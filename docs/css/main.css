@@ -1279,7 +1279,7 @@ a {
 }
 
 #allServicesBtn.is-business::before {
-  content: "Bekijk meer zakelijke diensten";
+  content: "Bekijk zakelijke diensten";
   color: white;
 }
 
@@ -1453,11 +1453,6 @@ a {
 .my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-.my-4{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .mb-1{
@@ -1875,16 +1870,6 @@ a {
   border-radius: 0.75rem;
 }
 
-.rounded-l-2xl{
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-}
-
-.rounded-r-2xl{
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-}
-
 .border{
   border-width: 1px;
 }
@@ -2178,26 +2163,6 @@ a {
 
 .pt-\[0\.2rem\]{
   padding-top: 0.2rem;
-}
-
-.pt-\[0\.8rem\]{
-  padding-top: 0.8rem;
-}
-
-.pt-\[0\.65rem\]{
-  padding-top: 0.65rem;
-}
-
-.pt-\[0\.62rem\]{
-  padding-top: 0.62rem;
-}
-
-.pt-\[0\.6rem\]{
-  padding-top: 0.6rem;
-}
-
-.pt-\[0\.68rem\]{
-  padding-top: 0.68rem;
 }
 
 .pt-\[0\.55rem\]{

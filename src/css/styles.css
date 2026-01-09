@@ -393,7 +393,7 @@
   }
 
   #allServicesBtn.is-business::before {
-    content: "Bekijk meer zakelijke diensten";
+    content: "Bekijk zakelijke diensten";
     color: white;
   }
 
