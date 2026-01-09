@@ -4,14 +4,14 @@
   "main": "index.js",
   "scripts": {
     "build": "node ./scripts/build.mjs",
-    "watch:css": "npx tailwindcss -i ./src/css/main.css -o ./docs/css/main.css --postcss --watch",
-    "watch": "npm run build && npm run watch:css"
+    "dev": "node ./scripts/dev.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.22",
+    "chokidar": "^5.0.0",
     "postcss": "^8.5.6",
     "postcss-import": "^16.1.1",
     "tailwindcss": "^3.4.19"
