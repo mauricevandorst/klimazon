@@ -164,7 +164,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -1450,6 +1450,26 @@ a {
   margin-bottom: 0.5rem;
 }
 
+.mx-\[1\.5rem\]{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.mx-\[0\.5rem\]{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mx-\[1rem\]{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mx-\[0\.7rem\]{
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+}
+
 .mb-1{
   margin-bottom: 0.25rem;
 }
@@ -1727,20 +1747,6 @@ a {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-@keyframes shimmer{
-  0%{
-    background-position: -250% 0;
-  }
-
-  100%{
-    background-position: 250% 0;
-  }
-}
-
-.animate-shimmer{
-  animation: shimmer 15s ease-in-out infinite;
-}
-
 .select-none{
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1994,10 +2000,6 @@ a {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
-.bg-shimmer-text{
-  background-image: linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255, 255, 255, 0.75) 45%, rgba(255,255,255,1) 70%);
-}
-
 .from-\[color\:var\(--kz-blue\)\]{
   --tw-gradient-from: var(--kz-blue) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
@@ -2029,10 +2031,6 @@ a {
 
 .to-transparent{
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
-}
-
-.bg-\[length\:220\%_100\%\]{
-  background-size: 220% 100%;
 }
 
 .bg-clip-text{
@@ -2182,6 +2180,50 @@ a {
   padding-top: 0.2rem;
 }
 
+.pt-\[1\.5rem\]{
+  padding-top: 1.5rem;
+}
+
+.pt-\[0\.7rem\]{
+  padding-top: 0.7rem;
+}
+
+.pt-\[1rem\]{
+  padding-top: 1rem;
+}
+
+.pt-\[1\.2rem\]{
+  padding-top: 1.2rem;
+}
+
+.pt-\[0\.8rem\]{
+  padding-top: 0.8rem;
+}
+
+.pt-\[0\.6rem\]{
+  padding-top: 0.6rem;
+}
+
+.pt-\[0\.5rem\]{
+  padding-top: 0.5rem;
+}
+
+.pt-\[0\.55rem\]{
+  padding-top: 0.55rem;
+}
+
+.pt-\[0\.4rem\]{
+  padding-top: 0.4rem;
+}
+
+.pt-\[0\.45rem\]{
+  padding-top: 0.45rem;
+}
+
+.pt-\[0\.56rem\]{
+  padding-top: 0.56rem;
+}
+
 .text-left{
   text-align: left;
 }
@@ -2235,6 +2277,14 @@ a {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[1\.5rem\]{
+  font-size: 1.5rem;
+}
+
+.text-\[2rem\]{
+  font-size: 2rem;
 }
 
 .font-bold{
@@ -2578,6 +2628,16 @@ a {
     margin-right: 0px;
   }
 
+  .sm\:mx-\[0\.5rem\]{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .sm\:mx-\[1rem\]{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
   .sm\:me-2{
     margin-inline-end: 0.5rem;
   }
@@ -2666,6 +2726,22 @@ a {
     padding-bottom: 2.5rem;
   }
 
+  .sm\:pt-\[1\.5rem\]{
+    padding-top: 1.5rem;
+  }
+
+  .sm\:pt-\[1\.2rem\]{
+    padding-top: 1.2rem;
+  }
+
+  .sm\:pt-\[0\.8rem\]{
+    padding-top: 0.8rem;
+  }
+
+  .sm\:pt-\[0\.5rem\]{
+    padding-top: 0.5rem;
+  }
+
   .sm\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -2693,6 +2769,14 @@ a {
   .sm\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .sm\:text-\[3\.5rem\]{
+    font-size: 3.5rem;
+  }
+
+  .sm\:text-\[4rem\]{
+    font-size: 4rem;
   }
 }
 

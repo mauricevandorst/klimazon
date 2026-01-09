@@ -549,12 +549,23 @@
   <!-- MARQUEE: merken die we installeren -->
   <section class="w-full bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] mb-[25rem]">
     <div class="flex flex-col items-center pt-5">
-      <h2 class="text-xl sm:text-3xl uppercase font-extrabold tracking-tight italic pe-1
-           bg-shimmer-text bg-[length:220%_100%]
-           bg-clip-text text-transparent
-           animate-shimmer">
-        Merken die wij installeren
-      </h2>
+      <div class="relative">
+        <!-- ACHTERGROND -->
+        <div class="pointer-events-none absolute inset-0 z-0 flex items-center">
+          <div class="flex self-start text-[2.5rem] sm:text-[4rem] uppercase
+            font-extrabold italic tracking-tight
+            text-white select-none leading-none
+            whitespace-nowrap">
+            <span style="opacity: 0.04">Klimazon merk</span>
+          </div>
+        </div>
+
+        <!-- VOORGROND -->
+        <h2 class="relative z-10 text-xl mx-[0.7rem] sm:mx-[1rem] pt-[0.56rem] sm:pt-[1.2rem] sm:text-3xl uppercase font-extrabold tracking-tight italic pe-1 text-white">
+          Merken die wij installeren
+        </h2>
+      </div>
+      
     </div>
     <div class="mx-auto px-4 sm:px-6 lg:px-8">
       <div class="relative overflow-hidden rounded-2xl">
