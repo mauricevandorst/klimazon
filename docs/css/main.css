@@ -1514,6 +1514,10 @@ a {
   margin-top: 25rem;
 }
 
+.mt-8{
+  margin-top: 2rem;
+}
+
 .block{
   display: block;
 }
@@ -1911,6 +1915,10 @@ a {
   border-color: transparent;
 }
 
+.border-white\/10{
+  border-color: rgb(255 255 255 / 0.1);
+}
+
 .bg-\[color\:var\(--kz-darkerblue\)\]{
   background-color: var(--kz-darkerblue);
 }
@@ -1967,6 +1975,10 @@ a {
 
 .bg-white\/90{
   background-color: rgb(255 255 255 / 0.9);
+}
+
+.bg-white\/10{
+  background-color: rgb(255 255 255 / 0.1);
 }
 
 .bg-\[linear-gradient\(to_right\2c var\(--kz-blue\)\2c var\(--kz-blue\)\)\]{
@@ -2358,6 +2370,14 @@ a {
   color: rgb(250 204 21 / var(--tw-text-opacity, 1));
 }
 
+.text-white\/80{
+  color: rgb(255 255 255 / 0.8);
+}
+
+.text-white\/85{
+  color: rgb(255 255 255 / 0.85);
+}
+
 .underline-offset-4{
   text-underline-offset: 4px;
 }
@@ -2381,6 +2401,10 @@ a {
 
 .opacity-70{
   opacity: 0.7;
+}
+
+.opacity-90{
+  opacity: 0.9;
 }
 
 .shadow{
@@ -2418,6 +2442,10 @@ a {
 
 .ring-black\/10{
   --tw-ring-color: rgb(0 0 0 / 0.1);
+}
+
+.ring-white\/15{
+  --tw-ring-color: rgb(255 255 255 / 0.15);
 }
 
 .grayscale{
@@ -2819,6 +2847,11 @@ a {
   .lg\:py-24{
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  .lg\:py-14{
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
   }
 
   .lg\:pb-0{

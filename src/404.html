@@ -8,32 +8,242 @@
   <title>404 – Pagina niet gevonden | Klimazon</title>
   <meta name="robots" content="noindex">
 
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 </head>
 
 <body class="bg-white text-[color:var(--kz-navy)] antialiased">
 
-  <div
-    class="lg:px-24 lg:py-24 md:py-20 md:px-44 px-4 py-24 items-center flex justify-center flex-col-reverse lg:flex-row md:gap-28 gap-16">
-    <div class="xl:pt-24 w-full xl:w-1/2 relative pb-12 lg:pb-0">
-      <div class="relative">
-        <div class="absolute">
-          <h1 class="my-2 text-gray-800 font-bold text-2xl">
-            Looks like you've found the doorway to the great nothing
-          </h1>
-          <p class="my-2 text-gray-800">
-            Sorry about that! Please visit our homepage to get where you need to go.
-          </p>
-          <a href="/" class="inline-block my-2 border rounded py-4 px-8 bg-indigo-600 text-white hover:bg-indigo-700">
-            Take me there!
-          </a>
-        </div>
-        <img src="./assets/404-2.png" alt="404 illustration" />
+  <!-- Topbar (desktop only) -->
+  <div class="bg-[color:var(--kz-darkerblue)] hidden sm:block">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex py-2 items-center text-xs font-bold text-white" style="justify-content: space-evenly;">
+        <a href="/#reviews" class="flex items-center gap-1 hover:opacity-90 hover:underline">
+          <span class="flex text-white">Uitstekend</span>
+          <div class="rounded-[4px] pl-[0.3rem] pr-[0.3rem] pt-[0.2rem] pb-[0.15rem] bg-white">
+            <img src="./assets/images/logo/Google logo.png" alt="Google reviews" class="h-3" />
+          </div>
+          <span class="flex text-yellow-400">★★★★★</span>
+        </a>
+
+        <a href="/#over-ons" class="hover:opacity-90 hover:underline">Vakkundige monteurs</a>
+        <a href="/contact.html" class="hover:opacity-90 hover:underline">Maak een afspraak!</a>
       </div>
     </div>
-    <img src="./assets/group.png" alt="" />
   </div>
 
+  <!-- Topbar carousel (mobile only) -->
+  <div class="js-topbar-carousel bg-[color:var(--kz-darkerblue)] sm:hidden">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="overflow-x-auto scroll-smooth snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none]"
+        aria-label="Topbar carousel">
+        <style>
+          .js-topbar-carousel .overflow-x-auto::-webkit-scrollbar {
+            display: none;
+          }
+        </style>
+
+        <div class="flex js-topbar-track">
+          <a href="/#reviews"
+            class="flex flex-row items-center justify-center gap-2 w-full shrink-0 snap-start py-2 text-center text-xs font-bold text-white hover:opacity-90 hover:underline">
+            <span class="text-white">Hoge klantbeoordeling</span>
+            <div class="rounded-[4px] pl-[0.3rem] pr-[0.3rem] pt-[0.15rem] pb-[0.1rem] bg-white">
+              <img src="./assets/images/logo/Google logo.png" alt="Google reviews" class="h-3" />
+            </div>
+            <span class="text-yellow-400">★★★★★</span>
+          </a>
+
+          <a href="/#over-ons"
+            class="w-full shrink-0 snap-start py-2 text-center text-xs font-bold text-white hover:opacity-90 hover:underline">
+            Onze monteurs hebben échte vakkennis!
+          </a>
+
+          <a href="/contact.html"
+            class="w-full shrink-0 snap-start py-2 text-center text-xs font-bold text-white hover:opacity-90 hover:underline">
+            Maak een afspraak, ook mogelijk aan huis
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-black/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <img src="./assets/images/logo/Klimazon-blauw.webp" alt="Klimazon Klimaat & zontechniek" class="h-10 w-auto"
+            loading="eager" />
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-2" aria-label="Hoofdnavigatie">
+          <a class="rounded-[5px] px-3 my-2 text-xs font-semibold text-[color:var(--kz-lightgrey)] hover:text-black"
+            href="/projecten.html">Projecten</a>
+          <a class="rounded-[5px] px-3 my-2 text-xs font-semibold text-[color:var(--kz-lightgrey)] hover:text-black"
+            href="/over-ons.html">Over ons</a>
+          <a class="rounded-[5px] px-3 my-2 text-xs font-semibold text-[color:var(--kz-lightgrey)] hover:text-black"
+            href="/contact.html">Contact</a>
+
+          <a href="/offerte.html"
+            class="ml-2 inline-flex items-center justify-center rounded-[5px] px-4 py-2 text-xs font-semibold text-white shadow-sm
+                   bg-[color:var(--kz-darkerblue)] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
+            Offerte aanvragen
+          </a>
+        </nav>
+
+        <div class="flex items-center gap-2 lg:hidden">
+          <a href="/contact.html"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-[5px] hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-[color:var(--kz-darkerblue)]"
+            aria-label="Contact" title="Contact">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"
+              aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M2 3.5A1.5 1.5 0 013.5 2h2A1.5 1.5 0 017 3.5v2A1.5 1.5 0 015.5 7H5a11 11 0 008 8v-.5A1.5 1.5 0 0114.5 13h2a1.5 1.5 0 011.5 1.5v2A1.5 1.5 0 0116.5 18h-.5C7.82 18 2 12.18 2 5v-.5z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+
+          <a href="/"
+            class="inline-flex h-10 px-4 items-center justify-center rounded-[5px] bg-[color:var(--kz-darkerblue)] text-white text-xs font-semibold hover:opacity-90">
+            Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 404 hero -->
+  <section class="relative w-full overflow-hidden bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))]">
+    <!-- floating locations background -->
+    <div class="pointer-events-none absolute inset-0 flex items-center">
+      <div class="mt-2 ml-4 sm:ml-8 lg:ml-8
+            flex flex-col self-start text-[7rem]
+            font-extrabold italic tracking-tight
+            text-white/5 opacity-35 select-none leading-none
+            whitespace-nowrap">
+        <span>ASSENDELFT WORMERVEER JISP WESTKNOLLENDAM</span>
+        <span>KROMMENIE KOOG A/D ZAAN WORMER</span>
+        <span>WESTZAAN OOSTZAAN SPIJKERBOOR</span>
+        <span>LANDSMEER PURMEREND BEVERWIJK</span>
+        <span>HEEMSKERK ZAANDAM KNOLLENDAM</span>
+        <span>UITGEEST CASTRICUM</span>
+      </div>
+    </div>
+
+    <div class="relative mx-auto w-full max-w-7xl px-6 py-10 lg:py-14">
+      <div class="grid gap-8 lg:grid-cols-12 lg:items-center">
+        <!-- Copy -->
+        <div class="lg:col-span-6">
+          <h1 class="mt-4 text-3xl sm:text-5xl font-extrabold tracking-tight text-white italic">
+            Pagina niet gevonden.
+          </h1>
+          <p class="mt-4 max-w-xl text-base sm:text-lg font-medium text-white/90">
+            De link klopt niet (meer), of de pagina is verplaatst.
+          </p>
+          <p class="mt-4 max-w-xl text-base sm:text-lg font-medium text-white/90">
+            Ga terug naar de homepage, neem contact op of vraag een offerte aan.
+          </p>
+
+          <div class="mt-7 flex flex-wrap items-center gap-4">
+            <a href="/"
+              class="inline-flex items-center justify-center gap-2 rounded-2xl px-5 h-12 text-sm font-semibold text-white shadow-sm
+                     bg-[color:var(--kz-primary)] hover:opacity-90
+                     focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-focus)]">
+              Naar homepage
+            </a>
+
+            <a href="/contact.html"
+              class="inline-flex items-center justify-center gap-2 rounded-2xl px-5 h-12 text-sm font-semibold bg-white/70 ring-1 ring-black/10 hover:bg-black/5 backdrop-blur">
+              Contact
+            </a>
+
+            <a href="/offerte.html"
+              class="inline-flex items-center justify-center gap-2 rounded-2xl px-5 h-12 text-sm font-semibold bg-white/70 ring-1 ring-black/10 hover:bg-black/5 backdrop-blur">
+              Offerte aanvragen
+            </a>
+          </div>
+
+          <!-- Quick links (services) -->
+          <div class="mt-8 flex flex-wrap gap-2">
+            <a href="/zonnepanelen.html"
+              class="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/15 px-3 py-1 text-sm text-white/90 hover:opacity-90">
+              Zonnepanelen
+            </a>
+            <a href="/airconditioning.html"
+              class="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/15 px-3 py-1 text-sm text-white/90 hover:opacity-90">
+              Airco
+            </a>
+            <a href="/warmtepomp.html"
+              class="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/15 px-3 py-1 text-sm text-white/90 hover:opacity-90">
+              Warmtepompen
+            </a>
+            <a href="/thuisbatterij.html"
+              class="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/15 px-3 py-1 text-sm text-white/90 hover:opacity-90">
+              Thuisbatterijen
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual card -->
+        <div class="lg:col-span-6">
+          <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/10 shadow-[var(--kz-shadow-1)] backdrop-blur">
+            <div class="grid grid-cols-12 gap-3 p-4 sm:p-5">
+              <div class="col-span-12 sm:col-span-7 relative overflow-hidden rounded-2xl">
+                <img src="./assets/404-2.png" alt="404 illustratie" class="h-56 sm:h-64 w-full object-cover" loading="eager" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-black/10 to-transparent"></div>
+
+                <div class="absolute left-4 bottom-4">
+                  <span
+                    class="inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[color:var(--kz-primary)]">
+                    <span class="h-1.5 w-1.5 rounded-full bg-[color:var(--kz-secondary)]"></span>
+                    404
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-span-12 sm:col-span-5 grid grid-rows-3 gap-3">
+                <div class="relative overflow-hidden rounded-2xl bg-white/10">
+                  <img src="./assets/group.png" alt="" class="h-24 sm:h-full w-full object-cover opacity-90" loading="lazy" />
+                  <div class="absolute inset-0 bg-gradient-to-r from-black/30 via-black/10 to-transparent"></div>
+                  <div class="absolute left-3 top-3 text-xs font-semibold text-white">Klimazon</div>
+                </div>
+
+                <div class="rounded-2xl border border-white/10 bg-white/10 p-4 flex flex-col justify-center">
+                  <div class="text-xs font-semibold text-white/80">Tip</div>
+                  <div class="mt-1 text-sm font-semibold text-white">
+                    Controleer de URL of gebruik het menu hierboven.
+                  </div>
+                </div>
+
+                <div class="rounded-2xl border border-white/10 bg-white/10 p-4 flex flex-col justify-center">
+                  <div class="text-xs font-semibold text-white/80">Snel naar</div>
+                  <a href="/contact.html" class="mt-1 text-sm font-semibold text-white hover:underline">
+                    Contact opnemen →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer strip -->
+            <div class="m-4 rounded-2xl border border-white/10 bg-white/10 p-4">
+              <div class="text-sm font-semibold text-white">Niet gevonden wat je zocht?</div>
+              <div class="mt-1 text-sm text-white/85">
+                We helpen je snel verder met advies, installatie of onderhoud.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimal scripts (only if you want the mobile topbar carousel behaviour) -->
+  <script src="./js/topbar-carousel.js" defer></script>
 </body>
 
 </html>
