@@ -288,8 +288,8 @@
       <div class="mt-2 ml-4 sm:ml-8 lg:ml-8
             flex flex-col self-start text-[7rem]
             font-extrabold italic tracking-tight
-            text-white/5 opacity-35 select-none leading-none
-            whitespace-nowrap">
+            text-white/5 opacity-50 select-none leading-none
+            whitespace-nowrap skew-x-[-12deg]">
         <span>ASSENDELFT WORMERVEER JISP WESTKNOLLENDAM</span>
         <span>KROMMENIE KOOG A/D ZAAN WORMER</span>
         <span>WESTZAAN OOSTZAAN SPIJKERBOOR</span>
@@ -401,7 +401,7 @@
               <h3
                 class="text-xl font-extrabold tracking-tight italic uppercase bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
                 Populaire diensten</h3>
-              <span class="text-sm text-slate-500 md:hidden">Onze selectie populairste diensten bij jou thuis!</span>
+              <span class="text-sm text-slate-500 md:hidden">Onze populairste diensten voor jouw huis!</span>
               <span class="text-sm text-slate-500 hidden md:block">Voor zowel kleine als grotere klussen
                 in en rondom het huis vertrouwen klanten het meest op deze diensten.</span>
             </div>
@@ -409,12 +409,6 @@
             <!-- Tiles: ALWAYS horizontal -->
             <div class="-mx-6 sm:mx-0">
               <div class="flex justify-evenly sm:gap-4 overflow-hidden pb-2 sm:px-0">
-                <div class="flex flex-col gap-2 items-center">
-                  <a class="service-btn shrink-0" type="button" aria-label="Zonnepanelen" href="zonnepanelen.html">
-                    <img class="h-full w-full" src="./assets/images/icons/solar-panels.svg" alt="Zonnepanelen" />
-                  </a>
-                  <span class="text-xs">Zonnepanelen</span>
-                </div>
 
                 <div class="flex flex-col gap-2 items-center">
                   <a class="service-btn shrink-0" type="button" aria-label="Airconditioning"
@@ -422,6 +416,13 @@
                     <img class="p-3" src="./assets/images/icons/airconditioning.svg" alt="Airconditioning" />
                   </a>
                   <span class="text-xs">Airconditioning</span>
+                </div>
+
+                <div class="flex flex-col gap-2 items-center">
+                  <a class="service-btn shrink-0" type="button" aria-label="Zonnepanelen" href="zonnepanelen.html">
+                    <img class="h-full w-full" src="./assets/images/icons/solar-panels.svg" alt="Zonnepanelen" />
+                  </a>
+                  <span class="text-xs">Zonnepanelen</span>
                 </div>
 
                 <div class="flex flex-col gap-2 items-center">
@@ -555,97 +556,689 @@
   </section>
 
   <!-- MARQUEE: merken die we installeren -->
-  <section class="w-full bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] mb-[25rem]">
-    <div class="flex flex-col items-center pt-5">
-      <div class="relative mb-4">
-        <!-- ACHTERGROND -->
-        <div class="pointer-events-none absolute inset-0 z-0 flex items-center">
-          <div class="flex self-start text-[2.5rem] sm:text-[4rem] uppercase
-            font-extrabold italic tracking-tight
-            text-white select-none leading-none
-            whitespace-nowrap">
-            <span style="opacity: 0.025">Klimazon merk</span>
-          </div>
+  <section
+    class="relative w-full bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] pt-6 overflow-hidden">
+
+    <!-- ACHTERGRONDTEXT (over het blauwe vlak) -->
+    <div class="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
+      <div class="flex flex-col gap-0 text-[4rem] sm:text-[5rem] uppercase font-extrabold italic leading-[1.2]
+                 text-white/5 opacity-50 select-none whitespace-nowrap skew-x-6">
+        <div class="flex flex-row gap-10 skew-x-12">
+          <span>Klimazon</span><span>Klimazon</span><span>Klimazon</span><span>Klimazon</span>
         </div>
-
-        <!-- VOORGROND -->
-        <h2
-          class="relative z-10 text-xl mx-[0.9rem] sm:mx-[1rem] sm:pt-[1.25rem] pt-[0.55rem] sm:text-3xl uppercase font-extrabold tracking-tight italic pe-1 text-white">
-          Merken die wij installeren
-        </h2>
+        <div class="flex flex-row gap-10 skew-x-12">
+          <span>Klimazon</span><span>Klimazon</span><span>Klimazon</span><span>Klimazon</span>
+        </div>
+        <div class="flex flex-row gap-10 skew-x-12">
+          <span>Klimazon</span><span>Klimazon</span><span>Klimazon</span><span>Klimazon</span>
+        </div>
       </div>
-
     </div>
+
+    <!-- Titel -->
+    <div class="flex flex-col items-center mb-3">
+      <h2 class="text-2xl text-center ms-[0.7rem] me-[0.9rem] sm:mx-[1rem] sm:pt-[1.25rem] pt-[0.55rem]
+             sm:text-3xl uppercase font-extrabold tracking-tight italic text-white">
+        Merken die wij installeren
+      </h2>
+    </div>
+
+    <!-- Marquee wrapper -->
     <div class="mx-auto">
       <div class="relative overflow-hidden rounded-2xl">
+
         <!-- Edge fades -->
-        <div
-          class="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-24 z-20 bg-gradient-to-r from-[color:var(--kz-darkerblue)] to-transparent">
+        <div class="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-24 z-20
+               bg-gradient-to-r from-[color:var(--kz-darkerblue)] to-transparent">
         </div>
-        <div
-          class="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-24 z-20 bg-gradient-to-l from-[color:var(--kz-blue)] to-transparent">
+        <div class="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-24 z-20
+               bg-gradient-to-l from-[color:var(--kz-blue)] to-transparent">
         </div>
 
         <!-- Marquee viewport -->
-        <div class="marquee">
+        <div class="marquee relative z-10">
           <div class="marquee__track">
+
             <!-- Track A -->
             <ul class="marquee__content" aria-label="Merken">
-              <li class="logo-tile">
-                <img src="./assets/images/logo/SolarEdge-wit.webp" alt="SolarEdge" decoding="async" />
-              </li>
-              <li class="logo-tile">
-                <img src="./assets/images/logo/Remeha-wit.webp" alt="Remeha" loading="lazy" decoding="async" />
-              </li>
-              <li class="logo-tile">
-                <img src="./assets/images/logo/Haier-wit.webp" alt="Haier" loading="lazy" decoding="async" />
-              </li>
-              <li class="logo-tile">
-                <img src="./assets/images/logo/Enphase-wit.webp" alt="Enphase" loading="lazy" decoding="async" />
-              </li>
-              <li class="logo-tile">
-                <img src="./assets/images/logo/VanDerValk-wit.webp" alt="Van der Valk" decoding="async" />
-              </li>
-              <li class="logo-tile">
-                <img src="./assets/images/logo/Daikin-wit.webp" alt="Daikin" loading="lazy" decoding="async" />
-              </li>
-              <li class="logo-tile">
-                <img src="./assets/images/logo/LG-wit.webp" alt="LG" loading="lazy" decoding="async" />
-              </li>
-              <li class="logo-tile">
-                <img src="./assets/images/logo/Growatt-wit.webp" alt="Growatt" loading="lazy" decoding="async" />
-              </li>
+              <li class="logo-tile"><img src="./assets/images/logo/SolarEdge-wit.webp" alt="SolarEdge" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Remeha-wit.webp" alt="Remeha" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Haier-wit.webp" alt="Haier" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Enphase-wit.webp" alt="Enphase" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/VanDerValk-wit.webp" alt="Van der Valk" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Daikin-wit.webp" alt="Daikin" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/LG-wit.webp" alt="LG" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Growatt-wit.webp" alt="Growatt" /></li>
             </ul>
 
-            <!-- Duplicate (Track B) -->
+            <!-- Track B -->
             <ul class="marquee__content" aria-hidden="true">
-              <li class="logo-tile">
-                <img src="./assets/images/logo/SolarEdge-wit.webp" alt="" loading="lazy" decoding="async" />
-              </li>
-              <li class="logo-tile">
-                <img src="./assets/images/logo/Remeha-wit.webp" alt="" loading="lazy" decoding="async" />
-              </li>
-              <li class="logo-tile">
-                <img src="./assets/images/logo/Haier-wit.webp" alt="" loading="lazy" decoding="async" />
-              </li>
-              <li class="logo-tile">
-                <img src="./assets/images/logo/Enphase-wit.webp" alt="" loading="lazy" decoding="async" />
-              </li>
-              <li class="logo-tile">
-                <img src="./assets/images/logo/VanDerValk-wit.webp" alt="" loading="lazy" decoding="async" />
-              </li>
-              <li class="logo-tile">
-                <img src="./assets/images/logo/Daikin-wit.webp" alt="" loading="lazy" decoding="async" />
-              </li>
-              <li class="logo-tile">
-                <img src="./assets/images/logo/LG-wit.webp" alt="" loading="lazy" decoding="async" />
-              </li>
-              <li class="logo-tile">
-                <img src="./assets/images/logo/Growatt-wit.webp" alt="" loading="lazy" decoding="async" />
-              </li>
+              <li class="logo-tile"><img src="./assets/images/logo/SolarEdge-wit.webp" alt="" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Remeha-wit.webp" alt="" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Haier-wit.webp" alt="" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Enphase-wit.webp" alt="" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/VanDerValk-wit.webp" alt="" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Daikin-wit.webp" alt="" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/LG-wit.webp" alt="" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Growatt-wit.webp" alt="" /></li>
             </ul>
+
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google reviews Widget -->
+  <section class="w-full py-8">
+    <!-- Titel -->
+    <div class="flex flex-col items-center mb-5">
+      <h2
+        class="text-2xl sm:text-3xl pe-1 font-extrabold tracking-tight italic uppercase bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+        Wat zeggen onze klanten?
+      </h2>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+      <script src="https://elfsightcdn.com/platform.js" async></script>
+      <div class="elfsight-app-4b54be38-b1aa-4a9e-85da-1409b26b85e3" data-elfsight-app-lazy></div>
+    </div>
+  </section>
+
+  <!-- PRODUCTEN: Mitsubishi Electric (meest geplaatst) -->
+  <section class="relative w-full overflow-hidden bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))]">
+    <!-- Background marquee (lighter, responsive, less DOM-heavy) -->
+    <div class="pointer-events-none absolute inset-0 z-0">
+      <div class="absolute -top-10 left-1/2 w-[120rem] -translate-x-1/2 opacity-[0.03]">
+        <div class="flex flex-col whitespace-nowrap uppercase font-extrabold italic tracking-tight text-white
+           text-[4rem] sm:text-[5rem]
+           [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
+          <span class="mr-10">Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric</span>
+          <span class="mr-10">Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric</span>
+          <span class="mr-10">Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric</span>
+          <span class="mr-10">Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric</span>
+          <span class="mr-10">Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric</span>
+          <span class="mr-10">Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric</span>
+          <span class="mr-10">Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric</span>
+          <span class="mr-10">Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric</span>
+          <span class="mr-10">Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric</span>
+          <span class="mr-10">Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric</span>
+          <span class="mr-10">Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric</span>
+          <span class="mr-10">Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric</span>
+          <span class="mr-10">Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric</span>
+          <span class="mr-10">Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric</span>
+          <span class="mr-10">Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric Mitsubishi Electric</span>
+        </div>
+      </div>
+
+      <!-- Soft glow -->
+      <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
+      <div class="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
+    </div>
+
+    <div class="relative z-10 mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
+      <!-- Header -->
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight italic uppercase text-white/90">
+          Onze meest geplaatste installaties
+        </h2>
+        <p class="mt-3 text-sm sm:text-base lg:text-lg font-medium text-white/90">
+          Betrouwbare systemen die wij dagelijks installeren bij woningen en bedrijven. Stil, zuinig en strak afgewerkt.
+        </p>
+      </div>
+
+      <!-- Cards (super responsive) -->
+      <!-- Mobile: 1 col (ultra small), 2 cols from ~375px, 3 cols on md, 4 cols on xl -->
+      <div class="mt-8 grid gap-3 sm:gap-4 lg:gap-5
+            [grid-template-columns:repeat(1,minmax(0,1fr))]
+            [@media(min-width:380px)]:[grid-template-columns:repeat(2,minmax(0,1fr))]
+            md:[grid-template-columns:repeat(4,minmax(0,1fr))]">
+
+
+        <!-- Card 1 -->
+        <a href="/mitsubishi-msz-ap" class="group rounded-[10px] border border-black/10 bg-white shadow-sm overflow-hidden
+                      transition hover:-translate-y-0.5 hover:shadow-md">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="./assets/images/products/mitsubishi-msz-ap.png" alt="Mitsubishi Electric MSZ-AP airco"
+              class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" />
+          </div>
+
+          <div class="p-4 sm:p-5">
+            <div class="text-[11px] sm:text-xs font-bold text-slate-600 uppercase tracking-wide">Meest gekozen</div>
+
+            <h3 class="mt-1 text-base sm:text-lg font-extrabold italic uppercase
+                     bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+              Mitsubishi Electric MSZ-AP
+            </h3>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="/mitsubishi-msz-ln" class="group rounded-[10px] border border-black/10 bg-white shadow-sm overflow-hidden
+                      transition hover:-translate-y-0.5 hover:shadow-md">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="./assets/images/products/mitsubishi-msz-ln.webp"
+              alt="Mitsubishi Electric Design Series MSZ-LN airco"
+              class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" />
+          </div>
+
+          <div class="p-4 sm:p-5">
+            <div class="text-[11px] sm:text-xs font-bold text-slate-600 uppercase tracking-wide">Premium comfort</div>
+
+            <h3 class="mt-1 text-base sm:text-lg font-extrabold italic uppercase
+                     bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+              Design Series (MSZ-LN)
+            </h3>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="/mitsubishi-multisplit" class="group rounded-[10px] border border-black/10 bg-white shadow-sm overflow-hidden
+                      transition hover:-translate-y-0.5 hover:shadow-md">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="./assets/images/products/mitsubishi-multisplit.webp" alt="Multi-split airco installatie"
+              class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" />
+          </div>
+
+          <div class="p-4 sm:p-5">
+            <div class="text-[11px] sm:text-xs font-bold text-slate-600 uppercase tracking-wide">Meerdere ruimtes</div>
+
+            <h3 class="mt-1 text-base sm:text-lg font-extrabold italic uppercase
+                     bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+              Multi-split oplossingen
+            </h3>
+          </div>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="/lucht-water-warmtepomp" class="group rounded-[10px] border border-black/10 bg-white shadow-sm overflow-hidden
+              transition hover:-translate-y-0.5 hover:shadow-md">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="./assets/images/products/lucht-water-warmtepomp.webp" alt="Lucht-water warmtepomp"
+              class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" />
+          </div>
+
+          <div class="p-4 sm:p-5">
+            <div class="text-[11px] sm:text-xs font-bold text-slate-600 uppercase tracking-wide">All-electric ready
+            </div>
+            <h3 class="mt-1 text-base sm:text-lg font-extrabold italic uppercase
+             bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+              Lucht-water warmtepomp
+            </h3>
+          </div>
+        </a>
+
+        <!-- Card 5 -->
+        <a href="/hybride-warmtepomp" class="group rounded-[10px] border border-black/10 bg-white shadow-sm overflow-hidden
+              transition hover:-translate-y-0.5 hover:shadow-md">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="./assets/images/products/hybride-warmtepomp.jpg" alt="Hybride warmtepomp"
+              class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" />
+          </div>
+
+          <div class="p-4 sm:p-5">
+            <div class="text-[11px] sm:text-xs font-bold text-slate-600 uppercase tracking-wide">Beste instap</div>
+            <h3 class="mt-1 text-base sm:text-lg font-extrabold italic uppercase
+             bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+              Hybride warmtepomp
+            </h3>
+          </div>
+        </a>
+
+        <!-- Card 6 -->
+        <a href="/zonnepanelen" class="group rounded-[10px] border border-black/10 bg-white shadow-sm overflow-hidden
+              transition hover:-translate-y-0.5 hover:shadow-md">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="./assets/images/products/zonnepanelen.jpg" alt="Zonnepanelen installatie"
+              class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" />
+          </div>
+
+          <div class="p-4 sm:p-5">
+            <div class="text-[11px] sm:text-xs font-bold text-slate-600 uppercase tracking-wide">Maximale opbrengst
+            </div>
+            <h3 class="mt-1 text-base sm:text-lg font-extrabold italic uppercase
+             bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+              Zonnepanelen
+            </h3>
+          </div>
+        </a>
+
+        <!-- Card 7 -->
+        <a href="/thuisbatterij" class="group rounded-[10px] border border-black/10 bg-white shadow-sm overflow-hidden
+              transition hover:-translate-y-0.5 hover:shadow-md">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="./assets/images/products/thuisbatterij.webp" alt="Thuisbatterij energieopslag"
+              class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" />
+          </div>
+
+          <div class="p-4 sm:p-5">
+            <div class="text-[11px] sm:text-xs font-bold text-slate-600 uppercase tracking-wide">Eigen energie</div>
+            <h3 class="mt-1 text-base sm:text-lg font-extrabold italic uppercase
+             bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+              Thuisbatterij
+            </h3>
+          </div>
+        </a>
+
+        <!-- Card 8 -->
+        <a href="/airco-onderhoud" class="group rounded-[10px] border border-black/10 bg-white shadow-sm overflow-hidden
+              transition hover:-translate-y-0.5 hover:shadow-md">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="./assets/images/products/airco-onderhoud.jpg" alt="Airco onderhoud en service"
+              class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" />
+          </div>
+
+          <div class="p-4 sm:p-5">
+            <div class="text-[11px] sm:text-xs font-bold text-slate-600 uppercase tracking-wide">Langere levensduur
+            </div>
+            <h3 class="mt-1 text-base sm:text-lg font-extrabold italic uppercase
+             bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+              Onderhoud & service
+            </h3>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Included + CTA -->
+      <div class="mt-6 rounded-[10px] border border-black/10 bg-white shadow-sm overflow-hidden">
+        <div class="p-5 sm:p-6 lg:p-7 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+          <div>
+            <div class="text-sm sm:text-base font-extrabold italic uppercase
+               bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+              Altijd inbegrepen bij installatie
+            </div>
+
+            <ul class="mt-3 grid gap-2 sm:grid-cols-2 text-sm text-slate-600">
+              <li class="flex gap-2"><span class="font-extrabold">✓</span>Advies op maat</li>
+              <li class="flex gap-2"><span class="font-extrabold">✓</span>Vakkundige montage</li>
+              <li class="flex gap-2"><span class="font-extrabold">✓</span>Netjes afgewerkt & getest</li>
+              <li class="flex gap-2"><span class="font-extrabold">✓</span>Uitleg en nazorg</li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
+            <a href="offerte.html"
+              class="inline-flex items-center justify-center rounded-[10px] px-4 py-2 text-sm font-semibold text-white shadow-sm
+                    bg-[color:var(--kz-darkerblue)] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
+              Offerte aanvragen
+            </a>
+
+            <a href="contact.html" class="inline-flex items-center justify-center rounded-[10px] px-4 py-2 text-sm font-semibold
+                    text-[color:var(--kz-darkerblue)] border border-black/10 hover:bg-black/5
+                    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
+              Vrijblijvend advies
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WERKGEBIED: Lokale SEO -->
+  <section class="relative w-full py-10 overflow-hidden">
+    <!-- Achtergrondtekst -->
+    <div class="pointer-events-none absolute inset-0 z-0 flex items-start justify-center">
+      <div class="flex flex-col gap-0 text-[4rem] sm:text-[5rem] uppercase font-extrabold italic tracking-tight
+                bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent
+                opacity-[0.04] select-none whitespace-nowrap skew-x-3">
+        <span>Zaanstreek &amp; Omstreken Zaanstreek &amp; Omstreken</span>
+        <span>Lokale service Lokale service Lokale service</span>
+        <span>Zaanstreek &amp; Omstreken Zaanstreek &amp; Omstreken</span>
+        <span>Lokale service Lokale service Lokale service</span>
+        <span>Zaanstreek &amp; Omstreken Zaanstreek &amp; Omstreken</span>
+        <span>Lokale service Lokale service Lokale service</span>
+        <span>Zaanstreek &amp; Omstreken Zaanstreek &amp; Omstreken</span>
+        <span>Lokale service Lokale service Lokale service</span>
+        <span>Zaanstreek &amp; Omstreken Zaanstreek &amp; Omstreken</span>
+        <span>Lokale service Lokale service Lokale service</span>
+      </div>
+    </div>
+
+    <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <!-- Titel -->
+      <div class="flex flex-col items-center mb-6">
+        <h2 class="text-2xl sm:text-3xl text-center font-extrabold tracking-tight italic uppercase pe-1
+                 bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+          Actief in de regio Zaanstreek &amp; omstreken
+        </h2>
+        <p class="mt-2 max-w-3xl text-center text-sm sm:text-base text-slate-600">
+          Wij installeren airco’s, warmtepompen, zonnepanelen en thuisbatterijen bij klanten in de hele regio.
+        </p>
+      </div>
+
+      <!-- Content -->
+      <div class="grid gap-4 lg:grid-cols-3">
+        <!-- Kaart: Werkgebied -->
+        <article class="rounded-[5px] border border-black/10 bg-white shadow-sm p-5 sm:p-6 lg:col-span-2">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3
+                class="text-lg font-extrabold italic uppercase
+                       bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+                Werkgebied
+              </h3>
+              <p class="mt-2 text-sm text-slate-600">
+                We zijn dagelijks onderweg in onderstaande plaatsen.
+              </p>
+              <p class="mt-2 text-sm text-slate-600">
+                Staat jouw woonplaats er niet tussen? Vaak kunnen we alsnog helpen, neem gerust contact met ons op.
+              </p>
+            </div>
+
+            <a href="contact.html"
+              class="hidden sm:inline-flex items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold text-white shadow-sm text-nowrap
+                    bg-[color:var(--kz-darkerblue)] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
+              Contact opnemen
+            </a>
+          </div>
+
+          <!-- Plaatsnamen -->
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span
+              class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-700">Assendelft</span>
+            <span
+              class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-700">Wormerveer</span>
+            <span
+              class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-700">Krommenie</span>
+            <span
+              class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-700">Zaandam</span>
+            <span
+              class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-700">Wormer</span>
+            <span
+              class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-700">Koog
+              a/d Zaan</span>
+            <span
+              class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-700">Westzaan</span>
+            <span
+              class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-700">Oostzaan</span>
+            <span
+              class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-700">Heemskerk</span>
+            <span
+              class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-700">Beverwijk</span>
+            <span
+              class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-700">Uitgeest</span>
+            <span
+              class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-700">Castricum</span>
+          </div>
+
+          <!-- Interne links (lokaal) -->
+          <div class="mt-5 pt-5 border-t border-black/10">
+            <div class="text-xs font-bold text-slate-600 uppercase tracking-wide">
+              Populaire lokale pagina’s
+            </div>
+
+            <div class="mt-3 grid gap-2 sm:grid-cols-2">
+              <!-- Pas href’s aan naar je lokale landingspagina’s zodra je die hebt -->
+              <a href="airconditioning.html" class="rounded-[5px] border border-black/10 px-4 py-3 hover:bg-black/5">
+                <div class="text-sm font-semibold">Airco installatie in Assendelft</div>
+                <div class="text-xs text-black/60">Advies, montage en nazorg.</div>
+              </a>
+
+              <a href="airconditioning.html" class="rounded-[5px] border border-black/10 px-4 py-3 hover:bg-black/5">
+                <div class="text-sm font-semibold">Airco in Zaandam</div>
+                <div class="text-xs text-black/60">Koelen én verwarmen, fluisterstil.</div>
+              </a>
+
+              <a href="warmtepomp.html" class="rounded-[5px] border border-black/10 px-4 py-3 hover:bg-black/5">
+                <div class="text-sm font-semibold">Warmtepomp in Wormerveer</div>
+                <div class="text-xs text-black/60">Duurzaam verwarmen, lagere kosten.</div>
+              </a>
+
+              <a href="zonnepanelen.html" class="rounded-[5px] border border-black/10 px-4 py-3 hover:bg-black/5">
+                <div class="text-sm font-semibold">Zonnepanelen in Krommenie</div>
+                <div class="text-xs text-black/60">Advies, installatie en rendement.</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile CTA -->
+          <a href="contact.html"
+            class="sm:hidden mt-5 inline-flex w-full items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold text-white shadow-sm
+                  bg-[color:var(--kz-darkerblue)] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
+            Contact opnemen
+          </a>
+        </article>
+
+        <!-- Kaart: Lokale belofte -->
+        <aside class="rounded-[5px] border border-black/10 bg-white shadow-sm p-5 sm:p-6">
+          <h3 class="text-lg font-extrabold italic uppercase
+                   bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+            Lokale service
+          </h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Je krijgt snelle terugkoppeling, duidelijke afspraken en een installatie die netjes wordt opgeleverd.
+          </p>
+
+          <ul class="mt-4 grid gap-2 text-sm text-slate-600">
+            <li class="flex gap-2"><span class="font-extrabold">✓</span>Lokale monteurs</li>
+            <li class="flex gap-2"><span class="font-extrabold">✓</span>Snelle service &amp; nazorg</li>
+            <li class="flex gap-2"><span class="font-extrabold">✓</span>Netjes afgewerkt</li>
+            <li class="flex gap-2"><span class="font-extrabold">✓</span>Advies op maat</li>
+          </ul>
+
+          <div class="mt-5 flex flex-col gap-2">
+            <a href="offerte.html"
+              class="inline-flex items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold text-white shadow-sm
+                    bg-[color:var(--kz-darkerblue)] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
+              Offerte aanvragen
+            </a>
+            <a href="diensten.html" class="inline-flex items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
+                    text-[color:var(--kz-darkerblue)] border border-black/10 hover:bg-black/5">
+              Bekijk alle diensten
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOKALE PROJECTEN / RECENT GEPLAATST -->
+  <section class="hidden relative w-full py-10 overflow-hidden">
+    <!-- Achtergrondtekst -->
+    <div class="pointer-events-none absolute inset-0 z-0 flex items-start justify-center">
+      <div class="mt-2 flex flex-col gap-0 text-[4rem] sm:text-[5rem] uppercase font-extrabold italic tracking-tight
+                bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent
+                opacity-[0.06] select-none whitespace-nowrap">
+        <span>Recent geplaatst Recent geplaatst Recent geplaatst</span>
+        <span>Lokale projecten Lokale projecten Lokale projecten</span>
+      </div>
+    </div>
+
+    <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <!-- Titel -->
+      <div class="flex flex-col items-center mb-6">
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight italic uppercase pe-1
+                 bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+          Hoe ziet ons werk eruit?
+        </h2>
+        <p class="mt-2 max-w-3xl text-center text-sm sm:text-base text-slate-600">
+          Een greep uit recente installaties in de regio. Netjes afgewerkt, getest en opgeleverd zoals het hoort.
+        </p>
+      </div>
+
+      <div class="grid gap-4 lg:grid-cols-3">
+        <!-- Links: project cards -->
+        <div class="lg:col-span-2 grid gap-4 sm:grid-cols-2">
+          <!-- Project 1 -->
+          <article class="rounded-[5px] border border-black/10 bg-white shadow-sm overflow-hidden">
+            <div class="h-44">
+              <!-- VERVANG: projectfoto -->
+              <img src="./assets/images/projects/project-01.jpg" alt="Airco installatie in Assendelft"
+                class="h-full w-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-5">
+              <div class="text-xs font-bold text-slate-600 uppercase tracking-wide">Airco + zonnepanelen</div>
+              <h3
+                class="mt-1 text-lg font-extrabold italic uppercase
+                       bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+                Assendelft
+              </h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Single split geplaatst en strak afgewerkt. Inclusief uitleg, test en nazorg.
+              </p>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span
+                  class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-600">
+                  Netjes weggewerkt
+                </span>
+                <span
+                  class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-600">
+                  Getest & opgeleverd
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="rounded-[5px] border border-black/10 bg-white shadow-sm overflow-hidden">
+            <div class="h-44">
+              <!-- VERVANG: projectfoto -->
+              <img src="./assets/images/projects/project-02.jpg" alt="Warmtepomp installatie in Zaandam"
+                class="h-full w-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-5">
+              <div class="text-xs font-bold text-slate-600 uppercase tracking-wide">Warmtepomp</div>
+              <h3
+                class="mt-1 text-lg font-extrabold italic uppercase
+                       bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+                Zaandam
+              </h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Duurzame upgrade met focus op comfort en lager verbruik. Alles overzichtelijk ingesteld.
+              </p>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span
+                  class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-600">
+                  Comfort upgrade
+                </span>
+                <span
+                  class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-600">
+                  Duidelijke uitleg
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="rounded-[5px] border border-black/10 bg-white shadow-sm overflow-hidden">
+            <div class="h-44">
+              <!-- VERVANG: projectfoto -->
+              <img src="./assets/images/projects/project-03.jpg" alt="Zonnepanelen installatie in Krommenie"
+                class="h-full w-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-5">
+              <div class="text-xs font-bold text-slate-600 uppercase tracking-wide">Zonnepanelen</div>
+              <h3
+                class="mt-1 text-lg font-extrabold italic uppercase
+                       bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+                Krommenie
+              </h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Plaatsing met nette kabelroute en controle op opbrengst. Klaar voor jaren rendement.
+              </p>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span
+                  class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-600">
+                  Strakke afwerking
+                </span>
+                <span
+                  class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-600">
+                  Opbrengst check
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="rounded-[5px] border border-black/10 bg-white shadow-sm overflow-hidden">
+            <div class="h-44">
+              <!-- VERVANG: projectfoto -->
+              <img src="./assets/images/projects/project-04.jpg" alt="Multi-split airco installatie in Wormerveer"
+                class="h-full w-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-5">
+              <div class="text-xs font-bold text-slate-600 uppercase tracking-wide">Airco</div>
+              <h3
+                class="mt-1 text-lg font-extrabold italic uppercase
+                       bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+                Wormerveer
+              </h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Multi-split oplossing voor meerdere ruimtes. Netjes weggewerkt en perfect afgesteld.
+              </p>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span
+                  class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-600">
+                  Meerdere ruimtes
+                </span>
+                <span
+                  class="inline-flex items-center rounded-[5px] border border-black/10 px-2 py-1 text-xs text-slate-600">
+                  Maatwerk
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Rechts: team + CTA -->
+        <aside class="rounded-[5px] border border-black/10 bg-white shadow-sm p-5 sm:p-6">
+          <h3 class="text-lg font-extrabold italic uppercase
+                   bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+            Wie je over de vloer krijgt
+          </h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Geen ingehuurde ploeg. Je hebt direct contact met ons, en wij doen de installatie zelf.
+          </p>
+
+          <!-- Team photos -->
+          <div class="mt-5 grid grid-cols-2 gap-3">
+            <figure class="rounded-[5px] overflow-hidden border border-black/10">
+              <!-- Foto eigenaar -->
+              <img src="./assets/images/portraits/boy-den-brave.jpg" alt="Eigenaar Klimazon"
+                class="h-40 w-full object-cover" loading="lazy" />
+              <figcaption class="p-3">
+                <div class="text-sm font-semibold">Boy</div>
+                <div class="text-xs text-black/60">Eigenaar / Installateur</div>
+              </figcaption>
+            </figure>
+
+            <figure class="rounded-[5px] overflow-hidden border border-black/10">
+              <!-- Foto collega -->
+              <img src="./assets/images/portraits/tim.png" alt="Monteur Klimazon" class="h-40 w-full object-cover"
+                loading="lazy" />
+              <figcaption class="p-3">
+                <div class="text-sm font-semibold">Tim</div>
+                <div class="text-xs text-black/60">Installateur</div>
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Trust bullets -->
+          <ul class="mt-5 grid gap-2 text-sm text-slate-600">
+            <li class="flex gap-2"><span class="font-extrabold">✓</span>Netjes werken & strak afwerken</li>
+            <li class="flex gap-2"><span class="font-extrabold">✓</span>Duidelijke uitleg bij oplevering</li>
+            <li class="flex gap-2"><span class="font-extrabold">✓</span>Snelle service in de regio</li>
+          </ul>
+
+          <!-- CTA -->
+          <div class="mt-5 flex flex-col gap-2">
+            <a href="projecten.html" class="inline-flex items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
+                    text-[color:var(--kz-darkerblue)] border border-black/10 hover:bg-black/5">
+              Bekijk alle projecten
+            </a>
+            <a href="offerte.html"
+              class="inline-flex items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold text-white shadow-sm
+                    bg-[color:var(--kz-darkerblue)] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
+              Offerte aanvragen
+            </a>
+          </div>
+        </aside>
       </div>
     </div>
   </section>
