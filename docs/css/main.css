@@ -2619,6 +2619,10 @@ a {
   border-radius: 5px;
 }
 
+.rounded-\[8px\]{
+  border-radius: 8px;
+}
+
 .rounded-full{
   border-radius: 9999px;
 }
@@ -3162,6 +3166,10 @@ a {
   line-height: 2.25rem;
 }
 
+.text-\[10px\]{
+  font-size: 10px;
+}
+
 .text-\[11px\]{
   font-size: 11px;
 }
@@ -3458,12 +3466,12 @@ a {
   opacity: 0.03;
 }
 
-.opacity-\[0\.06\]{
-  opacity: 0.06;
-}
-
 .opacity-\[0\.04\]{
   opacity: 0.04;
+}
+
+.opacity-\[0\.06\]{
+  opacity: 0.06;
 }
 
 .bg-blend-normal{
@@ -3818,10 +3826,6 @@ a {
   -ms-overflow-style: none;
 }
 
-.\[grid-template-columns\:repeat\(1\2c minmax\(0\2c 1fr\)\)\]{
-  grid-template-columns: repeat(1,minmax(0,1fr));
-}
-
 .\[mask-image\:linear-gradient\(to_right\2c transparent\2c black\2c transparent\)\]{
   -webkit-mask-image: linear-gradient(to right,transparent,black,transparent);
           mask-image: linear-gradient(to right,transparent,black,transparent);
@@ -3929,6 +3933,10 @@ a {
   --tw-ring-color: var(--kz-darkerblue);
 }
 
+.focus\:ring-white\/60:focus{
+  --tw-ring-color: rgb(255 255 255 / 0.6);
+}
+
 .focus\:ring-offset-2:focus{
   --tw-ring-offset-width: 2px;
 }
@@ -4022,6 +4030,10 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .sm\:flex-row{
     flex-direction: row;
   }
@@ -4079,6 +4091,14 @@ a {
     line-height: 1;
   }
 
+  .sm\:text-\[12px\]{
+    font-size: 12px;
+  }
+
+  .sm\:text-\[13px\]{
+    font-size: 13px;
+  }
+
   .sm\:text-\[3rem\]{
     font-size: 3rem;
   }
@@ -4107,6 +4127,14 @@ a {
     line-height: 1rem;
   }
 
+  .sm\:text-\[14px\]{
+    font-size: 14px;
+  }
+
+  .sm\:text-\[15px\]{
+    font-size: 15px;
+  }
+
   .sm\:underline{
     text-decoration-line: underline;
   }
@@ -4129,6 +4157,10 @@ a {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .md\:flex-row{
     flex-direction: row;
   }
@@ -4139,10 +4171,6 @@ a {
 
   .md\:justify-self-center{
     justify-self: center;
-  }
-
-  .md\:\[grid-template-columns\:repeat\(4\2c minmax\(0\2c 1fr\)\)\]{
-    grid-template-columns: repeat(4,minmax(0,1fr));
   }
 }
 
@@ -4229,11 +4257,5 @@ a {
     .dark\:lg\:hover\:\[paint-order\:markers\]:hover{
       paint-order: markers;
     }
-  }
-}
-
-@media(min-width:380px){
-  .\[\@media\(min-width\:380px\)\]\:\[grid-template-columns\:repeat\(2\2c minmax\(0\2c 1fr\)\)\]{
-    grid-template-columns: repeat(2,minmax(0,1fr));
   }
 }
