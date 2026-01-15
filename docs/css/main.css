@@ -4030,10 +4030,6 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .sm\:grid-cols-4{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .sm\:flex-row{
     flex-direction: row;
   }
@@ -4052,10 +4048,6 @@ a {
 
   .sm\:gap-4{
     gap: 1rem;
-  }
-
-  .sm\:p-5{
-    padding: 1.25rem;
   }
 
   .sm\:p-6{
@@ -4095,8 +4087,8 @@ a {
     font-size: 12px;
   }
 
-  .sm\:text-\[13px\]{
-    font-size: 13px;
+  .sm\:text-\[15px\]{
+    font-size: 15px;
   }
 
   .sm\:text-\[3rem\]{
@@ -4120,19 +4112,6 @@ a {
   .sm\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-
-  .sm\:text-xs{
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
-  .sm\:text-\[14px\]{
-    font-size: 14px;
-  }
-
-  .sm\:text-\[15px\]{
-    font-size: 15px;
   }
 
   .sm\:underline{
