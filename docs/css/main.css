@@ -1488,6 +1488,10 @@ a {
   margin-top: 1.4rem;
 }
 
+.mb-\[10rem\]{
+  margin-bottom: 10rem;
+}
+
 .box-border{
   box-sizing: border-box;
 }
