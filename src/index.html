@@ -88,7 +88,7 @@
     </div>
 
     <!-- Navbar -->
-    <header class="bg-white/90 backdrop-blur border-b border-black/10">
+    <header class="bg-white/90 backdrop-blur border-b border-black/10 shadow-md shadow-black/8">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
           <!-- Brand -->
@@ -302,7 +302,7 @@
     </div>
 
     <div class="relative mx-auto w-full max-w-7xl px-6 py-8 lg:py-10">
-      <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-10">
+      <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-10 mb-16">
 
         <!-- LINKS -->
         <div class="w-full lg:flex-1">
@@ -374,16 +374,29 @@
         </div>
       </div>
     </div>
+
+    <!-- WAVE -->
+    <div class="absolute bottom-0 left-0 w-full pointer-events-none">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="block w-full h-[100px]">
+        <path d="M0,80 
+         C240,40 480,40 720,60 
+         960,80 1200,80 1440,60 
+         L1440,120 L0,120 Z" fill="#ffffff" />
+      </svg>
+    </div>
+
   </section>
 
   <!-- SERVICES SLIDER (2 pages: Particulier + Zakelijk) -->
-  <section class="w-full">
+  <section class="w-full bg-white">
     <div class="mx-auto max-w-6xl">
 
       <!-- Slider card -->
-      <div id="servicesCard" class="relative overflow-hidden">
+      <div id="servicesCard" class="relative overflow-hidden touch-pan-y">
+
         <!-- Track -->
-        <div id="servicesTrack" class="relative flex transition-transform duration-500 ease-in-out">
+        <div id="servicesTrack"
+          class="relative flex transition-transform duration-500 ease-in-out will-change-transform">
           <!-- Slide 1: Particulier -->
           <div class="w-full shrink-0 px-6 pb-2">
 
@@ -697,15 +710,15 @@
       <!-- Header -->
       <div class="mx-auto max-w-3xl text-center">
         <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight italic uppercase text-white/90">
-          Meest geplaatste installaties
+          Recente installaties
         </h2>
         <p class="mt-3 text-sm sm:text-base lg:text-lg font-medium text-white/90">
-          Betrouwbare systemen die wij dagelijks installeren bij woningen en bedrijven. Stil, zuinig en strak afgewerkt.
+          Betrouwbare systemen die wij recent bij woningen en bedrijven hebben geïnstalleerd. Stil, zuinig en strak afgewerkt.
         </p>
       </div>
 
       <!-- Cards (super responsive) -->
-      <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 lg:gap-5">
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-5 px-8 sm:px-0">
 
         <!-- Card 1 -->
         <a href="./mitsubishi-msz-ap" class="group rounded-[10px] border border-black/10 bg-white shadow-sm overflow-hidden
@@ -742,7 +755,8 @@
             <img data-rotator data-images='[
       "./assets/images/products/mitsubishi-msz-ln.webp",
       "./assets/images/products/mitsubishi-msz-ln-2.png"
-    ]' data-interval="6500" src="./assets/images/products/mitsubishi-msz-ln.webp" alt="Mitsubishi Electric MSZ-LN airco"
+    ]' data-interval="6500" src="./assets/images/products/mitsubishi-msz-ln.webp"
+              alt="Mitsubishi Electric MSZ-LN airco"
               class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02] transition-opacity duration-500"
               loading="lazy" />
           </div>
@@ -771,7 +785,8 @@
             <img data-rotator data-images='[
       "./assets/images/products/mitsubishi-multisplit.webp",
       "./assets/images/products/mitsubishi-multisplit-2.jpg"
-    ]' data-interval="6500" src="./assets/images/products/mitsubishi-multisplit.webp" alt="Mitsubishi Multi-split airco installatie"
+    ]' data-interval="6500" src="./assets/images/products/mitsubishi-multisplit.webp"
+              alt="Mitsubishi Multi-split airco installatie"
               class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02] transition-opacity duration-500"
               loading="lazy" />
           </div>
@@ -939,7 +954,7 @@
       </div>
 
       <!-- Included + CTA -->
-      <div class="mt-6 rounded-[10px] border border-black/10 bg-white shadow-sm overflow-hidden">
+      <div class="mt-6 mx-8 sm:mx-0 rounded-[10px] border border-black/10 bg-white shadow-sm overflow-hidden">
         <div class="p-5 sm:p-6 lg:p-7 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           <div>
             <div class="text-sm sm:text-base font-extrabold italic uppercase
