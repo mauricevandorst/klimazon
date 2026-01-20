@@ -1122,7 +1122,7 @@ a {
 /* All services button */
 
 #allServicesBtn::before {
-  content: "Bekijk meer diensten";
+  content: "Bekijk alle diensten →";
 }
 
 #allServicesBtn.is-business {
@@ -1130,14 +1130,29 @@ a {
 }
 
 #allServicesBtn:not(.is-business) {
-  background: linear-gradient(to right,
-        var(--kz-darkerblue),
-        var(--kz-blue));
+  background: var(--kz-darkerblue);
 }
 
 #allServicesBtn.is-business::before {
-  content: "Bekijk zakelijke diensten";
+  content: "Bekijk zakelijke diensten →";
   color: white;
+}
+
+/* Badge in service cards */
+
+.badge{
+  border-radius: 9999px;
+  background-color: var(--kz-blue);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 /* Hide horizontal scrollbar but keep scrolling */
@@ -1307,12 +1322,24 @@ a {
   left: 50%;
 }
 
+.left-16{
+  left: 4rem;
+}
+
 .right-0{
   right: 0px;
 }
 
+.right-6{
+  right: 1.5rem;
+}
+
 .top-0{
   top: 0px;
+}
+
+.top-4{
+  top: 1rem;
 }
 
 .isolate{
@@ -1400,9 +1427,19 @@ a {
   margin-right: -1.5rem;
 }
 
+.mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-16{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .my-2{
@@ -1410,9 +1447,9 @@ a {
   margin-bottom: 0.5rem;
 }
 
-.mx-8{
-  margin-left: 2rem;
-  margin-right: 2rem;
+.my-12{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .mb-1{
@@ -1431,10 +1468,6 @@ a {
   margin-bottom: 1rem;
 }
 
-.mb-5{
-  margin-bottom: 1.25rem;
-}
-
 .mb-6{
   margin-bottom: 1.5rem;
 }
@@ -1451,10 +1484,6 @@ a {
   margin-inline-end: 1rem;
 }
 
-.me-\[0\.9rem\]{
-  margin-inline-end: 0.9rem;
-}
-
 .ml-2{
   margin-left: 0.5rem;
 }
@@ -1465,10 +1494,6 @@ a {
 
 .ml-auto{
   margin-left: auto;
-}
-
-.ms-\[0\.7rem\]{
-  margin-inline-start: 0.7rem;
 }
 
 .mt-1{
@@ -1491,10 +1516,6 @@ a {
   margin-top: 1.25rem;
 }
 
-.mt-6{
-  margin-top: 1.5rem;
-}
-
 .mt-7{
   margin-top: 1.75rem;
 }
@@ -1513,6 +1534,13 @@ a {
 
 .box-content{
   box-sizing: content-box;
+}
+
+.line-clamp-2{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .line-clamp-none{
@@ -1606,8 +1634,8 @@ a {
   display: none;
 }
 
-.aspect-\[16\/10\]{
-  aspect-ratio: 16/10;
+.aspect-\[16\/8\]{
+  aspect-ratio: 16/8;
 }
 
 .h-10{
@@ -1785,6 +1813,11 @@ a {
 
 .-translate-x-1\/2{
   --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/2{
+  --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3096,6 +3129,14 @@ a {
   padding-bottom: 0.5rem;
 }
 
+.pb-4{
+  padding-bottom: 1rem;
+}
+
+.pb-8{
+  padding-bottom: 2rem;
+}
+
 .pb-\[0\.15rem\]{
   padding-bottom: 0.15rem;
 }
@@ -3114,6 +3155,10 @@ a {
 
 .pr-\[0\.3rem\]{
   padding-right: 0.3rem;
+}
+
+.pt-12{
+  padding-top: 3rem;
 }
 
 .pt-2{
@@ -3208,14 +3253,6 @@ a {
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-\[10px\]{
-  font-size: 10px;
-}
-
-.text-\[11px\]{
-  font-size: 11px;
 }
 
 .text-\[2\.5rem\]{
@@ -3361,6 +3398,10 @@ a {
 
 .text-\[\#336699\]\/\[\.35\]{
   color: rgb(51 102 153 / .35);
+}
+
+.text-\[color\:var\(--kz-blue\)\]{
+  color: var(--kz-blue);
 }
 
 .text-\[color\:var\(--kz-darkerblue\)\]{
@@ -3666,6 +3707,12 @@ a {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-lg{
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-md{
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -3792,12 +3839,6 @@ a {
 
 .transition{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-opacity{
-  transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -3978,6 +4019,10 @@ a {
   text-align: center;
 }
 
+.focus\:text-white\/90:focus{
+  color: rgb(255 255 255 / 0.9);
+}
+
 .focus\:outline-none:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -3991,10 +4036,6 @@ a {
 
 .focus\:ring-\[color\:var\(--kz-darkerblue\)\]:focus{
   --tw-ring-color: var(--kz-darkerblue);
-}
-
-.focus\:ring-white\/60:focus{
-  --tw-ring-color: rgb(255 255 255 / 0.6);
 }
 
 .focus\:ring-offset-2:focus{
@@ -4102,10 +4143,6 @@ a {
     justify-content: space-between;
   }
 
-  .sm\:gap-3{
-    gap: 0.75rem;
-  }
-
   .sm\:gap-4{
     gap: 1rem;
   }
@@ -4141,14 +4178,6 @@ a {
   .sm\:text-5xl{
     font-size: 3rem;
     line-height: 1;
-  }
-
-  .sm\:text-\[12px\]{
-    font-size: 12px;
-  }
-
-  .sm\:text-\[15px\]{
-    font-size: 15px;
   }
 
   .sm\:text-\[3rem\]{
@@ -4222,8 +4251,16 @@ a {
     grid-column: span 6 / span 6;
   }
 
+  .lg\:mb-\[6rem\]{
+    margin-bottom: 6rem;
+  }
+
   .lg\:ml-8{
     margin-left: 2rem;
+  }
+
+  .lg\:mt-8{
+    margin-top: 2rem;
   }
 
   .lg\:flex{
@@ -4258,20 +4295,12 @@ a {
     align-items: center;
   }
 
-  .lg\:justify-between{
-    justify-content: space-between;
-  }
-
   .lg\:gap-10{
     gap: 2.5rem;
   }
 
   .lg\:gap-5{
     gap: 1.25rem;
-  }
-
-  .lg\:p-7{
-    padding: 1.75rem;
   }
 
   .lg\:px-8{

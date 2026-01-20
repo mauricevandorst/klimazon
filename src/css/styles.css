@@ -381,7 +381,7 @@
 
   /* All services button */
   #allServicesBtn::before {
-    content: "Bekijk meer diensten";
+    content: "Bekijk alle diensten →";
   }
 
   #allServicesBtn.is-business {
@@ -389,14 +389,19 @@
   }
 
   #allServicesBtn:not(.is-business) {
-    background: linear-gradient(to right,
-        var(--kz-darkerblue),
-        var(--kz-blue));
+    background: var(--kz-darkerblue);
   }
 
   #allServicesBtn.is-business::before {
-    content: "Bekijk zakelijke diensten";
+    content: "Bekijk zakelijke diensten →";
     color: white;
+  }
+
+  /* Badge in service cards */
+  .badge {
+    @apply rounded-full bg-[color:var(--kz-blue)]
+           px-3 py-1 text-[10px] font-medium
+           uppercase tracking-wider text-white;
   }
 
   /* Hide horizontal scrollbar but keep scrolling */
