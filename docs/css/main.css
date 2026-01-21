@@ -3974,8 +3974,8 @@ a {
   background-image: url('../assets/images/bg/pattern.webp');
 }
 
-.\[background-position\:70\%_10\%\]{
-  background-position: 70% 10%;
+.\[background-position\:70\%_20\%\]{
+  background-position: 70% 20%;
 }
 
 .\[mask-image\:linear-gradient\(to_right\2c transparent\2c black\2c transparent\)\]{
@@ -4273,10 +4273,6 @@ a {
     display: none;
   }
 
-  .md\:w-1\/2{
-    width: 50%;
-  }
-
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -4287,10 +4283,6 @@ a {
 
   .md\:flex-row{
     flex-direction: row;
-  }
-
-  .md\:items-center{
-    align-items: center;
   }
 
   .md\:justify-self-end{
@@ -4385,10 +4377,6 @@ a {
   .lg\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
-  }
-
-  .lg\:\[background-position\:68\%_50\%\]{
-    background-position: 68% 50%;
   }
 }
 
