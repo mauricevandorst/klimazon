@@ -1316,6 +1316,10 @@ a {
   bottom: 0px;
 }
 
+.bottom-6{
+  bottom: 1.5rem;
+}
+
 .end-1{
   inset-inline-end: 0.25rem;
 }
@@ -1433,11 +1437,6 @@ a {
   margin-right: -1.5rem;
 }
 
-.mx-4{
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1464,10 +1463,6 @@ a {
 
 .mb-16{
   margin-bottom: 4rem;
-}
-
-.mb-3{
-  margin-bottom: 0.75rem;
 }
 
 .mb-4{
@@ -1655,6 +1650,10 @@ a {
   height: 2.5rem;
 }
 
+.h-12{
+  height: 3rem;
+}
+
 .h-16{
   height: 4rem;
 }
@@ -1691,6 +1690,10 @@ a {
   height: 18rem;
 }
 
+.h-8{
+  height: 2rem;
+}
+
 .h-\[100px\]{
   height: 100px;
 }
@@ -1711,6 +1714,10 @@ a {
   width: 2.5rem;
 }
 
+.w-12{
+  width: 3rem;
+}
+
 .w-16{
   width: 4rem;
 }
@@ -1729,6 +1736,10 @@ a {
 
 .w-72{
   width: 18rem;
+}
+
+.w-8{
+  width: 2rem;
 }
 
 .w-\[120rem\]{
@@ -1774,10 +1785,6 @@ a {
 
 .max-w-7xl{
   max-width: 80rem;
-}
-
-.max-w-full{
-  max-width: 100%;
 }
 
 .max-w-xl{
@@ -2720,6 +2727,10 @@ a {
   border-radius: 9999px;
 }
 
+.rounded-lg{
+  border-radius: 0.5rem;
+}
+
 .rounded-b{
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -2878,6 +2889,11 @@ a {
 .bg-emerald-500{
   --tw-bg-opacity: 1;
   background-color: rgb(16 185 129 / var(--tw-bg-opacity, 1));
+}
+
+.bg-green-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity, 1));
 }
 
 .bg-slate-900{
@@ -3156,10 +3172,6 @@ a {
   padding-bottom: 0.5rem;
 }
 
-.pb-4{
-  padding-bottom: 1rem;
-}
-
 .pb-5{
   padding-bottom: 1.25rem;
 }
@@ -3206,10 +3218,6 @@ a {
 
 .pt-\[0\.2rem\]{
   padding-top: 0.2rem;
-}
-
-.pt-\[0\.55rem\]{
-  padding-top: 0.55rem;
 }
 
 .text-left{
@@ -3502,14 +3510,6 @@ a {
 .text-yellow-400{
   --tw-text-opacity: 1;
   color: rgb(250 204 21 / var(--tw-text-opacity, 1));
-}
-
-.text-white\/80{
-  color: rgb(255 255 255 / 0.8);
-}
-
-.text-white\/85{
-  color: rgb(255 255 255 / 0.85);
 }
 
 .underline{
@@ -3880,6 +3880,12 @@ a {
   transition-duration: 150ms;
 }
 
+.transition-colors{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-transform{
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -3964,6 +3970,14 @@ a {
   -ms-overflow-style: none;
 }
 
+.\[background-image\:url\(\'\.\.\/assets\/images\/bg\/pattern\.webp\'\)\]{
+  background-image: url('../assets/images/bg/pattern.webp');
+}
+
+.\[background-position\:70\%_10\%\]{
+  background-position: 70% 10%;
+}
+
 .\[mask-image\:linear-gradient\(to_right\2c transparent\2c black\2c transparent\)\]{
   -webkit-mask-image: linear-gradient(to right,transparent,black,transparent);
           mask-image: linear-gradient(to right,transparent,black,transparent);
@@ -4016,6 +4030,11 @@ a {
 
 .hover\:bg-black\/5:hover{
   background-color: rgb(0 0 0 / 0.05);
+}
+
+.hover\:bg-green-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:font-bold:hover{
@@ -4115,11 +4134,6 @@ a {
     margin-right: 0px;
   }
 
-  .sm\:mx-\[1rem\]{
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
   .sm\:me-2{
     margin-inline-end: 0.5rem;
   }
@@ -4208,10 +4222,6 @@ a {
     padding-bottom: 3rem;
   }
 
-  .sm\:pt-\[1\.25rem\]{
-    padding-top: 1.25rem;
-  }
-
   .sm\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -4263,6 +4273,10 @@ a {
     display: none;
   }
 
+  .md\:w-1\/2{
+    width: 50%;
+  }
+
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -4275,12 +4289,20 @@ a {
     flex-direction: row;
   }
 
+  .md\:items-center{
+    align-items: center;
+  }
+
   .md\:justify-self-end{
     justify-self: end;
   }
 
   .md\:justify-self-center{
     justify-self: center;
+  }
+
+  .md\:\[background-position\:80\%_50\%\]{
+    background-position: 80% 50%;
   }
 }
 
@@ -4311,6 +4333,10 @@ a {
 
   .lg\:hidden{
     display: none;
+  }
+
+  .lg\:w-1\/2{
+    width: 50%;
   }
 
   .lg\:max-w-\[420px\]{
@@ -4359,6 +4385,10 @@ a {
   .lg\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:\[background-position\:68\%_50\%\]{
+    background-position: 68% 50%;
   }
 }
 
