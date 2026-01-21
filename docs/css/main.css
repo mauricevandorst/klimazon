@@ -3594,6 +3594,10 @@ a {
   opacity: 0.06;
 }
 
+.opacity-10{
+  opacity: 0.1;
+}
+
 .bg-blend-normal{
   background-blend-mode: normal;
 }
@@ -3984,6 +3988,10 @@ a {
 
 .\[background-position\:0\%_20\%\]{
   background-position: 0% 20%;
+}
+
+.\[background-position\:100\%_20\%\]{
+  background-position: 100% 20%;
 }
 
 .\[background-position\:70\%_20\%\]{
