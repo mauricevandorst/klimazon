@@ -1352,6 +1352,10 @@ a {
   top: 1rem;
 }
 
+.bottom-\[-1px\]{
+  bottom: -1px;
+}
+
 .isolate{
   isolation: isolate;
 }
@@ -1527,6 +1531,10 @@ a {
 
 .mt-\[1\.4rem\]{
   margin-top: 1.4rem;
+}
+
+.mt-12{
+  margin-top: 3rem;
 }
 
 .box-border{
@@ -3562,6 +3570,10 @@ a {
   opacity: 0;
 }
 
+.opacity-10{
+  opacity: 0.1;
+}
+
 .opacity-20{
   opacity: 0.2;
 }
@@ -3592,10 +3604,6 @@ a {
 
 .opacity-\[0\.06\]{
   opacity: 0.06;
-}
-
-.opacity-10{
-  opacity: 0.1;
 }
 
 .bg-blend-normal{
@@ -3992,10 +4000,6 @@ a {
 
 .\[background-position\:100\%_20\%\]{
   background-position: 100% 20%;
-}
-
-.\[background-position\:70\%_20\%\]{
-  background-position: 70% 20%;
 }
 
 .\[mask-image\:linear-gradient\(to_right\2c transparent\2c black\2c transparent\)\]{
