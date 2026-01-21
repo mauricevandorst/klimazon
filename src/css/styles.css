@@ -381,7 +381,7 @@
 
   /* All services button */
   #allServicesBtn::before {
-    content: "Bekijk alle diensten →";
+    content: "Bekijk alle diensten";
   }
 
   #allServicesBtn.is-business {
@@ -393,7 +393,7 @@
   }
 
   #allServicesBtn.is-business::before {
-    content: "Bekijk zakelijke diensten →";
+    content: "Bekijk zakelijke diensten";
     color: white;
   }
 

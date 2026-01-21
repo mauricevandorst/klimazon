@@ -1122,7 +1122,7 @@ a {
 /* All services button */
 
 #allServicesBtn::before {
-  content: "Bekijk alle diensten →";
+  content: "Bekijk alle diensten";
 }
 
 #allServicesBtn.is-business {
@@ -1134,7 +1134,7 @@ a {
 }
 
 #allServicesBtn.is-business::before {
-  content: "Bekijk zakelijke diensten →";
+  content: "Bekijk zakelijke diensten";
   color: white;
 }
 
@@ -1453,6 +1453,11 @@ a {
   margin-bottom: 0.5rem;
 }
 
+.my-8{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mb-1{
   margin-bottom: 0.25rem;
 }
@@ -1694,6 +1699,10 @@ a {
   height: 2px;
 }
 
+.h-auto{
+  height: auto;
+}
+
 .h-full{
   height: 100%;
 }
@@ -1765,6 +1774,10 @@ a {
 
 .max-w-7xl{
   max-width: 80rem;
+}
+
+.max-w-full{
+  max-width: 100%;
 }
 
 .max-w-xl{
@@ -3390,6 +3403,10 @@ a {
   line-height: 1.2;
 }
 
+.leading-\[2em\]{
+  line-height: 2em;
+}
+
 .leading-none{
   line-height: 1;
 }
@@ -3485,6 +3502,14 @@ a {
 .text-yellow-400{
   --tw-text-opacity: 1;
   color: rgb(250 204 21 / var(--tw-text-opacity, 1));
+}
+
+.text-white\/80{
+  color: rgb(255 255 255 / 0.8);
+}
+
+.text-white\/85{
+  color: rgb(255 255 255 / 0.85);
 }
 
 .underline{
@@ -3710,6 +3735,12 @@ a {
 .shadow{
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_0_10px_rgba\(0\2c 0\2c 0\2c 0\.15\)\]{
+  --tw-shadow: 0 0 10px rgba(0,0,0,0.15);
+  --tw-shadow-colored: 0 0 10px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 

@@ -301,13 +301,14 @@
       </div>
     </div>
 
-    <div class="relative mx-auto w-full max-w-7xl px-6 py-8 lg:py-10 z-10 mb-16 lg:mt-8 lg:mb-[6rem]">
+    <div
+      class="relative flex flex-col gap-4 mx-auto w-full max-w-7xl px-6 py-8 lg:py-10 z-10 mb-16 lg:mt-8 lg:mb-[6rem]">
       <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-10">
 
         <!-- LINKS -->
         <div class="w-full lg:flex-1">
           <div class="max-w-xl lg:max-w-[420px]">
-            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white italic">
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white/90 italic">
               KLIMAAT- EN ZONTECHNIEK
             </h1>
             <p class="mt-4 font-medium text-m text-white/90">
@@ -373,6 +374,12 @@
           </div>
 
         </div>
+      </div>
+      <div class="w-full flex justify-center mt-4">
+        <a href="./offerte" class="sm:hidden inline-flex w-full items-center justify-center rounded-[8px] px-4 py-2 text-sm font-semibold
+                   bg-white/10 text-white focus:text-white/90">
+          Offerte aanvragen
+        </a>
       </div>
     </div>
 
@@ -577,7 +584,7 @@
 
   <!-- PROJECTEN: Recent geplaatst -->
   <section class="relative w-full overflow-hidden bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))]">
-    <!-- Background marquee (lighter, responsive, less DOM-heavy) -->
+    <!-- Background (lighter, responsive, less DOM-heavy) -->
     <div class="pointer-events-none absolute inset-0 z-0">
       <div class="absolute -top-10 left-1/2 w-[120rem] -translate-x-1/2 opacity-[0.03]" aria-hidden="true">
         <div class="flex flex-col whitespace-nowrap uppercase font-extrabold italic tracking-tight text-white
@@ -803,7 +810,7 @@
     <!-- Titel -->
     <div class="flex flex-col items-center mb-8">
       <h2
-        class="text-2xl sm:text-3xl px-2 text-center font-extrabold tracking-tight italic uppercase bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+        class="text-2xl sm:text-3xl px-4 text-center font-extrabold tracking-tight italic uppercase bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
         Wat zeggen onze klanten?
       </h2>
     </div>
@@ -817,7 +824,7 @@
 
   <!-- MARQUEE: merken die we installeren -->
   <section
-    class="relative w-full bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] overflow-hidden pt-8">
+    class="relative w-full bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] overflow-hidden">
 
     <!-- ACHTERGRONDTEXT (over het blauwe vlak) -->
     <div class="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
@@ -835,21 +842,9 @@
       </div>
     </div>
 
-    <!-- Titel -->
-    <div class="flex flex-col mb-3 mx-4 gap-4 text-center">
-      <h2 class="text-2xl sm:mx-[1rem] sm:pt-[1.25rem] pt-[0.55rem]
-             sm:text-3xl w-full uppercase font-extrabold tracking-tight italic text-white">
-        <span class="hidden sm:block">Merken die wij installeren</span>
-        <span class="block sm:hidden">Onze topmerken</span>
-      </h2>
-      <p class="font-medium text-sm text-white/90">
-        Wij hebben de expertise in huis om betrouwbare merken vakkundig te installeren. 
-      </p>
-    </div>
-
     <!-- Marquee wrapper -->
     <div class="mx-auto">
-      <div class="relative overflow-hidden rounded-2xl pb-4">
+      <div class="relative overflow-hidden rounded-2xl">
 
         <!-- Edge fades -->
         <div class="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-24 z-20
@@ -892,6 +887,33 @@
       </div>
     </div>
 
+  </section>
+
+  <!-- ONS VERHAAL: Noord-Holland specialist -->
+  <section class="w-full flex flex-col gap-4 my-8 px-4 overflow-hidden">
+    <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-700">
+      Klimaat- en zontechniek installateur uit Noord-Holland
+    </h2>
+    <p class="max-w-3xl mx-auto text-sm font-medium leading-[2em] sm:text-base text-slate-700">
+      Ben jij op zoek naar een lokale specialist in duurzame energie- en klimaattechniek in de regio 
+      Noord-Holland? Wij bieden op maat gemaakte oplossingen voor zowel particuliere als zakelijke klanten, 
+      waaronder airconditioning, warmtepompen, zonnepanelen en thuisbatterijen.
+    </p>
+    <p class="max-w-3xl mx-auto text-sm font-medium leading-[2em] sm:text-base text-slate-700">Met onze expertise en
+      hoogwaardige
+      producten helpen wij jou om comfortabeler te wonen of werken, terwijl je
+      tegelijkertijd bijdraagt aan een duurzamere toekomst. Kies voor Klimazon
+      en ervaar het verschil van professionele installatie en uitstekende service.
+    </p>
+    <div class="w-full flex justify-center mt-4">
+      <a href="./offerte" class="sm:hidden inline-flex w-full items-center justify-center rounded-[8px] px-4 py-2 text-sm font-semibold
+                   bg-[color:var(--kz-darkerblue)] text-white focus:text-white/90">
+        Offerte aanvragen
+      </a>
+    </div>
+    <img src="./assets/images/portraits/duurzame-installaties-noord-holland.jpg"
+      alt="Duurzame installaties in Noord-Holland"
+      class="mx-auto mt-4 w-full max-w-3xl h-auto max-w-full inline-block align-middle shadow-[0_0_10px_rgba(0,0,0,0.15)]" />
   </section>
 
   <!-- WERKGEBIED: Lokale SEO -->
