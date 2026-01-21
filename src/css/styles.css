@@ -399,9 +399,9 @@
 
   /* Badge in service cards */
   .badge {
-    @apply rounded-full bg-[color:var(--kz-blue)]
-           px-3 py-1 text-[10px] font-medium
-           uppercase tracking-wider text-white;
+    @apply rounded-full bg-white
+           px-3 py-1 text-[12px] font-medium
+           capitalize tracking-wider text-slate-600;
   }
 
   /* Hide horizontal scrollbar but keep scrolling */
