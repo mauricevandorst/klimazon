@@ -1842,6 +1842,10 @@ a {
   border-collapse: separate;
 }
 
+.origin-center{
+  transform-origin: center;
+}
+
 .-translate-x-1\/2{
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1849,6 +1853,21 @@ a {
 
 .-translate-y-1\/2{
   --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-180{
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-\[190deg\]{
+  --tw-rotate: 190deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-\[-8deg\]{
+  --tw-rotate: -8deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3609,6 +3628,10 @@ a {
   opacity: 0.06;
 }
 
+.opacity-30{
+  opacity: 0.3;
+}
+
 .bg-blend-normal{
   background-blend-mode: normal;
 }
@@ -4001,6 +4024,10 @@ a {
   background-image: url('../assets/images/bg/pattern-2.webp');
 }
 
+.\[background-image\:url\(\'\.\.\/assets\/images\/bg\/pattern-3\.webp\'\)\]{
+  background-image: url('../assets/images/bg/pattern-3.webp');
+}
+
 .\[background-position\:0\%_20\%\]{
   background-position: 0% 20%;
 }
@@ -4009,8 +4036,36 @@ a {
   background-position: 100% 20%;
 }
 
+.\[background-position\:20\%_80\%\]{
+  background-position: 20% 80%;
+}
+
+.\[background-position\:20\%_90\%\]{
+  background-position: 20% 90%;
+}
+
+.\[background-position\:25\%_80\%\]{
+  background-position: 25% 80%;
+}
+
+.\[background-position\:30\%_80\%\]{
+  background-position: 30% 80%;
+}
+
 .\[background-position\:50\%_100\%\]{
   background-position: 50% 100%;
+}
+
+.\[background-position\:80\%_25\%\]{
+  background-position: 80% 25%;
+}
+
+.\[background-position\:90\%_20\%\]{
+  background-position: 90% 20%;
+}
+
+.\[background-size\:20\%_auto\]{
+  background-size: 20% auto;
 }
 
 .\[mask-image\:linear-gradient\(to_right\2c transparent\2c black\2c transparent\)\]{
@@ -4072,6 +4127,10 @@ a {
   background-color: rgb(22 163 74 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-white\/15:hover{
+  background-color: rgb(255 255 255 / 0.15);
+}
+
 .hover\:font-bold:hover{
   font-weight: 700;
 }
@@ -4092,6 +4151,10 @@ a {
 
 .hover\:opacity-90:hover{
   opacity: 0.9;
+}
+
+.hover\:opacity-95:hover{
+  opacity: 0.95;
 }
 
 .hover\:shadow-md:hover{
@@ -4139,6 +4202,11 @@ a {
 
 .hover\:focus\:text-center:focus:hover{
   text-align: center;
+}
+
+.group:hover .group-hover\:translate-x-1{
+  --tw-translate-x: 0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .group:hover .group-hover\:scale-\[1\.02\]{
@@ -4336,8 +4404,16 @@ a {
     justify-self: center;
   }
 
+  .md\:opacity-5{
+    opacity: 0.05;
+  }
+
   .md\:\[background-position\:0\%_50\%\]{
     background-position: 0% 50%;
+  }
+
+  .md\:\[background-position\:50\%_80\%\]{
+    background-position: 50% 80%;
   }
 
   .md\:\[background-position\:80\%_50\%\]{
@@ -4354,8 +4430,8 @@ a {
     grid-column: span 6 / span 6;
   }
 
-  .lg\:mb-\[6rem\]{
-    margin-bottom: 6rem;
+  .lg\:mb-\[3rem\]{
+    margin-bottom: 3rem;
   }
 
   .lg\:ml-8{
@@ -4364,14 +4440,6 @@ a {
 
   .lg\:mt-8{
     margin-top: 2rem;
-  }
-
-  .lg\:mb-\[2rem\]{
-    margin-bottom: 2rem;
-  }
-
-  .lg\:mb-\[3rem\]{
-    margin-bottom: 3rem;
   }
 
   .lg\:flex{
