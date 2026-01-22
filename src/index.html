@@ -307,7 +307,7 @@
     </div>
 
     <div
-      class="relative flex flex-col gap-4 mx-auto w-full max-w-7xl px-6 py-8 lg:py-10 z-10 mb-16 lg:mt-8 lg:mb-[6rem]">
+      class="relative flex flex-col gap-4 mx-auto w-full max-w-7xl px-6 py-8 lg:py-10 z-10 mb-16 lg:mt-8 lg:mb-[3rem]">
       <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-10">
 
         <!-- LINKS -->
@@ -404,7 +404,9 @@
   </section>
 
   <!-- SERVICES SLIDER (2 pages: Particulier + Zakelijk) -->
-  <section class="w-full bg-white mb-16">
+  <section class="w-full relative bg-white pb-16">
+
+    <!-- Services container -->
     <div class="mx-auto max-w-6xl">
 
       <!-- Slider card -->
@@ -585,6 +587,13 @@
         </div>
       </div>
     </div>
+
+    <!-- Achtergrond onderaan -->
+    <div class="pointer-events-none absolute inset-0 opacity-10
+       bg-no-repeat bg-contain
+       [background-image:url('../assets/images/bg/Zaanstreek.webp')]
+       [background-position:50%_100%]">
+    </div>
   </section>
 
   <!-- PROJECTEN: Recent geplaatst -->
@@ -637,8 +646,7 @@
           Recente installaties
         </h2>
         <p class="mt-3 text-sm sm:text-base lg:text-lg font-medium text-white/90">
-          Betrouwbare systemen die wij onlangs bij woningen en bedrijven hebben geïnstalleerd. Stil, zuinig en strak
-          afgewerkt.
+          Diensten die wij onlangs bij woningen en bedrijven hebben uitgevoerd. Met zorg en vakmanschap.
         </p>
       </div>
 
@@ -801,7 +809,7 @@
       </div>
 
       <!-- CTA -->
-      <div class="w-full flex justify-center mt-4">
+      <div class="w-full flex justify-center mt-8">
         <a href="./diensten.html" class="inline-flex items-center justify-center rounded-[8px] px-4 py-2 text-m font-semibold
                    text-white focus:text-white/90">
           Bekijk alle diensten →
@@ -811,7 +819,8 @@
   </section>
 
   <!-- Google reviews Widget -->
-  <section class="w-full mt-12 overflow-hidden">
+  <section class="w-full relative mt-12 overflow-hidden">
+
     <!-- Titel -->
     <div class="flex flex-col items-center">
       <h2
@@ -822,7 +831,8 @@
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <!-- Featurable widget -->
-      <div id="featurable-83354f56-799b-4356-bd75-5967171330f0" data-featurable-async ></div><script src="https://featurable.com/assets/bundle.js" defer charset="UTF-8"></script>
+      <div id="featurable-83354f56-799b-4356-bd75-5967171330f0" data-featurable-async></div>
+      <script src="https://featurable.com/assets/bundle.js" defer charset="UTF-8"></script>
     </div>
   </section>
 
@@ -909,39 +919,42 @@
     </div>
 
     <!-- content -->
-    <div class="relative z-10 mx-auto max-w-6xl flex flex-col-reverse lg:flex-row lg:items-center gap-8">
-      <div class="w-full lg:w-1/2">
+    <div class="relative z-10 mx-auto max-w-6xl flex flex-col-reverse md:flex-row md:items-center gap-8">
+      <div class="w-full md:w-1/2 flex justify-center">
         <img src="./assets/images/portraits/duurzame-installaties-noord-holland.jpg"
           alt="Duurzame installaties in Noord-Holland"
           class="w-full h-auto rounded-lg shadow-[0_0_10px_rgba(0,0,0,0.15)]" />
       </div>
 
-      <div class="w-full lg:w-1/2 flex flex-col gap-4">
+      <div class="w-full md:w-1/2 flex flex-col gap-4">
         <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-700">
           Klimaat- en zontechniek installateur uit Noord-Holland
         </h2>
 
         <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">
-          Ben jij op zoek naar een lokale specialist in duurzame energie- en klimaattechniek in de regio
+          Ben jij op zoek naar een lokale specialist in <strong>duurzame energie- en klimaattechniek</strong> in de
+          regio
           Noord-Holland? Wij bieden op maat gemaakte oplossingen voor zowel particuliere als zakelijke klanten,
           waaronder airconditioning, warmtepompen, zonnepanelen en thuisbatterijen.
         </p>
 
         <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">
-          Met onze expertise, ruime ervaring en topselectie producten helpen wij jou om comfortabeler te wonen of werken, terwijl je
-          tegelijkertijd bijdraagt aan een duurzamere toekomst. Kies voor Klimazon en ervaar het verschil van
+          Met onze expertise, ruime ervaring en topselectie producten helpen wij jou om <strong>comfortabeler te wonen
+            of werken</strong>, terwijl je
+          tegelijkertijd bijdraagt aan een duurzamere toekomst. <strong>Kies voor Klimazon</strong> en ervaar het
+          verschil van
           professionele installatie en uitstekende service.
         </p>
 
         <a href="./offerte"
-          class="inline-flex w-full items-center justify-center rounded-[8px] px-4 py-2 text-sm font-semibold text-slate-700
+          class="inline-flex gap-2 w-fit items-center justify-center rounded-[8px] px-4 py-2 text-sm font-semibold text-slate-700
                    border border-black/10 bg-[color:var(--kz-darkerblue)] text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
-          Offerte aanvragen
+          <span>Offerte aanvragen</span>
+          <span>→</span>
         </a>
       </div>
     </div>
   </section>
-
 
   <!-- WERKGEBIED: Lokale SEO -->
   <section class="hidden relative w-full py-10 overflow-hidden">
@@ -1299,7 +1312,7 @@
 
   <!-- Zwevend WhatsApp icoon (mobiel) -->
   <a href="https://wa.me/31612345678" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 flex items-center justify-center
-         w-12 h-12 rounded-full bg-green-500 shadow-lg md:hidden hover:bg-green-600 transition-colors"
+         w-12 h-12 rounded-full bg-green-500 shadow-lg lg:hidden hover:bg-green-600 transition-colors"
     aria-label="Chat via WhatsApp">
     <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552">
       <defs>
