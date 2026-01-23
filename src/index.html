@@ -353,7 +353,7 @@
             </div>
 
             <div href="./diensten.html" class="flex flex-col gap-1 p-4 justify-center">
-              <h3 class="text-sm font-bold text-[color:var(--kz-darkerblue)]">
+              <h3 class="text-sm font-bold text-slate-600">
                 PARTICULIERE KLANTEN
               </h3>
               <p class="text-xs sm:text-sm font-medium text-gray-600">
@@ -376,7 +376,7 @@
             </div>
 
             <div class="flex flex-col gap-1 p-4 justify-center">
-              <h3 class="text-sm font-bold text-[color:var(--kz-darkerblue)]">
+              <h3 class="text-sm font-bold text-slate-600">
                 ZAKELIJKE KLANTEN
               </h3>
               <p class="text-xs sm:text-sm font-medium text-gray-600">
@@ -393,9 +393,12 @@
         </div>
       </div>
       <div class="w-full flex justify-center mt-4">
-        <a href="./offerte" class="sm:hidden inline-flex w-full items-center justify-center rounded-[8px] px-4 py-2 text-sm font-semibold
-                   bg-white/10 text-white focus:text-white/90 hover:bg-white/15">
+        <a href="./offerte" class="group sm:hidden inline-flex gap-2 w-full items-center justify-center rounded-[8px] px-4 py-2 text-sm font-semibold
+                   bg-white/10 text-white focus:text-white/90 transition hover:opacity-90">
           Offerte aanvragen
+          <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
+            →
+          </span>
         </a>
       </div>
     </div>
@@ -591,9 +594,13 @@
 
         <!-- CTA to all services -->
         <div class="flex">
-          <a id="allServicesBtn" href="./diensten.html"
-            class="mx-auto mt-2 inline-flex items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold text-white shadow-sm
-                   bg-[color:var(--kz-darkerblue)] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
+          <a id="allServicesBtn" href="./diensten.html" class="group mx-auto my-2 inline-flex gap-1 items-center justify-center rounded-[5px] px-4 py-2
+            text-sm font-semibold text-white shadow-sm
+            bg-[color:var(--kz-darkerblue)] hover:opacity-90 transition
+            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
+            <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
           </a>
         </div>
       </div>
@@ -667,7 +674,7 @@
 
         <!-- Card 1 -->
         <a href="./zonnepanelen.html" class="group block overflow-hidden rounded-[10px] bg-white
-          inset-shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+          inset-shadow-sm transition hover:shadow-md">
 
           <!-- Image -->
           <div class="relative aspect-[16/8] overflow-hidden">
@@ -708,17 +715,18 @@
               Inclusief SolarEdge omvormer en Enphase micro-omvormers voor optimale opbrengst.
             </h3>
 
-            <span class="mt-2 inline-flex w-fit text-sm font-semibold
-                 text-[color:var(--kz-darkerblue)]
-                 transition hover:opacity-90">
+            <span class="group mt-2 inline-flex gap-1 w-fit text-sm font-semibold text-[color:var(--kz-darkerblue)]">
               Bekijk dienst
+              <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
             </span>
           </div>
         </a>
 
         <!-- Card 2 -->
         <a href="./airconditioning.html" class="group block overflow-hidden rounded-[10px] bg-white
-          inset-shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+          inset-shadow-sm transition hover:shadow-md">
 
           <!-- Image -->
           <div class="relative aspect-[16/8] overflow-hidden">
@@ -760,17 +768,18 @@
               Elke ruimte heeft zijn eigen klimaatbehoefte.
             </h3>
 
-            <span class="mt-2 inline-flex w-fit text-sm font-semibold
-                 text-[color:var(--kz-darkerblue)]
-                 transition hover:opacity-90">
+            <span class="group mt-2 inline-flex gap-1 w-fit text-sm font-semibold text-[color:var(--kz-darkerblue)]">
               Bekijk dienst
+              <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
             </span>
           </div>
         </a>
 
         <!-- Card 3 -->
         <a href="./thuisbatterij.html" class="group block overflow-hidden rounded-[10px] bg-white
-          inset-shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+          inset-shadow-sm transition hover:shadow-md">
 
           <!-- Image -->
           <div class="relative aspect-[16/8] overflow-hidden">
@@ -811,17 +820,18 @@
               Mooi systeem met zonnepanelen en thuisbatterij voor optimale zelfconsumptie van zonne-energie.
             </h3>
 
-            <span class="mt-2 inline-flex w-fit text-sm font-semibold
-                 text-[color:var(--kz-darkerblue)]
-                 transition hover:opacity-90">
+            <span class="group mt-2 inline-flex gap-1 w-fit text-sm font-semibold text-[color:var(--kz-darkerblue)]">
               Bekijk dienst
+              <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
             </span>
           </div>
         </a>
 
         <!-- Card 4 -->
         <a href="./zonnepanelen-zakelijk.html" class="group block overflow-hidden rounded-[10px] bg-white
-          inset-shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+          inset-shadow-sm transition hover:shadow-md">
 
           <!-- Image -->
           <div class="relative aspect-[16/8] overflow-hidden">
@@ -863,10 +873,11 @@
               wil ondernemen.
             </h3>
 
-            <span class="mt-2 inline-flex w-fit text-sm font-semibold
-                 text-[color:var(--kz-darkerblue)]
-                 transition hover:opacity-90">
+            <span class="group mt-2 inline-flex gap-1 w-fit text-sm font-semibold text-[color:var(--kz-darkerblue)]">
               Bekijk dienst
+              <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
             </span>
           </div>
         </a>
@@ -875,8 +886,8 @@
       <!-- CTA -->
       <div class="w-full flex justify-center mt-8">
         <a href="./diensten.html" class="group inline-flex items-center justify-center gap-1
-            rounded-[8px] px-4 py-2 text-m font-semibold
-            text-white transition hover:opacity-95">
+            rounded-[8px] px-4 text-m font-semibold
+            text-white transition hover:opacity-90">
           Bekijk alle diensten
           <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
             →
@@ -971,7 +982,7 @@
   </section>
 
   <!-- OVER ONS: Lokale installateur in Noord-Holland -->
-  <section class="relative w-full my-8 px-4 overflow-hidden">
+  <section class="relative w-full my-12 px-4 overflow-hidden">
     <!-- background overlay -->
     <div class="pointer-events-none absolute inset-0 opacity-10
            bg-no-repeat
@@ -1009,16 +1020,18 @@
         <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">
           Met onze expertise, ruime ervaring en topselectie producten helpen wij jou om <strong>comfortabeler te wonen
             of werken</strong>, terwijl je
-          tegelijkertijd bijdraagt aan een duurzamere toekomst. <strong>Kies voor Klimazon</strong> en ervaar het
+          tegelijkertijd bijdraagt aan een duurzamere toekomst. Kies voor Klimazon en ervaar het
           verschil van
-          professionele installatie en uitstekende service.
+          <strong>professionele installatie</strong> en uitstekende service.
         </p>
 
-        <a href="./offerte"
-          class="inline-flex gap-2 w-fit items-center justify-center rounded-[8px] px-4 py-2 text-sm font-semibold text-slate-700
-                   border border-black/10 bg-[color:var(--kz-darkerblue)] text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
-          <span>Offerte aanvragen</span>
-          <span>→</span>
+        <a href="./offerte.html" class="group inline-flex gap-2 w-fit items-center justify-center rounded-[8px] px-4 py-2 text-sm font-semibold text-slate-700
+                   border border-black/10 bg-[color:var(--kz-darkerblue)] text-white
+            text-white transition hover:opacity-95">
+          Offerte aanvragen
+          <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
+            →
+          </span>
         </a>
       </div>
     </div>

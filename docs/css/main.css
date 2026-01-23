@@ -1446,14 +1446,14 @@ a {
   margin-right: auto;
 }
 
+.my-12{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-.my-8{
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 .mb-1{
@@ -1853,21 +1853,6 @@ a {
 
 .-translate-y-1\/2{
   --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.rotate-180{
-  --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.rotate-\[190deg\]{
-  --tw-rotate: 190deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.rotate-\[-8deg\]{
-  --tw-rotate: -8deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3628,10 +3613,6 @@ a {
   opacity: 0.06;
 }
 
-.opacity-30{
-  opacity: 0.3;
-}
-
 .bg-blend-normal{
   background-blend-mode: normal;
 }
@@ -4036,32 +4017,12 @@ a {
   background-position: 100% 20%;
 }
 
-.\[background-position\:20\%_80\%\]{
-  background-position: 20% 80%;
-}
-
-.\[background-position\:20\%_90\%\]{
-  background-position: 20% 90%;
-}
-
-.\[background-position\:25\%_80\%\]{
-  background-position: 25% 80%;
-}
-
-.\[background-position\:30\%_80\%\]{
-  background-position: 30% 80%;
-}
-
 .\[background-position\:50\%_100\%\]{
   background-position: 50% 100%;
 }
 
 .\[background-position\:80\%_25\%\]{
   background-position: 80% 25%;
-}
-
-.\[background-position\:90\%_20\%\]{
-  background-position: 90% 20%;
 }
 
 .\[background-size\:20\%_auto\]{
@@ -4113,11 +4074,6 @@ a {
   }
 }
 
-.hover\:-translate-y-0\.5:hover{
-  --tw-translate-y: -0.125rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .hover\:bg-black\/5:hover{
   background-color: rgb(0 0 0 / 0.05);
 }
@@ -4125,10 +4081,6 @@ a {
 .hover\:bg-green-600:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(22 163 74 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:bg-white\/15:hover{
-  background-color: rgb(255 255 255 / 0.15);
 }
 
 .hover\:font-bold:hover{
