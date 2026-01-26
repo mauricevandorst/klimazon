@@ -4045,10 +4045,6 @@ a {
   background-image: url('../assets/images/bg/pattern-3.webp');
 }
 
-.\[background-image\:url\(\'\.\/assets\/images\/bg\/pattern-1\.webp\'\)\]{
-  background-image: url('./assets/images/bg/pattern-1.webp');
-}
-
 .\[background-position\:0\%_20\%\]{
   background-position: 0% 20%;
 }
@@ -4096,14 +4092,6 @@ a {
 .\[mask-image\:linear-gradient\(to_right\2c transparent\2c black\2c transparent\)\]{
   -webkit-mask-image: linear-gradient(to right,transparent,black,transparent);
           mask-image: linear-gradient(to right,transparent,black,transparent);
-}
-
-.\[overscroll-behavior\:contain\]{
-  overscroll-behavior: contain;
-}
-
-.\[scroll-snap-type\:none\]{
-  scroll-snap-type: none;
 }
 
 .\[scrollbar-width\:none\]{
