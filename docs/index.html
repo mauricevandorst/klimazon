@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Klimazon | Zonnepanelen, Airco’s, Warmtepompen & Thuisbatterijen</title>
+  <title>Klimazon: Klimaat- en zontechniek installateur uit de Zaanstreek</title>
   <meta name="description"
     content="Klimazon plaatst zonnepanelen, airco’s, warmtepompen en thuisbatterijen. Snelle service, vakkundige installatie en sterke lokale focus." />
 
@@ -19,7 +19,7 @@
 
 </head>
 
-<body class="bg-white text-[color:var(--kz-navy)] antialiased">
+<body class="bg-white text-[color:var(--kz-navy)] antialiased [overflow-anchor:none]">
   <!-- Topbar (desktop only) -->
   <div class="bg-[color:var(--kz-darkerblue)] hidden sm:block">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -290,30 +290,26 @@
   <!-- BANNER -->
   <section class="relative w-full overflow-hidden bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))]">
 
-    <!-- ZWEVENDE LOCATIES (achtergrond) -->
-    <div class="pointer-events-none absolute inset-0 flex items-center">
-      <div class="mt-2 ml-4 sm:ml-8 lg:ml-8
-            flex flex-col self-start text-[7rem]
-            font-extrabold italic tracking-tight
-            text-white/5 opacity-50 select-none leading-none
-            whitespace-nowrap skew-x-[-12deg]">
-        <span>ASSENDELFT WORMERVEER JISP WESTKNOLLENDAM</span>
-        <span>KROMMENIE KOOG A/D ZAAN WORMER</span>
-        <span>WESTZAAN OOSTZAAN SPIJKERBOOR</span>
-        <span>LANDSMEER PURMEREND BEVERWIJK</span>
-        <span>HEEMSKERK ZAANDAM KNOLLENDAM</span>
-        <span>UITGEEST CASTRICUM</span>
+    <!-- Background (lighter, responsive, less DOM-heavy) -->
+    <div class="pointer-events-none absolute inset-0 z-0">
+      <div class="absolute -top-10 left-1/2 w-[120rem] -translate-x-1/2 opacity-[0.03] skew-x-[-15deg]"
+        aria-hidden="true">
+        <div class="flex flex-col whitespace-nowrap uppercase font-extrabold italic tracking-tight text-white
+     text-[5rem] sm:text-[7rem] pt-12
+     [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
+          <span>ASSENDELFT WORMERVEER WESTKNOLLENDAM</span>
+          <span>KROMMENIE KOOG A/D ZAAN WORMER</span>
+          <span>WESTZAAN OOSTZAAN SPIJKERBOOR</span>
+          <span>LANDSMEER PURMEREND BEVERWIJK</span>
+          <span>HEEMSKERK ZAANDAM KNOLLENDAM</span>
+          <span>UITGEEST CASTRICUM JISP</span>
+        </div>
       </div>
-    </div>
 
-    <!-- 
-    <div class="pointer-events-none absolute inset-0 opacity-20
-           bg-no-repeat origin-center
-           [background-image:url('../assets/images/bg/pattern-3.webp')] 
-           [background-position:80%_25%]
-           md:[background-position:50%_80%]
-           [background-size:20%_auto]">
-    </div>-->
+      <!-- Soft glow -->
+      <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
+      <div class="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
+    </div>
 
     <div
       class="relative flex flex-col gap-4 mx-auto w-full max-w-7xl px-6 py-8 lg:py-10 z-10 mb-16 lg:mt-8 lg:mb-[3rem]">
@@ -327,30 +323,31 @@
             </h1>
             <h4 class="mt-1 text-3xl sm:text-5xl font-bold tracking-wide text-white">
               Lokale expert in verduurzaming
-              </h1>
-              <p class="mt-4 font-medium text-sm font-medium tracking-wide text-white/90">
-                Merkt u dat uw woning of bedrijf energiezuiniger en comfortabeler kan? Zoekt u nieuwe zonnepanelen,
-                airconditioning, een ander systeem of simpelweg advies? Wij installeren slimme, betrouwbare en duurzame oplossingen.
-              </p>
-              <p class="mt-4 text-sm font-medium tracking-wide text-white/90 flex gap-3">
-                <span class="font-extrabold">✓</span>Wij komen graag bij u langs
-              </p>
-              <p class="mt-1 text-sm font-medium tracking-wide text-white/90 flex gap-3">
-                <span class="font-extrabold">✓</span>Betrouwbaar, flexibel en vakkundig
-              </p>
-              <p class="mt-1 text-sm font-medium tracking-wide text-white/90 flex gap-3">
-                <span class="font-extrabold">✓</span>Vrijblijvende offertes en advies
-              </p>
+            </h4>
+            <p class="mt-4 font-medium text-sm font-medium tracking-wide text-white/90">
+              Merkt u dat uw woning of bedrijf energiezuiniger en comfortabeler kan? Zoekt u nieuwe zonnepanelen,
+              airconditioning, een ander systeem of simpelweg advies? Wij helpen met slimme, betrouwbare en duurzame
+              oplossingen.
+            </p>
+            <p class="mt-4 text-sm font-medium tracking-wide text-white/90 flex gap-3">
+              <span class="font-extrabold">✓</span>Wij komen graag bij u langs
+            </p>
+            <p class="mt-1 text-sm font-medium tracking-wide text-white/90 flex gap-3">
+              <span class="font-extrabold">✓</span>Betrouwbaar, flexibel en vakkundig
+            </p>
+            <p class="mt-1 text-sm font-medium tracking-wide text-white/90 flex gap-3">
+              <span class="font-extrabold">✓</span>Vrijblijvende offertes en advies
+            </p>
 
-              <div class="flex w-full justify-start mt-4">
-                <a href="./offerte" class="group w-[215px] h-auto inline-flex gap-2 items-center justify-center rounded-[8px] px-4 py-2 text-sm font-semibold
+            <div class="flex w-full justify-start mt-4">
+              <a href="./offerte" class="group w-[215px] h-auto inline-flex gap-2 items-center justify-center rounded-[8px] px-4 py-2 text-sm font-semibold
                    bg-white/10 text-white focus:text-white/90 transition hover:opacity-90">
-                  Vraag een offerte aan
-                  <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                    →
-                  </span>
-                </a>
-              </div>
+                Vraag een offerte aan
+                <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -923,7 +920,8 @@
         </h2>
 
         <p class="mt-3 text-sm sm:text-base font-medium text-slate-600">
-          Lees echte ervaringen van klanten in de Zaanstreek. Wij werken netjes, denken mee en leveren vakwerk.
+          Lees echte ervaringen van klanten uit de Zaanstreek en omgeving. Wij werken netjes, denken mee en leveren
+          vakwerk.
         </p>
 
         <!-- Summary + CTA row -->
@@ -933,10 +931,10 @@
             <div class="rounded-[4px] px-2 py-1 bg-white">
               <img src="./assets/images/logo/Google logo.png" alt="Google reviews" class="h-4" />
             </div>
-          <span class="text-sm font-semibold text-slate-700">5.0/5</span>
-          <span class="text-yellow-400 text-sm">★★★★★</span>
-          <span class="text-sm text-slate-500">|</span>
-          <span class="text-sm text-slate-500">35+ reviews</span>
+            <span class="text-sm font-semibold text-slate-700">5.0/5</span>
+            <span class="text-yellow-400 text-sm">★★★★★</span>
+            <span class="text-sm text-slate-500">|</span>
+            <span class="text-sm text-slate-500">35+ reviews</span>
           </div>
         </div>
       </div>
@@ -1015,8 +1013,8 @@
 
   </section>
 
-  <!-- Over ons: Lokale installateur in Noord-Holland -->
-  <section class="relative w-full my-12 px-4 overflow-hidden">
+  <!-- Waarom kiezen voor ons?  -->
+  <section class="relative w-full my-12 px-4 sm:px-8 overflow-hidden">
     <!-- background overlay -->
     <div class="pointer-events-none absolute inset-0 opacity-10
            bg-no-repeat
@@ -1041,7 +1039,7 @@
 
       <div class="w-full md:w-1/2 flex flex-col gap-4">
         <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-700">
-          Klimaat- en zontechniek installateur uit Noord-Holland
+          Waarom kiezen klanten voor Klimazon als hun lokale installateur in Noord-Holland?
         </h2>
 
         <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">
@@ -1073,8 +1071,8 @@
   </section>
 
   <!-- Banner: Nieuwe installatie? -->
-  <section
-    class="relative w-full py-12 px-4 overflow-hidden bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))]">
+  <section class="relative w-full py-12 px-4 sm:px-8 overflow-hidden 
+  bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))]">
     <!-- Background (lighter, responsive, less DOM-heavy) -->
     <div class="pointer-events-none absolute inset-0 z-0">
       <div class="absolute -top-10 left-1/2 w-[120rem] -translate-x-1/2 opacity-[0.03]" aria-hidden="true">
@@ -1099,13 +1097,14 @@
     <!-- content -->
     <div class="relative z-10 mx-auto max-w-6xl flex flex-col-reverse md:flex-row md:items-center gap-8">
       <div class="w-full md:w-1/2 flex flex-col gap-4">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-white/90">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-white">
           Wilt u uw woning of pand verder verduurzamen?
         </h2>
 
         <p class="text-sm sm:text-base font-medium tracking-wide text-white/90">
-          Denkt u aan zonnepanelen, een airco of een thuisbatterij? Dan wilt u vooral dat het goed gebeurt.
-          Wij komen langs, kijken naar uw situatie en installeren het netjes en vakkundig.
+          Denkt u aan zonnepanelen, airco, thuisbatterij of een ander systeem? Of zoekt u alleen advies?
+          Dan wilt u vooral goed worden geholpen. Wij komen langs, kijken naar uw situatie en adviseren
+          voor de beste oplossing voor uw woning of bedrijf.
         </p>
 
         <div class="w-full flex justify-start mt-4">
@@ -1118,11 +1117,17 @@
           </a>
         </div>
       </div>
+
+      <!-- Afbeelding rechts -->
+      <div class="w-full hidden md:flex w-1/2 justify-center">
+        <img src="./assets/images/hero/pointing.webp" alt="Duurzame installaties in Noord-Holland"
+          class="w-[350px] h-auto rounded-lg shadow-[0_0_10px_rgba(0,0,0,0.15)]" />
+      </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="relative w-full mt-12 mb-4 sm:mb-12 px-4 overflow-hidden">
+  <section class="relative w-full mt-12 mb-4 sm:mb-12 px-4 sm:px-8 overflow-hidden">
     <!-- background overlay -->
     <div class="pointer-events-none absolute inset-0 opacity-10 bg-no-repeat
           [background-image:url('../assets/images/bg/pattern-1.webp')]
@@ -1308,69 +1313,131 @@
     <div class="mx-auto max-w-7xl px-6 pt-24 pb-6">
 
       <!-- Footer Grid -->
-      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="grid gap-10 lg:grid-cols-12 lg:gap-12">
 
-        <!-- Bedrijf -->
-        <div>
+        <!-- Left / Brand + CTA -->
+        <div class="lg:col-span-4 xl:col-span-3">
           <h2 class="text-2xl mb-3 font-bold leading-relaxed uppercase italic text-white/90">Klimazon</h2>
 
           <p class="text-sm font-medium leading-relaxed text-white/90">
             Lokale expert in duurzame installaties uit de Zaanstreek met focus op kwaliteit en service.
-            Met een ervaren team van specialisten plaatsen en onderhouden wij slimme installaties zoals
-            zonnepanelen, airconditioning,warmtepompen en thuisbatterijen voor zowel particulieren als
+            Met een team van ervaren monteurs plaatsen en onderhouden wij slimme installaties zoals
+            zonnepanelen, airconditioning, warmtepompen en thuisbatterijen voor zowel particulieren als
             bedrijven.
           </p>
+
+          <!-- CTA's -->
+          <div class="mt-6 flex flex-row gap-3 items-center">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/31612345678" target="_blank" rel="noopener noreferrer"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-white/0 hover:bg-white/90 transition-colors"
+              aria-label="Chat via WhatsApp"> <svg class="w-10 h-auto" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 175.216 175.552">
+                <defs>
+                  <linearGradient id="b" x1="85.915" x2="86.535" y1="32.567" y2="137.092"
+                    gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#57d163" />
+                    <stop offset="1" stop-color="#23b33a" />
+                  </linearGradient>
+                  <filter id="a" width="1.115" height="1.114" x="-.057" y="-.057" color-interpolation-filters="sRGB">
+                    <feGaussianBlur stdDeviation="3.531" />
+                  </filter>
+                </defs>
+                <path fill="#b3b3b3"
+                  d="m54.532 138.45 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.523h.023c33.707 0 61.139-27.426 61.153-61.135.006-16.335-6.349-31.696-17.895-43.251A60.75 60.75 0 0 0 87.94 25.983c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.558zm-40.811 23.544L24.16 123.88c-6.438-11.154-9.825-23.808-9.821-36.772.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954zm0 0"
+                  filter="url(#a)" />
+                <path fill="#fff"
+                  d="m12.966 161.238 10.439-38.114a73.42 73.42 0 0 1-9.821-36.772c.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954z" />
+                <path fill="url(#linearGradient1780)"
+                  d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.559 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.524h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.929z" />
+                <path fill="url(#b)"
+                  d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.313-6.179 22.558 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.517 31.126 8.523h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.928z" />
+                <path fill="#fff" fill-rule="evenodd"
+                  d="M68.772 55.603c-1.378-3.061-2.828-3.123-4.137-3.176l-3.524-.043c-1.226 0-3.218.46-4.902 2.3s-6.435 6.287-6.435 15.332 6.588 17.785 7.506 19.013 12.718 20.381 31.405 27.75c15.529 6.124 18.689 4.906 22.061 4.6s10.877-4.447 12.408-8.74 1.532-7.971 1.073-8.74-1.685-1.226-3.525-2.146-10.877-5.367-12.562-5.981-2.91-.919-4.137.921-4.746 5.979-5.819 7.206-2.144 1.381-3.984.462-7.76-2.861-14.784-9.124c-5.465-4.873-9.154-10.891-10.228-12.73s-.114-2.835.808-3.751c.825-.824 1.838-2.147 2.759-3.22s1.224-1.84 1.836-3.065.307-2.301-.153-3.22-4.032-10.011-5.666-13.647" />
+              </svg> </a>
+
+            <!-- Google -->
+            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-lg hover:bg-gray-50 transition-colors"
+              aria-label="Open Google"> <svg class="w-8 h-8" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path fill="#FFC107"
+                  d="M43.611 20.083H42V20H24v8h11.303C33.653 32.659 29.194 36 24 36c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.047 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" />
+                <path fill="#FF3D00"
+                  d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.047 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z" />
+                <path fill="#4CAF50"
+                  d="M24 44c5.092 0 9.78-1.949 13.314-5.121l-6.159-5.214C29.107 35.091 26.715 36 24 36c-5.174 0-9.62-3.317-11.284-7.946l-6.521 5.023C9.518 39.556 16.227 44 24 44z" />
+                <path fill="#1976D2"
+                  d="M43.611 20.083H42V20H24v8h11.303c-.793 2.239-2.231 4.166-4.148 5.665l.003-.002 6.159 5.214C36.889 39.27 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" />
+              </svg> </a>
+          </div>
         </div>
 
-        <!-- Diensten -->
-        <nav aria-label="Footer diensten">
-          <h3 class="mb-3 text-sm font-bold uppercase tracking-wide italic">
-            Diensten
-          </h3>
-          <ul class="space-y-2 text-sm font-medium text-white/90">
-            <li><a href="./zonnepanelen.html" class="hover:underline">• Zonnepanelen</a></li>
-            <li><a href="./airconditioning.html" class="hover:underline">• Airconditioning</a></li>
-            <li><a href="./warmtepomp.html" class="hover:underline">• Warmtepompen</a></li>
-            <li><a href="./thuisbatterij.html" class="hover:underline">• Thuisbatterijen</a></li>
-            <li><a href="./onderhoud.html" class="hover:underline">• Onderhoud & service</a></li>
-          </ul>
-        </nav>
+        <!-- Right / Links & info -->
+        <div class="lg:col-span-8 xl:col-span-9">
+          <div class="grid gap-10 sm:grid-cols-2 xl:grid-cols-3">
 
-        <!-- Regio -->
-        <div>
-          <h3 class="mb-3 text-sm font-bold uppercase tracking-wide italic">
-            Werkgebied
-          </h3>
-          <p class="text-sm font-medium text-white/90 leading-relaxed">
-            Actief in de Zaanstreek en Noord-Holland, waaronder:
-            Assendelft, Zaandam, Wormer, Wormerveer, Krommenie, Koog aan de Zaan,
-            Westzaan, Oostzaan, Beverwijk, Heemskerk, Velsen, IJmuiden,
-            Haarlem, Haarlemmermeer, Alkmaar en omliggende regio’s.
-          </p>
-        </div>
+            <!-- Diensten -->
+            <nav aria-label="Footer diensten" class="xl:order-1">
+              <h3 class="mb-3 text-sm font-bold uppercase tracking-wide italic">Diensten</h3>
+              <ul class="space-y-2 text-sm font-medium text-white/90">
+                <li><a href="./zonnepanelen.html" class="flex flex-row gap-4 hover:underline">
+                    <p class="text-3xl leading-[1rem]">•</p><span>Zonnepanelen</span>
+                  </a></li>
+                <li><a href="./airconditioning.html" class="flex flex-row gap-4 hover:underline">
+                    <p class="text-3xl leading-[1rem]">•</p><span>Airconditioning</span>
+                  </a></li>
+                <li><a href="./warmtepomp.html" class="flex flex-row gap-4 hover:underline">
+                    <p class="text-3xl leading-[1rem]">•</p><span>Warmtepompen</span>
+                  </a></li>
+                <li><a href="./thuisbatterij.html" class="flex flex-row gap-4 hover:underline">
+                    <p class="text-3xl leading-[1rem]">•</p><span>Thuisbatterijen</span>
+                  </a></li>
+                <li><a href="./onderhoud.html" class="flex flex-row gap-4 hover:underline">
+                    <p class="text-3xl leading-[1rem]">•</p><span>Onderhoud & service</span>
+                  </a></li>
+              </ul>
+            </nav>
 
-        <!-- Contact -->
-        <div>
-          <h3 class="mb-3 text-sm font-bold uppercase tracking-wide italic">
-            Contact
-          </h3>
-          <ul class="space-y-2 text-sm font-medium text-white/90">
-            <li>
-              <a href="tel:+31612345678" class="hover:underline">
-                • +31 6 12 34 56 78
-              </a>
-            </li>
-            <li>
-              <a href="mailto:info@klimazon.nl" class="hover:underline">
-                • info@klimazon.nl
-              </a>
-            </li>
-            <li>
-              <a href="./contact.html" class="hover:underline">
-                • Contactpagina
-              </a>
-            </li>
-          </ul>
+            <!-- Werkgebied (span over 2 columns on xl for better readability) -->
+            <div class="col-span-1">
+              <h3 class="mb-3 text-sm font-bold uppercase tracking-wide italic">Werkgebied</h3>
+              <p class="text-sm font-medium text-white/90 leading-relaxed">
+                Actief in de Zaanstreek en Noord-Holland, waaronder:
+                Assendelft, Zaandam, Wormer, Wormerveer, Krommenie, Koog aan de Zaan,
+                Westzaan, Oostzaan, Beverwijk, Heemskerk, Velsen, IJmuiden,
+                Haarlem, Haarlemmermeer, Alkmaar en omliggende regio’s.
+              </p>
+            </div>
+
+            <!-- Bedrijfsinformatie -->
+            <div class="xl:order-3">
+              <h3 class="mb-3 text-sm font-bold uppercase tracking-wide italic">Bedrijfsinformatie</h3>
+              <p class="flex flex-row gap-3 text-sm font-medium text-white/90 leading-relaxed">
+                <span class="w-[125px] shrink-0">KVK-nummer:</span><span>93441630</span>
+              </p>
+              <p class="flex flex-row gap-3 text-sm font-medium text-white/90 leading-relaxed">
+                <span class="w-[125px] shrink-0">BTW-nummer:</span><span>NL000000000A00</span>
+              </p>
+            </div>
+
+            <!-- Contact -->
+            <div class="xl:order-2">
+              <h3 class="mb-3 text-sm font-bold uppercase tracking-wide italic">Contact</h3>
+              <ul class="space-y-2 text-sm font-medium text-white/90">
+                <li><a href="tel:+31612345678" class="flex flex-row gap-4 hover:underline">
+                    <p class="text-3xl leading-[1rem]">•</p><span>+31 6 12 34 56 78</span>
+                  </a></li>
+                <li><a href="mailto:info@klimazon.nl" class="flex flex-row gap-4 hover:underline">
+                    <p class="text-3xl leading-[1rem]">•</p><span>info@klimazon.nl</span>
+                  </a></li>
+                <li><a href="./contact.html" class="flex flex-row gap-4 hover:underline">
+                    <p class="text-3xl leading-[1rem]">•</p><span>Contactpagina</span>
+                  </a></li>
+              </ul>
+            </div>
+
+          </div>
         </div>
 
       </div>
@@ -1427,6 +1494,7 @@
   <script src="./js/featurable-credit-hider.js" defer></script>
   <script src="./js/marquee.js" defer></script>
   <script src="./js/menu.mobile.js" defer></script>
+  <script src="./js/services-slider.js" defer></script>
   <script src="./js/topbar-carousel.js" defer></script>
   <script src="./js/year.js" defer></script>
 </body>
