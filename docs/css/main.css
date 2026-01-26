@@ -1480,6 +1480,10 @@ a {
   margin-inline-end: 1rem;
 }
 
+.me-\[15px\]{
+  margin-inline-end: 15px;
+}
+
 .ml-2{
   margin-left: 0.5rem;
 }
@@ -1490,6 +1494,10 @@ a {
 
 .ml-auto{
   margin-left: auto;
+}
+
+.ms-\[15px\]{
+  margin-inline-start: 15px;
 }
 
 .mt-1{
@@ -1512,10 +1520,6 @@ a {
   margin-top: 1rem;
 }
 
-.mt-5{
-  margin-top: 1.25rem;
-}
-
 .mt-7{
   margin-top: 1.75rem;
 }
@@ -1524,24 +1528,12 @@ a {
   margin-top: 2rem;
 }
 
-.mt-\[1\.4rem\]{
-  margin-top: 1.4rem;
-}
-
-.ms-\[15px\]{
-  margin-inline-start: 15px;
-}
-
 .mt-\[-2px\]{
   margin-top: -2px;
 }
 
-.me-1{
-  margin-inline-end: 0.25rem;
-}
-
-.me-\[15px\]{
-  margin-inline-end: 15px;
+.mt-\[1\.4rem\]{
+  margin-top: 1.4rem;
 }
 
 .box-border{
@@ -3252,10 +3244,6 @@ a {
   padding-right: 0.3rem;
 }
 
-.pt-10{
-  padding-top: 2.5rem;
-}
-
 .pt-12{
   padding-top: 3rem;
 }
@@ -4284,10 +4272,6 @@ a {
 
   .sm\:mt-4{
     margin-top: 1rem;
-  }
-
-  .sm\:ms-\[25px\]{
-    margin-inline-start: 25px;
   }
 
   .sm\:block{
