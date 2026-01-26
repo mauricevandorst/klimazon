@@ -4098,6 +4098,14 @@ a {
           mask-image: linear-gradient(to right,transparent,black,transparent);
 }
 
+.\[overscroll-behavior\:contain\]{
+  overscroll-behavior: contain;
+}
+
+.\[scroll-snap-type\:none\]{
+  scroll-snap-type: none;
+}
+
 .\[scrollbar-width\:none\]{
   scrollbar-width: none;
 }
