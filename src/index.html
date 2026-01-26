@@ -323,14 +323,14 @@
         <div class="w-full lg:flex-1">
           <div class="max-w-xl">
             <h1 class="text-xl sm:text-2xl font-semibold tracking-wide text-white">
-              Duurzaam installatiebedrijf uit de Zaanstreek
+              Klimaat- en zontechniek installateur uit de Zaanstreek
             </h1>
             <h4 class="mt-1 text-3xl sm:text-5xl font-bold tracking-wide text-white">
-              Jouw expert voor duurzame installaties
+              Lokale expert in duurzame installaties
               </h1>
               <p class="mt-4 font-medium text-sm font-medium tracking-wide text-white/90">
-                Je merkt dat je woning of bedrijf energiezuiniger en comfortabeler kan. Nieuwe zonnepanelen,
-                airconditioning, een warmtepomp of een aanpassing van je huidige installatie? Wij zorgen
+                Merkt u dat uw woning of bedrijf energiezuiniger en comfortabeler kan? Nieuwe zonnepanelen,
+                airconditioning, een warmtepomp of een aanpassing van uw huidige installatie? Wij zorgen
                 dat woningen en bedrijfspanden worden uitgerust met slimme, betrouwbare en duurzame
                 installaties. Ook toe aan verbetering?
               </p>
@@ -441,7 +441,7 @@
 
             <!-- ZWEVENDE LOCATIES (achtergrond) -->
             <div class="pointer-events-none absolute inset-0 flex items-center">
-              <div class="mt-[1.4rem] sm:mt-4 m-2 pe-1 me-4 sm:me-2
+              <div class="mt-[-2px] ms-[15px] pe-1
                   flex self-start text-[2.5rem] sm:text-[3rem] uppercase
                   font-extrabold italic tracking-tight
                   bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent
@@ -451,7 +451,7 @@
               </div>
             </div>
 
-            <div class="mb-4 pt-8 w-full flex flex-col text-left">
+            <div class="mb-4 pt-2 w-full flex flex-col text-left">
               <h3
                 class="text-xl sm:text-3xl font-extrabold tracking-tight italic uppercase bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
                 Populaire diensten</h3>
@@ -509,7 +509,7 @@
 
             <!-- ZWEVENDE LOCATIES (achtergrond) -->
             <div class="pointer-events-none absolute inset-0 flex flex-col items-center z-0">
-              <div class="mt-[1.4rem] sm:mt-4 m-2 pe-1 me-4 sm:me-2
+              <div class="mt-[-2px] me-[15px] pe-1
                   flex flex-col self-end text-[2.5rem] sm:text-[3rem] uppercase
                   font-extrabold italic tracking-tight
                   bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent
@@ -520,7 +520,7 @@
               </div>
             </div>
 
-            <div class="mb-4 pt-8 w-full flex flex-col text-right relative z-10">
+            <div class="mb-4 pt-2 w-full flex flex-col text-right relative z-10">
               <h3 class="text-xl sm:text-3xl font-extrabold tracking-tight italic uppercase pe-1
                 bg-[linear-gradient(to_right,var(--kz-blue),var(--kz-blue))] bg-clip-text text-transparent">
                 Zakelijke diensten</h3>
@@ -532,13 +532,6 @@
             <!-- Tiles: ALWAYS horizontal -->
             <div class="-mx-6 sm:mx-0">
               <div class="flex justify-evenly sm:gap-4 overflow-hidden pb-2 sm:px-0">
-                <div class="hidden md:flex flex-col gap-2 items-center">
-                  <a class="service-btn shrink-0" type="button" aria-label="Airconditioning"
-                    href="./airconditioning-zakelijk.html">
-                    <img class="p-3" src="./assets/images/icons/airconditioning-business.svg" alt="Airconditioning" />
-                  </a>
-                  <span class="text-xs">Airconditioning</span>
-                </div>
 
                 <div class="flex flex-col gap-2 items-center">
                   <a class="service-btn shrink-0" type="button" aria-label="Zonnepanelen"
@@ -547,6 +540,14 @@
                       alt="Zonnepanelen" />
                   </a>
                   <span class="text-xs">Zonnepanelen</span>
+                </div>
+
+                <div class="flex-col gap-2 items-center">
+                  <a class="service-btn shrink-0" type="button" aria-label="Airconditioning"
+                    href="./airconditioning-zakelijk.html">
+                    <img class="p-3" src="./assets/images/icons/airconditioning-business.svg" alt="Airconditioning" />
+                  </a>
+                  <span class="text-xs">Airconditioning</span>
                 </div>
 
                 <div class="hidden sm:flex flex-col gap-2 items-center">
@@ -565,7 +566,7 @@
                   <span class="text-xs">Warmtepomp</span>
                 </div>
 
-                <div class="flex flex-col gap-2 items-center">
+                <div class="hidden md:flex flex-col gap-2 items-center">
                   <a class="service-btn shrink-0" type="button" aria-label="Luchtgordijn"
                     href="./luchtgordijn-zakelijk.html">
                     <img class="p-3" src="./assets/images/icons/air-curtain-business.svg" alt="Luchtgordijn" />
@@ -669,7 +670,7 @@
         <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight italic uppercase text-white">
           Recente installaties
         </h2>
-        <p class="mt-3 font-medium text-sm font-medium tracking-wide text-white/90">
+        <p class="mt-3 font-medium text-sm sm:text-base font-medium tracking-wide text-white/90">
           Diensten die wij onlangs bij woningen en bedrijven hebben uitgevoerd. Wij beginnen altijd met
           passend advies, en vervolgens installeren wij elk systeem met zorg en vakmanschap.
         </p>
@@ -904,47 +905,48 @@
   </section>
 
   <!-- Google reviews Widget -->
-  <section class="w-full relative mt-12 overflow-hidden">
-
+  <section id="reviews" class="w-full relative mt-12 overflow-hidden">
     <!-- background overlay (mirrored) -->
     <div class="pointer-events-none absolute inset-0 opacity-10
-     bg-no-repeat
-     [background-image:url('../assets/images/bg/pattern-1.webp')]
-     [background-size:auto_8rem]
-     [background-position:0%_80%]
-     md:[background-position:0%_20%]
-     transform -scale-x-100">
-    </div>
-
-    <div class="pointer-events-none absolute inset-0 opacity-5
-       bg-no-repeat
-       [background-image:url('../assets/images/bg/pattern-2.webp')]
-       [background-position:150%_30%]
-       md:[background-position:80%_50%]
-       transform -scale-x-100">
-    </div>
-
-    <div class="pointer-events-none absolute inset-0 opacity-5
-       bg-no-repeat
-       [background-image:url('../assets/images/bg/pattern-2.webp')]
-       [background-position:80%_150%]
-       md:[background-position:80%_50%]
-       transform -scale-x-100">
-    </div>
-
-    <!-- Titel -->
-    <div class="flex flex-col items-center">
-      <h2
-        class="text-2xl sm:text-3xl px-4 text-center font-extrabold tracking-tight italic uppercase bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
-        Wat zeggen onze klanten?
-      </h2>
+    bg-no-repeat
+    [background-image:url('./assets/images/bg/pattern-1.webp')]
+    [background-size:auto_8rem]
+    [background-position:0%_80%]
+    md:[background-position:0%_20%]
+    transform -scale-x-100">
     </div>
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <!-- Featurable widget -->
+      <!-- Header block -->
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight italic uppercase
+        bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
+          Wat zeggen onze klanten?
+        </h2>
+
+        <p class="mt-3 text-sm sm:text-base font-medium text-slate-600">
+          Echte ervaringen van klanten in de Zaanstreek. Wij werken netjes, denken mee en leveren vakwerk.
+        </p>
+
+        <!-- Summary + CTA row -->
+        <div class="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <!-- Rating pill (hardcode of later dynamisch) -->
+          <div class="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 shadow-sm">
+            <div class="rounded-[4px] px-2 py-1 bg-white">
+              <img src="./assets/images/logo/Google logo.png" alt="Google reviews" class="h-4" />
+            </div>
+            <span class="text-yellow-400 text-sm">★★★★★</span>
+            <span class="text-sm text-slate-500">op basis van 35+ reviews</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Widget container (geeft 'body' en consistentie met je cards) -->
       <div id="featurable-83354f56-799b-4356-bd75-5967171330f0" data-featurable-async></div>
-      <script src="https://featurable.com/assets/bundle.js" defer charset="UTF-8"></script>
+
     </div>
+
+    <script src="https://featurable.com/assets/bundle.js" defer charset="UTF-8"></script>
   </section>
 
   <!-- MARQUEE: merken die we installeren -->
@@ -1051,8 +1053,8 @@
         </p>
 
         <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">
-          Met onze expertise, ruime ervaring en topselectie producten helpen wij jou om <strong>comfortabeler te wonen
-            of werken</strong>, terwijl je
+          Met onze expertise, ruime ervaring en topselectie producten helpen wij u om <strong>comfortabeler te wonen
+            of werken</strong>, terwijl u
           tegelijkertijd bijdraagt aan een duurzamere toekomst. Kies voor Klimazon en ervaar het
           verschil van
           <strong>professionele installatie</strong> en uitstekende service.
@@ -1098,18 +1100,18 @@
     <div class="relative z-10 mx-auto max-w-6xl flex flex-col-reverse md:flex-row md:items-center gap-8">
       <div class="w-full md:w-1/2 flex flex-col gap-4">
         <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-white/90">
-          Wil jij jouw woning of pand verder verduurzamen?
+          Wilt u uw woning of pand verder verduurzamen?
         </h2>
 
         <p class="text-sm sm:text-base font-medium tracking-wide text-white/90">
-          Denk je aan zonnepanelen, een airco of een thuisbatterij? Dan wil je vooral dat het goed gebeurt.
-          Wij komen langs, kijken naar je situatie en installeren het netjes en vakkundig.
+          Denkt u aan zonnepanelen, een airco of een thuisbatterij? Dan wilt u vooral dat het goed gebeurt.
+          Wij komen langs, kijken naar uw situatie en installeren het netjes en vakkundig.
         </p>
 
         <div class="w-full flex justify-start mt-4">
           <a href="./contact" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[8px] px-5 py-2 text-sm font-semibold
                    bg-white/10 text-white focus:text-white/90 transition hover:opacity-90">
-            Contact opnemen
+            Neem contact op
             <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
               →
             </span>
@@ -1120,13 +1122,19 @@
   </section>
 
   <!-- FAQ -->
-  <section class="relative w-full mt-12 px-4 overflow-hidden">
+  <section class="relative w-full mt-12 mb-4 sm:mb-12 px-4 overflow-hidden">
     <!-- background overlay -->
     <div class="pointer-events-none absolute inset-0 opacity-10 bg-no-repeat
           [background-image:url('../assets/images/bg/pattern-1.webp')]
           [background-size:auto_10rem]
           [background-position:0%_20%]
-          md:[background-position:0%_50%]">
+          md:[background-position:0%_32%]">
+    </div>
+    <div class="pointer-events-none absolute inset-0 opacity-5 bg-no-repeat
+          [background-image:url('../assets/images/bg/pattern-1.webp')]
+          [background-size:auto_17rem]
+          hidden md:block [background-position:0%_50%]
+          md:[background-position:0%_23%]">
     </div>
     <div class="pointer-events-none absolute inset-0 opacity-10
           bg-no-repeat
@@ -1143,22 +1151,23 @@
     </div>
 
     <!-- Content -->
-    <div class="relative z-10 mx-auto max-w-6xl flex flex-col-reverse md:flex-row md:items-center gap-8">
-      <div class="w-full md:w-1/2 flex flex-col gap-4">
+    <div class="relative z-10 mx-auto max-w-6xl md:items-center gap-8">
+      <div class="w-full flex flex-col md:flex-row  gap-4">
 
         <!-- FAQ Title -->
-        <div class="flex flex-col">
+        <div class="flex flex-col md:w-[55%]">
           <h4
             class="text-m sm:xl font-bold tracking-tight uppercase bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
             FAQ
           </h4>
-          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-700">
-            Veelgestelde vragen
+          <h2 class="flex flex-row gap-2 md:flex-col text-2xl sm:text-3xl font-semibold tracking-tight text-slate-700">
+            <span class="w-content">Veelgestelde</span>
+            <span class="w-content">vragen</span>
           </h2>
         </div>
 
         <!-- FAQ Accordion -->
-        <div class="mt-4 flex flex-col gap-3">
+        <div class="mt-4 w-full flex flex-col gap-3">
 
           <details class="faq group rounded-lg border border-slate-200 bg-white p-4">
             <summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-slate-700">
@@ -1182,7 +1191,7 @@
             </summary>
             <div class="faq-content overflow-hidden">
               <p class="mt-3 text-sm leading-relaxed text-slate-600">
-                In de meeste gevallen wel, maar isolatie en afgiftesysteem zijn bepalend. We kijken naar jouw verbruik,
+                In de meeste gevallen wel, maar isolatie en afgiftesysteem zijn bepalend. We kijken naar uw verbruik,
                 isolatieniveau, radiatoren/vloerverwarming en beschikbare ruimte. Daarna adviseren we wat technisch én
                 financieel
                 het meest logisch is.
@@ -1199,7 +1208,7 @@
               <p class="mt-3 text-sm leading-relaxed text-slate-600">
                 Dat hangt af van gebruik, ingestelde temperatuur, isolatie en systeemvermogen. We kunnen dit inschatten
                 op basis
-                van jouw situatie en eventueel een verbruiksberekening maken, zodat je weet wat je kunt verwachten per
+                van uw situatie en eventueel een verbruiksberekening maken, zodat u weet wat u kunt verwachten per
                 maand/seizoen.
               </p>
             </div>
@@ -1214,7 +1223,7 @@
               <p class="mt-3 text-sm leading-relaxed text-slate-600">
                 Meestal is een standaard installatie binnen één dag klaar. We werken netjes, beschermen waar nodig
                 vloeren en
-                ruimen alles op. Voor complexere installaties (bijv. grotere systemen) plannen we dit duidelijk met je
+                ruimen alles op. Voor complexere installaties (bijv. grotere systemen) plannen we dit duidelijk met u
                 in.
               </p>
             </div>
@@ -1229,7 +1238,7 @@
               <p class="mt-3 text-sm leading-relaxed text-slate-600">
                 In veel gevallen niet, maar dit verschilt per gemeente, pandtype en plaatsing (bijv. monument of
                 beschermd
-                stadsgezicht). We denken met je mee en geven aan waar je op moet letten voordat we starten.
+                stadsgezicht). We denken met u mee en geven aan waar u op moet letten voordat we starten.
               </p>
             </div>
           </details>
@@ -1243,7 +1252,7 @@
               <p class="mt-3 text-sm leading-relaxed text-slate-600">
                 Onderhoud houdt systemen efficiënt, stil en betrouwbaar. We bespreken wat verstandig is per installatie
                 en kunnen
-                onderhoud/service inplannen. Bij storingen kun je contact opnemen en helpen we je zo snel mogelijk
+                onderhoud/service inplannen. Bij storingen kunt u contact opnemen en helpen we u zo snel mogelijk
                 verder.
               </p>
             </div>
@@ -1256,8 +1265,8 @@
             </summary>
             <div class="faq-content overflow-hidden">
               <p class="mt-3 text-sm leading-relaxed text-slate-600">
-                Wij zijn actief in Noord-Holland, met een sterke focus op de Zaanstreek en omliggende regio’s. Ook
-                buiten dit gebied kunnen we vaak langskomen. Twijfel je? Deel je postcode en we checken het meteen.
+                Wij zijn actief in Noord-Holland, met een sterke focus op de Zaanstreek en omliggende regio’s.
+                Ook buiten dit gebied is vaak veel mogelijk. Twijfelt u? Deel uw postcode en we kijken direct wat kan.
               </p>
             </div>
           </details>
@@ -1269,9 +1278,9 @@
             </summary>
             <div class="faq-content overflow-hidden">
               <p class="mt-3 text-sm leading-relaxed text-slate-600">
-                Ja, je kunt vrijblijvend een offerte aanvragen. Na je aanvraag nemen we contact op om je wensen en
+                Ja, u kunt vrijblijvend een offerte aanvragen. Na uw aanvraag nemen we contact op om uw wensen en
                 situatie kort
-                door te nemen, zodat je een voorstel krijgt dat klopt qua techniek én prijs.
+                door te nemen, zodat u een voorstel krijgt dat klopt qua techniek én prijs.
               </p>
             </div>
           </details>
@@ -1282,20 +1291,21 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] text-white">
-    <div class="relative mx-auto max-w-7xl px-6 pt-24 pb-6">
+  <footer class="relative bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] text-white">
 
-      <div class="absolute top-0 left-0 w-full pointer-events-none z-0 -translate-y-px">
-        <!-- Mobile -->
-        <svg viewBox="0 0 1440 90" preserveAspectRatio="none" class="block sm:hidden w-full h-[100px]">
-          <path d="M0,60 C120,20 360,90 720,55 1080,20 1320,50 1440,40 L1440,0 L0,0 Z" fill="#ffffff" />
-        </svg>
+    <!-- Footer decoration (Wave) -->
+    <div class="absolute top-0 left-0 w-full pointer-events-none z-0 -translate-y-px">
+      <!-- Mobile -->
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" class="block sm:hidden w-full h-[100px]">
+        <path d="M0,60 C120,20 360,90 720,55 1080,20 1320,50 1440,40 L1440,0 L0,0 Z" fill="#ffffff" />
+      </svg>
 
-        <!-- Desktop -->
-        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="hidden sm:block w-full h-[100px]">
-          <path d="M0,85 C240,25 480,25 720,55 960,85 1200,85 1440,55 L1440,0 L0,0 Z" fill="#ffffff" />
-        </svg>
-      </div>
+      <!-- Desktop -->
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="hidden sm:block w-full h-[100px]">
+        <path d="M0,85 C240,25 480,25 720,55 960,85 1200,85 1440,55 L1440,0 L0,0 Z" fill="#ffffff" />
+      </svg>
+    </div>
+    <div class="mx-auto max-w-7xl px-6 pt-24 pb-6">
 
       <!-- Footer Grid -->
       <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
@@ -1332,9 +1342,10 @@
             Werkgebied
           </h3>
           <p class="text-sm font-medium text-white/90 leading-relaxed">
-            Actief in de Zaanstreek en Noord-Holland:<br>
-            Assendelft, Zaandam, Wormer, Krommenie, Koog aan de Zaan,
-            Beverwijk, Heemskerk en omgeving.
+            Actief in de Zaanstreek en Noord-Holland, waaronder:
+            Assendelft, Zaandam, Wormer, Wormerveer, Krommenie, Koog aan de Zaan,
+            Westzaan, Oostzaan, Beverwijk, Heemskerk, Velsen, IJmuiden,
+            Haarlem, Haarlemmermeer, Alkmaar en omliggende regio’s.
           </p>
         </div>
 

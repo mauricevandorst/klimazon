@@ -1512,6 +1512,10 @@ a {
   margin-top: 1rem;
 }
 
+.mt-5{
+  margin-top: 1.25rem;
+}
+
 .mt-7{
   margin-top: 1.75rem;
 }
@@ -1522,6 +1526,22 @@ a {
 
 .mt-\[1\.4rem\]{
   margin-top: 1.4rem;
+}
+
+.ms-\[15px\]{
+  margin-inline-start: 15px;
+}
+
+.mt-\[-2px\]{
+  margin-top: -2px;
+}
+
+.me-1{
+  margin-inline-end: 0.25rem;
+}
+
+.me-\[15px\]{
+  margin-inline-end: 15px;
 }
 
 .box-border{
@@ -3232,6 +3252,10 @@ a {
   padding-right: 0.3rem;
 }
 
+.pt-10{
+  padding-top: 2.5rem;
+}
+
 .pt-12{
   padding-top: 3rem;
 }
@@ -4033,8 +4057,16 @@ a {
   background-image: url('../assets/images/bg/pattern-3.webp');
 }
 
+.\[background-image\:url\(\'\.\/assets\/images\/bg\/pattern-1\.webp\'\)\]{
+  background-image: url('./assets/images/bg/pattern-1.webp');
+}
+
 .\[background-position\:0\%_20\%\]{
   background-position: 0% 20%;
+}
+
+.\[background-position\:0\%_50\%\]{
+  background-position: 0% 50%;
 }
 
 .\[background-position\:0\%_80\%\]{
@@ -4045,16 +4077,8 @@ a {
   background-position: 100% 20%;
 }
 
-.\[background-position\:150\%_30\%\]{
-  background-position: 150% 30%;
-}
-
 .\[background-position\:50\%_100\%\]{
   background-position: 50% 100%;
-}
-
-.\[background-position\:80\%_150\%\]{
-  background-position: 80% 150%;
 }
 
 .\[background-position\:80\%_25\%\]{
@@ -4071,6 +4095,10 @@ a {
 
 .\[background-size\:auto_15rem\]{
   background-size: auto 15rem;
+}
+
+.\[background-size\:auto_17rem\]{
+  background-size: auto 17rem;
 }
 
 .\[background-size\:auto_8rem\]{
@@ -4242,6 +4270,10 @@ a {
     margin-right: 0px;
   }
 
+  .sm\:mb-12{
+    margin-bottom: 3rem;
+  }
+
   .sm\:me-2{
     margin-inline-end: 0.5rem;
   }
@@ -4252,6 +4284,10 @@ a {
 
   .sm\:mt-4{
     margin-top: 1rem;
+  }
+
+  .sm\:ms-\[25px\]{
+    margin-inline-start: 25px;
   }
 
   .sm\:block{
@@ -4382,6 +4418,10 @@ a {
     width: 50%;
   }
 
+  .md\:w-\[55\%\]{
+    width: 55%;
+  }
+
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -4392,6 +4432,10 @@ a {
 
   .md\:flex-row{
     flex-direction: row;
+  }
+
+  .md\:flex-col{
+    flex-direction: column;
   }
 
   .md\:items-center{
@@ -4412,6 +4456,14 @@ a {
 
   .md\:\[background-position\:0\%_20\%\]{
     background-position: 0% 20%;
+  }
+
+  .md\:\[background-position\:0\%_23\%\]{
+    background-position: 0% 23%;
+  }
+
+  .md\:\[background-position\:0\%_32\%\]{
+    background-position: 0% 32%;
   }
 
   .md\:\[background-position\:0\%_50\%\]{
