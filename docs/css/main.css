@@ -4234,6 +4234,10 @@ a {
   color: rgb(255 255 255 / 0.9);
 }
 
+.focus\:text-slate-600\/90:focus{
+  color: rgb(71 85 105 / 0.9);
+}
+
 .focus\:outline-none:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
