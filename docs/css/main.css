@@ -1737,6 +1737,10 @@ a {
   width: 4rem;
 }
 
+.w-3{
+  width: 0.75rem;
+}
+
 .w-4{
   width: 1rem;
 }
@@ -1763,10 +1767,6 @@ a {
 
 .w-\[125px\]{
   width: 125px;
-}
-
-.w-\[215px\]{
-  width: 215px;
 }
 
 .w-\[350px\]{
@@ -1866,10 +1866,6 @@ a {
   border-collapse: separate;
 }
 
-.origin-center{
-  transform-origin: center;
-}
-
 .-translate-x-1\/2{
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1892,16 +1888,6 @@ a {
 
 .skew-x-6{
   --tw-skew-x: 6deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.skew-x-\[-12deg\]{
-  --tw-skew-x: -12deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.skew-x-\[-20deg\]{
-  --tw-skew-x: -20deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2983,6 +2969,14 @@ a {
   background-color: rgb(255 255 255 / 0.9);
 }
 
+.bg-white\/80{
+  background-color: rgb(255 255 255 / 0.8);
+}
+
+.bg-white\/95{
+  background-color: rgb(255 255 255 / 0.95);
+}
+
 .bg-\[linear-gradient\(to_right\2c var\(--kz-blue\)\2c var\(--kz-blue\)\)\]{
   background-image: linear-gradient(to right,var(--kz-blue),var(--kz-blue));
 }
@@ -3380,6 +3374,10 @@ a {
   font-size: 4rem;
 }
 
+.text-\[5rem\]{
+  font-size: 5rem;
+}
+
 .text-\[7rem\]{
   font-size: 7rem;
 }
@@ -3402,10 +3400,6 @@ a {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[5rem\]{
-  font-size: 5rem;
 }
 
 .font-bold{
@@ -4083,10 +4077,6 @@ a {
   background-image: url('../assets/images/bg/pattern-2.webp');
 }
 
-.\[background-image\:url\(\'\.\.\/assets\/images\/bg\/pattern-3\.webp\'\)\]{
-  background-image: url('../assets/images/bg/pattern-3.webp');
-}
-
 .\[background-position\:0\%_20\%\]{
   background-position: 0% 20%;
 }
@@ -4105,14 +4095,6 @@ a {
 
 .\[background-position\:50\%_100\%\]{
   background-position: 50% 100%;
-}
-
-.\[background-position\:80\%_25\%\]{
-  background-position: 80% 25%;
-}
-
-.\[background-size\:20\%_auto\]{
-  background-size: 20% auto;
 }
 
 .\[background-size\:auto_10rem\]{
@@ -4349,6 +4331,10 @@ a {
     width: 6rem;
   }
 
+  .sm\:w-\[215px\]{
+    width: 215px;
+  }
+
   .sm\:w-\[9rem\]{
     width: 9rem;
   }
@@ -4388,14 +4374,14 @@ a {
     padding-right: 1.5rem;
   }
 
-  .sm\:py-12{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
   .sm\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .sm\:py-12{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .sm\:text-2xl{
@@ -4421,6 +4407,10 @@ a {
     font-size: 5rem;
   }
 
+  .sm\:text-\[7rem\]{
+    font-size: 7rem;
+  }
+
   .sm\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
@@ -4434,10 +4424,6 @@ a {
   .sm\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-
-  .sm\:text-\[7rem\]{
-    font-size: 7rem;
   }
 
   .sm\:underline{
@@ -4512,10 +4498,6 @@ a {
 
   .md\:\[background-position\:0\%_50\%\]{
     background-position: 0% 50%;
-  }
-
-  .md\:\[background-position\:50\%_80\%\]{
-    background-position: 50% 80%;
   }
 
   .md\:\[background-position\:80\%_50\%\]{
