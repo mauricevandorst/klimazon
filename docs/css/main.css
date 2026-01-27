@@ -1344,6 +1344,10 @@ a {
   right: 0px;
 }
 
+.right-4{
+  right: 1rem;
+}
+
 .right-6{
   right: 1.5rem;
 }
@@ -1354,10 +1358,6 @@ a {
 
 .top-4{
   top: 1rem;
-}
-
-.right-4{
-  right: 1rem;
 }
 
 .isolate{
@@ -1709,6 +1709,10 @@ a {
   height: 2rem;
 }
 
+.h-9{
+  height: 2.25rem;
+}
+
 .h-\[100px\]{
   height: 100px;
 }
@@ -1723,10 +1727,6 @@ a {
 
 .h-full{
   height: 100%;
-}
-
-.h-9{
-  height: 2.25rem;
 }
 
 .w-1\/2{
@@ -1763,6 +1763,10 @@ a {
 
 .w-8{
   width: 2rem;
+}
+
+.w-9{
+  width: 2.25rem;
 }
 
 .w-\[120rem\]{
@@ -1804,10 +1808,6 @@ a {
 
 .w-full{
   width: 100%;
-}
-
-.w-9{
-  width: 2.25rem;
 }
 
 .max-w-3xl{
