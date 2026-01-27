@@ -1360,6 +1360,10 @@ a {
   top: 1rem;
 }
 
+.right-5{
+  right: 1.25rem;
+}
+
 .isolate{
   isolation: isolate;
 }
