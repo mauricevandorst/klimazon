@@ -3998,6 +3998,12 @@ a {
   transition-duration: 150ms;
 }
 
+.transition-opacity{
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-300{
   transition-duration: 300ms;
 }
@@ -4232,12 +4238,24 @@ a {
   text-align: center;
 }
 
+.focus\:text-\[color\:var\(--kz-lightblue\)\]:focus{
+  color: var(--kz-lightblue);
+}
+
 .focus\:text-slate-600\/90:focus{
   color: rgb(71 85 105 / 0.9);
 }
 
 .focus\:text-white\/90:focus{
   color: rgb(255 255 255 / 0.9);
+}
+
+.focus\:opacity-80:focus{
+  opacity: 0.8;
+}
+
+.focus\:opacity-90:focus{
+  opacity: 0.9;
 }
 
 .focus\:outline-none:focus{

@@ -1408,20 +1408,19 @@
             </nav>
 
             <!-- Werkgebied (span over 2 columns on xl for better readability) -->
-            <div class="col-span-1">
-              <h3 class="mb-3 text-sm font-bold uppercase tracking-wide italic">Werkgebied</h3>
-              <p class="text-sm font-medium text-white/90 leading-relaxed">
-                Actief in de Zaanstreek en Noord-Holland, waaronder:
-                Assendelft, Zaandam, Wormer, Wormerveer, Krommenie, Koog aan de Zaan,
-                Westzaan, Oostzaan, Beverwijk, Heemskerk, Velsen, IJmuiden,
-                Haarlem, Haarlemmermeer, Alkmaar en omliggende regio’s.
-              </p>
-            </div>
-
-            <!-- Reviews -->
-            <div class="col-span-1">
+            <div class="col-span-1 flex flex-col gap-10">
+              <div>
+                <h3 class="mb-3 text-sm font-bold uppercase tracking-wide italic">Werkgebied</h3>
+                <p class="text-sm font-medium text-white/90 leading-relaxed">
+                  Actief in de Zaanstreek en Noord-Holland, waaronder:
+                  Assendelft, Zaandam, Wormer, Wormerveer, Krommenie, Koog aan de Zaan,
+                  Westzaan, Oostzaan, Beverwijk, Heemskerk, Velsen, IJmuiden,
+                  Haarlem, Haarlemmermeer, Alkmaar en omliggende regio’s.
+                </p>
+              </div>
+              
               <!-- Summary + CTA row -->
-              <a href="#reviews" class="flex flex-col sm:flex-row items-start justify-start gap-3">
+              <a href="#reviews" class="flex flex-col sm:flex-row items-start justify-start gap-3 hover:opacity-90 focus:opacity-90 transition-opacity">
                 <!-- Rating pill (hardcode of later dynamisch) -->
                 <div
                   class="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 shadow-sm">
