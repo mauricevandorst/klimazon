@@ -1333,7 +1333,7 @@
           <div class="mt-6 flex flex-row gap-3 items-center">
             <!-- WhatsApp -->
             <a href="https://wa.me/31654216787" target="_blank" rel="noopener noreferrer"
-              class="flex items-center justify-center w-10 h-10 rounded-full bg-white/0 hover:bg-white/90 transition-colors"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-white/0 hover:opacity-80 transition-colors"
               aria-label="Chat via WhatsApp"> <svg class="w-10 h-auto" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 175.216 175.552">
                 <defs>
@@ -1361,7 +1361,7 @@
 
             <!-- Google -->
             <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"
-              class="flex items-center justify-center w-9 h-9 rounded-full bg-white shadow-lg hover:bg-gray-50 transition-colors"
+              class="flex items-center justify-center w-9 h-9 rounded-full bg-white shadow-lg hover:opacity-80 transition-colors"
               aria-label="Open Google"> <svg class="w-8 h-8" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true">
                 <path fill="#FFC107"
@@ -1384,20 +1384,24 @@
             <nav aria-label="Footer diensten" class="xl:order-1">
               <h3 class="mb-3 text-sm font-bold uppercase tracking-wide italic">Diensten</h3>
               <ul class="space-y-2 text-sm font-medium text-white/90">
-                <li><a href="./zonnepanelen.html" class="flex flex-row gap-4 hover:underline">
+                <li><a href="./zonnepanelen.html"
+                    class="flex flex-row gap-4 w-min hover:text-[color:var(--kz-lightblue)]">
                     <p class="text-3xl leading-[1rem]">•</p><span>Zonnepanelen</span>
                   </a></li>
-                <li><a href="./airconditioning.html" class="flex flex-row gap-4 hover:underline">
+                <li><a href="./airconditioning.html"
+                    class="flex flex-row gap-4 w-min hover:text-[color:var(--kz-lightblue)]">
                     <p class="text-3xl leading-[1rem]">•</p><span>Airconditioning</span>
                   </a></li>
-                <li><a href="./warmtepomp.html" class="flex flex-row gap-4 hover:underline">
+                <li><a href="./warmtepomp.html"
+                    class="flex flex-row gap-4 w-min hover:text-[color:var(--kz-lightblue)]">
                     <p class="text-3xl leading-[1rem]">•</p><span>Warmtepompen</span>
                   </a></li>
-                <li><a href="./thuisbatterij.html" class="flex flex-row gap-4 hover:underline">
+                <li><a href="./thuisbatterij.html"
+                    class="flex flex-row gap-4 w-min hover:text-[color:var(--kz-lightblue)]">
                     <p class="text-3xl leading-[1rem]">•</p><span>Thuisbatterijen</span>
                   </a></li>
-                <li><a href="./onderhoud.html" class="flex flex-row gap-4 hover:underline">
-                    <p class="text-3xl leading-[1rem]">•</p><span>Onderhoud & service</span>
+                <li><a href="./onderhoud.html" class="flex flex-row gap-4 w-min hover:text-[color:var(--kz-lightblue)]">
+                    <p class="text-3xl leading-[1rem]">•</p><span class="text-nowrap">Onderhoud & service</span>
                   </a></li>
               </ul>
             </nav>
@@ -1413,31 +1417,56 @@
               </p>
             </div>
 
-            <!-- Bedrijfsinformatie -->
-            <div class="xl:order-3">
-              <h3 class="mb-3 text-sm font-bold uppercase tracking-wide italic">Bedrijfsinformatie</h3>
-              <p class="flex flex-row gap-1 text-sm font-medium text-white/90 leading-relaxed">
-                <span class="w-[125px] shrink-0">KVK-nummer:</span><span>93441630</span>
-              </p>
-              <p class="flex flex-row gap-1 text-sm font-medium text-white/90 leading-relaxed">
-                <span class="w-[125px] shrink-0">BTW-nummer:</span><span>NL000000000A00</span>
-              </p>
+            <!-- Reviews -->
+            <div class="col-span-1">
+              <!-- Summary + CTA row -->
+              <div class="flex flex-col sm:flex-row items-start justify-start gap-3">
+                <!-- Rating pill (hardcode of later dynamisch) -->
+                <div
+                  class="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 shadow-sm">
+                  <div class="rounded-[4px] px-2 py-1 bg-white">
+                    <img src="./assets/images/logo/Google logo.png" alt="Google reviews" class="h-4" />
+                  </div>
+                  <span class="text-sm font-semibold text-slate-700">5.0/5</span>
+                  <span class="text-yellow-400 text-sm">★★★★★</span>
+                  <span class="text-sm text-slate-500">|</span>
+                  <span class="text-sm text-slate-500">35+ reviews</span>
+                </div>
+              </div>
             </div>
 
             <!-- Contact -->
             <div class="xl:order-2">
               <h3 class="mb-3 text-sm font-bold uppercase tracking-wide italic">Contact</h3>
               <ul class="space-y-2 text-sm font-medium text-white/90">
-                <li><a href="tel:+31654216787" class="flex flex-row gap-4 hover:underline">
-                    <p class="text-3xl leading-[1rem]">•</p><span>+31 6 12 34 56 78</span>
+                <li><a href="tel:+31654216787" class="flex flex-row gap-4 w-min hover:text-[color:var(--kz-lightblue)]">
+                    <p class="text-3xl leading-[1rem]">•</p><span class="text-nowrap">+31 6 12 34 56 78</span>
                   </a></li>
-                <li><a href="mailto:info@klimazon.nl" class="flex flex-row gap-4 hover:underline">
+                <li><a href="mailto:info@klimazon.nl"
+                    class="flex flex-row gap-4 w-min hover:text-[color:var(--kz-lightblue)]">
                     <p class="text-3xl leading-[1rem]">•</p><span>info@klimazon.nl</span>
                   </a></li>
-                <li><a href="./contact.html" class="flex flex-row gap-4 hover:underline">
+                <li><a href="./contact.html" class="flex flex-row gap-4 w-min hover:text-[color:var(--kz-lightblue)]">
                     <p class="text-3xl leading-[1rem]">•</p><span>Contactpagina</span>
                   </a></li>
               </ul>
+            </div>
+
+            <!-- Bedrijfsinformatie -->
+            <div class="xl:order-3">
+              <h3 class="mb-3 text-sm font-bold uppercase tracking-wide italic">
+                Bedrijfsinformatie
+              </h3>
+
+              <p class="flex text-sm font-medium text-white/90 leading-relaxed">
+                <span class="w-32 shrink-0">KVK-nummer:</span>
+                <span>93441630</span>
+              </p>
+
+              <p class="flex text-sm font-medium text-white/90 leading-relaxed">
+                <span class="w-32 shrink-0">BTW-nummer:</span>
+                <span>NL000000000A00</span>
+              </p>
             </div>
 
           </div>
@@ -1455,8 +1484,8 @@
         </span>
 
         <div class="flex gap-4">
-          <a href="./privacy.html" class="hover:underline">Privacy</a>
-          <a href="./voorwaarden.html" class="hover:underline">Voorwaarden</a>
+          <a href="./privacy.html" class="hover:opacity-80">Privacy</a>
+          <a href="./voorwaarden.html" class="hover:opacity-80">Voorwaarden</a>
         </div>
       </div>
     </div>
