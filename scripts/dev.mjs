@@ -2,6 +2,7 @@ import chokidar from "chokidar";
 import { mkdirSync, cpSync, existsSync, rmSync } from "node:fs";
 import path from "node:path";
 import { spawn } from "node:child_process";
+import { readdirSync } from "node:fs";
 
 const SRC = "src";
 const DOCS = "docs";
@@ -30,8 +31,13 @@ function removePath(p) {
 
 function initialSync() {
   ensureDirs();
-  copyFile(path.join(SRC, "index.html"), path.join(DOCS, "index.html"));
-  copyFile(path.join(SRC, "404.html"), path.join(DOCS, "404.html"));
+
+  for (const file of readdirSync(SRC)) {
+    if (file.endsWith(".html")) {
+      copyFile(path.join(SRC, file), path.join(DOCS, file));
+    }
+  }
+
   copyDir(path.join(SRC, "js"), path.join(DOCS, "js"));
   copyDir(path.join(SRC, "assets"), path.join(DOCS, "assets"));
 }
@@ -64,21 +70,35 @@ const tw = spawn(
   }
 );
 
-// File watchers: html, js, assets
 const watcher = chokidar.watch(
   [
-    `${SRC}/index.html`,
-    `${SRC}/404.html`,
+    SRC,
     `${SRC}/js/**`,
     `${SRC}/assets/**`,
   ],
   { ignoreInitial: true }
 );
 
+function isRootHtml(p) {
+  // alleen src/*.html (geen subfolders)
+  return p.startsWith(`${SRC}${path.sep}`) &&
+    path.extname(p) === ".html" &&
+    path.dirname(p) === SRC;
+}
+
 watcher
   .on("add", (p) => {
     const dest = toDocsPath(p);
     copyFile(p, dest);
+  })
+  .on("change", (p) => {
+    if (isRootHtml(p) ||
+      p.includes(`${path.sep}js${path.sep}`) ||
+      p.includes(`${path.sep}assets${path.sep}`) ||
+      p.includes(`${path.sep}partials${path.sep}`)) {
+      const dest = toDocsPath(p);
+      copyFile(p, dest);
+    }
   })
   .on("change", (p) => {
     const dest = toDocsPath(p);
@@ -101,10 +121,10 @@ watcher
 function shutdown(code = 0) {
   try {
     watcher.close();
-  } catch {}
+  } catch { }
   try {
     tw.kill("SIGINT");
-  } catch {}
+  } catch { }
   process.exit(code);
 }
 

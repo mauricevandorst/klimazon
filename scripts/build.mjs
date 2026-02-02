@@ -1,4 +1,4 @@
-import { rmSync, mkdirSync, cpSync, existsSync } from "node:fs";
+import { rmSync, mkdirSync, cpSync, existsSync, readdirSync } from "node:fs";
 import { execSync } from "node:child_process";
 
 const SRC = "src";
@@ -12,14 +12,18 @@ function clean() {
 }
 
 function copyStatic() {
-  cpSync(`${SRC}/index.html`, `${DOCS}/index.html`, { force: true });
-  cpSync(`${SRC}/404.html`, `${DOCS}/404.html`, { force: true });
+  // kopieer alle .html bestanden in src root
+  for (const file of readdirSync(SRC)) {
+    if (file.endsWith(".html")) {
+      cpSync(`${SRC}/${file}`, `${DOCS}/${file}`, { force: true });
+    }
+  }
+
   cpSync(`${SRC}/js`, `${DOCS}/js`, { recursive: true, force: true });
   cpSync(`${SRC}/assets`, `${DOCS}/assets`, { recursive: true, force: true });
 }
 
 function buildCss() {
-  // pas input pad aan als je input.css gebruikt
   execSync(
     "npx tailwindcss -i ./src/css/main.css -o ./docs/css/main.css --postcss --minify",
     { stdio: "inherit" }
