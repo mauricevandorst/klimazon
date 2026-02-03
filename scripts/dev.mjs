@@ -40,6 +40,7 @@ function initialSync() {
 
   copyDir(path.join(SRC, "js"), path.join(DOCS, "js"));
   copyDir(path.join(SRC, "assets"), path.join(DOCS, "assets"));
+  copyDir(path.join(SRC, "partials"), path.join(DOCS, "partials"));
 }
 
 function toDocsPath(srcPath) {
