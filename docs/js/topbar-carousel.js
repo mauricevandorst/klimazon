@@ -1,15 +1,22 @@
 // topbar-carousel.js
 (function () {
-  const carousels = document.querySelectorAll(".js-topbar-carousel");
-  carousels.forEach(initCarousel);
+  function initAll() {
+    const carousels = document.querySelectorAll(".js-topbar-carousel");
+    carousels.forEach(initCarousel);
+  }
 
   function initCarousel(container) {
+    if (container.dataset.topbarCarouselInit === "true") return;
+
     const viewport = container.querySelector(".overflow-x-auto");
     const track = container.querySelector(".js-topbar-track");
     if (!viewport || !track) return;
 
     const slides = Array.from(track.children);
     const count = slides.length;
+    if (count === 0) return;
+
+    container.dataset.topbarCarouselInit = "true";
 
     let index = 0;
     let timer = null;
@@ -77,5 +84,14 @@
     // Init
     alignToIndex("auto");
     start();
+  }
+
+  // Expose a hook for pages that inject the header later (via includes.js)
+  window.initTopbarCarousel = initAll;
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initAll);
+  } else {
+    initAll();
   }
 })();

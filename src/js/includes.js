@@ -13,6 +13,9 @@ async function includeHTML(id, file) {
   if (typeof window.initMobileMenu === "function") {
     window.initMobileMenu();
   }
+  if (typeof window.initTopbarCarousel === "function") {
+    window.initTopbarCarousel();
+  }
 
   await includeHTML("footer", "./partials/footer.html");
 
