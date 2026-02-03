@@ -1,33 +1,54 @@
 // ./js/menu.mobile.js
 
 (function () {
-  function initMobileMenu() {
-    const trigger = document.querySelector("[data-mobile-trigger]");
-    const menu = document.querySelector("[data-mobile-menu]");
+  function toggleMenu(root, triggerEl) {
+    const menu = root.querySelector("[data-mobile-menu]");
+    if (!menu) return;
+    menu.classList.toggle("hidden");
 
-    if (!trigger || !menu) return;
+    if (triggerEl) {
+      const isOpen = !menu.classList.contains("hidden");
+      triggerEl.setAttribute("aria-expanded", String(isOpen));
+    }
+  }
 
-    // Toggle hele menu panel
-    trigger.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
+  function toggleAccordion(root, btn) {
+    const key = btn.getAttribute("data-mobile-accordion");
+    const panel = root.querySelector(`[data-mobile-panel="${key}"]`);
+    if (!panel) return;
 
-    // Accordions
-    const accordionButtons = document.querySelectorAll("[data-mobile-accordion]");
-    accordionButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const key = btn.getAttribute("data-mobile-accordion");
-        const panel = document.querySelector(`[data-mobile-panel="${key}"]`);
-        if (!panel) return;
+    panel.classList.toggle("hidden");
 
-        panel.classList.toggle("hidden");
+    const icon = btn.querySelector("span");
+    if (icon) icon.textContent = panel.classList.contains("hidden") ? "+" : "–";
+  }
 
-        const icon = btn.querySelector("span");
-        if (icon) icon.textContent = panel.classList.contains("hidden") ? "+" : "–";
-      });
+  function initMobileMenu(root = document) {
+    if (window.__mobileMenuDelegatedAdded) return;
+    window.__mobileMenuDelegatedAdded = true;
+
+    root.addEventListener("click", (e) => {
+      const trigger = e.target.closest("[data-mobile-trigger]");
+      if (trigger) {
+        e.preventDefault();
+        toggleMenu(root, trigger);
+        return;
+      }
+
+      const accordionBtn = e.target.closest("[data-mobile-accordion]");
+      if (accordionBtn) {
+        e.preventDefault();
+        toggleAccordion(root, accordionBtn);
+      }
     });
   }
 
   // Expose globally, zodat includes.js dit kan callen
   window.initMobileMenu = initMobileMenu;
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => initMobileMenu(document));
+  } else {
+    initMobileMenu(document);
+  }
 })();

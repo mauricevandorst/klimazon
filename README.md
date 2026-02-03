@@ -28,4 +28,5 @@ Tijdens ontwikkeling werk je **altijd** in `src/`. De map `docs/` wordt automati
 **Belangrijk**
 - Werk in `src/`, serve altijd `docs/`.
 - Als iets in de browser ontbreekt, check of `npm run dev` draait of draai `npm run build`.
-
+- Gebruik geen live-server op `docs/` bij `includes.js`: de live-reload injectie kan partials kapotmaken
+  (zoals het mobiele menu). `python -m http.server` werkt wel goed.
