@@ -5,19 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (images.length < 2) return null;
 
-    // Preload
-    images.slice(1).forEach(src => {
-      const pre = new Image();
-      pre.src = src;
-    });
-
     return {
       img,
       images,
       interval,
       index: 0,
       paused: false,
-      lastSlot: 0
+      lastSlot: 0,
+      active: false,
+      preloaded: false
     };
   }).filter(Boolean);
 
@@ -30,6 +26,37 @@ document.addEventListener("DOMContentLoaded", () => {
       item.img.classList.remove("opacity-0");
     }, fadeMs);
   };
+
+  const activateItem = item => {
+    if (item.active) return;
+    item.active = true;
+    if (item.preloaded) return;
+
+    item.preloaded = true;
+    item.images.slice(1).forEach(src => {
+      const pre = new Image();
+      pre.src = src;
+    });
+  };
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const item = items.find(current => current.img === entry.target);
+        if (!item) return;
+
+        if (entry.isIntersecting) {
+          activateItem(item);
+        } else {
+          item.active = false;
+        }
+      });
+    }, { rootMargin: "200px 0px", threshold: 0.1 });
+
+    items.forEach(item => observer.observe(item.img));
+  } else {
+    items.forEach(activateItem);
+  }
 
   // Hover pauze per card (optioneel)
   items.forEach(item => {
@@ -45,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const now = Date.now();
 
     items.forEach(item => {
-      if (item.paused) return;
+      if (item.paused || !item.active) return;
 
       const slot = Math.floor(now / item.interval); // globale fase
       if (slot === item.lastSlot) return;

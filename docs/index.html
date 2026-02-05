@@ -233,7 +233,7 @@
 
             <div class="h-40 sm:h-auto sm:w-[9rem] self-stretch flex-shrink-0">
               <img src="./assets/images/portraits/monteur-in-huis.jpg" alt="Klimazon Klimaat & zontechniek"
-                class="w-full h-full object-cover" />
+                class="w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
             </div>
 
             <div class="flex flex-col gap-1 p-4 justify-center">
@@ -256,7 +256,7 @@
           shadow-sm overflow-hidden backdrop-blur shadow-md shadow-black/8">
             <div class="h-40 sm:h-auto sm:w-[9rem] self-stretch flex-shrink-0">
               <img src="./assets/images/portraits/monteur-zakelijk.jpg" alt="Klimazon Klimaat & zontechniek"
-                class="w-full h-full object-cover" />
+                class="w-full h-full object-cover" loading="eager" decoding="async" />
             </div>
 
             <div class="flex flex-col gap-1 p-4 justify-center">
@@ -567,7 +567,7 @@
         "./assets/images/products/zonnepanelen-2.jpg",
         "./assets/images/portraits/coffee-consult.webp"
       ]' data-interval="6500" src="./assets/images/products/zonnepanelen-2.jpg" alt="Zonnepanelen installatie"
-              loading="lazy" class="h-full w-full object-cover transition duration-300
+              loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-300
              group-hover:scale-[1.02]" />
             <div class="pointer-events-none absolute inset-x-0 bottom-0 h-40
             bg-gradient-to-t from-black/60 to-transparent">
@@ -620,7 +620,8 @@
         "./assets/images/products/mitsubishi-msz-ap.png",
         "./assets/images/products/mitsubishi-msz-ap-2.jpg"
       ]' data-interval="6500" src="./assets/images/products/mitsubishi-msz-ap.png"
-              alt="Mitsubishi Electric MSZ-AP airco" loading="lazy" class="h-full w-full object-cover transition duration-300
+              alt="Mitsubishi Electric MSZ-AP airco" loading="lazy" decoding="async"
+              class="h-full w-full object-cover transition duration-300
              group-hover:scale-[1.02]" />
             <div class="pointer-events-none absolute inset-x-0 bottom-0 h-40
             bg-gradient-to-t from-black/60 to-transparent">
@@ -673,7 +674,7 @@
         "./assets/images/products/zonnepanelen-2.webp",
         "./assets/images/products/thuisbatterij-2.jpg"
       ]' data-interval="6500" src="./assets/images/products/zonnepanelen-2.jpg" alt="Zonnepanelen installatie"
-              loading="lazy" class="h-full w-full object-cover transition duration-300
+              loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-300
              group-hover:scale-[1.02]" />
             <div class="pointer-events-none absolute inset-x-0 bottom-0 h-40
             bg-gradient-to-t from-black/60 to-transparent">
@@ -725,7 +726,7 @@
         "./assets/images/services/zonnepanelen-zakelijk-2.webp",
         "./assets/images/services/zonnepanelen-zakelijk-3.webp"
       ]' data-interval="6500" src="./assets/images/services/zonnepanelen-zakelijk.webp" alt="Zonnepanelen installatie"
-              loading="lazy" class="h-full w-full object-cover transition duration-300
+              loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-300
              group-hover:scale-[1.02]" />
             <div class="pointer-events-none absolute inset-x-0 bottom-0 h-40
             bg-gradient-to-t from-black/60 to-transparent">
@@ -805,7 +806,8 @@
           <!-- Rating pill (hardcode of later dynamisch) -->
           <div class="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 shadow-sm">
             <div class="rounded-[4px] px-2 py-1 bg-white">
-              <img src="./assets/images/logo/Google logo.png" alt="Google reviews" class="h-4" />
+              <img src="./assets/images/logo/Google logo.png" alt="Google reviews" class="h-4" loading="lazy"
+                decoding="async" />
             </div>
             <span class="text-yellow-400 text-sm">★★★★★</span>
             <span class="text-sm text-slate-500">|</span>
@@ -859,26 +861,42 @@
 
             <!-- Track A -->
             <ul class="marquee__content" aria-label="Merken">
-              <li class="logo-tile"><img src="./assets/images/logo/SolarEdge-wit.webp" alt="SolarEdge" /></li>
-              <li class="logo-tile"><img src="./assets/images/logo/Remeha-wit.webp" alt="Remeha" /></li>
-              <li class="logo-tile"><img src="./assets/images/logo/Haier-wit.webp" alt="Haier" /></li>
-              <li class="logo-tile"><img src="./assets/images/logo/Enphase-wit.webp" alt="Enphase" /></li>
-              <li class="logo-tile"><img src="./assets/images/logo/VanDerValk-wit.webp" alt="Van der Valk" /></li>
-              <li class="logo-tile"><img src="./assets/images/logo/Daikin-wit.webp" alt="Daikin" /></li>
-              <li class="logo-tile"><img src="./assets/images/logo/LG-wit.webp" alt="LG" /></li>
-              <li class="logo-tile"><img src="./assets/images/logo/Growatt-wit.webp" alt="Growatt" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/SolarEdge-wit.webp" alt="SolarEdge"
+                  loading="lazy" decoding="async" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Remeha-wit.webp" alt="Remeha" loading="lazy"
+                  decoding="async" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Haier-wit.webp" alt="Haier" loading="lazy"
+                  decoding="async" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Enphase-wit.webp" alt="Enphase" loading="lazy"
+                  decoding="async" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/VanDerValk-wit.webp" alt="Van der Valk"
+                  loading="lazy" decoding="async" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Daikin-wit.webp" alt="Daikin" loading="lazy"
+                  decoding="async" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/LG-wit.webp" alt="LG" loading="lazy"
+                  decoding="async" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Growatt-wit.webp" alt="Growatt" loading="lazy"
+                  decoding="async" /></li>
             </ul>
 
             <!-- Track B -->
             <ul class="marquee__content" aria-hidden="true">
-              <li class="logo-tile"><img src="./assets/images/logo/SolarEdge-wit.webp" alt="" /></li>
-              <li class="logo-tile"><img src="./assets/images/logo/Remeha-wit.webp" alt="" /></li>
-              <li class="logo-tile"><img src="./assets/images/logo/Haier-wit.webp" alt="" /></li>
-              <li class="logo-tile"><img src="./assets/images/logo/Enphase-wit.webp" alt="" /></li>
-              <li class="logo-tile"><img src="./assets/images/logo/VanDerValk-wit.webp" alt="" /></li>
-              <li class="logo-tile"><img src="./assets/images/logo/Daikin-wit.webp" alt="" /></li>
-              <li class="logo-tile"><img src="./assets/images/logo/LG-wit.webp" alt="" /></li>
-              <li class="logo-tile"><img src="./assets/images/logo/Growatt-wit.webp" alt="" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/SolarEdge-wit.webp" alt="" loading="lazy"
+                  decoding="async" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Remeha-wit.webp" alt="" loading="lazy"
+                  decoding="async" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Haier-wit.webp" alt="" loading="lazy"
+                  decoding="async" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Enphase-wit.webp" alt="" loading="lazy"
+                  decoding="async" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/VanDerValk-wit.webp" alt="" loading="lazy"
+                  decoding="async" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Daikin-wit.webp" alt="" loading="lazy"
+                  decoding="async" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/LG-wit.webp" alt="" loading="lazy"
+                  decoding="async" /></li>
+              <li class="logo-tile"><img src="./assets/images/logo/Growatt-wit.webp" alt="" loading="lazy"
+                  decoding="async" /></li>
             </ul>
 
           </div>
@@ -992,7 +1010,7 @@
     <div class="relative z-10 mx-auto max-w-6xl flex flex-col-reverse md:flex-row md:items-center gap-8">
       <div class="w-full md:w-1/2 flex justify-center">
         <img src="./assets/images/portraits/duurzame-installaties-noord-holland.jpg"
-          alt="Duurzame installaties in Noord-Holland"
+          alt="Duurzame installaties in Noord-Holland" loading="lazy" decoding="async"
           class="w-full h-auto rounded-lg shadow-[0_0_10px_rgba(0,0,0,0.15)]" />
       </div>
 
@@ -1084,7 +1102,7 @@
       <!-- Afbeelding rechts -->
       <div class="w-full hidden md:flex w-1/2 justify-center">
         <img src="./assets/images/hero/pointing.webp" alt="Duurzame installaties in Noord-Holland"
-          class="w-[350px] h-auto rounded-lg shadow-[0_0_10px_rgba(0,0,0,0.15)]" />
+          loading="lazy" decoding="async" class="w-[350px] h-auto rounded-lg shadow-[0_0_10px_rgba(0,0,0,0.15)]" />
       </div>
     </div>
   </section>
