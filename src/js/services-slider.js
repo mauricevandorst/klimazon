@@ -30,8 +30,17 @@
   function animateAllServicesBtn(toBusiness) {
     allServices.classList.remove("is-animate");
     allServices.classList.toggle("is-business", toBusiness);
+
+    // change href
+    allServices.href = toBusiness
+      ? "./diensten-zakelijk.html"
+      : "./diensten.html";
+
     void allServices.offsetHeight;
-    if (toBusiness) allServices.classList.add("is-animate");
+
+    if (toBusiness) {
+      allServices.classList.add("is-animate");
+    }
   }
 
   function update() {
