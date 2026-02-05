@@ -1,7 +1,11 @@
-<!-- Topbar (desktop only) -->
-<div class="bg-[color:var(--kz-darkerblue)] hidden sm:block">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="flex py-2 items-center text-xs font-bold text-white" style="justify-content: space-evenly;">
+<div
+  class="opacity-0 -translate-y-2 animate-[kz-nav-in-mobile_360ms_ease-out_forwards] sm:animate-[kz-nav-in_420ms_cubic-bezier(.2,.8,.2,1)_forwards]
+         motion-reduce:animate-none motion-reduce:opacity-100 motion-reduce:translate-y-0">
+  <!-- Topbar (desktop only) -->
+  <div class="bg-[color:var(--kz-darkerblue)] hidden sm:block">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex py-2 items-center text-xs font-bold text-white kz-stagger"
+        style="justify-content: space-evenly;">
 
       <!-- Reviews -->
       <a href="./#reviews" class="flex items-center gap-1 hover:opacity-90 hover:underline">
@@ -20,56 +24,124 @@
       <a href="./#over-ons" class="hover:opacity-90 hover:underline">Vakkundige monteurs</a>
       <a href="./#contact" class="hover:opacity-90 hover:underline">Maak een afspraak!</a>
 
-    </div>
-  </div>
-</div>
-
-<!-- Wrapper for mobile topbar carousel + navbar -->
-<div class="">
-  <!-- Topbar carousel (mobile only) -->
-  <div class="js-topbar-carousel bg-[color:var(--kz-darkerblue)] sm:hidden">
-    <div class="mx-auto max-w-7xl px-4">
-      <div class="overflow-x-auto scroll-smooth snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none]"
-        aria-label="Topbar carousel">
-        <style>
-          .js-topbar-carousel .overflow-x-auto::-webkit-scrollbar {
-            display: none;
-          }
-        </style>
-
-        <div class="flex js-topbar-track">
-          <a href="./#reviews"
-            class="flex flex-row items-center justify-center gap-2 w-full shrink-0 snap-start py-2 text-center text-xs font-bold text-white hover:opacity-90 hover:underline">
-            <span class="text-white">
-              Hoge klantbeoordeling
-            </span>
-            <div class="rounded-[4px] pl-[0.3rem] pr-[0.3rem] pt-[0.15rem] pb-[0.1rem] bg-white">
-              <img src="./assets/images/logo/Google logo.png" alt="Google reviews" class="h-3" />
-            </div>
-            <span class="text-yellow-400">
-              ★★★★★
-            </span>
-          </a>
-
-          <a href="./#over-ons"
-            class="w-full shrink-0 snap-start py-2 text-center text-xs font-bold text-white hover:opacity-90 hover:underline">
-            Onze monteurs hebben échte vakkennis!
-          </a>
-          <a href="./#contact"
-            class="w-full shrink-0 snap-start py-2 text-center text-xs font-bold text-white hover:opacity-90 hover:underline">
-            Maak een afspraak, ook mogelijk aan huis
-          </a>
-        </div>
       </div>
     </div>
   </div>
 
-  <!-- Navbar -->
-  <header class="bg-white/90 backdrop-blur border-b border-black/10 shadow-md shadow-black/8">
+  <!-- Wrapper for mobile topbar carousel + navbar -->
+  <div class="">
+    <!-- Topbar carousel (mobile only) -->
+    <div class="js-topbar-carousel bg-[color:var(--kz-darkerblue)] sm:hidden">
+      <div class="mx-auto max-w-7xl px-4">
+        <div class="overflow-x-auto scroll-smooth snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none]"
+          aria-label="Topbar carousel">
+          <style>
+            .js-topbar-carousel .overflow-x-auto::-webkit-scrollbar {
+              display: none;
+            }
+          </style>
+          <style>
+            @keyframes kz-nav-in {
+              from {
+                opacity: 0;
+                transform: translateY(-8px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+            @keyframes kz-nav-in-mobile {
+              from {
+                opacity: 0;
+                transform: translateY(-4px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+            @keyframes kz-fade-slide {
+              from {
+                opacity: 0;
+                transform: translateY(-6px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+            @keyframes kz-pop {
+              0% {
+                opacity: 0;
+                transform: translateY(-6px) scale(0.98);
+              }
+              60% {
+                opacity: 1;
+                transform: translateY(0) scale(1.01);
+              }
+              100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+              }
+            }
+            .kz-stagger > * {
+              opacity: 0;
+              animation: kz-fade-slide 420ms ease-out forwards;
+            }
+            .kz-stagger > *:nth-child(1) { animation-delay: 60ms; }
+            .kz-stagger > *:nth-child(2) { animation-delay: 120ms; }
+            .kz-stagger > *:nth-child(3) { animation-delay: 180ms; }
+            .kz-stagger > *:nth-child(4) { animation-delay: 240ms; }
+            .kz-stagger > *:nth-child(5) { animation-delay: 300ms; }
+            .kz-stagger > *:nth-child(6) { animation-delay: 360ms; }
+            .kz-stagger > *:nth-child(7) { animation-delay: 420ms; }
+            .kz-stagger > *:nth-child(8) { animation-delay: 480ms; }
+            .kz-stagger > *:nth-child(9) { animation-delay: 540ms; }
+            .kz-stagger > *:nth-child(10) { animation-delay: 600ms; }
+            @media (prefers-reduced-motion: reduce) {
+              .kz-stagger > * {
+                opacity: 1;
+                animation: none;
+              }
+            }
+          </style>
+
+          <div class="flex js-topbar-track kz-stagger">
+            <a href="./#reviews"
+              class="flex flex-row items-center justify-center gap-2 w-full shrink-0 snap-start py-2 text-center text-xs font-bold text-white hover:opacity-90 hover:underline">
+              <span class="text-white">
+                Hoge klantbeoordeling
+              </span>
+              <div class="rounded-[4px] pl-[0.3rem] pr-[0.3rem] pt-[0.15rem] pb-[0.1rem] bg-white">
+                <img src="./assets/images/logo/Google logo.png" alt="Google reviews" class="h-3" />
+              </div>
+              <span class="text-yellow-400">
+                ★★★★★
+              </span>
+            </a>
+
+            <a href="./#over-ons"
+              class="w-full shrink-0 snap-start py-2 text-center text-xs font-bold text-white hover:opacity-90 hover:underline">
+              Onze monteurs hebben échte vakkennis!
+            </a>
+            <a href="./#contact"
+              class="w-full shrink-0 snap-start py-2 text-center text-xs font-bold text-white hover:opacity-90 hover:underline">
+              Maak een afspraak, ook mogelijk aan huis
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <header
+      class="bg-white/90 backdrop-blur border-b border-black/10 shadow-md shadow-black/8">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
         <!-- Brand -->
-        <a href="./" class="flex flex-row items-center gap-3">
+        <a href="./"
+          class="flex flex-row items-center gap-3 opacity-0 animate-[kz-pop_520ms_cubic-bezier(.2,.8,.2,1)_forwards] [animation-delay:120ms] motion-reduce:animate-none motion-reduce:opacity-100">
           <img src="./assets/images/logo/Klimazon-logo.png" alt="Klimazon Klimaat & zontechniek" class="h-10 w-auto"
             loading="eager" />
           <div class="flex flex-col text-center items-center leading-none">
@@ -83,7 +155,7 @@
         </a>
 
         <!-- Desktop nav -->
-        <nav class="hidden lg:flex items-center gap-1" aria-label="Hoofdnavigatie">
+        <nav class="hidden lg:flex items-center gap-1 kz-stagger" aria-label="Hoofdnavigatie">
           <!-- Dropdown: Voor thuis -->
           <div class="relative">
             <button
@@ -276,4 +348,5 @@
     </div>
   </header>
 
+  </div>
 </div>

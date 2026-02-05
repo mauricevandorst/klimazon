@@ -1994,6 +1994,11 @@ a {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.-translate-y-2{
+  --tw-translate-y: -0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .-translate-y-px{
   --tw-translate-y: -1px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2006,6 +2011,11 @@ a {
 
 .translate-y-1\/3{
   --tw-translate-y: 33.333333%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1{
+  --tw-translate-y: -0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2052,6 +2062,22 @@ a {
 
 .transform-none{
   transform: none;
+}
+
+.animate-\[kz-nav-in-mobile_360ms_ease-out_forwards\]{
+  animation: kz-nav-in-mobile 360ms ease-out forwards;
+}
+
+.animate-\[kz-fade-slide_360ms_ease-out_forwards\]{
+  animation: kz-fade-slide 360ms ease-out forwards;
+}
+
+.animate-\[kz-fade-slide_300ms_ease-out_forwards\]{
+  animation: kz-fade-slide 300ms ease-out forwards;
+}
+
+.animate-\[kz-pop_520ms_cubic-bezier\(\.2\2c \.8\2c \.2\2c 1\)_forwards\]{
+  animation: kz-pop 520ms cubic-bezier(.2,.8,.2,1) forwards;
 }
 
 .cursor-not-allowed{
@@ -4388,6 +4414,10 @@ a {
   -ms-overflow-style: none;
 }
 
+.\[animation-delay\:120ms\]{
+  animation-delay: 120ms;
+}
+
 .\[background-image\:url\(\'\.\.\/assets\/images\/bg\/Zaanstreek\.webp\'\)\]{
   background-image: url('../assets/images/bg/Zaanstreek.webp');
 }
@@ -4696,6 +4726,21 @@ a {
   opacity: 1;
 }
 
+@media (prefers-reduced-motion: reduce){
+  .motion-reduce\:translate-y-0{
+    --tw-translate-y: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .motion-reduce\:animate-none{
+    animation: none;
+  }
+
+  .motion-reduce\:opacity-100{
+    opacity: 1;
+  }
+}
+
 @media (min-width: 640px){
   .sm\:col-span-2{
     grid-column: span 2 / span 2;
@@ -4769,6 +4814,10 @@ a {
 
   .sm\:w-\[9rem\]{
     width: 9rem;
+  }
+
+  .sm\:animate-\[kz-nav-in_420ms_cubic-bezier\(\.2\2c \.8\2c \.2\2c 1\)_forwards\]{
+    animation: kz-nav-in 420ms cubic-bezier(.2,.8,.2,1) forwards;
   }
 
   .sm\:grid-cols-2{
