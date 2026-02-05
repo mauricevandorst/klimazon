@@ -1914,20 +1914,16 @@ a {
   max-width: 80rem;
 }
 
+.max-w-\[250px\]{
+  max-width: 250px;
+}
+
 .max-w-\[520px\]{
   max-width: 520px;
 }
 
 .max-w-xl{
   max-width: 36rem;
-}
-
-.max-w-\[200px\]{
-  max-width: 200px;
-}
-
-.max-w-\[250px\]{
-  max-width: 250px;
 }
 
 .flex-shrink{
@@ -4976,30 +4972,8 @@ a {
     justify-self: center;
   }
 
-  .md\:rounded-2xl{
-    border-radius: 1rem;
-  }
-
-  .md\:border-white\/40{
-    border-color: rgb(255 255 255 / 0.4);
-  }
-
-  .md\:bg-white\/5{
-    background-color: rgb(255 255 255 / 0.05);
-  }
-
-  .md\:p-6{
-    padding: 1.5rem;
-  }
-
   .md\:text-left{
     text-align: left;
-  }
-
-  .md\:shadow-\[0_18px_50px_rgba\(0\2c 0\2c 0\2c 0\.05\)\]{
-    --tw-shadow: 0 18px 50px rgba(0,0,0,0.05);
-    --tw-shadow-colored: 0 18px 50px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
   .md\:\[background-image\:url\(\'\.\.\/assets\/images\/bg\/Zaanstreek-xl\.webp\'\)\]{
