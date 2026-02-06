@@ -2014,11 +2014,6 @@ a {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.-translate-y-1{
-  --tw-translate-y: -0.25rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .skew-x-12{
   --tw-skew-x: 12deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2068,16 +2063,8 @@ a {
   animation: kz-nav-in-mobile 360ms ease-out forwards;
 }
 
-.animate-\[kz-fade-slide_360ms_ease-out_forwards\]{
-  animation: kz-fade-slide 360ms ease-out forwards;
-}
-
-.animate-\[kz-fade-slide_300ms_ease-out_forwards\]{
-  animation: kz-fade-slide 300ms ease-out forwards;
-}
-
-.animate-\[kz-pop_520ms_cubic-bezier\(\.2\2c \.8\2c \.2\2c 1\)_forwards\]{
-  animation: kz-pop 520ms cubic-bezier(.2,.8,.2,1) forwards;
+.animate-\[kz-nav-in_420ms_cubic-bezier\(\.2\2c \.8\2c \.2\2c 1\)_forwards\]{
+  animation: kz-nav-in 420ms cubic-bezier(.2,.8,.2,1) forwards;
 }
 
 .cursor-not-allowed{
@@ -4414,10 +4401,6 @@ a {
   -ms-overflow-style: none;
 }
 
-.\[animation-delay\:120ms\]{
-  animation-delay: 120ms;
-}
-
 .\[background-image\:url\(\'\.\.\/assets\/images\/bg\/Zaanstreek\.webp\'\)\]{
   background-image: url('../assets/images/bg/Zaanstreek.webp');
 }
@@ -4818,6 +4801,10 @@ a {
 
   .sm\:animate-\[kz-nav-in_420ms_cubic-bezier\(\.2\2c \.8\2c \.2\2c 1\)_forwards\]{
     animation: kz-nav-in 420ms cubic-bezier(.2,.8,.2,1) forwards;
+  }
+
+  .sm\:animate-\[kz-fade-slide_420ms_cubic-bezier\(\.2\2c \.8\2c \.2\2c 1\)_forwards\]{
+    animation: kz-fade-slide 420ms cubic-bezier(.2,.8,.2,1) forwards;
   }
 
   .sm\:grid-cols-2{

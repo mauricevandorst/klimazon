@@ -1,28 +1,41 @@
-<div
-  class="opacity-0 -translate-y-2 animate-[kz-nav-in-mobile_360ms_ease-out_forwards] sm:animate-[kz-nav-in_420ms_cubic-bezier(.2,.8,.2,1)_forwards]
+<div class="opacity-0 -translate-y-2
+         animate-[kz-nav-in_420ms_cubic-bezier(.2,.8,.2,1)_forwards]
          motion-reduce:animate-none motion-reduce:opacity-100 motion-reduce:translate-y-0">
+  <style>
+    @keyframes kz-nav-in {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
   <!-- Topbar (desktop only) -->
   <div class="bg-[color:var(--kz-darkerblue)] hidden sm:block">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex py-2 items-center text-xs font-bold text-white kz-stagger"
-        style="justify-content: space-evenly;">
+      <div class="flex py-2 items-center text-xs font-bold text-white" style="justify-content: space-evenly;">
 
-      <!-- Reviews -->
-      <a href="./#reviews" class="flex items-center gap-1 hover:opacity-90 hover:underline">
-        <span class="flex text-white">
-          Uitstekend
-        </span>
-        <div class="rounded-[4px] pl-[0.3rem] pr-[0.3rem] pt-[0.2rem] pb-[0.15rem] bg-white">
-          <img src="./assets/images/logo/Google logo.png" alt="Google reviews" class="h-3" decoding="async" />
-        </div>
-        <span class="flex text-yellow-400">
-          ★★★★★
-        </span>
-      </a>
+        <!-- Reviews -->
+        <a href="./#reviews" class="flex items-center gap-1 hover:opacity-90 hover:underline">
+          <span class="flex text-white">
+            Uitstekend
+          </span>
+          <div class="rounded-[4px] pl-[0.3rem] pr-[0.3rem] pt-[0.2rem] pb-[0.15rem] bg-white">
+            <img src="./assets/images/logo/Google logo.png" alt="Google reviews" class="h-3" decoding="async" />
+          </div>
+          <span class="flex text-yellow-400">
+            ★★★★★
+          </span>
+        </a>
 
-      <!-- CTA's -->
-      <a href="./#over-ons" class="hover:opacity-90 hover:underline">Vakkundige monteurs</a>
-      <a href="./#contact" class="hover:opacity-90 hover:underline">Maak een afspraak!</a>
+        <!-- CTA's -->
+        <a href="./#over-ons" class="hover:opacity-90 hover:underline">Vakkundige monteurs</a>
+        <a href="./#contact" class="hover:opacity-90 hover:underline">Maak een afspraak!</a>
 
       </div>
     </div>
@@ -33,81 +46,16 @@
     <!-- Topbar carousel (mobile only) -->
     <div class="js-topbar-carousel bg-[color:var(--kz-darkerblue)] sm:hidden">
       <div class="mx-auto max-w-7xl px-4">
-        <div class="overflow-x-auto scroll-smooth snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none]"
+        <div
+          class="overflow-x-auto scroll-smooth snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none]"
           aria-label="Topbar carousel">
           <style>
             .js-topbar-carousel .overflow-x-auto::-webkit-scrollbar {
               display: none;
             }
           </style>
-          <style>
-            @keyframes kz-nav-in {
-              from {
-                opacity: 0;
-                transform: translateY(-8px);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(0);
-              }
-            }
-            @keyframes kz-nav-in-mobile {
-              from {
-                opacity: 0;
-                transform: translateY(-4px);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(0);
-              }
-            }
-            @keyframes kz-fade-slide {
-              from {
-                opacity: 0;
-                transform: translateY(-6px);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(0);
-              }
-            }
-            @keyframes kz-pop {
-              0% {
-                opacity: 0;
-                transform: translateY(-6px) scale(0.98);
-              }
-              60% {
-                opacity: 1;
-                transform: translateY(0) scale(1.01);
-              }
-              100% {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-              }
-            }
-            .kz-stagger > * {
-              opacity: 0;
-              animation: kz-fade-slide 420ms ease-out forwards;
-            }
-            .kz-stagger > *:nth-child(1) { animation-delay: 60ms; }
-            .kz-stagger > *:nth-child(2) { animation-delay: 120ms; }
-            .kz-stagger > *:nth-child(3) { animation-delay: 180ms; }
-            .kz-stagger > *:nth-child(4) { animation-delay: 240ms; }
-            .kz-stagger > *:nth-child(5) { animation-delay: 300ms; }
-            .kz-stagger > *:nth-child(6) { animation-delay: 360ms; }
-            .kz-stagger > *:nth-child(7) { animation-delay: 420ms; }
-            .kz-stagger > *:nth-child(8) { animation-delay: 480ms; }
-            .kz-stagger > *:nth-child(9) { animation-delay: 540ms; }
-            .kz-stagger > *:nth-child(10) { animation-delay: 600ms; }
-            @media (prefers-reduced-motion: reduce) {
-              .kz-stagger > * {
-                opacity: 1;
-                animation: none;
-              }
-            }
-          </style>
 
-          <div class="flex js-topbar-track kz-stagger">
+          <div class="flex js-topbar-track">
             <a href="./#reviews"
               class="flex flex-row items-center justify-center gap-2 w-full shrink-0 snap-start py-2 text-center text-xs font-bold text-white hover:opacity-90 hover:underline">
               <span class="text-white">
@@ -135,218 +83,219 @@
     </div>
 
     <!-- Navbar -->
-    <header
-      class="bg-white/90 backdrop-blur border-b border-black/10 shadow-md shadow-black/8">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex h-16 items-center justify-between">
-        <!-- Brand -->
-        <a href="./"
-          class="flex flex-row items-center gap-3 opacity-0 animate-[kz-pop_520ms_cubic-bezier(.2,.8,.2,1)_forwards] [animation-delay:120ms] motion-reduce:animate-none motion-reduce:opacity-100">
-          <img src="./assets/images/logo/Klimazon-logo.png" alt="Klimazon Klimaat & zontechniek" class="h-10 w-auto"
-            loading="eager" decoding="async" />
-          <div class="flex flex-col text-center items-center leading-none">
-            <span class="text-[19.68px] lg:text-[23px] font-extrabold tracking-tight text-slate-700">
-              Klimazon
-            </span>
-            <span class="text-[8.5px] lg:text-[10px] font-medium tracking-tight -mt-0.5 text-slate-700">
-              Klimaat &amp; zontechniek
-            </span>
-          </div>
-        </a>
+    <header class="bg-white/90 backdrop-blur border-b border-black/10 shadow-md shadow-black/8">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <!-- Brand -->
+          <a href="./" class="flex flex-row items-center gap-3">
+            <img src="./assets/images/logo/Klimazon-logo.png" alt="Klimazon Klimaat & zontechniek"
+              class="h-10 w-auto" />
+            <div class="flex flex-col text-center items-center leading-none">
+              <span class="text-[19.68px] lg:text-[23px] font-extrabold tracking-tight text-slate-700">
+                Klimazon
+              </span>
+              <span class="text-[8.5px] lg:text-[10px] font-medium tracking-tight -mt-0.5 text-slate-700">
+                Klimaat &amp; zontechniek
+              </span>
+            </div>
+          </a>
 
-        <!-- Desktop nav -->
-        <nav class="hidden lg:flex items-center gap-1 kz-stagger" aria-label="Hoofdnavigatie">
-          <!-- Dropdown: Voor thuis -->
-          <div class="relative">
-            <button
-              class="group inline-flex items-center gap-2 rounded-[5px] px-3 my-2 text-sm font-semibold text-[color:var(--kz-lightgrey)] hover:text-black focus:outline-none"
-              type="button" data-dropdown-trigger="thuis" aria-haspopup="true" aria-expanded="false">
-              <span>Voor thuis</span>
-              <svg class="h-4 w-4 opacity-70 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08Z"
-                  clip-rule="evenodd" />
-              </svg>
-            </button>
+          <!-- Desktop nav -->
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Hoofdnavigatie">
+            <!-- Dropdown: Voor thuis -->
+            <div class="relative">
+              <button
+                class="group inline-flex items-center gap-2 rounded-[5px] px-3 my-2 text-sm font-semibold text-[color:var(--kz-lightgrey)] hover:text-black focus:outline-none"
+                type="button" data-dropdown-trigger="thuis" aria-haspopup="true" aria-expanded="false">
+                <span>Voor thuis</span>
+                <svg class="h-4 w-4 opacity-70 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08Z"
+                    clip-rule="evenodd" />
+                </svg>
+              </button>
 
-            <div class="invisible absolute left-0 mt-2 w-[360px] rounded-[5px] border border-black/10 bg-white p-2 shadow-xl opacity-0 transition
+              <div class="invisible absolute left-0 mt-2 w-[360px] rounded-[5px] border border-black/10 bg-white p-2 shadow-xl opacity-0 transition
                      data-[open=true]:visible data-[open=true]:opacity-100" data-dropdown-menu="thuis" role="menu">
-              <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./zonnepanelen.html">
-                <div class="text-sm font-semibold">Zonnepanelen</div>
-                <div class="text-xs text-black/60">Advies, installatie en rendement.</div>
-              </a>
-              <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./airconditioning.html">
-                <div class="text-sm font-semibold">Airco</div>
-                <div class="text-xs text-black/60">Koelen én verwarmen, fluisterstil.</div>
-              </a>
-              <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./warmtepomp.html">
-                <div class="text-sm font-semibold">Warmtepompen</div>
-                <div class="text-xs text-black/60">Duurzaam verwarmen, lagere kosten.</div>
-              </a>
-              <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./thuisbatterij.html">
-                <div class="text-sm font-semibold">Thuisbatterijen</div>
-                <div class="text-xs text-black/60">Meer eigen verbruik, slim opslaan.</div>
-              </a>
+                <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./zonnepanelen.html">
+                  <div class="text-sm font-semibold">Zonnepanelen</div>
+                  <div class="text-xs text-black/60">Advies, installatie en rendement.</div>
+                </a>
+                <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./airconditioning.html">
+                  <div class="text-sm font-semibold">Airco</div>
+                  <div class="text-xs text-black/60">Koelen én verwarmen, fluisterstil.</div>
+                </a>
+                <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./warmtepomp.html">
+                  <div class="text-sm font-semibold">Warmtepompen</div>
+                  <div class="text-xs text-black/60">Duurzaam verwarmen, lagere kosten.</div>
+                </a>
+                <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./thuisbatterij.html">
+                  <div class="text-sm font-semibold">Thuisbatterijen</div>
+                  <div class="text-xs text-black/60">Meer eigen verbruik, slim opslaan.</div>
+                </a>
 
-              <div class="my-2 border-t border-black/10"></div>
+                <div class="my-2 border-t border-black/10"></div>
 
-              <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./onderhoud-en-service.html">
-                <div class="text-sm font-semibold">Onderhoud & Service 🔧</div>
-                <div class="text-xs text-black/60">Betrouwbaar, snel en netjes geregeld.</div>
-              </a>
+                <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./onderhoud-en-service.html">
+                  <div class="text-sm font-semibold">Onderhoud & Service 🔧</div>
+                  <div class="text-xs text-black/60">Betrouwbaar, snel en netjes geregeld.</div>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <!-- Dropdown: Voor bedrijven -->
-          <div class="relative">
-            <button
-              class="group inline-flex items-center gap-2 rounded-[5px] px-3 my-2 text-sm text-[color:var(--kz-lightgrey)] hover:text-black font-semibold focus:outline-none"
-              type="button" data-dropdown-trigger="bedrijven" aria-haspopup="true" aria-expanded="false">
-              <span>Voor bedrijven</span>
-              <svg class="h-4 w-4 opacity-70 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20" fill="currentColor">
+            <!-- Dropdown: Voor bedrijven -->
+            <div class="relative">
+              <button
+                class="group inline-flex items-center gap-2 rounded-[5px] px-3 my-2 text-sm text-[color:var(--kz-lightgrey)] hover:text-black font-semibold focus:outline-none"
+                type="button" data-dropdown-trigger="bedrijven" aria-haspopup="true" aria-expanded="false">
+                <span>Voor bedrijven</span>
+                <svg class="h-4 w-4 opacity-70 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08Z"
+                    clip-rule="evenodd" />
+                </svg>
+              </button>
+
+              <div class="invisible absolute left-0 mt-2 w-[360px] rounded-[5px] border border-black/10 bg-white p-2 shadow-xl opacity-0 transition
+                     data-[open=true]:visible data-[open=true]:opacity-100" data-dropdown-menu="bedrijven" role="menu">
+                <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./zonnepanelen-zakelijk.html">
+                  <div class="text-sm font-semibold">Zonnepanelen zakelijk</div>
+                  <div class="text-xs text-black/60">Grootverbruik, slimme opwek.</div>
+                </a>
+                <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./airconditioning-zakelijk.html">
+                  <div class="text-sm font-semibold">Airco zakelijk</div>
+                  <div class="text-xs text-black/60">Comfort in kantoor, winkel of hal.</div>
+                </a>
+                <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./warmtepomp-zakelijk.html">
+                  <div class="text-sm font-semibold">Warmtepomp zakelijk</div>
+                  <div class="text-xs text-black/60">Duurzaam verwarmen op schaal.</div>
+                </a>
+                <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./opslag-zakelijk.html">
+                  <div class="text-sm font-semibold">Opslag & energiemanagement</div>
+                  <div class="text-xs text-black/60">Peak shaving, optimalisatie, inzicht.</div>
+                </a>
+              </div>
+            </div>
+
+            <a class="rounded-[5px] px-3 my-2 text-sm font-semibold text-[color:var(--kz-lightgrey)] hover:text-black"
+              href="./projecten.html">
+              <span>Projecten</span>
+            </a>
+            <a class="rounded-[5px] px-3 my-2 text-sm font-semibold text-[color:var(--kz-lightgrey)] hover:text-black"
+              href="./over-ons.html">
+              <span class="text-[color:var(--kz-lightgrey)] hover:text-black">Over ons</span>
+            </a>
+            <a class="rounded-[5px] px-3 my-2 text-sm font-semibold text-[color:var(--kz-lightgrey)] hover:text-black"
+              href="./contact.html">
+              <span class="text-[color:var(--kz-lightgrey)] hover:text-black">Contact</span>
+            </a>
+
+            <!-- CTA -->
+            <a href="./offerte.html"
+              class="ml-2 inline-flex items-center justify-center rounded-[5px] px-4 py-2 text-xs font-semibold text-white shadow-sm
+                   bg-[color:var(--kz-darkerblue)] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
+              Offerte aanvragen
+            </a>
+          </nav>
+
+          <!-- Mobile actions -->
+          <div class="flex items-center gap-2 lg:hidden">
+            <a href="tel:+31654216787"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-[5px] text-slate-700 hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-[color:var(--kz-darkerblue)]"
+              aria-label="Offerte aanvragen" title="Offerte aanvragen">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"
+                aria-hidden="true">
                 <path fill-rule="evenodd"
-                  d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08Z"
+                  d="M2 3.5A1.5 1.5 0 013.5 2h2A1.5 1.5 0 017 3.5v2A1.5 1.5 0 015.5 7H5a11 11 0 008 8v-.5A1.5 1.5 0 0114.5 13h2a1.5 1.5 0 011.5 1.5v2A1.5 1.5 0 0116.5 18h-.5C7.82 18 2 12.18 2 5v-.5z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+
+            <button type="button"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-[5px] text-slate-700 hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-[color:var(--kz-darkerblue)]"
+              aria-label="Open menu" data-mobile-trigger>
+              <!-- hamburger -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+                <path fill-rule="evenodd"
+                  d="M3.75 6.75A.75.75 0 0 1 4.5 6h15a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75Zm0 5.25A.75.75 0 0 1 4.5 11.25h15a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75Zm0 5.25A.75.75 0 0 1 4.5 16.5h15a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75Z"
                   clip-rule="evenodd" />
               </svg>
             </button>
+          </div>
+        </div>
+      </div>
 
-            <div class="invisible absolute left-0 mt-2 w-[360px] rounded-[5px] border border-black/10 bg-white p-2 shadow-xl opacity-0 transition
-                     data-[open=true]:visible data-[open=true]:opacity-100" data-dropdown-menu="bedrijven" role="menu">
-              <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./zonnepanelen-zakelijk.html">
-                <div class="text-sm font-semibold">Zonnepanelen zakelijk</div>
-                <div class="text-xs text-black/60">Grootverbruik, slimme opwek.</div>
-              </a>
-              <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./airconditioning-zakelijk.html">
-                <div class="text-sm font-semibold">Airco zakelijk</div>
-                <div class="text-xs text-black/60">Comfort in kantoor, winkel of hal.</div>
-              </a>
-              <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./warmtepomp-zakelijk.html">
-                <div class="text-sm font-semibold">Warmtepomp zakelijk</div>
-                <div class="text-xs text-black/60">Duurzaam verwarmen op schaal.</div>
-              </a>
-              <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./opslag-zakelijk.html">
-                <div class="text-sm font-semibold">Opslag & energiemanagement</div>
-                <div class="text-xs text-black/60">Peak shaving, optimalisatie, inzicht.</div>
-              </a>
+      <!-- Mobile menu panel -->
+      <div class="hidden border-t border-black/10 bg-white" data-mobile-menu>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+          <div class="grid gap-2">
+            <button
+              class="flex w-full items-center justify-between rounded-[5px] px-4 py-3 text-sm font-semibold hover:bg-black/5"
+              data-mobile-accordion="thuis">
+              Voor thuis
+              <span class="text-black/50">+</span>
+            </button>
+            <div class="hidden rounded-[5px] border border-black/10 p-2" data-mobile-panel="thuis">
+              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
+                href="./zonnepanelen.html">Zonnepanelen</a>
+              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5" href="./airconditioning.html">Airco</a>
+              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
+                href="./warmtepomp.html">Warmtepompen</a>
+              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
+                href="./thuisbatterij.html">Thuisbatterijen</a>
+              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
+                href="./onderhoud-en-service.html">Onderhoud &
+                service</a>
             </div>
-          </div>
 
-          <a class="rounded-[5px] px-3 my-2 text-sm font-semibold text-[color:var(--kz-lightgrey)] hover:text-black"
-            href="./projecten.html">
-            <span>Projecten</span>
-          </a>
-          <a class="rounded-[5px] px-3 my-2 text-sm font-semibold text-[color:var(--kz-lightgrey)] hover:text-black"
-            href="./over-ons.html">
-            <span class="text-[color:var(--kz-lightgrey)] hover:text-black">Over ons</span>
-          </a>
-          <a class="rounded-[5px] px-3 my-2 text-sm font-semibold text-[color:var(--kz-lightgrey)] hover:text-black"
-            href="./contact.html">
-            <span class="text-[color:var(--kz-lightgrey)] hover:text-black">Contact</span>
-          </a>
+            <button
+              class="flex w-full items-center justify-between rounded-[5px] px-4 py-3 text-sm font-semibold hover:bg-black/5"
+              data-mobile-accordion="bedrijven">
+              Voor bedrijven
+              <span class="text-black/50">+</span>
+            </button>
+            <div class="hidden rounded-[5px] border border-black/10 p-2" data-mobile-panel="bedrijven">
+              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
+                href="./zonnepanelen-zakelijk.html">Zonnepanelen zakelijk</a>
+              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
+                href="./airconditioning-zakelijk.html">Airco
+                zakelijk</a>
+              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
+                href="./warmtepomp-zakelijk.html">Warmtepomp
+                zakelijk</a>
+              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5" href="./opslag-zakelijk.html">Opslag &
+                energiemanagement</a>
+            </div>
 
-          <!-- CTA -->
-          <a href="./offerte.html"
-            class="ml-2 inline-flex items-center justify-center rounded-[5px] px-4 py-2 text-xs font-semibold text-white shadow-sm
-                   bg-[color:var(--kz-darkerblue)] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
-            Offerte aanvragen
-          </a>
-        </nav>
+            <a class="rounded-[5px] px-4 py-3 font-semibold text-sm hover:bg-black/5"
+              href="./projecten.html">Projecten</a>
+            <a class="rounded-[5px] px-4 py-3 font-semibold text-sm hover:bg-black/5" href="./over-ons.html">Over
+              ons</a>
+            <a class="rounded-[5px] px-4 py-3 font-semibold text-sm hover:bg-black/5" href="./contact.html">Contact</a>
 
-        <!-- Mobile actions -->
-        <div class="flex items-center gap-2 lg:hidden">
-          <a href="tel:+31654216787"
-            class="inline-flex h-10 w-10 items-center justify-center rounded-[5px] text-slate-700 hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-[color:var(--kz-darkerblue)]"
-            aria-label="Offerte aanvragen" title="Offerte aanvragen">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"
-              aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M2 3.5A1.5 1.5 0 013.5 2h2A1.5 1.5 0 017 3.5v2A1.5 1.5 0 015.5 7H5a11 11 0 008 8v-.5A1.5 1.5 0 0114.5 13h2a1.5 1.5 0 011.5 1.5v2A1.5 1.5 0 0116.5 18h-.5C7.82 18 2 12.18 2 5v-.5z"
-                clip-rule="evenodd" />
-            </svg>
-          </a>
-
-          <button type="button"
-            class="inline-flex h-10 w-10 items-center justify-center rounded-[5px] text-slate-700 hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-[color:var(--kz-darkerblue)]"
-            aria-label="Open menu" data-mobile-trigger>
-            <!-- hamburger -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
-              <path fill-rule="evenodd"
-                d="M3.75 6.75A.75.75 0 0 1 4.5 6h15a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75Zm0 5.25A.75.75 0 0 1 4.5 11.25h15a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75Zm0 5.25A.75.75 0 0 1 4.5 16.5h15a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75Z"
-                clip-rule="evenodd" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile menu panel -->
-    <div class="hidden border-t border-black/10 bg-white" data-mobile-menu>
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
-        <div class="grid gap-2">
-          <button
-            class="flex w-full items-center justify-between rounded-[5px] px-4 py-3 text-sm font-semibold hover:bg-black/5"
-            data-mobile-accordion="thuis">
-            Voor thuis
-            <span class="text-black/50">+</span>
-          </button>
-          <div class="hidden rounded-[5px] border border-black/10 p-2" data-mobile-panel="thuis">
-            <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
-              href="./zonnepanelen.html">Zonnepanelen</a>
-            <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5" href="./airconditioning.html">Airco</a>
-            <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5" href="./warmtepomp.html">Warmtepompen</a>
-            <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
-              href="./thuisbatterij.html">Thuisbatterijen</a>
-            <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
-              href="./onderhoud-en-service.html">Onderhoud &
-              service</a>
-          </div>
-
-          <button
-            class="flex w-full items-center justify-between rounded-[5px] px-4 py-3 text-sm font-semibold hover:bg-black/5"
-            data-mobile-accordion="bedrijven">
-            Voor bedrijven
-            <span class="text-black/50">+</span>
-          </button>
-          <div class="hidden rounded-[5px] border border-black/10 p-2" data-mobile-panel="bedrijven">
-            <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
-              href="./zonnepanelen-zakelijk.html">Zonnepanelen zakelijk</a>
-            <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5" href="./airconditioning-zakelijk.html">Airco
-              zakelijk</a>
-            <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
-              href="./warmtepomp-zakelijk.html">Warmtepomp
-              zakelijk</a>
-            <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5" href="./opslag-zakelijk.html">Opslag &
-              energiemanagement</a>
-          </div>
-
-          <a class="rounded-[5px] px-4 py-3 font-semibold text-sm hover:bg-black/5"
-            href="./projecten.html">Projecten</a>
-          <a class="rounded-[5px] px-4 py-3 font-semibold text-sm hover:bg-black/5" href="./over-ons.html">Over
-            ons</a>
-          <a class="rounded-[5px] px-4 py-3 font-semibold text-sm hover:bg-black/5" href="./contact.html">Contact</a>
-
-          <a href="./offerte.html" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
+            <a href="./offerte.html" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
                    bg-[color:var(--kz-darkerblue)] text-white focus:text-white/90 transition hover:opacity-90">
-            Vraag offerte aan
-            <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
-          </a>
-          <a href="tel:+31654216787" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
+              Vraag offerte aan
+              <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </a>
+            <a href="tel:+31654216787" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
                    border border-black/10 text-slate-600 focus:text-slate-600/90 transition hover:opacity-90">
-            <span class="inline-block transition-transform duration-300 group-hover:-translate-x-1" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                <path
-                  d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.85 21 3 13.15 3 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z" />
-              </svg>
-            </span>Bel ons!
-          </a>
+              <span class="inline-block transition-transform duration-300 group-hover:-translate-x-1"
+                aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                  <path
+                    d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.85 21 3 13.15 3 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z" />
+                </svg>
+              </span>Bel ons!
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
   </div>
 </div>
