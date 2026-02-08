@@ -13,6 +13,12 @@
         transform: translateY(0);
       }
     }
+
+    [data-mobile-header].is-mobile-open {
+      background-color: #ffffff;
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+    }
   </style>
 
   <!-- Topbar (desktop only) -->
@@ -83,7 +89,7 @@
     </div>
 
     <!-- Navbar -->
-    <header class="bg-white/90 backdrop-blur border-b border-black/10 shadow-md shadow-black/8">
+    <header class="bg-white/90 backdrop-blur border-b border-black/10 shadow-md shadow-black/8" data-mobile-header>
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
           <!-- Brand -->
@@ -139,7 +145,7 @@
                 </a>
 
                 <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./onderhoud-en-service.html">
-                  <div class="text-sm font-semibold">Onderhoud & Service 🔧</div>
+                  <div class="text-sm font-semibold">Onderhoud & Service</div>
                 </a>
               </div>
             </div>

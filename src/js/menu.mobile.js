@@ -6,6 +6,12 @@
     if (!menu) return;
     menu.classList.toggle("hidden");
 
+    const header = root.querySelector("[data-mobile-header]");
+    if (header) {
+      const isOpenNow = !menu.classList.contains("hidden");
+      header.classList.toggle("is-mobile-open", isOpenNow);
+    }
+
     if (triggerEl) {
       const isOpen = !menu.classList.contains("hidden");
       triggerEl.setAttribute("aria-expanded", String(isOpen));

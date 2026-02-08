@@ -151,9 +151,9 @@
     <div class="relative mx-auto w-full max-w-7xl px-6 py-10 lg:py-14 z-10 mb-[4rem]">
       <div class="flex flex-col-reverse md:flex-row lg:items-center gap-8 lg:gap-12">
         <div class="w-full lg:w-1/2">
-          <p class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-white/70">Projecten</p>
+          <p class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-white/70">Projectgallerij</p>
           <h1 class="mt-3 text-3xl sm:text-5xl font-bold tracking-tight text-white">
-            Recente installaties uit de regio
+            Recente installaties
           </h1>
           <p class="mt-4 text-sm sm:text-base font-medium text-white/90 leading-relaxed">
             Kijk mee met een aantal installaties die wij recent hebben uitgevoerd voor woningen
@@ -161,18 +161,18 @@
           </p>
 
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="./offerte.html" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
-                   bg-white/10 text-white focus:text-white/90 transition hover:opacity-90">
-              Vraag offerte aan
-              <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
-            </a>
             <a href="#projects" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
                    bg-white/95 text-slate-600 focus:text-slate-600/90 transition hover:opacity-90">
               Bekijk projecten
               <span class="inline-block text-m transition-transform duration-300 group-hover:translate-y-0.5">
                 ↓
+              </span>
+            </a>
+            <a href="./offerte.html" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
+                   bg-white/10 text-white focus:text-white/90 transition hover:opacity-90">
+              Vraag offerte aan
+              <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                →
               </span>
             </a>
           </div>
@@ -206,14 +206,14 @@
     <div id="projects" class="mx-auto w-full max-w-7xl px-6">
       <div class="flex items-end justify-between gap-6">
         <div>
-          <p class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-slate-500">Projectgallerij</p>
+          <p class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-slate-500">Recente projecten</p>
           <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-slate-700">Projecten uit de regio</h2>
           <p class="mt-2 text-sm sm:text-base text-slate-600 max-w-2xl">
-            Een selectie van onze installaties met korte projectdetails en beeldmateriaal per locatie.
+            Bent u benieuwd hoe wij ons werk afleveren? Hieronder een kleine selectie van recente installaties met korte details en beeldmateriaal per locatie.
           </p>
         </div>
         <a href="./offerte.html" class="hidden sm:inline-flex h-auto items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
-          bg-[var(--kz-blue)] text-white hover:opacity-90 transition">
+          bg-[color:var(--kz-darkerblue)] text-white hover:opacity-90 transition">
           Offerte aanvragen
         </a>
       </div>
@@ -482,40 +482,10 @@
       </div>
     </div>
 
-    <script>
-      (function () {
-        var carousels = document.querySelectorAll('[data-carousel]');
-        carousels.forEach(function (carousel) {
-          var images = carousel.querySelectorAll('.carousel-image');
-          var prev = carousel.querySelector('[data-carousel-prev]');
-          var next = carousel.querySelector('[data-carousel-next]');
-          var index = 0;
-
-          function show(i) {
-            images.forEach(function (img, idx) {
-              img.classList.toggle('hidden', idx !== i);
-            });
-          }
-
-          if (prev) {
-            prev.addEventListener('click', function () {
-              index = (index - 1 + images.length) % images.length;
-              show(index);
-            });
-          }
-          if (next) {
-            next.addEventListener('click', function () {
-              index = (index + 1) % images.length;
-              show(index);
-            });
-          }
-        });
-      })();
-    </script>
   </section>
 
   <!-- NEEM CONTACT OP -->
-  <section class="relative w-full mt-12 mb-4 sm:mb-12 px-4 sm:px-8">
+  <section class="relative w-full mt-12 mb-4 sm:mb-12">
     <!-- background overlay -->
     <div class="pointer-events-none absolute inset-0 opacity-10 bg-no-repeat
           [background-image:url('../assets/images/bg/pattern-1.webp')]
@@ -527,7 +497,7 @@
           [background-position:100%_80%]">
     </div>
 
-    <div class="relative z-10 mx-auto max-w-6xl">
+    <div class="relative z-10 mx-auto max-w-7xl px-6">
 
       <!-- Background (lighter, responsive, less DOM-heavy) -->
       <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
@@ -572,10 +542,10 @@
           <div class="flex flex-col gap-3">
             <h4
               class="w-full text-m sm:xl font-bold tracking-tight bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
-              Zoekt u advies, of heeft u al een project in gedachten?
+              Heeft u een project in gedachten of zoekt u advies?
             </h4>
             <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-700">
-              Neem vrijblijvend contact met ons op.
+              Neem vrijblijvend contact met ons op!
             </h2>
             <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">
               Contact opnemen en een offerte aanvragen is bij ons geheel vrijblijvend, voor particulieren
@@ -612,8 +582,8 @@
   </section>
 
   <!-- FAQ -->
-  <section class="relative w-full pb-2 mt-8 px-4 sm:px-8">
-    <div class="mx-auto max-w-6xl">
+  <section class="relative w-full pb-2 mt-8">
+    <div class="mx-auto max-w-7xl px-6">
       <h4
         class="w-min text-m sm:xl font-bold tracking-tight uppercase bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
         FAQ
@@ -708,6 +678,7 @@
   <script src="./js/dropdowns.desktop.js"></script>
   <script src="./js/menu.mobile.js"></script>
   <script src="./js/topbar-carousel.js"></script>
+  <script src="./js/projecten-carousel.js"></script>
   <script src="./js/year.js"></script>
   <script src="./js/form-validation.js" defer></script>
   <script src="./js/offerte-forminit.js" defer></script>
