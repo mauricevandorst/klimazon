@@ -2496,6 +2496,10 @@ a {
   padding-top: 0.2rem;
 }
 
+.pt-10{
+  padding-top: 2.5rem;
+}
+
 .text-left{
   text-align: left;
 }
@@ -3172,6 +3176,11 @@ a {
   color: rgb(255 255 255 / 0.9);
 }
 
+.focus\:text-slate-700:focus{
+  --tw-text-opacity: 1;
+  color: rgb(51 65 85 / var(--tw-text-opacity, 1));
+}
+
 .focus\:opacity-80:focus{
   opacity: 0.8;
 }
@@ -3436,6 +3445,10 @@ a {
 
   .sm\:pt-4{
     padding-top: 1rem;
+  }
+
+  .sm\:pt-12{
+    padding-top: 3rem;
   }
 
   .sm\:text-2xl{
