@@ -73,11 +73,11 @@
               </span>
             </a>
 
-            <a href="./over-ons"
+            <a href="./diensten.html"
               class="w-full shrink-0 snap-start py-2 text-center text-xs font-bold text-white hover:opacity-90 hover:underline">
               Onze monteurs hebben échte vakkennis!
             </a>
-            <a href="./contact"
+            <a href="./contact.html"
               class="w-full shrink-0 snap-start py-2 text-center text-xs font-bold text-white hover:opacity-90 hover:underline">
               Maak een afspraak, ook mogelijk aan huis
             </a>
@@ -87,7 +87,8 @@
     </div>
 
     <!-- Navbar -->
-    <header class="bg-white/90 backdrop-blur border-b border-black/10 shadow-md shadow-black/8" data-mobile-header>
+    <header class="relative bg-white/90 backdrop-blur border-b border-black/10 shadow-md shadow-black/8"
+      data-mobile-header>
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
           <!-- Brand -->
@@ -133,7 +134,7 @@
                   <div class="text-sm font-semibold">Zonnepanelen</div>
                 </a>
                 <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./airconditioning.html">
-                  <div class="text-sm font-semibold">Airco</div>
+                  <div class="text-sm font-semibold">Airconditioning</div>
                 </a>
                 <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./warmtepomp.html">
                   <div class="text-sm font-semibold">Warmtepompen</div>
@@ -175,7 +176,7 @@
                   <div class="text-sm font-semibold">Zonnepanelen zakelijk</div>
                 </a>
                 <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./airconditioning-zakelijk.html">
-                  <div class="text-sm font-semibold">Airco zakelijk</div>
+                  <div class="text-sm font-semibold">Airconditioning zakelijk</div>
                 </a>
                 <a class="block rounded-[5px] px-4 py-3 hover:bg-black/5" href="./warmtepomp-zakelijk.html">
                   <div class="text-sm font-semibold">Warmtepomp zakelijk</div>
@@ -191,8 +192,8 @@
               <span>Projecten</span>
             </a>
             <a class="rounded-[5px] px-3 my-2 text-sm font-semibold text-[color:var(--kz-lightgrey)] hover:text-black"
-              href="./over-ons.html">
-              <span class="text-[color:var(--kz-lightgrey)] hover:text-black">Over ons</span>
+              href="./subsidie-check.html">
+              <span class="text-[color:var(--kz-lightgrey)] hover:text-black">Subsidie-check</span>
             </a>
             <a class="rounded-[5px] px-3 my-2 text-sm font-semibold text-[color:var(--kz-lightgrey)] hover:text-black"
               href="./contact.html">
@@ -222,7 +223,7 @@
 
             <button type="button"
               class="inline-flex h-10 w-10 items-center justify-center rounded-[5px] text-slate-700 hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-[color:var(--kz-darkerblue)]"
-              aria-label="Open menu" data-mobile-trigger>
+              aria-label="Open menu" data-mobile-trigger aria-expanded="false">
               <!-- hamburger -->
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
                 <path fill-rule="evenodd"
@@ -235,7 +236,9 @@
       </div>
 
       <!-- Mobile menu panel -->
-      <div class="hidden border-t border-black/10 bg-white" data-mobile-menu>
+      <div class="hidden absolute left-0 right-0 top-full z-40 border-t border-black/10 bg-white shadow-lg transform
+         transition-all duration-300 ease-in-out opacity-0 -translate-y-[18px] pointer-events-none lg:hidden"
+        data-mobile-menu>
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
           <div class="grid gap-2">
             <button
@@ -244,18 +247,30 @@
               Voor thuis
               <span class="text-black/50">+</span>
             </button>
-            <div class="hidden rounded-[5px] border border-black/10 p-2" data-mobile-panel="thuis">
-              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5" href="diensten.html">Alle diensten</a>
-              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
-                href="./zonnepanelen.html">Zonnepanelen</a>
-              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5" href="./airconditioning.html">Airco</a>
-              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
-                href="./warmtepomp.html">Warmtepompen</a>
-              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
-                href="./thuisbatterij.html">Thuisbatterijen</a>
-              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
-                href="./onderhoud-en-service.html">Onderhoud &
-                service</a>
+            <div class="hidden pe-4 flex flex-col gap-1" data-mobile-panel="thuis">
+              <a class="flex justify-between px-3 py-2 text-sm border-b-[1px] border-slate-200 hover:bg-black/5"
+                href="./zonnepanelen.html">
+                <span>Zonnepanelen</span>
+              </a>
+              <a class="flex justify-between px-3 py-2 text-sm border-b-[1px] border-slate-200 hover:bg-black/5"
+                href="./airconditioning.html">
+                <span>Airconditioning</span>
+              </a>
+              <a class="flex justify-between px-3 py-2 text-sm border-b-[1px] border-slate-200 hover:bg-black/5"
+                href="./warmtepomp.html">
+                <span>Warmtepompen</span>
+              </a>
+              <a class="flex justify-between px-3 py-2 text-sm border-b-[1px] border-slate-200 hover:bg-black/5"
+                href="./thuisbatterij.html">
+                <span>Thuisbatterijen</span>
+              </a>
+              <a class="px-3 py-2 flex justify-between text-sm border-b-[1px] border-slate-200 hover:bg-black/5"
+                href="diensten.html">
+                <span>Alle diensten</span>
+              </a>
+              <a class="flex justify-between px-3 py-2 text-sm hover:bg-black/5" href="./onderhoud-en-service.html">
+                <span>Onderhoud & service</span>
+              </a>
             </div>
 
             <button
@@ -264,25 +279,30 @@
               Voor bedrijven
               <span class="text-black/50">+</span>
             </button>
-            <div class="hidden rounded-[5px] border border-black/10 p-2" data-mobile-panel="bedrijven">
-              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
-                href="./diensten-zakelijk.html">Alle zakelijke diensten</a>
-              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
-                href="./zonnepanelen-zakelijk.html">Zonnepanelen zakelijk</a>
-              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
-                href="./airconditioning-zakelijk.html">Airco
-                zakelijk</a>
-              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
-                href="./warmtepomp-zakelijk.html">Warmtepomp
-                zakelijk</a>
-              <a class="block rounded-[5px] px-3 py-2 text-sm hover:bg-black/5"
-                href="./thuisbatterij-zakelijk.html">Thuisbatterij zakelijk</a>
+            <div class="hidden pe-4 flex flex-col gap-1" data-mobile-panel="bedrijven">
+              <a class="flex justify-between px-3 py-2 text-sm border-b-[1px] border-slate-200 hover:bg-black/5" href="./zonnepanelen-zakelijk.html">
+                <span>Zonnepanelen zakelijk</span>
+              </a>
+              <a class="flex justify-between px-3 py-2 text-sm border-b-[1px] border-slate-200 hover:bg-black/5" href="./airconditioning-zakelijk.html">
+                <span>Airconditioning zakelijk</span>
+              </a>
+              <a class="flex justify-between px-3 py-2 text-sm border-b-[1px] border-slate-200 hover:bg-black/5" href="./warmtepomp-zakelijk.html">
+                <span>Warmtepomp zakelijk</span>
+              </a>
+              <a class="flex justify-between px-3 py-2 text-sm border-b-[1px] border-slate-200 hover:bg-black/5" href="./thuisbatterij-zakelijk.html">
+                <span>Thuisbatterij zakelijk</span>
+              </a>
+              <a class="flex justify-between px-3 py-2 text-sm border-b-[1px] border-slate-200 hover:bg-black/5" href="./diensten-zakelijk.html">
+                <span>Alle zakelijke diensten</span>
+              </a>
+              <a class="flex justify-between px-3 py-2 text-sm border-b-[1px] border-slate-200 hover:bg-black/5" href="./onderhoud-en-beheer.html">
+                <span>Onderhoud & beheer</span>
+              </a>
             </div>
 
             <a class="rounded-[5px] px-4 py-3 font-semibold text-sm hover:bg-black/5"
               href="./projecten.html">Projecten</a>
-            <a class="rounded-[5px] px-4 py-3 font-semibold text-sm hover:bg-black/5" href="./over-ons.html">Over
-              ons</a>
+            <a class="rounded-[5px] px-4 py-3 font-semibold text-sm hover:bg-black/5" href="./subsidie-check.html">Subsidie-check</a>
             <a class="rounded-[5px] px-4 py-3 font-semibold text-sm hover:bg-black/5" href="./contact.html">Contact</a>
 
             <a href="./offerte.html" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold

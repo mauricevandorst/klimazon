@@ -1,21 +1,48 @@
 // ./js/menu.mobile.js
 
 (function () {
+  function updateMenuViewportBounds(menu) {
+    if (!menu || menu.classList.contains("hidden")) return;
+
+    const top = menu.getBoundingClientRect().top;
+    const availableHeight = Math.max(120, window.innerHeight - top);
+
+    menu.style.maxHeight = `${availableHeight}px`;
+    menu.style.overflowY = "auto";
+    menu.style.overscrollBehavior = "contain";
+  }
+
   function toggleMenu(root, triggerEl) {
     const menu = root.querySelector("[data-mobile-menu]");
     if (!menu) return;
-    menu.classList.toggle("hidden");
+
+    const isOpen = !menu.classList.contains("hidden");
+
+    if (!isOpen) {
+      // Open: eerst zichtbaar maken, dan in volgende frame animeren
+      menu.classList.remove("hidden");
+      requestAnimationFrame(() => {
+        updateMenuViewportBounds(menu);
+        menu.classList.remove("opacity-0", "-translate-y-[18px]", "pointer-events-none");
+        menu.classList.add("opacity-100", "translate-y-0", "pointer-events-auto");
+      });
+    } else {
+      // Close: eerst terug animeren, daarna verbergen
+      menu.classList.remove("opacity-100", "translate-y-0", "pointer-events-auto");
+      menu.classList.add("opacity-0", "-translate-y-[18px]", "pointer-events-none");
+
+      const onEnd = (e) => {
+        if (e.propertyName !== "transform" && e.propertyName !== "opacity") return;
+        menu.classList.add("hidden");
+        menu.removeEventListener("transitionend", onEnd);
+      };
+      menu.addEventListener("transitionend", onEnd);
+    }
 
     const header = root.querySelector("[data-mobile-header]");
-    if (header) {
-      const isOpenNow = !menu.classList.contains("hidden");
-      header.classList.toggle("is-mobile-open", isOpenNow);
-    }
+    if (header) header.classList.toggle("is-mobile-open", !isOpen);
 
-    if (triggerEl) {
-      const isOpen = !menu.classList.contains("hidden");
-      triggerEl.setAttribute("aria-expanded", String(isOpen));
-    }
+    if (triggerEl) triggerEl.setAttribute("aria-expanded", String(!isOpen));
   }
 
   function toggleAccordion(root, btn) {
@@ -46,6 +73,12 @@
         e.preventDefault();
         toggleAccordion(root, accordionBtn);
       }
+    });
+
+    window.addEventListener("resize", () => {
+      const menu = root.querySelector("[data-mobile-menu]");
+      if (!menu || menu.classList.contains("hidden")) return;
+      updateMenuViewportBounds(menu);
     });
   }
 

@@ -127,6 +127,14 @@
   <!-- BANNER -->
   <section class="relative w-full overflow-hidden bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))]">
 
+    <!-- Achtergrond boven -->
+    <div class="w-full lg:w-1/2 flex md:hidden justify-center">
+      <div class="w-full max-w-[520px] max-h-[200px] overflow-hidden border-b-[1px] border-[#ffffff47]">
+        <img src="./assets/images/portraits/monteur-zakelijk.jpg" alt="Duurzame installaties in de Zaanstreek"
+          class="w-full h-full object-cover object-center" loading="eager" fetchpriority="high" decoding="async" />
+      </div>
+    </div>
+
     <!-- Background (lighter, responsive, less DOM-heavy) -->
     <div class="pointer-events-none absolute inset-0 z-0">
       <div class="absolute -top-10 left-1/2 w-[120rem] -translate-x-1/2 opacity-[0.03] skew-x-[-15deg]"
@@ -148,7 +156,7 @@
       <div class="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
     </div>
 
-    <div class="relative mx-auto w-full max-w-7xl px-6 py-10 lg:py-14 z-10 mb-[4rem]">
+    <div class="relative mx-auto w-full max-w-7xl px-6 py-10 lg:py-14 z-10 mb-[4rem] pt-6 sm:pt-10">
       <div class="flex flex-col-reverse md:flex-row lg:items-center gap-8 lg:gap-12">
         <div class="w-full lg:w-1/2">
           <p class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-white/70">Zakelijke diensten</p>
@@ -175,12 +183,10 @@
           </div>
         </div>
 
-        <div class="w-full lg:w-1/2 lg:shrink-0 flex justify-center">
-          <div class="w-full max-w-[520px] aspect-[4/2] sm:aspect-[4/3] overflow-hidden shadow-xl">
-            <img src="./assets/images/portraits/monteur-zakelijk.jpg" alt="Duurzame installaties in de Zaanstreek"
-              class="w-full h-full object-cover object-center rounded-[5px]" loading="eager" fetchpriority="high"
-              decoding="async" />
-          </div>
+        <div class="w-full lg:w-1/2 hidden md:flex justify-center">
+          <img src="./assets/images/portraits/monteur-zakelijk.jpg" alt="Duurzame installaties in de Zaanstreek"
+            class="w-full h-auto rounded-[5px] shadow-[0_0_14px_rgba(0,0,0,0.18)]" loading="eager" fetchpriority="high"
+            decoding="async" />
         </div>
       </div>
     </div>
@@ -256,20 +262,12 @@
             <span class="text-xs">Batterijopslag</span>
           </div>
 
-          <div class="flex flex-col gap-2 items-center">
-            <a class="service-btn shrink-0" type="button" aria-label="Warmtepomp" href="./warmtepomp-zakelijk.html">
-              <img class="p-3" src="./assets/images/icons/heat-pump-business.svg" alt="Warmtepomp" />
-            </a>
-            <span class="text-xs">Warmtepomp</span>
-          </div>
-
           <div class="flex flex-col gap-2 items-center justify-center">
-            <a class="service-btn shrink-0" type="button" aria-label="Airconditioning"
-              href="./airconditioning-zakelijk.html">
-              <img class="p-3" src="./assets/images/icons/maintenance-business.svg" alt="Airconditioning" />
+            <a class="service-btn shrink-0" type="button" aria-label="Onderhoud & Beheer"
+              href="./onderhoud-en-beheer.html">
+              <img class="p-3" src="./assets/images/icons/maintenance-business.svg" alt="Onderhoud & Beheer" />
             </a>
-            <span class="flex flex-col sm:flex-row flex-wrap gap-1 text-center text-xs"><span>Onderhoud
-                &</span><span>beheer</span></span>
+            <span class="flex flex-col sm:flex-row flex-wrap gap-1 text-center text-xs"><span>Onderhoud & <br>beheer
           </div>
 
         </div>
@@ -441,7 +439,7 @@
 
   <!-- Banner: Nieuwe installatie? -->
   <section class="relative w-full py-12 overflow-hidden 
-  bg-[linear-gradient(to_right,var(--kz-blue),var(--kz-darkerblue))]">
+  bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))]">
     <!-- Background (lighter, responsive, less DOM-heavy) -->
     <div class="pointer-events-none absolute inset-0 z-0">
       <div class="absolute -top-10 left-1/2 w-[120rem] -translate-x-1/2 opacity-[0.03]" aria-hidden="true">
@@ -491,7 +489,7 @@
 
       <!-- Afbeelding rechts -->
       <div class="w-full md:w-1/2 flex justify-center">
-        <img src="./assets/images/hero/pointing.webp" alt="Duurzame installaties in Noord-Holland" loading="lazy"
+        <img src="./assets/images/projects/project-09.webp" alt="Duurzame installaties in Noord-Holland" loading="lazy"
           decoding="async" class="w-full h-auto rounded-lg shadow-[0_0_10px_rgba(0,0,0,0.15)]" />
       </div>
     </div>
