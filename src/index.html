@@ -244,7 +244,7 @@
                 Op zoek naar een nieuwe airco of zonnepanelen voor uw woning? Wij komen langs.
               </p>
               <span class="mt-2 inline-flex items-center gap-1 w-fit text-xs sm:text-sm 
-              font-semibold text-[color:var(--kz-darkerblue)] transition">
+              font-semibold text-[color:var(--kz-darkerblue)] group-hover:opacity-70 transition">
                 Plan een afspraak aan huis
                 <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
               </span>
@@ -267,7 +267,7 @@
                 Wilt u een nieuwe airco, warmtepomp of zonnepanelen voor uw bedrijf?
               </p>
               <span class="mt-2 inline-flex items-center gap-1 w-fit text-xs sm:text-sm 
-              font-semibold text-[color:var(--kz-darkerblue)] transition">
+              font-semibold text-[color:var(--kz-darkerblue)] group-hover:opacity-70 transition">
                 Plan een afspraak aan huis
                 <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
               </span>
@@ -334,37 +334,37 @@
               <div class="flex justify-evenly sm:gap-4 overflow-hidden pb-2 sm:px-0">
 
                 <div class="flex flex-col gap-2 items-center">
-                  <a class="service-btn shrink-0" type="button" aria-label="Zonnepanelen" href="./zonnepanelen.html">
-                    <img class="h-full w-full" src="./assets/images/icons/solar-panels.svg" alt="Zonnepanelen" />
+                  <a class="group service-btn shrink-0" type="button" aria-label="Zonnepanelen" href="./zonnepanelen.html">
+                    <img class="h-full w-full group-hover:opacity-70 transition" src="./assets/images/icons/solar-panels.svg" alt="Zonnepanelen" />
                   </a>
                   <span class="text-xs">Zonnepanelen</span>
                 </div>
 
                 <div class="flex flex-col gap-2 items-center">
-                  <a class="service-btn shrink-0" type="button" aria-label="Airconditioning"
+                  <a class="group service-btn shrink-0" type="button" aria-label="Airconditioning"
                     href="./airconditioning.html">
-                    <img class="p-3" src="./assets/images/icons/airconditioning.svg" alt="Airconditioning" />
+                    <img class="p-3 group-hover:opacity-70 transition" src="./assets/images/icons/airconditioning.svg" alt="Airconditioning" />
                   </a>
                   <span class="text-xs">Airconditioning</span>
                 </div>
 
                 <div class="flex flex-col gap-2 items-center">
-                  <a class="service-btn shrink-0" type="button" aria-label="Warmtepomp" href="./warmtepomp.html">
-                    <img class="p-3" src="./assets/images/icons/heat-pump.svg" alt="Warmtepomp" />
+                  <a class="group service-btn shrink-0" type="button" aria-label="Warmtepomp" href="./warmtepomp.html">
+                    <img class="p-3 group-hover:opacity-70 transition" src="./assets/images/icons/heat-pump.svg" alt="Warmtepomp" />
                   </a>
                   <span class="text-xs">Warmtepomp</span>
                 </div>
 
                 <div class="hidden sm:flex flex-col gap-2 items-center">
-                  <a class="service-btn shrink-0" type="button" aria-label="Thuisbatterij" href="./thuisbatterij.html">
-                    <img class="p-3" src="./assets/images/icons/home-battery.svg" alt="Thuisbatterij" />
+                  <a class="group service-btn shrink-0" type="button" aria-label="Thuisbatterij" href="./thuisbatterij.html">
+                    <img class="p-3 group-hover:opacity-70 transition" src="./assets/images/icons/home-battery.svg" alt="Thuisbatterij" />
                   </a>
                   <span class="text-xs">Thuisbatterij</span>
                 </div>
 
                 <div class="hidden md:flex flex-col gap-2 items-center">
-                  <a class="service-btn shrink-0" type="button" aria-label="Onderhoud" href="./onderhoud.html">
-                    <img class="p-3" src="./assets/images/icons/maintenance.svg" alt="Onderhoud" />
+                  <a class="group service-btn shrink-0" type="button" aria-label="Onderhoud" href="./onderhoud.html">
+                    <img class="p-3 group-hover:opacity-70 transition" src="./assets/images/icons/maintenance.svg" alt="Onderhoud" />
                   </a>
                   <span class="text-xs">Onderhoud & Service</span>
                 </div>
@@ -556,12 +556,12 @@
 
       <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
         <article
-          class="group h-full rounded-[12px] bg-white shadow-[0_12px_30px_rgba(15,23,42,0.08)] overflow-hidden flex flex-col">
+          class="group h-full rounded-[5px] bg-white shadow-[0_12px_30px_rgba(15,23,42,0.08)] overflow-hidden flex flex-col">
           <div class="relative aspect-[4/3] overflow-hidden" data-carousel>
             <img src="./assets/images/projects/project-04.jpg" alt="Zonnepanelen op een schuin dak in Assendelft"
-              class="carousel-image absolute inset-0 h-full w-full object-cover" decoding="async" />
+              class="carousel-image absolute inset-0 h-full w-full object-cover [overflow-clip-margin:unset]" decoding="async" />
             <img src="./assets/images/projects/project-02.jpg" alt="Detail van de panelen en bekabeling"
-              class="carousel-image absolute inset-0 h-full w-full object-cover hidden" loading="lazy"
+              class="carousel-image absolute inset-0 h-full w-full object-cover [overflow-clip-margin:unset] hidden" loading="lazy"
               decoding="async" />
             <button type="button" data-carousel-prev class="absolute left-3 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full bg-white/90 text-slate-700 shadow
               hover:bg-white transition" aria-label="Vorige afbeelding">&lsaquo;</button>
@@ -580,7 +580,7 @@
               class="group mt-2 inline-flex w-fit text-sm font-semibold text-[color:var(--kz-darkerblue)]">
               Bekijk zonnepanelen dienst
             </a>
-            <a href="./projecten.html#project1" class="group mt-auto inline-flex gap-1 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
+            <a href="./projecten.html#project-1" class="group mt-auto inline-flex gap-1 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
               text-white shadow-sm bg-[color:var(--kz-darkerblue)] hover:opacity-90 transition
               focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
               Lees meer
@@ -592,12 +592,12 @@
         </article>
 
         <article
-          class="group h-full rounded-[12px] bg-white shadow-[0_12px_30px_rgba(15,23,42,0.08)] overflow-hidden flex flex-col">
+          class="group h-full rounded-[5px] bg-white shadow-[0_12px_30px_rgba(15,23,42,0.08)] overflow-hidden flex flex-col">
           <div class="relative aspect-[4/3] overflow-hidden" data-carousel>
             <img src="./assets/images/projects/project-03.jpg" alt="Warmtepomp buitenunit in Wormer"
-              class="carousel-image absolute inset-0 h-full w-full object-cover" decoding="async" />
+              class="carousel-image absolute inset-0 h-full w-full object-cover [overflow-clip-margin:unset]" decoding="async" />
             <img src="./assets/images/projects/project-01.jpg" alt="Binnenopstelling met leidingwerk en regeling"
-              class="carousel-image absolute inset-0 h-full w-full object-cover hidden" loading="lazy"
+              class="carousel-image absolute inset-0 h-full w-full object-cover [overflow-clip-margin:unset] hidden" loading="lazy"
               decoding="async" />
             <button type="button" data-carousel-prev class="absolute left-3 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full bg-white/90 text-slate-700 shadow
               hover:bg-white transition" aria-label="Vorige afbeelding">&lsaquo;</button>
@@ -617,7 +617,7 @@
               class="group mt-2 inline-flex w-fit text-sm font-semibold text-[color:var(--kz-darkerblue)]">
               Bekijk warmtepomp dienst
             </a>
-            <a href="./projecten.html#project2" class="group mt-auto inline-flex gap-1 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
+            <a href="./projecten.html#project-2" class="group mt-auto inline-flex gap-1 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
               text-white shadow-sm bg-[color:var(--kz-darkerblue)] hover:opacity-90 transition
               focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
               Lees meer
@@ -629,12 +629,12 @@
         </article>
 
         <article
-          class="group h-full rounded-[12px] bg-white shadow-[0_12px_30px_rgba(15,23,42,0.08)] overflow-hidden flex flex-col">
+          class="group h-full rounded-[5px] bg-white shadow-[0_12px_30px_rgba(15,23,42,0.08)] overflow-hidden flex flex-col">
           <div class="relative aspect-[4/3] overflow-hidden" data-carousel>
             <img src="./assets/images/projects/project-02.jpg" alt="Airco buitenunit in Zaandam"
-              class="carousel-image absolute inset-0 h-full w-full object-cover" decoding="async" />
+              class="carousel-image absolute inset-0 h-full w-full object-cover [overflow-clip-margin:unset]" decoding="async" />
             <img src="./assets/images/projects/project-04.jpg" alt="Stijlvolle binnenunit aan de wand"
-              class="carousel-image absolute inset-0 h-full w-full object-cover hidden" loading="lazy"
+              class="carousel-image absolute inset-0 h-full w-full object-cover [overflow-clip-margin:unset] hidden" loading="lazy"
               decoding="async" />
             <button type="button" data-carousel-prev class="absolute left-3 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full bg-white/90 text-slate-700 shadow
               hover:bg-white transition" aria-label="Vorige afbeelding">&lsaquo;</button>
@@ -654,7 +654,7 @@
               class="group mt-2 inline-flex w-fit text-sm font-semibold text-[color:var(--kz-darkerblue)]">
               Bekijk airco dienst
             </a>
-            <a href="./projecten.html#project3" class="group mt-auto inline-flex gap-1 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
+            <a href="./projecten.html#project-3" class="group mt-auto inline-flex gap-1 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
               text-white shadow-sm bg-[color:var(--kz-darkerblue)] hover:opacity-90 transition
               focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
               Lees meer

@@ -252,7 +252,7 @@
     if (stepIndex === 1) {
       if (state.usageMode === "known") {
         if (!(Number(state.annualKwh) > 0)) {
-          showError("annualKwh", "Vul je jaarverbruik in.");
+          showError("annualKwh", "Vul uw jaarverbruik in.");
           valid = false;
         } else {
           clearError("annualKwh");
