@@ -218,11 +218,13 @@
           Kies <span class="inline-flex text-[color:var(--kz-blue)]">onderhoud</span> dat bij u past
         </h2>
         <p class="text-sm max-w-2xl text-center sm:text-base font-medium leading-[2em] text-slate-700">
-          Zorgeloos genieten van uw installatie? Met onze onderhoudscontracten bent u verzekerd van goed onderhouden apparatuur.
+          Zorgeloos genieten van uw installatie? Met onze onderhoudscontracten bent u verzekerd van goed onderhouden
+          apparatuur.
         </p>
       </div>
 
-      <div class="relative w-max p-1 px-3 bg-white border border-gray-200 rounded-[5px] inline-flex items-center mb-8 w-60">
+      <div
+        class="relative w-max p-1 px-3 bg-white border border-gray-200 rounded-[5px] inline-flex items-center mb-8 w-60">
         <div id="toggle-slider"
           class="absolute -z-10 h-[53px] rounded-[5px] bg-[linear-gradient(to_right,var(--kz-darkerblue),#0090d0ba)] transition-transform duration-300 ease-in-out pointer-events-none translate-x-0">
         </div>
@@ -242,7 +244,8 @@
 
       <!-- Pricing Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl w-full items-end">
-        <div class="bg-[linear-gradient(to_right,#7a602859,#b88a3587)] rounded-[10px] p-2 shadow-xl hover:shadow-lg transition-shadow">
+        <div
+          class="bg-[linear-gradient(to_right,#7a602859,#b88a3587)] rounded-[10px] p-2 shadow-xl hover:shadow-lg transition-shadow">
           <div class="rounded-[5px] p-6 bg-white border border-neutral-200 hover:shadow-lg transition-shadow">
             <h3 class="text-neutral-700 text-m font-semibold mb-6">Brons</h3>
             <div class="flex items-baseline gap-1 mb-8"><span id="price-bronze"
@@ -312,10 +315,24 @@
           </div>
         </div>
         <div
-          class="bg-[linear-gradient(to_right,#b2b2b285,#b8b8b8f2)] rounded-[10px] p-2 shadow-xl hover:shadow-lg transition-shadow">
-          <p class="text-center text-slate-700 font-semibold text-sm py-1.5">Meestgekozen!</p>
+          class="bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-lightblue))] rounded-[10px] p-2 shadow-lg shadow-slate-700/50 hover:shadow-slate-700/70 transition-shadow">
+          <p class="text-center text-white font-semibold text-sm py-1.5">Meestgekozen!</p>
           <div class="rounded-[5px] p-6 bg-white">
-            <h3 class="text-neutral-700 text-m font-semibold mb-6">Zilver</h3>
+            <div class="flex w-max items-center divide-x divide-gray-200 py-1 text-sm border border-gray-200 rounded-full">
+              <span class="pr-1 pl-3 text-lg">
+                <!-- Silver medal icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-award-icon lucide-award">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <path d="M8.21 13.89a3.5 3.5 0 0 1 3.79 0L12 15l-.21-.11a3.5 3.5 0 0 1-3.79 0z"></path>
+                  <path d="M9.16 18h5.68"></path>
+              </span>
+              <span
+                class="pl-2 pr-5 bg-[linear-gradient(to_right,#4f4f4f,#a3a3a3)] font-semibold bg-clip-text text-transparent">
+                Zilver onderhoudscontract
+              </span>
+            </div>
             <div class="flex items-baseline gap-1 mb-8"><span id="price-silver"
                 class="text-[28px] text-neutral-900">€19</span><span class="text-neutral-600 text-xs">/ maand</span>
             </div>
@@ -390,7 +407,8 @@
             </button>
           </div>
         </div>
-        <div class="bg-[linear-gradient(to_right,#dccb0142,#d49300ba)] rounded-[10px] p-2 shadow-xl hover:shadow-lg transition-shadow">
+        <div
+          class="bg-[linear-gradient(to_right,#dccb0142,#d49300ba)] rounded-[10px] p-2 shadow-xl hover:shadow-lg transition-shadow">
           <div class="rounded-[5px] p-6 bg-white border border-neutral-200 hover:shadow-lg transition-shadow">
             <h3 class="text-neutral-700 text-m font-semibold mb-6">Goud</h3>
             <div class="flex items-baseline gap-1 mb-8"><span id="price-gold"
