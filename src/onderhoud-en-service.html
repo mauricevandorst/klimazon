@@ -341,7 +341,7 @@
               </li>
             </ul>
             <!-- Button color gold to gold 70% opacity -->
-            <button
+            <button type="button" data-contract-select="brons"
               class="w-full py-3 rounded-[5px] cursor-pointer bg-[linear-gradient(to_right,#7a6028bf,#b88a3587)] text-white text-sm font-semibold hover:opacity-80 transition-opacity">
               Kies contract
             </button>
@@ -419,7 +419,7 @@
                   reparaties</span>
               </li>
             </ul>
-            <button
+            <button type="button" data-contract-select="zilver"
               class="w-full py-3 rounded-[5px] cursor-pointer bg-[linear-gradient(to_right,var(--kz-darkerblue),#0090d0ba)] text-white text-sm font-semibold hover:opacity-80 transition-opacity">
               Kies contract
             </button>
@@ -496,7 +496,7 @@
                   optimalisatiecheck</span>
               </li>
             </ul>
-            <button
+            <button type="button" data-contract-select="goud"
               class="w-full py-3 rounded-[5px] cursor-pointer bg-[linear-gradient(to_right,#dccb01e0,#d49300ba)] text-white text-sm font-semibold hover:opacity-80 transition-opacity">
               Kies contract
             </button>
@@ -507,9 +507,9 @@
   </section>
 
   <!-- LEAD GENERATION FORM -->
-  <section class="relative flex flex-col items-center z-10 mx-auto max-w-7xl mt-16 px-3">
+  <section id="contract-formulier" class="relative flex flex-col items-center z-10 mx-auto max-w-7xl mt-16 px-3">
     <form
-      class="flex flex-col w-full justify-center px-4 py-6 pt-10 rounded-[15px] max-w-3xl items-center text-sm text-slate-800 shadow-[0px_0px_10px_0px] shadow-black/10">
+      class="flex flex-col w-full justify-center px-4 py-6 pt-10 rounded-[15px] max-w-5xl items-center text-sm text-slate-800 shadow-[0px_0px_10px_0px] shadow-black/10">
       <p
         class="text-xs bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] text-white font-medium px-3 py-1 rounded-full">
         Contractformulier</p>
@@ -569,7 +569,7 @@
             aria-haspopup="listbox" aria-expanded="false">
             <div class="flex items-center gap-2">
               <span class="h-4 w-4 rounded-full bg-[linear-gradient(to_right,#4f4f4f,#a3a3a3)]"></span>
-              <span class="font-medium">Zilver contract (standaard)</span>
+              <span class="font-medium">Zilver contract</span>
             </div>
             <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.92546 6L5.68538 1L1.44531 6" stroke="#6B7280" stroke-opacity="0.7" stroke-width="1.5"
@@ -628,8 +628,8 @@
   </section>
 
   <!-- FAQ -->
-  <section class="relative w-full my-12 overflow-hidden">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <section class="relative w-full my-12 lg:mt-16 overflow-hidden">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <h4
         class="w-min text-m sm:xl font-bold tracking-tight uppercase bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
         FAQ
@@ -793,6 +793,19 @@
         });
       }
 
+      function selectContract(value) {
+        const selectedButton = Array.from(optionButtons).find(function (btn) {
+          return btn.dataset.value === value;
+        });
+        if (!selectedButton) return;
+
+        updateSelected(
+          selectedButton.dataset.value,
+          selectedButton.dataset.label,
+          selectedButton.dataset.dotClass
+        );
+      }
+
       trigger.addEventListener("click", function () {
         const isOpen = trigger.getAttribute("aria-expanded") === "true";
         setOpen(!isOpen);
@@ -819,6 +832,24 @@
         if (event.key === "Escape") {
           setOpen(false);
         }
+      });
+
+      const contractFormSection = document.getElementById("contract-formulier");
+      const contractCtaButtons = document.querySelectorAll("[data-contract-select]");
+
+      contractCtaButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          selectContract(button.dataset.contractSelect);
+          setOpen(false);
+
+          if (contractFormSection) {
+            contractFormSection.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+
+          window.setTimeout(function () {
+            trigger.focus();
+          }, 350);
+        });
       });
     });
   </script>

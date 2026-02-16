@@ -4002,6 +4002,10 @@ a {
     margin-top: 2rem;
   }
 
+  .lg\:mt-16{
+    margin-top: 4rem;
+  }
+
   .lg\:flex{
     display: flex;
   }
