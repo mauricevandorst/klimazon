@@ -120,10 +120,11 @@
         <div class="w-full lg:w-1/2">
           <p class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-white/70">Subsidie-check</p>
           <h1 class="mt-3 text-3xl sm:text-5xl font-bold tracking-tight text-white">
-              Ontdek uw subsidies
+            Ontdek uw subsidies
           </h1>
           <p class="mt-4 text-sm sm:text-base font-medium text-white/90 leading-relaxed">
-            Benieuwd of u recht heeft op subsidies of regelingen? Met onze korte check krijgt u een duidelijk beeld van de mogelijkheden voor uw woning of pand.
+            Benieuwd of u recht heeft op subsidies of regelingen? Met onze korte check krijgt u een duidelijk beeld van
+            de mogelijkheden voor uw woning of pand.
           </p>
 
           <div class="mt-6 flex flex-wrap gap-3">
@@ -146,8 +147,8 @@
 
         <div class="w-full lg:w-1/2 hidden md:flex justify-center">
           <img src="./assets/images/portraits/document-bekijken.jpg" alt="Duurzame installaties in de Zaanstreek"
-            class="w-full h-auto rounded-[5px] shadow-[0_0_14px_rgba(0,0,0,0.18)]" loading="eager"
-            fetchpriority="high" decoding="async" />
+            class="w-full h-auto rounded-[5px] shadow-[0_0_14px_rgba(0,0,0,0.18)]" loading="eager" fetchpriority="high"
+            decoding="async" />
         </div>
       </div>
     </div>
@@ -167,223 +168,220 @@
 
   </section>
 
-  <!-- Form Section -->
-  <section class="relative pb-10 sm:pb-14 bg-white">
-    <div class="mx-auto max-w-7xl px-6">
-      <div class="mx-auto max-w-5xl">
-        <div class="rounded-[12px] border border-black/10 bg-white shadow-lg shadow-black/5">
-          <!-- Header -->
-          <div class="border-b border-black/10 px-6 py-5 sm:px-8">
-            <h2 class="text-lg sm:text-xl font-bold tracking-wide text-slate-700">
-              Subsidie-check formulier
-            </h2>
-            <p class="mt-1 text-sm font-medium text-black/60">
-              Vul de gegevens zo volledig mogelijk in. Wij nemen snel contact met u op.
-            </p>
-          </div>
+  <!-- Leading Section -->
+  <section id="pricing" class="relative flex flex-col z-10 mx-auto max-w-7xl">
+    <div class="flex flex-col items-center py-4 px-4">
+      <div class="flex flex-col gap-1 mb-6">
+        <h2 class="w-full text-2xl text-center sm:text-3xl font-semibold tracking-tight text-slate-700">
+          Wij hebben
+          <span
+            class="inline-flex bg-[linear-gradient(to_right,var(--kz-darkerblue),#0090d0ba)] bg-clip-text text-transparent">kennis
+            en ervaring</span>
+          over
+          <span
+            class="inline-flex bg-[linear-gradient(to_right,var(--kz-darkerblue),#0090d0ba)] bg-clip-text text-transparent">subsidies</span>.
+        </h2>
+      </div>
 
-          <form id="contact-form" class="px-6 py-6 sm:px-8 sm:py-8">
-            <!-- Persoonsgegevens -->
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <div>
-                <label for="firstName" class="block text-sm font-semibold text-slate-700">Voornaam <span
-                    class="text-rose-400">*</span></label>
-                <input id="firstName" type="text" name="fi-sender-firstName" autocomplete="given-name" placeholder="Jan"
-                  required
-                  class="mt-1 w-full rounded-[10px] border border-black/10 bg-white px-4 py-3 text-sm font-medium
-                       text-slate-700 placeholder:text-black/40 shadow-sm shadow-black/5 outline-none
-                       focus:border-[color:var(--kz-darkerblue)] focus:ring-2 focus:ring-[color:var(--kz-darkerblue)]/5" />
-              </div>
-
-              <div>
-                <label for="lastName" class="block text-sm font-semibold text-slate-700">Achternaam <span
-                    class="text-rose-400">*</span></label>
-                <input id="lastName" type="text" name="fi-sender-lastName" autocomplete="family-name"
-                  placeholder="de Vries" required
-                  class="mt-1 w-full rounded-[10px] border border-black/10 bg-white px-4 py-3 text-sm font-medium
-                       text-slate-700 placeholder:text-black/40 shadow-sm shadow-black/5 outline-none
-                       focus:border-[color:var(--kz-darkerblue)] focus:ring-2 focus:ring-[color:var(--kz-darkerblue)]/5" />
-              </div>
-
-              <div class="sm:col-span-2">
-                <label for="email" class="block text-sm font-semibold text-slate-700">E-mailadres <span
-                    class="text-rose-400">*</span></label>
-                <input id="email" type="email" name="fi-sender-email" autocomplete="email"
-                  placeholder="jan@voorbeeld.nl" required
-                  class="mt-1 w-full rounded-[10px] border border-black/10 bg-white px-4 py-3 text-sm font-medium
-                       text-slate-700 placeholder:text-black/40 shadow-sm shadow-black/5 outline-none
-                       focus:border-[color:var(--kz-darkerblue)] focus:ring-2 focus:ring-[color:var(--kz-darkerblue)]/5" />
-              </div>
-
-              <div class="sm:col-span-2">
-                <label for="phone"
-                  class="block text-sm font-semibold text-slate-700">Telefoonnummer</label>
-                <input id="phone" type="tel" name="fi-sender-phone" autocomplete="tel" placeholder="06 12345678"
-                  inputmode="tel"
-                  class="mt-1 w-full rounded-[10px] border border-black/10 bg-white px-4 py-3 text-sm font-medium
-                       text-slate-700 placeholder:text-black/40 shadow-sm shadow-black/5 outline-none
-                       focus:border-[color:var(--kz-darkerblue)] focus:ring-2 focus:ring-[color:var(--kz-darkerblue)]/5" />
-              </div>
-            </div>
-
-            <!-- Locatie -->
-            <div class="mt-8">
-              <h3 class="text-sm font-bold uppercase tracking-wide italic text-slate-700">
-                Locatie
-              </h3>
-
-              <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div>
-                  <label for="postal" class="block text-sm font-semibold text-slate-700">Postcode <span
-                      class="text-rose-400">*</span></label>
-                  <input id="postal" type="text" name="fi-address-postal" autocomplete="postal-code"
-                    placeholder="1566 AB" required
-                    class="mt-1 w-full rounded-[10px] border border-black/10 bg-white px-4 py-3 text-sm font-medium
-                         text-slate-700 placeholder:text-black/40 shadow-sm shadow-black/5 outline-none
-                         focus:border-[color:var(--kz-darkerblue)] focus:ring-2 focus:ring-[color:var(--kz-darkerblue)]/5" />
-                </div>
-
-                <div>
-                  <label for="city" class="block text-sm font-semibold text-slate-700">Plaats <span
-                      class="text-rose-400">*</span></label>
-                  <input id="city" type="text" name="fi-address-city" autocomplete="address-level2"
-                    placeholder="Assendelft" required
-                    class="mt-1 w-full rounded-[10px] border border-black/10 bg-white px-4 py-3 text-sm font-medium
-                         text-slate-700 placeholder:text-black/40 shadow-sm shadow-black/5 outline-none
-                         focus:border-[color:var(--kz-darkerblue)] focus:ring-2 focus:ring-[color:var(--kz-darkerblue)]/5" />
-                </div>
-              </div>
-            </div>
-
-            <!-- Woningtype -->
-            <div class="mt-8">
-              <h3 class="text-sm font-bold uppercase tracking-wide italic text-slate-700">
-                Woningtype
-              </h3>
-
-              <div class="mt-4">
-                <label for="homeType" class="block text-sm font-semibold text-slate-700">Type woning <span
-                    class="text-rose-400">*</span></label>
-                <select id="homeType" name="fi-home-type" required
-                  class="mt-1 w-full rounded-[10px] border border-black/10 bg-white px-4 py-3 text-sm font-medium
-                       text-slate-700 shadow-sm shadow-black/5 outline-none
-                       focus:border-[color:var(--kz-darkerblue)] focus:ring-2 focus:ring-[color:var(--kz-darkerblue)]/5">
-                  <option value="" disabled selected>Kies type woning</option>
-                  <option value="eengezinswoning">Eengezinswoning</option>
-                  <option value="appartement">Appartement</option>
-                  <option value="twee-onder-een-kap">Twee-onder-een-kap</option>
-                  <option value="vrijstaand">Vrijstaand</option>
-                  <option value="bedrijfspand">Bedrijfspand</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Bouwjaar -->
-            <div class="mt-8">
-              <h3 class="text-sm font-bold uppercase tracking-wide italic text-slate-700">
-                Bouwjaar
-              </h3>
-
-              <div class="mt-4">
-                <label for="buildYear" class="block text-sm font-semibold text-slate-700">Bouwjaar <span
-                    class="text-rose-400">*</span></label>
-                <select id="buildYear" name="fi-home-buildyear" required
-                  class="mt-1 w-full rounded-[10px] border border-black/10 bg-white px-4 py-3 text-sm font-medium
-                       text-slate-700 shadow-sm shadow-black/5 outline-none
-                       focus:border-[color:var(--kz-darkerblue)] focus:ring-2 focus:ring-[color:var(--kz-darkerblue)]/5">
-                  <option value="" disabled selected>Kies een periode</option>
-                  <option value="voor-1945">Voor 1945</option>
-                  <option value="1945-1974">1945 - 1974</option>
-                  <option value="1975-1994">1975 - 1994</option>
-                  <option value="1995-2010">1995 - 2010</option>
-                  <option value="2011-2020">2011 - 2020</option>
-                  <option value="2021-nu">2021 - nu</option>
-                  <option value="onbekend">Onbekend</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Maatregelen -->
-            <div class="mt-8">
-              <h3 class="text-sm font-bold uppercase tracking-wide italic text-slate-700">
-                Geïnteresseerde maatregelen
-              </h3>
-
-              <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                <label class="flex items-center gap-3 rounded-[10px] border border-black/10 bg-white px-4 py-3 text-sm font-semibold
-                       text-slate-700 shadow-sm shadow-black/5 cursor-pointer
-                       hover:bg-black/5">
-                  <input type="checkbox" name="fi-measure-zonnepanelen" value="zonnepanelen"
-                    class="h-4 w-4 accent-[color:var(--kz-darkerblue)]" />
-                  Zonnepanelen
-                </label>
-                <label class="flex items-center gap-3 rounded-[10px] border border-black/10 bg-white px-4 py-3 text-sm font-semibold
-                       text-slate-700 shadow-sm shadow-black/5 cursor-pointer
-                       hover:bg-black/5">
-                  <input type="checkbox" name="fi-measure-warmtepomp" value="warmtepomp"
-                    class="h-4 w-4 accent-[color:var(--kz-darkerblue)]" />
-                  Warmtepomp
-                </label>
-                <label class="flex items-center gap-3 rounded-[10px] border border-black/10 bg-white px-4 py-3 text-sm font-semibold
-                       text-slate-700 shadow-sm shadow-black/5 cursor-pointer
-                       hover:bg-black/5">
-                  <input type="checkbox" name="fi-measure-thuisbatterij" value="thuisbatterij"
-                    class="h-4 w-4 accent-[color:var(--kz-darkerblue)]" />
-                  Thuisbatterij
-                </label>
-                <label class="flex items-center gap-3 rounded-[10px] border border-black/10 bg-white px-4 py-3 text-sm font-semibold
-                       text-slate-700 shadow-sm shadow-black/5 cursor-pointer
-                       hover:bg-black/5">
-                  <input type="checkbox" name="fi-measure-airco" value="airco"
-                    class="h-4 w-4 accent-[color:var(--kz-darkerblue)]" />
-                  Airconditioning
-                </label>
-                <label class="flex items-center gap-3 rounded-[10px] border border-black/10 bg-white px-4 py-3 text-sm font-semibold
-                       text-slate-700 shadow-sm shadow-black/5 cursor-pointer
-                       hover:bg-black/5">
-                  <input type="checkbox" name="fi-measure-isolatie" value="isolatie"
-                    class="h-4 w-4 accent-[color:var(--kz-darkerblue)]" />
-                  Isolatie
-                </label>
-              </div>
-            </div>
-
-            <!-- Opmerkingen -->
-            <div class="mt-8">
-              <label for="message" class="block text-sm font-semibold text-slate-700">Opmerkingen</label>
-              <textarea id="message" name="fi-text-message" rows="5"
-                placeholder="Korte toelichting over uw situatie of wensen (optioneel)"
-                class="mt-1 w-full resize-y rounded-[10px] border border-black/10 bg-white px-4 py-3 text-sm font-medium
-                     text-slate-700 placeholder:text-black/40 shadow-sm shadow-black/5 outline-none
-                     focus:border-[color:var(--kz-darkerblue)] focus:ring-2 focus:ring-[color:var(--kz-darkerblue)]/5"></textarea>
-            </div>
-
-            <!-- Actions -->
-            <div class="mt-6 flex flex-col gap-3 items-left sm:justify-between">
-              <button type="submit" class="inline-flex items-center justify-center rounded-[5px] px-4 py-2 text-sm font-bold text-white text-nowrap
-                     bg-[color:var(--kz-darkerblue)] shadow-md shadow-black/10
-                     hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-[color:var(--kz-darkerblue)]/20
-                     disabled:opacity-60 disabled:cursor-not-allowed">
-                Start subsidie-check
-              </button>
-
-              <p class="text-xs font-medium text-black/50 leading-relaxed">
-                Door te verzenden gaat u akkoord met ons
-                <a href="./privacy.html" class="font-semibold text-[color:var(--kz-darkerblue)] hover:underline">
-                  Privacybeleid
-                </a>
-                zodat we contact kunnen opnemen over uw aanvraag.
-              </p>
-            </div>
-
-            <!-- Result placeholder -->
-            <div id="result" class="mt-5 text-xs font-semibold text-green-600"></div>
-          </form>
-        </div>
+      <div class="flex flex-col gap-2 max-w-3xl mb-10">
+        <p class="text-sm max-w-4xl text-center sm:text-base font-medium leading-[2em] text-slate-700">
+          Of het nu gaat om ISDE, SDE++, of lokale regelingen, wij weten precies welke subsidies er zijn voor
+          particulieren en zakelijke klanten en hoe u hier gebruik van kunt maken.
+        </p>
+        <p class="text-sm mt-3 text-center sm:text-base font-medium leading-[2em] text-slate-700">
+          Met onze subsidie-check krijgt u snel inzicht in de mogelijkheden voor uw woning of pand, zodat u de juiste
+          stappen kunt zetten richting een duurzamere toekomst.
+        </p>
       </div>
     </div>
   </section>
 
+  <!-- Form Section -->
+  <section class="relative flex flex-col items-center z-10 mx-auto max-w-7xl mt-4 mb-10 px-3">
+    <form id="contact-form"
+      class="flex flex-col w-full justify-center px-4 py-6 pt-10 rounded-[15px] max-w-5xl items-center text-sm text-slate-800 shadow-[0px_0px_10px_0px] shadow-black/10">
+      <p
+        class="text-xs bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] text-white font-medium px-3 py-1 rounded-full">
+        Subsidie-check formulier
+      </p>
+      <h2 class="text-3xl md:text-4xl font-semibold py-4 text-center text-slate-700 tracking-tight">
+        Aanvraagformulier
+      </h2>
+      <p class="max-md:text-sm text-gray-500 pb-10 text-center">
+        Vul uw gegevens zo volledig mogelijk in. Wij zoeken uw subsidies uit en nemen contact met u op.
+      </p>
+
+      <div class="w-full px-4">
+        <div class="grid grid-cols-1 md:gap-4">
+          <div>
+            <label for="firstName" class="font-medium">Naam <span class="inline-flex text-rose-500">*</span></label>
+            <div
+              class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-[color:var(--kz-lightblue)] transition-all overflow-hidden">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18.311 16.406a9.64 9.64 0 0 0-4.748-4.158 5.938 5.938 0 1 0-7.125 0 9.64 9.64 0 0 0-4.749 4.158.937.937 0 1 0 1.623.938c1.416-2.447 3.916-3.906 6.688-3.906 2.773 0 5.273 1.46 6.689 3.906a.938.938 0 0 0 1.622-.938M5.938 7.5a4.063 4.063 0 1 1 8.125 0 4.063 4.063 0 0 1-8.125 0"
+                  fill="#475569" />
+              </svg>
+              <input id="firstName" type="text" name="fi-sender-firstName" autocomplete="given-name" placeholder="Voer uw naam in"
+                required class="h-full px-2 w-full outline-none bg-transparent focus-visible:shadow-none" />
+            </div>
+          </div>
+        </div>
+
+        <label for="email" class="font-medium">E-mailadres <span class="inline-flex text-rose-500">*</span></label>
+        <div
+          class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-[color:var(--kz-lightblue)] transition-all overflow-hidden">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.5 3.438h-15a.937.937 0 0 0-.937.937V15a1.563 1.563 0 0 0 1.562 1.563h13.75A1.563 1.563 0 0 0 18.438 15V4.375a.94.94 0 0 0-.938-.937m-2.41 1.874L10 9.979 4.91 5.313zM3.438 14.688v-8.18l5.928 5.434a.937.937 0 0 0 1.268 0l5.929-5.435v8.182z"
+              fill="#475569" />
+          </svg>
+          <input id="email" type="email" name="fi-sender-email" autocomplete="email" placeholder="jan@voorbeeld.nl"
+            required class="h-full px-2 w-full outline-none bg-transparent focus-visible:shadow-none" />
+        </div>
+
+        <label for="phone" class="font-medium mt-4">Telefoonnummer</label>
+        <div
+          class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-[color:var(--kz-lightblue)] transition-all overflow-hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-slate-500"
+            aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M2 3.5A1.5 1.5 0 013.5 2h2A1.5 1.5 0 017 3.5v2A1.5 1.5 0 015.5 7H5a11 11 0 008 8v-.5A1.5 1.5 0 0114.5 13h2a1.5 1.5 0 011.5 1.5v2A1.5 1.5 0 0116.5 18h-.5C7.82 18 2 12.18 2 5v-.5z"
+              clip-rule="evenodd" />
+          </svg>
+          <input id="phone" type="tel" name="fi-sender-phone" autocomplete="tel" placeholder="06 12345678"
+            inputmode="tel" class="h-full px-2 w-full outline-none bg-transparent focus-visible:shadow-none" />
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
+          <div>
+            <label for="postal" class="font-medium">Postcode <span class="inline-flex text-rose-500">*</span></label>
+            <div
+              class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-[color:var(--kz-lightblue)] transition-all overflow-hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                class="h-5 w-5 text-slate-500" aria-hidden="true">
+                <path
+                  d="M10 1.75A6.25 6.25 0 0 0 3.75 8c0 4.507 5.327 9.635 5.553 9.85a1 1 0 0 0 1.394 0c.226-.215 5.553-5.343 5.553-9.85A6.25 6.25 0 0 0 10 1.75Zm0 8.5A2.25 2.25 0 1 1 10 5.75a2.25 2.25 0 0 1 0 4.5Z" />
+              </svg>
+              <input id="postal" type="text" name="fi-address-postal" autocomplete="postal-code" placeholder="1234 AB"
+                required class="h-full px-2 w-full outline-none bg-transparent focus-visible:shadow-none" />
+            </div>
+          </div>
+
+          <div>
+            <label for="city" class="font-medium">Plaats <span class="inline-flex text-rose-500">*</span></label>
+            <div
+              class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-[color:var(--kz-lightblue)] transition-all overflow-hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                class="h-5 w-5 text-slate-500" aria-hidden="true">
+                <path
+                  d="M1.75 3.5A1.75 1.75 0 0 1 3.5 1.75h5A1.75 1.75 0 0 1 10.25 3.5v5A1.75 1.75 0 0 1 8.5 10.25h-5A1.75 1.75 0 0 1 1.75 8.5v-5ZM9.75 11.5a1.75 1.75 0 0 1 1.75-1.75h5a1.75 1.75 0 0 1 1.75 1.75v5a1.75 1.75 0 0 1-1.75 1.75h-5a1.75 1.75 0 0 1-1.75-1.75v-5ZM11.5 1.75a1.75 1.75 0 0 0-1.75 1.75v2.25a1 1 0 1 0 2 0V3.75h2a1 1 0 1 0 0-2h-2.25ZM4.25 12a1 1 0 1 0 0 2h2v2a1 1 0 1 0 2 0v-2.25A1.75 1.75 0 0 0 6.5 12h-2.25Z" />
+              </svg>
+              <input id="city" type="text" name="fi-address-city" autocomplete="address-level2" placeholder="Amsterdam"
+                required class="h-full px-2 w-full outline-none bg-transparent focus-visible:shadow-none" />
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
+          <div>
+            <label for="homeType" class="font-medium">Type woning <span
+                class="inline-flex text-rose-500">*</span></label>
+            <div
+              class="flex items-center mt-2 mb-4 h-10 px-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-[color:var(--kz-lightblue)] transition-all overflow-hidden">
+              <select id="homeType" name="fi-home-type" required
+                class="h-full w-full outline-none bg-transparent focus-visible:shadow-none">
+                <option value="" disabled selected>Kies type woning</option>
+                <option value="eengezinswoning">Eengezinswoning</option>
+                <option value="appartement">Appartement</option>
+                <option value="twee-onder-een-kap">Twee-onder-een-kap</option>
+                <option value="vrijstaand">Vrijstaand</option>
+                <option value="bedrijfspand">Bedrijfspand</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="buildYear" class="font-medium">Bouwjaar <span class="inline-flex text-rose-500">*</span></label>
+            <div
+              class="flex items-center mt-2 mb-4 h-10 px-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-[color:var(--kz-lightblue)] transition-all overflow-hidden">
+              <select id="buildYear" name="fi-home-buildyear" required
+                class="h-full w-full outline-none bg-transparent focus-visible:shadow-none">
+                <option value="" disabled selected>Kies een periode</option>
+                <option value="voor-1945">Voor 1945</option>
+                <option value="1945-1974">1945 - 1974</option>
+                <option value="1975-1994">1975 - 1994</option>
+                <option value="1995-2010">1995 - 2010</option>
+                <option value="2011-2020">2011 - 2020</option>
+                <option value="2021-nu">2021 - nu</option>
+                <option value="onbekend">Onbekend</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <p class="font-medium mt-2">Geinteresseerde diensten</p>
+        <div class="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <label
+            class="flex items-center gap-3 h-10 px-4 border border-slate-300 rounded-full text-sm font-medium cursor-pointer hover:bg-slate-50 transition-colors">
+            <input type="checkbox" name="fi-measure-zonnepanelen" value="zonnepanelen"
+              class="h-4 w-4 accent-[color:var(--kz-darkerblue)]" />
+            Zonnepanelen
+          </label>
+          <label
+            class="flex items-center gap-3 h-10 px-4 border border-slate-300 rounded-full text-sm font-medium cursor-pointer hover:bg-slate-50 transition-colors">
+            <input type="checkbox" name="fi-measure-warmtepomp" value="warmtepomp"
+              class="h-4 w-4 accent-[color:var(--kz-darkerblue)]" />
+            Warmtepomp
+          </label>
+          <label
+            class="flex items-center gap-3 h-10 px-4 border border-slate-300 rounded-full text-sm font-medium cursor-pointer hover:bg-slate-50 transition-colors">
+            <input type="checkbox" name="fi-measure-thuisbatterij" value="thuisbatterij"
+              class="h-4 w-4 accent-[color:var(--kz-darkerblue)]" />
+            Thuisbatterij
+          </label>
+          <label
+            class="flex items-center gap-3 h-10 px-4 border border-slate-300 rounded-full text-sm font-medium cursor-pointer hover:bg-slate-50 transition-colors">
+            <input type="checkbox" name="fi-measure-airco" value="airco"
+              class="h-4 w-4 accent-[color:var(--kz-darkerblue)]" />
+            Airconditioning
+          </label>
+          <label
+            class="flex items-center gap-3 h-10 px-4 border border-slate-300 rounded-full text-sm font-medium cursor-pointer hover:bg-slate-50 transition-colors sm:col-span-2">
+            <input type="checkbox" name="fi-measure-isolatie" value="isolatie"
+              class="h-4 w-4 accent-[color:var(--kz-darkerblue)]" />
+            Isolatie
+          </label>
+        </div>
+
+        <label for="message" class="font-medium mt-4 block">Opmerkingen</label>
+        <textarea id="message" name="fi-text-message" rows="5"
+          class="w-full mt-2 p-2 bg-transparent border border-slate-300 rounded-lg resize-y outline-none focus:ring-2 focus-within:ring-[color:var(--kz-lightblue)] transition-all"
+          placeholder="Korte toelichting over uw situatie of wensen (optioneel)"></textarea>
+
+        <div class="w-full flex justify-center mt-6">
+          <button type="submit"
+            class="w-full md:w-max py-2 px-6 md:px-12 rounded-full cursor-pointer bg-[linear-gradient(to_right,var(--kz-darkerblue),#0090d0ba)] text-white text-sm font-semibold hover:opacity-80 transition-opacity">
+            Subsidie-check aanvragen
+          </button>
+        </div>
+
+        <p class="text-xs font-medium text-black/50 leading-relaxed text-center mt-4">
+          Deze aanvraag is geheel vrijblijvend, en uiteraard gratis.
+        </p>
+
+        <p class="text-xs font-medium text-black/50 leading-relaxed text-center mt-4">
+          Door te verzenden gaat u akkoord met ons
+          <a href="./privacy.html" class="font-semibold text-[color:var(--kz-darkerblue)] hover:underline">
+            Privacybeleid
+          </a>
+          zodat we contact kunnen opnemen over uw aanvraag.
+        </p>
+
+        <div id="result" class="mt-5 text-xs font-semibold text-green-600 text-center"></div>
+      </div>
+    </form>
+  </section>
   <!-- Footer -->
   <div id="footer" class="relative bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] text-white">
   </div>

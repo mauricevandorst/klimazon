@@ -117,6 +117,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
+
 </head>
 
 <body class="bg-white text-slate-700 antialiased [overflow-anchor:none]">
@@ -129,9 +130,12 @@
 
     <!-- Achtergrond boven -->
     <div class="w-full lg:w-1/2 flex sm:hidden justify-center">
-      <div class="w-full max-w-[520px] max-h-[200px] overflow-hidden border-b-[1px] border-[#ffffff47]">
+      <div class="hero-image-wrap w-full max-w-[520px] max-h-[200px] overflow-hidden border-b-[1px] border-[#ffffff47]"
+        data-hero-image-wrap>
+        <div class="hero-image-skeleton" data-hero-skeleton aria-hidden="true"></div>
         <img src="./assets/images/projects/project-10.png" alt="Airconditioning in een woning in de Zaanstreek"
-          class="w-full h-full object-cover object-center" loading="eager" fetchpriority="high" decoding="async" />
+          class="w-full h-full object-cover object-center [overflow-clip-margin:unset] opacity-0 transition-opacity duration-300" data-hero-image
+          loading="eager" fetchpriority="high" decoding="async" />
       </div>
     </div>
 
@@ -193,9 +197,13 @@
         </div>
 
         <div class="w-full lg:w-1/2 hidden sm:flex justify-center">
-          <img src="./assets/images/projects/project-10.png" alt="Airconditioning in een woning in de Zaanstreek"
-            class="w-full max-w-[520px] h-auto rounded-[5px] shadow-[0_0_14px_rgba(0,0,0,0.18)]" loading="eager"
-            fetchpriority="high" decoding="async" />
+          <div class="hero-image-wrap w-full max-w-[520px]" data-hero-image-wrap>
+            <div class="hero-image-skeleton shadow-[0_0_14px_rgba(0,0,0,0.08)]" data-hero-skeleton aria-hidden="true">
+            </div>
+            <img src="./assets/images/projects/project-10.png" alt="Airconditioning in een woning in de Zaanstreek"
+              class="w-full max-w-[520px] h-auto rounded-[5px] shadow-[0_0_14px_rgba(0,0,0,0.18)] opacity-0 transition-opacity duration-300 [overflow-clip-margin:unset]"
+              data-hero-image loading="eager" fetchpriority="high" decoding="async" />
+          </div>
         </div>
       </div>
     </div>
@@ -426,7 +434,7 @@
           </div>
         </div>
         <div
-          class="bg-[linear-gradient(to_right,#dccb0142,#d49300ba)] rounded-[10px] p-1 pt-4 shadow-xl hover:shadow-lg transition-shadow">
+          class="bg-[linear-gradient(to_right,#dccb0194,#d49300ba)] rounded-[10px] p-1 pt-4 shadow-xl hover:shadow-lg transition-shadow">
           <div class="rounded-[5px] p-6 bg-white border border-neutral-200 hover:shadow-lg transition-shadow">
             <div
               class="flex w-max items-center justify-center py-1 px-2 gap-3 text-sm border border-gray-200 rounded-full">
@@ -722,7 +730,7 @@
 
   <!-- Zwevend WhatsApp icoon (mobiel) -->
   <a href="https://wa.me/31654216787" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-5 z-50 flex items-center justify-center
-         w-12 h-12 rounded-[5px] bg-green-500 shadow-lg lg:hidden hover:bg-green-600 transition-colors"
+         w-12 h-12 rounded-full bg-green-500 shadow-lg lg:hidden hover:bg-green-600 transition-colors"
     aria-label="Chat via WhatsApp">
     <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552">
       <defs>
@@ -759,100 +767,10 @@
   <script src="./js/faq-accordion.js" defer></script>
   <script src="./js/marquee.js" defer></script>
   <script src="./js/pricing.js" defer></script>
+  <script src="./js/hero-contract.js" defer></script>
   <script src="./js/includes.js" defer></script>
 
   <script src="https://forminit.com/sdk/v1/forminit.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const dropdown = document.querySelector("[data-contract-dropdown]");
-      if (!dropdown) return;
-
-      const trigger = dropdown.querySelector("#plan-button");
-      const menu = dropdown.querySelector("ul[role='listbox']");
-      const hiddenInput = dropdown.querySelector("input[name='plan']");
-      const optionButtons = dropdown.querySelectorAll("button[data-value]");
-
-      const triggerLabel = trigger.querySelector("span.font-medium");
-      const triggerDot = trigger.querySelector("span.h-4.w-4.rounded-full");
-
-      function setOpen(isOpen) {
-        menu.classList.toggle("hidden", !isOpen);
-        trigger.setAttribute("aria-expanded", String(isOpen));
-      }
-
-      function updateSelected(value, label, dotClass) {
-        hiddenInput.value = value;
-        triggerLabel.textContent = label;
-        triggerDot.className = "h-4 w-4 rounded-full " + dotClass;
-
-        optionButtons.forEach(function (btn) {
-          btn.classList.remove("bg-slate-100");
-          if (btn.dataset.value === value) {
-            btn.classList.add("bg-slate-100");
-          }
-        });
-      }
-
-      function selectContract(value) {
-        const selectedButton = Array.from(optionButtons).find(function (btn) {
-          return btn.dataset.value === value;
-        });
-        if (!selectedButton) return;
-
-        updateSelected(
-          selectedButton.dataset.value,
-          selectedButton.dataset.label,
-          selectedButton.dataset.dotClass
-        );
-      }
-
-      trigger.addEventListener("click", function () {
-        const isOpen = trigger.getAttribute("aria-expanded") === "true";
-        setOpen(!isOpen);
-      });
-
-      optionButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-          updateSelected(
-            button.dataset.value,
-            button.dataset.label,
-            button.dataset.dotClass
-          );
-          setOpen(false);
-        });
-      });
-
-      document.addEventListener("click", function (event) {
-        if (!dropdown.contains(event.target)) {
-          setOpen(false);
-        }
-      });
-
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-          setOpen(false);
-        }
-      });
-
-      const contractFormSection = document.getElementById("contract-formulier");
-      const contractCtaButtons = document.querySelectorAll("[data-contract-select]");
-
-      contractCtaButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-          selectContract(button.dataset.contractSelect);
-          setOpen(false);
-
-          if (contractFormSection) {
-            contractFormSection.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-
-          window.setTimeout(function () {
-            trigger.focus();
-          }, 350);
-        });
-      });
-    });
-  </script>
 
 </body>
 

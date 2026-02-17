@@ -129,9 +129,12 @@
 
     <!-- Achtergrond boven -->
     <div class="w-full lg:w-1/2 flex sm:hidden justify-center">
-      <div class="w-full max-w-[520px] max-h-[200px] overflow-hidden border-b-[1px] border-[#ffffff47]">
-        <img src="./assets/images/projects/project-08.jpg" alt="Warmtepomp in een woning in de Zaanstreek"
-          class="w-full h-full object-cover object-center" loading="eager" fetchpriority="high" decoding="async" />
+      <div class="hero-image-wrap w-full max-w-[520px] max-h-[200px] overflow-hidden border-b-[1px] border-[#ffffff47]"
+        data-hero-image-wrap>
+        <div class="hero-image-skeleton" data-hero-skeleton aria-hidden="true"></div>
+        <img src="./assets/images/projects/project-12.png" alt="Warmtepomp in een woning in de Zaanstreek"
+          class="w-full h-full object-cover object-center [overflow-clip-margin:unset] opacity-0 transition-opacity duration-300" data-hero-image
+          loading="eager" fetchpriority="high" decoding="async" />
       </div>
     </div>
 
@@ -182,12 +185,17 @@
             </a>
           </div>
         </div>
-
+        
         <div class="w-full lg:w-1/2 hidden sm:flex justify-center">
-          <img src="./assets/images/projects/project-06.jpeg" alt="Thuisbatterij in een woning in de Zaanstreek"
-            class="w-full max-w-[520px] h-auto rounded-[5px] shadow-[0_0_14px_rgba(0,0,0,0.18)]" loading="eager"
-            fetchpriority="high" decoding="async" />
+          <div class="hero-image-wrap w-full max-w-[520px]" data-hero-image-wrap>
+            <div class="hero-image-skeleton shadow-[0_0_14px_rgba(0,0,0,0.08)]" data-hero-skeleton aria-hidden="true">
+            </div>
+            <img src="./assets/images/projects/project-12.png" alt="Warmtepomp in een woning in de Zaanstreek"
+              class="w-full max-w-[520px] h-auto rounded-[5px] shadow-[0_0_14px_rgba(0,0,0,0.18)] opacity-0 transition-opacity duration-300 [overflow-clip-margin:unset]"
+              data-hero-image loading="eager" fetchpriority="high" decoding="async" />
+          </div>
         </div>
+
       </div>
     </div>
 
@@ -252,6 +260,7 @@
   <script src="./js/form-validation.js" defer></script>
   <script src="./js/offerte-forminit.js" defer></script>
   <script src="./js/marquee.js" defer></script>
+  <script src="./js/hero-contract.js" defer></script>
   <script src="./js/includes.js" defer></script>
 
   <script src="https://forminit.com/sdk/v1/forminit.js"></script>
