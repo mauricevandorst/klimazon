@@ -561,7 +561,6 @@
   .hero-image-skeleton {
     position: absolute;
     inset: 0;
-    border-radius: 5px;
     background: #d9e0ea;
     overflow: hidden;
     transition: opacity 240ms ease;

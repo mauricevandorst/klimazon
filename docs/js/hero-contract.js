@@ -1,6 +1,6 @@
 (() => {
   function initHeroImageReveal() {
-    const minDelayMs = 220;
+    const minDelayMs = 0; // Change for a minimum delay of hero images
     const heroImages = document.querySelectorAll("[data-hero-image]");
 
     heroImages.forEach((img) => {

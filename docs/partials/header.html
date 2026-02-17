@@ -17,6 +17,37 @@
       -webkit-backdrop-filter: none;
       backdrop-filter: none;
     }
+
+    @media (max-width: 1023px) {
+      [data-mobile-header] {
+        background-color: rgba(255, 255, 255, 0.9);
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
+        transition: background-color 180ms ease, backdrop-filter 180ms ease;
+      }
+
+      [data-mobile-header].is-mobile-scrolled {
+        background-color: rgba(255, 255, 255, 1);
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+      }
+
+      [data-mobile-header].is-mobile-open {
+        background-color: #ffffff;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+      }
+
+      [data-mobile-gradient-bar] {
+        opacity: 0;
+        clip-path: inset(0 calc((1 - var(--mobile-scroll-progress, 0)) * 100%) 0 0);
+        transition: opacity 180ms ease, clip-path 180ms ease;
+      }
+
+      [data-mobile-gradient-bar].is-mobile-scrolled {
+        opacity: 1;
+      }
+    }
   </style>
 
   <!-- Topbar (desktop only) -->
@@ -259,22 +290,22 @@
               </a>
               <a class="flex justify-between ps-2 text-sm hover:bg-black/5"
                 href="./zonnepanelen.html">
-                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-200">Zonnepanelen</span>
+                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-100">Zonnepanelen</span>
               </a>
               <a class="flex justify-between ps-2 text-sm hover:bg-black/5"
                 href="./airconditioning.html">
-                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-200">Airconditioning</span>
+                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-100">Airconditioning</span>
               </a>
               <a class="flex justify-between ps-2 text-sm hover:bg-black/5"
                 href="./warmtepomp.html">
-                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-200">Warmtepompen</span>
+                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-100">Warmtepompen</span>
               </a>
               <a class="flex justify-between ps-2 text-sm hover:bg-black/5"
                 href="./thuisbatterij.html">
-                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-200">Thuisbatterijen</span>
+                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-100">Thuisbatterijen</span>
               </a>
               <a class="flex justify-between ps-2 text-sm hover:bg-black/5" href="./onderhoud-en-service.html">
-                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-200">Onderhoud & service</span>
+                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-100">Onderhoud & service</span>
               </a>
             </div>
 
@@ -289,19 +320,19 @@
                 <span class="ps-1">Alle zakelijke diensten</span>
               </a>
               <a class="flex justify-between ps-3 text-sm hover:bg-black/5" href="./zonnepanelen-zakelijk.html">
-                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-200">Zonnepanelen zakelijk</span>
+                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-100">Zonnepanelen zakelijk</span>
               </a>
               <a class="flex justify-between ps-3 text-sm hover:bg-black/5" href="./airconditioning-zakelijk.html">
-                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-200">Airconditioning zakelijk</span>
+                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-100">Airconditioning zakelijk</span>
               </a>
               <a class="flex justify-between ps-3 text-sm hover:bg-black/5" href="./warmtepomp-zakelijk.html">
-                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-200">Warmtepomp zakelijk</span>
+                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-100">Warmtepomp zakelijk</span>
               </a>
               <a class="flex justify-between ps-3 text-sm hover:bg-black/5" href="./thuisbatterij-zakelijk.html">
-                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-200">Thuisbatterij zakelijk</span>
+                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-100">Thuisbatterij zakelijk</span>
               </a>
               <a class="flex justify-between ps-3 text-sm hover:bg-black/5" href="./onderhoud-en-service.html">
-                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-200">Zakelijk onderhoud & beheer</span>
+                <span class="w-full ps-2 py-2 border-b-[1px] border-slate-100">Onderhoud & beheer</span>
               </a>
             </div>
 
@@ -331,6 +362,9 @@
         </div>
       </div>
     </header>
+    <div
+      class="h-[2px] lg:hidden pointer-events-none bg-[linear-gradient(to_right,#6ca926,var(--kz-lightblue),#d85526)]"
+      data-mobile-gradient-bar></div>
 
   </div>
 </div>
