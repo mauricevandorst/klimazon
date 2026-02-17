@@ -175,8 +175,10 @@
         <h2 class="w-full text-2xl text-center sm:text-3xl font-semibold tracking-tight text-slate-700">
           Wij hebben
           <span
-            class="inline-flex bg-[linear-gradient(to_right,var(--kz-darkerblue),#0090d0ba)] bg-clip-text text-transparent">kennis
-            en ervaring</span>
+            class="inline-flex bg-[linear-gradient(to_right,var(--kz-darkerblue),#0090d0ba)] bg-clip-text text-transparent">kennis</span>
+          en
+          <span
+            class="inline-flex bg-[linear-gradient(to_right,var(--kz-darkerblue),#0090d0ba)] bg-clip-text text-transparent">ervaring</span>
           over
           <span
             class="inline-flex bg-[linear-gradient(to_right,var(--kz-darkerblue),#0090d0ba)] bg-clip-text text-transparent">subsidies</span>.
@@ -190,7 +192,7 @@
         </p>
         <p class="text-sm mt-3 text-center sm:text-base font-medium leading-[2em] text-slate-700">
           Met onze subsidie-check krijgt u snel inzicht in de mogelijkheden voor uw woning of pand, zodat u de juiste
-          stappen kunt zetten richting een duurzamere toekomst.
+          stappen kunt zetten richting verduurzaming.
         </p>
       </div>
     </div>
@@ -198,14 +200,16 @@
 
   <!-- Form Section -->
   <section class="relative flex flex-col items-center z-10 mx-auto max-w-7xl mt-4 mb-10 px-3">
-    <form id="contact-form"
-      class="flex flex-col w-full justify-center px-4 py-6 pt-10 rounded-[15px] max-w-5xl items-center text-sm text-slate-800 shadow-[0px_0px_10px_0px] shadow-black/10">
+    <form id="contact-form" class="flex flex-col w-full justify-center px-4 py-6 pt-10 rounded-[15px] max-w-5xl items-center text-sm text-slate-800 
+      shadow-[0px_0px_10px_0px] shadow-black/10
+      bg-[linear-gradient(to_right,#2a65a208,#0090d000)]
+      md:bg-[linear-gradient(to_right,white,#0090d000)]">
       <p
         class="text-xs bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] text-white font-medium px-3 py-1 rounded-full">
-        Subsidie-check formulier
+        Subsidie-check
       </p>
       <h2 class="text-3xl md:text-4xl font-semibold py-4 text-center text-slate-700 tracking-tight">
-        Aanvraagformulier
+        Subsidie-check formulier
       </h2>
       <p class="max-md:text-sm text-gray-500 pb-10 text-center">
         Vul uw gegevens zo volledig mogelijk in. Wij zoeken uw subsidies uit en nemen contact met u op.
@@ -222,8 +226,9 @@
                   d="M18.311 16.406a9.64 9.64 0 0 0-4.748-4.158 5.938 5.938 0 1 0-7.125 0 9.64 9.64 0 0 0-4.749 4.158.937.937 0 1 0 1.623.938c1.416-2.447 3.916-3.906 6.688-3.906 2.773 0 5.273 1.46 6.689 3.906a.938.938 0 0 0 1.622-.938M5.938 7.5a4.063 4.063 0 1 1 8.125 0 4.063 4.063 0 0 1-8.125 0"
                   fill="#475569" />
               </svg>
-              <input id="firstName" type="text" name="fi-sender-firstName" autocomplete="given-name" placeholder="Voer uw naam in"
-                required class="h-full px-2 w-full outline-none bg-transparent focus-visible:shadow-none" />
+              <input id="firstName" type="text" name="fi-sender-firstName" autocomplete="given-name"
+                placeholder="Voer uw naam in" required
+                class="h-full px-2 w-full outline-none bg-transparent focus-visible:shadow-none" />
             </div>
           </div>
         </div>
@@ -354,10 +359,15 @@
           </label>
         </div>
 
-        <label for="message" class="font-medium mt-4 block">Opmerkingen</label>
+        <label for="message" class="font-medium mt-4">Bericht <span class="inline-flex text-rose-500">*</span></label>
         <textarea id="message" name="fi-text-message" rows="5"
           class="w-full mt-2 p-2 bg-transparent border border-slate-300 rounded-lg resize-y outline-none focus:ring-2 focus-within:ring-[color:var(--kz-lightblue)] transition-all"
-          placeholder="Korte toelichting over uw situatie of wensen (optioneel)"></textarea>
+          placeholder="Vertel kort waar u naar op zoek bent (bijv. zonnepanelen, airco, warmtepomp, etc.) en vragen die u heeft."
+          required></textarea>
+
+        <p class="mt-2 text-xs text-gray-500">
+          Tip: Beschrijf globaal wat uw project omvat. Hoe specifieker, hoe beter ons advies.
+        </p>
 
         <div class="w-full flex justify-center mt-6">
           <button type="submit"
@@ -366,17 +376,15 @@
           </button>
         </div>
 
-        <p class="text-xs font-medium text-black/50 leading-relaxed text-center mt-4">
-          Deze aanvraag is geheel vrijblijvend, en uiteraard gratis.
-        </p>
-
-        <p class="text-xs font-medium text-black/50 leading-relaxed text-center mt-4">
-          Door te verzenden gaat u akkoord met ons
-          <a href="./privacy.html" class="font-semibold text-[color:var(--kz-darkerblue)] hover:underline">
-            Privacybeleid
-          </a>
-          zodat we contact kunnen opnemen over uw aanvraag.
-        </p>
+        <div class="flex flex-col w-full items-center">
+          <p class="max-w-2xl text-xs font-medium text-black/50 leading-relaxed text-center mt-4">
+            De aanvraag is geheel vrijblijvend, en uiteraard gratis. Door te verzenden gaat u akkoord met ons
+            <a href="./privacy.html" class="font-semibold text-[color:var(--kz-darkerblue)] hover:underline">
+              Privacybeleid
+            </a>
+            zodat we contact kunnen opnemen over uw aanvraag.
+          </p>
+        </div>
 
         <div id="result" class="mt-5 text-xs font-semibold text-green-600 text-center"></div>
       </div>

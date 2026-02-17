@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl">
 
 <head>
@@ -149,22 +149,22 @@
         <div class="hero-image-skeleton shadow-[0_0_14px_rgba(0,0,0,0.08)]" data-hero-skeleton aria-hidden="true">
         </div>
         <img src="./assets/images/projects/project-03.jpg" alt="Zonnepanelen op een woning in de Zaanstreek"
-          class="w-full h-auto rounded-[5px] shadow-[0_0_14px_rgba(0,0,0,0.18)] opacity-0 transition-opacity duration-300 [overflow-clip-margin:unset]"
+          class="w-full h-full rounded-[5px] shadow-[0_0_14px_rgba(0,0,0,0.18)] object-cover object-center opacity-0 transition-opacity duration-300 [overflow-clip-margin:unset]"
           data-hero-image loading="eager" fetchpriority="high" decoding="async" />
       </div>
       <!-- Pseudo overlay -->
-      <div class="absolute inset-0 bg-gradient-to-b from-black/0 via-black/10 to-slate-600/80 z-0"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/0 via-black/10 to-black/80 z-0"></div>
     </div>
 
     <!-- Achtergrond boven (mobiel) -->
     <div class="w-full lg:w-1/2 flex sm:hidden justify-center">
-      <div class="hero-image-wrap w-full max-w-[520px] max-h-[200px] overflow-hidden border-b-[1px] border-[#ffffff47]"
+      <div class="hero-image-wrap w-full max-h-[200px] overflow-hidden border-b-[1px] border-[#ffffff47]"
         data-hero-image-wrap>
         <div class="hero-image-skeleton" data-hero-skeleton aria-hidden="true"></div>
         <img src="./assets/images/projects/project-03.jpg" alt="Zonnepanelen op een woning in de Zaanstreek"
           class="w-full h-full object-cover object-center [overflow-clip-margin:unset] opacity-0 transition-opacity duration-300"
           data-hero-image loading="eager" fetchpriority="high" decoding="async" />
-        <div class="absolute inset-0 bg-gradient-to-b from-white/0 via-white/10 to-white/20 z-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-white/0 via-white/10 to-black/20 z-0"></div>
       </div>
     </div>
 
@@ -189,7 +189,7 @@
       <div class="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
     </div>
 
-    <div class="relative mx-auto w-full max-w-7xl px-6 py-10 lg:py-14 z-10 mb-[4rem] pt-6 sm:pt-10">
+    <div class="relative mx-auto w-full max-w-7xl px-6 py-10 lg:py-14 z-10 mb-[4rem] sm:mb-0 pt-6 sm:pt-10">
       <div class="flex flex-col-reverse md:flex-row lg:items-center gap-8 lg:gap-12">
         <div class="w-full lg:w-1/2">
           <p class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-white">Zonnepanelen</p>
@@ -222,7 +222,7 @@
     </div>
 
     <!-- WAVE -->
-    <div class="absolute bottom-[-1px] left-0 w-full pointer-events-none z-20">
+    <div class="absolute sm:hidden bottom-[-1px] left-0 w-full pointer-events-none z-20">
       <svg viewBox="0 0 1440 90" preserveAspectRatio="none" class="block sm:hidden w-full h-[100px]">
         <path d="M0,40 C120,80 360,0 720,30 1080,60 1320,20 1440,10 L1440,90 L0,90 Z" fill="#ffffff" />
       </svg>
@@ -237,15 +237,17 @@
   </section>
 
   <!-- USP's -->
-  <section id="usps" class="relative w-full overflow-hidden pb-16 lg:pb-24 lg:mt-8">
+  <section id="usps" class="relative w-full overflow-hidden pb-16 lg:pb-24 sm:mt-8">
 
     <!-- CONTAINER -->
     <div class="relative flex flex-col lg:flex-row gap-8 md:gap-6 md:gap-8 z-10 mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
 
       <!-- LINKS -->
-      <div class="w-full flex flex-col lg:pe-6 lg:pt-5 lg:max-w-[550px]">
-        <img src="./assets/images/portraits/monteur-in-huis.jpg" alt="Zonnepanelen op een woning in de Zaanstreek"
-          class="w-full h-auto rounded-[15px] object-cover" loading="eager" fetchpriority="high" decoding="async" />
+      <div class="w-full h-full hidden lg:flex justify-center rounded-[15px] overflow-hidden">
+        <div class="w-full h-[350px] overflow-hidden">
+          <img src="./assets/images/portraits/monteur-in-huis.jpg" alt="Zonnepanelen op een woning in de Zaanstreek"
+            class="w-full h-full object-cover object-center" loading="eager" fetchpriority="high" decoding="async" />
+        </div>
       </div>
 
       <!-- RECHTS -->
@@ -256,11 +258,14 @@
             Slim en energiezuinig
           </h4>
           <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-700">
-            Profiteer maximaal van <span class="inline-flex text-[color:var(--kz-blue)]">uw dak</span>.
+            Profiteer maximaal van <span
+              class="inline-flex bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">uw
+              dak</span>.
           </h2>
         </div>
         <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">
-          We zijn trots op het werk dat wij leveren en hebben intussen veel zonnepanelen geïnstalleerd in en rondom onze
+          We zijn trots op het werk dat wij leveren en hebben intussen heel veel woningen voorzien van zonnepanelen in
+          en rondom onze
           regio.
         </p>
         <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">
@@ -811,16 +816,16 @@
             </div>
             <span class="text-2xl font-medium">Zeer tevreden</span>
             <span class="text-xs font-medium">
-              "Zeer tevreden met de plaatsing van de zonnepanelen. Boy is langsgekomen en
-              we hebben een fijn adviesgesprek gehad. Snel daarna kwam hij langs
-              voor montage.
+              "Goede vaklui die eerlijk met je meedenken. Fijne en snelle communicatie, die na het installeren ook alles
+              netjes achter laten.
               <br><br>
-              Laat de zon maar komen!"
+              Absolute aanraders voor het plaatsen van zonnepanelen."
             </span>
+            <span class="text-[11px] font-semibold text-slate-500 tracking-tight italic">November 2025</span>
           </div>
           <span class="w-full flex flex-row items-center justify-end gap-3">
             <div class="flex gap-1">
-              <span class="inline font-semibold text-xs"><strong>Ronald S.</strong> via</span>
+              <span class="inline font-semibold text-xs"><strong>L. van Limpt</strong> via</span>
             </div>
             <img src="./assets/images/logo/google-reviews.png" alt="Google reviews" class="h-9" loading="lazy"
               decoding="async" />
@@ -848,7 +853,7 @@
           kwaliteit en vriendelijkheid.
         </p>
 
-        <div class="hidden sm:flex flex-wrap gap-2 px-auto sm:px-0">
+        <div class="hidden sm:flex flex-wrap gap-2 px-auto sm:px-0 mt-2">
           <a href="./offerte.html"
             class="group inline-flex gap-2 w-full sm:w-fit items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
                bg-gradient-to-b from-[color:var(--kz-blue)] to-[color:var(--kz-darkerblue)] shadow-lg shadow-blue-500/15 text-white transition hover:opacity-95 text-nowrap">

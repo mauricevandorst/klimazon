@@ -175,17 +175,21 @@
   <!-- Form Section -->
   <section class="relative flex flex-col items-center z-10 mx-auto max-w-7xl mt-4 mb-10 px-3">
     <form id="contact-form"
-      class="flex flex-col w-full justify-center px-4 py-6 pt-10 rounded-[15px] max-w-5xl items-center text-sm text-slate-800 shadow-[0px_0px_10px_0px] shadow-black/10">
+      class="flex flex-col w-full justify-center 
+      px-4 py-6 pt-10 rounded-[15px] max-w-5xl items-center text-sm text-slate-800 
+      shadow-[0px_0px_10px_0px] shadow-black/10
+      bg-[linear-gradient(to_right,#2a65a208,#0090d000)]
+      md:bg-[linear-gradient(to_right,white,#0090d000)]">
       <p
         class="text-xs bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] text-white font-medium px-3 py-1 rounded-full">
-        Offerteformulier
+        Offerte aanvragen
       </p>
       <h2 class="text-3xl md:text-4xl font-semibold py-4 text-center text-slate-700 tracking-tight">
         Aanvraagformulier
       </h2>
       <p class="max-md:text-sm text-gray-500 pb-10 text-center">
-        Of neem handmatig contact met ons op via <a href="mailto:contact@klimazon.com"
-          class="text-[color:var(--kz-blue)] hover:underline">contact@klimazon.com</a> of <a href="tel:+31654216787"
+        Vul het formulier in. Of neem contact op via <a href="mailto:info@klimazon.nl"
+          class="text-[color:var(--kz-blue)] hover:underline">info@klimazon.nl</a> of <a href="tel:+31654216787"
           class="text-[color:var(--kz-blue)] hover:underline">+31 6 54 21 67 87</a>.
       </p>
 
@@ -278,17 +282,15 @@
           </button>
         </div>
 
-        <p class="text-xs font-medium text-black/50 leading-relaxed text-center mt-4">
-          Deze aanvraag is geheel vrijblijvend, en uiteraard gratis.
-        </p>
-
-        <p class="text-xs font-medium text-black/50 leading-relaxed text-center mt-4">
-          Door te verzenden gaat u akkoord met ons
-          <a href="./privacy.html" class="font-semibold text-[color:var(--kz-darkerblue)] hover:underline">
-            Privacybeleid
-          </a>
-          zodat we contact kunnen opnemen over uw aanvraag.
-        </p>
+        <div class="flex flex-col w-full items-center">
+          <p class="max-w-2xl text-xs font-medium text-black/50 leading-relaxed text-center mt-4">
+            De aanvraag is geheel vrijblijvend, en uiteraard gratis. Door te verzenden gaat u akkoord met ons
+            <a href="./privacy.html" class="font-semibold text-[color:var(--kz-darkerblue)] hover:underline">
+              Privacybeleid
+            </a>
+            zodat we contact kunnen opnemen over uw aanvraag.
+          </p>
+        </div>
 
         <div id="result" class="mt-5 text-xs font-semibold text-green-600 text-center"></div>
       </div>
