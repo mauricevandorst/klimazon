@@ -16,6 +16,10 @@
   var usp1El = section.querySelector("[data-ac-usp-1]");
   var usp2El = section.querySelector("[data-ac-usp-2]");
   var usp3El = section.querySelector("[data-ac-usp-3]");
+  var mainCarousel = section.querySelector("[data-ac-carousel]");
+  var mainPrevButton = section.querySelector("[data-ac-main-prev]");
+  var mainNextButton = section.querySelector("[data-ac-main-next]");
+  var picksTrack = section.querySelector("[data-ac-picks]");
   var pickButtons = section.querySelectorAll("[data-ac-pick]");
   var picksPrevButton = section.querySelector("[data-ac-picks-prev]");
   var picksNextButton = section.querySelector("[data-ac-picks-next]");
@@ -91,6 +95,22 @@
     setSlide(index);
   }
 
+  function scrollPicksTrack(direction) {
+    if (!picksTrack) return;
+
+    var firstPick = pickButtons[0];
+    if (!firstPick) return;
+
+    var gapValue = window.getComputedStyle(picksTrack).columnGap || window.getComputedStyle(picksTrack).gap || "0";
+    var gap = parseFloat(gapValue) || 0;
+    var step = firstPick.getBoundingClientRect().width + gap;
+
+    picksTrack.scrollBy({
+      left: step * direction,
+      behavior: "smooth"
+    });
+  }
+
   for (var i = 0; i < pickButtons.length; i += 1) {
     (function (index) {
       pickButtons[index].addEventListener("click", function () {
@@ -100,14 +120,154 @@
   }
   if (picksPrevButton) {
     picksPrevButton.addEventListener("click", function () {
-      setSlideAndResetTimer(currentIndex - 1);
+      scrollPicksTrack(-1);
     });
   }
   if (picksNextButton) {
     picksNextButton.addEventListener("click", function () {
+      scrollPicksTrack(1);
+    });
+  }
+  if (mainPrevButton) {
+    mainPrevButton.addEventListener("click", function (event) {
+      event.stopPropagation();
+      setSlideAndResetTimer(currentIndex - 1);
+    });
+  }
+  if (mainNextButton) {
+    mainNextButton.addEventListener("click", function (event) {
+      event.stopPropagation();
       setSlideAndResetTimer(currentIndex + 1);
+    });
+  }
+  if (mainCarousel) {
+    mainCarousel.addEventListener("click", function (event) {
+      if (event.target && event.target.closest("button")) return;
+
+      var bounds = mainCarousel.getBoundingClientRect();
+      var clickX = event.clientX - bounds.left;
+      var clickedLeftHalf = clickX < bounds.width / 2;
+      setSlideAndResetTimer(clickedLeftHalf ? currentIndex - 1 : currentIndex + 1);
     });
   }
 
   setSlide(0);
+})();
+
+(function () {
+  var testimonials = document.querySelector("[data-airco-testimonials]");
+  if (!testimonials) return;
+
+  var quoteEl = testimonials.querySelector("[data-testimonial-quote]");
+  var authorEl = testimonials.querySelector("[data-testimonial-author]");
+  var pickButtons = testimonials.querySelectorAll("[data-testimonial-pick]");
+  if (!quoteEl || !authorEl || pickButtons.length !== 3) return;
+
+  var entries = [
+    {
+      quote:
+        '"Een heel fijn bedrijf met uiterst secure, vakbekwame en vriendelijke vakmensen. Een genot om zaken mee te doen! De servicegerichtheid en ouderwetse vriendelijkheid (waar vind je dat nog?) doen de rest."',
+      author: '<span class="font-extrabold">JJ</span> — Airco-installatie'
+    },
+    {
+      quote:
+        '"Goede vaklui die eerlijk met je meedenken. Fijne en snelle communicatie, die na het installeren ook alles netjes achter laten. Absolute aanraders voor het plaatsen van zonnepanelen."',
+      author: '<span class="font-extrabold">Lars</span> — Zonnepanelen installatie'
+    },
+    {
+      quote:
+        '"Klimazon dacht goed mee over de beste oplossing voor ons huis. De installatie van de warmtepomp verliep soepel en alles werd duidelijk uitgelegd."',
+      author: '<span class="font-extrabold">Toni</span> — Dubbele airco in Amsterdam'
+    }
+  ];
+  var activeIndex = 0;
+  var animationFrameId = null;
+  var intervalMs = 8000;
+  var cycleStartTime = 0;
+  var activeRingColor = "rgba(251, 146, 60, 1)";
+  var inactiveRingColor = "rgba(255, 255, 255, 0.35)";
+
+  function normalizeIndex(index) {
+    var length = entries.length;
+    return ((index % length) + length) % length;
+  }
+
+  function render(index) {
+    var safeIndex = normalizeIndex(index);
+    activeIndex = safeIndex;
+    quoteEl.textContent = entries[safeIndex].quote;
+    authorEl.innerHTML = entries[safeIndex].author;
+
+    for (var i = 0; i < pickButtons.length; i += 1) {
+      var isActive = i === safeIndex;
+      pickButtons[i].setAttribute("aria-pressed", isActive ? "true" : "false");
+      pickButtons[i].style.zIndex = isActive ? "30" : String(10 - i);
+      pickButtons[i].style.transform = isActive ? "translateY(-1px) scale(1.06)" : "translateY(0) scale(1)";
+      pickButtons[i].style.boxShadow = isActive ? "0 0 0 2px rgba(255,255,255,0.5)" : "none";
+      pickButtons[i].style.background = "conic-gradient(" + inactiveRingColor + " 360deg, " + inactiveRingColor + " 360deg)";
+    }
+  }
+
+  function paintProgress(progressRatio) {
+    var progressDegrees = Math.max(0, Math.min(progressRatio, 1)) * 360;
+    for (var i = 0; i < pickButtons.length; i += 1) {
+      if (i === activeIndex) {
+        pickButtons[i].style.background =
+          "conic-gradient(" +
+          activeRingColor +
+          " " +
+          progressDegrees +
+          "deg, " +
+          inactiveRingColor +
+          " " +
+          progressDegrees +
+          "deg 360deg)";
+      }
+    }
+  }
+
+  function stopAnimation() {
+    if (animationFrameId !== null) {
+      window.cancelAnimationFrame(animationFrameId);
+      animationFrameId = null;
+    }
+  }
+
+  function animationStep(now) {
+    if (!cycleStartTime) {
+      cycleStartTime = now;
+    }
+
+    var elapsed = now - cycleStartTime;
+    if (elapsed >= intervalMs) {
+      render(activeIndex + 1);
+      cycleStartTime = now;
+      elapsed = 0;
+    }
+
+    paintProgress(elapsed / intervalMs);
+    animationFrameId = window.requestAnimationFrame(animationStep);
+  }
+
+  function startAnimation() {
+    stopAnimation();
+    cycleStartTime = 0;
+    animationFrameId = window.requestAnimationFrame(animationStep);
+  }
+
+  function setActiveAndRestartCycle(index) {
+    render(index);
+    startAnimation();
+  }
+
+  for (var i = 0; i < pickButtons.length; i += 1) {
+    (function (index) {
+      pickButtons[index].addEventListener("click", function () {
+        setActiveAndRestartCycle(index);
+      });
+    })(i);
+  }
+
+  render(0);
+  startAnimation();
 })();
