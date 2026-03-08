@@ -85,13 +85,6 @@
     if (usp3El) usp3El.textContent = usp3;
 
     updatePickButtons(safeIndex);
-    if (pickButtons[safeIndex]) {
-      pickButtons[safeIndex].scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "nearest",
-      });
-    }
   }
 
   function setSlideAndResetTimer(index) {

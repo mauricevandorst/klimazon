@@ -2667,6 +2667,10 @@ a {
           background-clip: text;
 }
 
+.bg-center{
+  background-position: center;
+}
+
 .bg-no-repeat{
   background-repeat: no-repeat;
 }
@@ -4359,6 +4363,10 @@ a {
 
   .lg\:w-3\/4{
     width: 75%;
+  }
+
+  .lg\:w-2\/4{
+    width: 50%;
   }
 
   .lg\:max-w-\[380px\]{
