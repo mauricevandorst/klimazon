@@ -1298,6 +1298,19 @@ a {
   animation: hero-image-shimmer 1.1s linear infinite;
 }
 
+/* Background text: langzaam grow -> pauze -> shrink (herbruikbaar) */
+
+.grow-pause-shrink {
+  --grow-duration: 8s;
+  --pause-duration: 4s;
+  --scale-from: 1;
+  --scale-to: 1.1;
+  --cycle-duration: calc((var(--grow-duration) * 2) + var(--pause-duration));
+  transform-origin: center center;
+  animation: grow-pause-shrink var(--cycle-duration) ease-in-out infinite;
+  will-change: transform;
+}
+
 @media (min-width: 1024px) {
   #header:empty::before {
     background:
@@ -1318,6 +1331,10 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .grow-pause-shrink {
+    animation: none;
+  }
+
   #header:empty::before {
     animation: none;
   }
@@ -1344,6 +1361,24 @@ a {
 @keyframes hero-image-shimmer {
   to {
     transform: translateX(100%);
+  }
+}
+
+@keyframes grow-pause-shrink {
+  0% {
+    transform: scale(var(--scale-from));
+  }
+
+  40% {
+    transform: scale(var(--scale-to));
+  }
+
+  60% {
+    transform: scale(var(--scale-to));
+  }
+
+  100% {
+    transform: scale(var(--scale-from));
   }
 }
 
@@ -1798,10 +1833,6 @@ a {
 
 .max-h-\[200px\]{
   max-height: 200px;
-}
-
-.max-h-\[250px\]{
-  max-height: 250px;
 }
 
 .max-h-\[275px\]{
@@ -2591,6 +2622,10 @@ a {
 
 .bg-\[linear-gradient\(to_right\2c var\(--kz-darkerblue\)\2c \#0090d0ba\)\]{
   background-image: linear-gradient(to right,var(--kz-darkerblue),#0090d0ba);
+}
+
+.bg-\[linear-gradient\(to_right\2c var\(--kz-darkerblue\)\2c \#2d6db1\2c \#0d7ec2\2c var\(--kz-blue\)\)\]{
+  background-image: linear-gradient(to right,var(--kz-darkerblue),#2d6db1,#0d7ec2,var(--kz-blue));
 }
 
 .bg-\[linear-gradient\(to_right\2c var\(--kz-darkerblue\)\2c var\(--kz-blue\)\)\]{
@@ -4568,6 +4603,10 @@ a {
 
   .lg\:text-\[23px\]{
     font-size: 23px;
+  }
+
+  .lg\:text-\[9rem\]{
+    font-size: 9rem;
   }
 
   .lg\:text-sm{
