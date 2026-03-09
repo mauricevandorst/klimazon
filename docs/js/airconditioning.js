@@ -29,6 +29,9 @@
     "group outline-none shrink-0 basis-[calc(50%-0.25rem)] sm:basis-[calc(25%-0.375rem)] snap-start overflow-hidden rounded-[8px] border-2 border-transparent bg-white/5 transition-all duration-300 hover:border-white/70 hover:-translate-y-0.5";
 
   var currentIndex = 0;
+  var touchStartX = null;
+  var touchStartY = null;
+  var touchTriggered = false;
 
   function normalizeIndex(index) {
     var length = slides.length;
@@ -44,13 +47,49 @@
     }
   }
 
+  function scrollActivePickIntoView(index) {
+    if (!picksTrack || !pickButtons.length) return;
+    var activePick = pickButtons[index];
+    if (!activePick) return;
+
+    var pickLeft = activePick.offsetLeft;
+    var pickRight = pickLeft + activePick.offsetWidth;
+    var visibleLeft = picksTrack.scrollLeft;
+    var visibleRight = visibleLeft + picksTrack.clientWidth;
+
+    if (pickLeft < visibleLeft || pickRight > visibleRight) {
+      var targetLeft = pickLeft - (picksTrack.clientWidth - activePick.offsetWidth) / 2;
+      var maxScrollLeft = Math.max(0, picksTrack.scrollWidth - picksTrack.clientWidth);
+      var clampedLeft = Math.max(0, Math.min(targetLeft, maxScrollLeft));
+      picksTrack.scrollTo({
+        left: clampedLeft,
+        behavior: "smooth"
+      });
+    }
+  }
+
+  function prepareSlides() {
+    for (var i = 0; i < slides.length; i += 1) {
+      slides[i].classList.remove("hidden");
+      slides[i].style.opacity = "0";
+      slides[i].style.transform = "scale(1.015)";
+      slides[i].style.transition = "opacity 380ms ease, transform 380ms ease";
+      slides[i].style.pointerEvents = "none";
+      slides[i].style.zIndex = "1";
+      slides[i].setAttribute("aria-hidden", "true");
+    }
+  }
+
   function setSlide(index) {
     var safeIndex = normalizeIndex(index);
     currentIndex = safeIndex;
 
     for (var i = 0; i < slides.length; i += 1) {
       var isActive = i === safeIndex;
-      slides[i].classList.toggle("hidden", !isActive);
+      slides[i].style.opacity = isActive ? "1" : "0";
+      slides[i].style.transform = isActive ? "scale(1)" : "scale(1.015)";
+      slides[i].style.pointerEvents = isActive ? "auto" : "none";
+      slides[i].style.zIndex = isActive ? "2" : "1";
       slides[i].setAttribute("aria-hidden", isActive ? "false" : "true");
     }
 
@@ -89,6 +128,7 @@
     if (usp3El) usp3El.textContent = usp3;
 
     updatePickButtons(safeIndex);
+    scrollActivePickIntoView(safeIndex);
   }
 
   function setSlideAndResetTimer(index) {
@@ -104,6 +144,18 @@
     var gapValue = window.getComputedStyle(picksTrack).columnGap || window.getComputedStyle(picksTrack).gap || "0";
     var gap = parseFloat(gapValue) || 0;
     var step = firstPick.getBoundingClientRect().width + gap;
+    var maxScrollLeft = Math.max(0, picksTrack.scrollWidth - picksTrack.clientWidth);
+    var currentScrollLeft = picksTrack.scrollLeft;
+    var edgeTolerance = 2;
+
+    if (direction > 0 && currentScrollLeft >= maxScrollLeft - edgeTolerance) {
+      picksTrack.scrollTo({ left: 0, behavior: "smooth" });
+      return;
+    }
+    if (direction < 0 && currentScrollLeft <= edgeTolerance) {
+      picksTrack.scrollTo({ left: maxScrollLeft, behavior: "smooth" });
+      return;
+    }
 
     picksTrack.scrollBy({
       left: step * direction,
@@ -149,125 +201,50 @@
       var clickedLeftHalf = clickX < bounds.width / 2;
       setSlideAndResetTimer(clickedLeftHalf ? currentIndex - 1 : currentIndex + 1);
     });
+
+    mainCarousel.addEventListener(
+      "touchstart",
+      function (event) {
+        if (!event.touches || event.touches.length !== 1) return;
+        touchStartX = event.touches[0].clientX;
+        touchStartY = event.touches[0].clientY;
+        touchTriggered = false;
+      },
+      { passive: true }
+    );
+
+    mainCarousel.addEventListener(
+      "touchmove",
+      function (event) {
+        if (touchStartX === null || touchStartY === null || touchTriggered) return;
+        if (!event.touches || event.touches.length !== 1) return;
+
+        var deltaX = event.touches[0].clientX - touchStartX;
+        var deltaY = event.touches[0].clientY - touchStartY;
+        var absX = Math.abs(deltaX);
+        var absY = Math.abs(deltaY);
+        var swipeThreshold = 40;
+
+        if (absX > swipeThreshold && absX > absY) {
+          setSlideAndResetTimer(deltaX < 0 ? currentIndex + 1 : currentIndex - 1);
+          touchTriggered = true;
+        }
+      },
+      { passive: true }
+    );
+
+    mainCarousel.addEventListener(
+      "touchend",
+      function () {
+        touchStartX = null;
+        touchStartY = null;
+        touchTriggered = false;
+      },
+      { passive: true }
+    );
   }
 
+  prepareSlides();
   setSlide(0);
 })();
 
-(function () {
-  var testimonials = document.querySelector("[data-airco-testimonials]");
-  if (!testimonials) return;
-
-  var quoteEl = testimonials.querySelector("[data-testimonial-quote]");
-  var authorEl = testimonials.querySelector("[data-testimonial-author]");
-  var pickButtons = testimonials.querySelectorAll("[data-testimonial-pick]");
-  if (!quoteEl || !authorEl || pickButtons.length !== 3) return;
-
-  var entries = [
-    {
-      quote:
-        '"Een heel fijn bedrijf met uiterst secure, vakbekwame en vriendelijke vakmensen. Een genot om zaken mee te doen! De servicegerichtheid en ouderwetse vriendelijkheid (waar vind je dat nog?) doen de rest."',
-      author: '<span class="font-extrabold">JJ</span> — Airco-installatie'
-    },
-    {
-      quote:
-        '"Goede vaklui die eerlijk met je meedenken. Fijne en snelle communicatie, die na het installeren ook alles netjes achter laten. Absolute aanraders voor het plaatsen van zonnepanelen."',
-      author: '<span class="font-extrabold">Lars</span> — Zonnepanelen installatie'
-    },
-    {
-      quote:
-        '"Klimazon dacht goed mee over de beste oplossing voor ons huis. De installatie van de warmtepomp verliep soepel en alles werd duidelijk uitgelegd."',
-      author: '<span class="font-extrabold">Toni</span> — Dubbele airco in Amsterdam'
-    }
-  ];
-  var activeIndex = 0;
-  var animationFrameId = null;
-  var intervalMs = 8000;
-  var cycleStartTime = 0;
-  var activeRingColor = "rgba(251, 146, 60, 1)";
-  var inactiveRingColor = "rgba(255, 255, 255, 0.35)";
-
-  function normalizeIndex(index) {
-    var length = entries.length;
-    return ((index % length) + length) % length;
-  }
-
-  function render(index) {
-    var safeIndex = normalizeIndex(index);
-    activeIndex = safeIndex;
-    quoteEl.textContent = entries[safeIndex].quote;
-    authorEl.innerHTML = entries[safeIndex].author;
-
-    for (var i = 0; i < pickButtons.length; i += 1) {
-      var isActive = i === safeIndex;
-      pickButtons[i].setAttribute("aria-pressed", isActive ? "true" : "false");
-      pickButtons[i].style.zIndex = isActive ? "30" : String(10 - i);
-      pickButtons[i].style.transform = isActive ? "translateY(-1px) scale(1.06)" : "translateY(0) scale(1)";
-      pickButtons[i].style.boxShadow = isActive ? "0 0 0 2px rgba(255,255,255,0.5)" : "none";
-      pickButtons[i].style.background = "conic-gradient(" + inactiveRingColor + " 360deg, " + inactiveRingColor + " 360deg)";
-    }
-  }
-
-  function paintProgress(progressRatio) {
-    var progressDegrees = Math.max(0, Math.min(progressRatio, 1)) * 360;
-    for (var i = 0; i < pickButtons.length; i += 1) {
-      if (i === activeIndex) {
-        pickButtons[i].style.background =
-          "conic-gradient(" +
-          activeRingColor +
-          " " +
-          progressDegrees +
-          "deg, " +
-          inactiveRingColor +
-          " " +
-          progressDegrees +
-          "deg 360deg)";
-      }
-    }
-  }
-
-  function stopAnimation() {
-    if (animationFrameId !== null) {
-      window.cancelAnimationFrame(animationFrameId);
-      animationFrameId = null;
-    }
-  }
-
-  function animationStep(now) {
-    if (!cycleStartTime) {
-      cycleStartTime = now;
-    }
-
-    var elapsed = now - cycleStartTime;
-    if (elapsed >= intervalMs) {
-      render(activeIndex + 1);
-      cycleStartTime = now;
-      elapsed = 0;
-    }
-
-    paintProgress(elapsed / intervalMs);
-    animationFrameId = window.requestAnimationFrame(animationStep);
-  }
-
-  function startAnimation() {
-    stopAnimation();
-    cycleStartTime = 0;
-    animationFrameId = window.requestAnimationFrame(animationStep);
-  }
-
-  function setActiveAndRestartCycle(index) {
-    render(index);
-    startAnimation();
-  }
-
-  for (var i = 0; i < pickButtons.length; i += 1) {
-    (function (index) {
-      pickButtons[index].addEventListener("click", function () {
-        setActiveAndRestartCycle(index);
-      });
-    })(i);
-  }
-
-  render(0);
-  startAnimation();
-})();

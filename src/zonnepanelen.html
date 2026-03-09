@@ -140,33 +140,8 @@
   <!-- Header section -->
   <div id="header" class="sticky top-0 z-50"></div>
 
-  <!-- BANNER -->
+  <!-- HERO SECTION / BANNER -->
   <section class="relative w-full overflow-hidden bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))]">
-
-    <!-- Achtergrond groot (desktop) -->
-    <div class="absolute h-full w-full hidden sm:flex justify-center opacity-10 z-10">
-      <div class="hero-image-wrap w-full" data-hero-image-wrap>
-        <div class="hero-image-skeleton shadow-[0_0_14px_rgba(0,0,0,0.08)]" data-hero-skeleton aria-hidden="true">
-        </div>
-        <img src="./assets/images/projects/project-03.jpg" alt="Zonnepanelen op een woning in de Zaanstreek"
-          class="w-full h-full rounded-[5px] shadow-[0_0_14px_rgba(0,0,0,0.18)] object-cover object-center opacity-0 transition-opacity duration-300 [overflow-clip-margin:unset]"
-          data-hero-image loading="eager" fetchpriority="high" decoding="async" />
-      </div>
-      <!-- Pseudo overlay -->
-      <div class="absolute inset-0 bg-gradient-to-b from-black/0 via-black/10 to-black/80 z-0"></div>
-    </div>
-
-    <!-- Achtergrond boven (mobiel) -->
-    <div class="w-full lg:w-1/2 flex sm:hidden justify-center">
-      <div class="hero-image-wrap w-full max-h-[200px] overflow-hidden border-b-[1px] border-[#ffffff47]"
-        data-hero-image-wrap>
-        <div class="hero-image-skeleton" data-hero-skeleton aria-hidden="true"></div>
-        <img src="./assets/images/projects/project-03.jpg" alt="Zonnepanelen op een woning in de Zaanstreek"
-          class="w-full h-full object-cover object-center [overflow-clip-margin:unset] opacity-0 transition-opacity duration-300"
-          data-hero-image loading="eager" fetchpriority="high" decoding="async" />
-        <div class="absolute inset-0 bg-gradient-to-b from-white/0 via-white/10 to-black/20 z-0"></div>
-      </div>
-    </div>
 
     <!-- Background (lighter, responsive, less DOM-heavy) -->
     <div class="pointer-events-none absolute inset-0 z-0">
@@ -189,35 +164,67 @@
       <div class="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
     </div>
 
-    <div class="relative mx-auto w-full max-w-7xl px-6 py-10 lg:py-14 z-10 mb-[4rem] pt-6 sm:pt-10">
-      <div class="flex flex-col-reverse md:flex-row lg:items-center gap-8 lg:gap-12">
-        <div class="w-full md:w-1/2">
+    <div class="relative mx-auto w-full max-w-6xl px-6 py-10 lg:py-14 z-10 mb-[4rem] pt-6 sm:pt-10">
+      <div class="flex flex-col md:flex-row lg:items-center gap-8 lg:gap-12">
+        <div class="w-full">
           <p class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-white">Zonnepanelen</p>
           <h1 class="mt-3 text-3xl sm:text-5xl font-bold tracking-tight text-white">
-            Op zoek naar zonnepanelen?
+            Wij gaan voor u het dak op.
           </h1>
           <p class="mt-4 text-sm sm:text-base font-medium text-white/90 leading-relaxed">
-            Van advies tot installatie en service achteraf: wij regelen alles voor u. U krijgt eerlijk advies
-            en zorgvuldige installatie met vriendelijke installateurs.
+            Wij zijn experts op het gebied van zonnepanelen. Bij Klimazon geven wij advies, installeren vakkundig en
+            bieden
+            top service & onderhoud achteraf, met vriendelijke monteurs.
           </p>
 
           <div class="mt-6 flex flex-wrap gap-3">
             <a href="#usps" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
                    bg-white/10 text-white focus:text-white/90 transition hover:opacity-90">
               Lees meer
-              <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
+              <span class="inline-block transition-transform duration-300 group-hover:translate-y-[1px]">
                 ↓
               </span>
             </a>
-            <a href="./offerte.html" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
-                   bg-white/95 text-slate-600 focus:text-slate-600/90 transition hover:opacity-90">
-              Offerte aanvragen
+            <a href="./contact.html" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
+                   bg-white text-slate-700 focus:text-slate-600/90 transition hover:opacity-90">
+              Gratis offerte
               <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
             </a>
           </div>
         </div>
+
+        <!-- Testimonials -->
+        <div class="flex flex-col gap-4 max-w-sm" data-testimonials>
+          <div class="flex items-center">
+            <button type="button" data-testimonial-pick="0" aria-pressed="true" aria-label="Toon review van Toni"
+              class="relative z-30 flex h-11 w-11 items-center justify-center rounded-full p-[3px] transition-transform duration-300">
+              <span
+                class="flex h-full w-full items-center justify-center rounded-full bg-indigo-500 text-xs font-bold text-white">JJ</span>
+            </button>
+            <button type="button" data-testimonial-pick="1" aria-pressed="false" aria-label="Toon review van Marjolein"
+              class="relative -ml-3 z-20 flex h-11 w-11 items-center justify-center rounded-full p-[3px] transition-transform duration-300">
+              <span
+                class="flex h-full w-full items-center justify-center rounded-full bg-lime-500 text-xs font-bold text-white">LP</span>
+            </button>
+            <button type="button" data-testimonial-pick="2" aria-pressed="false" aria-label="Toon review van Jeroen"
+              class="relative -ml-3 z-10 flex h-11 w-11 items-center justify-center rounded-full p-[3px] transition-transform duration-300">
+              <span
+                class="flex h-full w-full items-center justify-center rounded-full bg-yellow-500 text-xs font-bold text-white">TD</span>
+            </button>
+          </div>
+
+          <blockquote class="block text-[12px] lg:text-sm text-white/90 font-sans leading-relaxed" data-testimonial-quote>
+            "Klimazon is een professioneel bedrijf. De prijs was zeer goed en concurrerend,
+            en het werk is uitgevoerd volgens hoge kwaliteits&shy;normen."
+          </blockquote>
+
+          <span class="text-xs lg:text-sm text-white/90 font-sans" data-testimonial-author>
+            <span class="font-extrabold">Toni</span> — Dubbele airco in Amsterdam
+          </span>
+        </div>
+
       </div>
     </div>
 
@@ -386,88 +393,32 @@
       <div class="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
     </div>
 
-    <div class="relative flex flex-col z-10 mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
+    <div class="relative flex z-10 mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
       <!-- Header -->
-      <div class="flex flex-col gap-6">
-        <div>
+      <div class="flex flex-col justify-center md:flex-row gap-6 md:gap-12">
+        <div class="max-w-xl">
           <p class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-white/90">Innovatieve technologie
           </p>
-          <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-white/95">Rendabel dankzij onze
-            <span class="inline text-sky-300 [text-shadow:0_0_3px_rgba(59,130,246,0.6)]">innovatie</span>
+          <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-white/95">
+            Betrouwbare systemen door
+            <span class="inline text-sky-300 [text-shadow:0_0_3px_rgba(59,130,246,0.6)]">kennis</span>
             en
-            <span class="inline text-sky-300 [text-shadow:0_0_3px_rgba(59,130,246,0.6)]">kennis</span>.
+            <span class="inline text-sky-300 [text-shadow:0_0_3px_rgba(59,130,246,0.6)]">kwaliteit</span>.
           </h2>
+
           <p class="mt-4 text-sm text-white/90 font-medium max-w-2xl">
-            Wij gebruiken niet zomaar producten. Onze producten zijn technisch cutting-edge en zorgen voor
-            moderne prestaties die u standaard verwacht van uw apparatuur.
+            Wij werken met hoogwaardige, moderne apparatuur die betrouwbaar presteert en klaar is voor dagelijks
+            gebruik.
           </p>
+
           <p class="mt-2 text-sm text-white/90 font-medium max-w-2xl">
-            Naast installatie leggen wij altijd duidelijk uit hoe uw apparatuur werkt en hoe u gebruik maakt
-            van de systemen.
+            Na installatie leggen wij duidelijk uit hoe het systeem werkt, zodat u precies weet hoe u alles optimaal
+            gebruikt.
           </p>
         </div>
 
         <!-- USP kaarten -->
-        <div class="grid gap-4 md:grid-cols-3">
-
-          <div class="rounded-2xl border border-white/20 backdrop-blur overflow-hidden">
-            <div class="flex flex-col items-center w-full h-full">
-              <div class="relative flex flex-col items-center w-full px-8 py-24
-                [background-image:url('../assets/images/portraits/monteur-in-huis.png')]
-                bg-cover bg-opacity-50 overflow-hidden">
-
-                <!-- Pseudo overlay -->
-                <div class="absolute inset-0 bg-black/20 z-0"></div>
-              </div>
-              <div class="flex flex-col gap-3 p-5 h-full w-full justify-between bg-white">
-                <div class="flex flex-col gap-1">
-                  <p class="text-s text-slate-600 font-bold">
-                    Efficiënte micro-omvormers
-                  </p>
-                  <p class="text-sm text-slate-600 font-medium">
-                    Geen omvormers of kabeltrajecten binnenshuis, maar slim gemonteerd direct onder de panelen.
-                  </p>
-                </div>
-                <a href="./diensten.html" class="group inline-flex gap-1
-                rounded-[5px] text-sm font-semibold text-[color:var(--kz-darkerblue)] transition hover:opacity-90">
-                  Lees over omvormers
-                  <span class="inline transition-transform duration-300 group-hover:translate-x-1">
-                    →
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="rounded-2xl border border-white/20 backdrop-blur overflow-hidden">
-            <div class="flex flex-col items-center w-full h-full">
-              <div class="relative flex flex-col items-center w-full px-8 py-24
-                [background-image:url('../assets/images/portraits/michael.jpg')]
-                bg-cover bg-opacity-50 overflow-hidden">
-
-                <!-- Pseudo overlay -->
-                <div class="absolute inset-0 bg-black/20 z-0"></div>
-              </div>
-              <div class="flex flex-col gap-3 p-5 h-full w-full justify-between bg-white">
-                <div class="flex flex-col gap-1">
-                  <p class="text-s text-slate-600 font-bold">
-                    Kennis over zonnepanelen en energiemanagement
-                  </p>
-                  <p class="text-sm text-slate-600 font-medium">
-                    We adviseren niet alleen over zonnepanelen, maar ook over slimme energie<wbr>management<wbr>systemen en
-                    thuisbatterijen. Zo haalt u het maximale uit uw installatie.
-                  </p>
-                </div>
-                <a href="./offerte.html" class="group inline-flex gap-1
-                rounded-[5px] text-sm font-semibold text-[color:var(--kz-darkerblue)] transition hover:opacity-90">
-                  Vraag een offerte aan
-                  <span class="inline transition-transform duration-300 group-hover:translate-x-1">
-                    →
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
+        <div class="flex flex-col md:w-1/3 md:flex-row gap-3 md:gap-6">
 
           <div class="rounded-2xl border border-white/20 backdrop-blur overflow-hidden">
             <div class="flex flex-col items-center w-full h-full">
@@ -1017,6 +968,7 @@
   <script src="./js/featurable-credit-hider.js" defer></script>
   <script src="./js/hero-contract.js" defer></script>
   <script src="./js/includes.js" defer></script>
+  <script type="module" src="./js/testimonial-rotator.js" defer></script>
 
   <script src="https://featurable.com/assets/v2/carousel_default.min.js" defer charset="UTF-8"></script>
 

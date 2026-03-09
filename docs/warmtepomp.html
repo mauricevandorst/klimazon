@@ -124,33 +124,8 @@
   <!-- Header section -->
   <div id="header" class="sticky top-0 z-50"></div>
 
-  <!-- BANNER -->
+  <!-- HERO SECTION / BANNER -->
   <section class="relative w-full overflow-hidden bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))]">
-
-    <!-- Achtergrond groot (desktop) -->
-    <div class="absolute h-full w-full hidden sm:flex justify-center opacity-10 z-10">
-      <div class="hero-image-wrap w-full" data-hero-image-wrap>
-        <div class="hero-image-skeleton shadow-[0_0_14px_rgba(0,0,0,0.08)]" data-hero-skeleton aria-hidden="true">
-        </div>
-        <img src="./assets/images/projects/project-08.jpg" alt="Warmtepomp in een woning in de Zaanstreek"
-          class="w-full h-full rounded-[5px] shadow-[0_0_14px_rgba(0,0,0,0.18)] object-cover object-center opacity-0 transition-opacity duration-300 [overflow-clip-margin:unset]"
-          data-hero-image loading="eager" fetchpriority="high" decoding="async" />
-      </div>
-      <!-- Pseudo overlay -->
-      <div class="absolute inset-0 bg-gradient-to-b from-black/0 via-black/10 to-black/80 z-0"></div>
-    </div>
-
-    <!-- Achtergrond boven -->
-    <div class="w-full lg:w-1/2 flex sm:hidden justify-center">
-      <div class="hero-image-wrap w-full max-w-[520px] max-h-[200px] overflow-hidden border-b-[1px] border-[#ffffff47]"
-        data-hero-image-wrap>
-        <div class="hero-image-skeleton" data-hero-skeleton aria-hidden="true"></div>
-        <img src="./assets/images/projects/project-08.jpg" alt="Warmtepomp in een woning in de Zaanstreek"
-          class="w-full h-full object-cover object-center [overflow-clip-margin:unset] opacity-0 transition-opacity duration-300" data-hero-image
-          loading="eager" fetchpriority="high" decoding="async" />
-        <div class="absolute inset-0 bg-gradient-to-b from-white/0 via-white/10 to-black/20 z-0"></div>
-      </div>
-    </div>
 
     <!-- Background (lighter, responsive, less DOM-heavy) -->
     <div class="pointer-events-none absolute inset-0 z-0">
@@ -173,33 +148,66 @@
       <div class="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
     </div>
 
-    <div class="relative mx-auto w-full max-w-7xl px-6 py-10 lg:py-14 z-10 mb-[4rem] pt-6 sm:pt-10">
-      <div class="flex flex-col-reverse md:flex-row lg:items-center gap-8 lg:gap-12">
-        <div class="w-full lg:w-1/2">
+    <div class="relative mx-auto w-full max-w-6xl px-6 py-10 lg:py-14 z-10 mb-[4rem] pt-6 sm:pt-10">
+      <div class="flex flex-col md:flex-row lg:items-center gap-8 lg:gap-12">
+        <div class="w-full">
           <p class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-white">Warmtepomp</p>
           <h1 class="mt-3 text-3xl sm:text-5xl font-bold tracking-tight text-white">
             Op zoek naar een warmtepomp?
           </h1>
           <p class="mt-4 text-sm sm:text-base font-medium text-white/90 leading-relaxed">
-            Van advies tot installatie en service achteraf: wij regelen alles voor u. U krijgt eerlijk advies
-            en zorgvuldige installatie met vriendelijke installateurs.
+            Van advies tot installatie en service achteraf: wij regelen alles voor u. 
+            U krijgt eerlijk advies en zorgvuldige installatie met vriendelijke installateurs.
           </p>
 
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="./offerte.html" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
+            <a href="#usps" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
                    bg-white/10 text-white focus:text-white/90 transition hover:opacity-90">
-              Offerte aanvragen
+              Lees meer
+              <span class="inline-block transition-transform duration-300 group-hover:translate-y-[1px]">
+                ↓
+              </span>
+            </a>
+            <a href="./contact.html" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
+                   bg-white text-slate-700 focus:text-slate-600/90 transition hover:opacity-90">
+              Gratis offerte
               <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
             </a>
-            <a href="./subsidie-check.html" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
-                   bg-white/95 text-slate-600 focus:text-slate-600/90 transition hover:opacity-90">
-              Bel ons!
-            </a>
           </div>
         </div>
-        
+
+        <!-- Testimonials -->
+        <div class="flex flex-col gap-4 max-w-sm" data-testimonials>
+          <div class="flex items-center">
+            <button type="button" data-testimonial-pick="0" aria-pressed="true" aria-label="Toon review van Toni"
+              class="relative z-30 flex h-11 w-11 items-center justify-center rounded-full p-[3px] transition-transform duration-300">
+              <span
+                class="flex h-full w-full items-center justify-center rounded-full bg-indigo-500 text-xs font-bold text-white">JJ</span>
+            </button>
+            <button type="button" data-testimonial-pick="1" aria-pressed="false" aria-label="Toon review van Marjolein"
+              class="relative -ml-3 z-20 flex h-11 w-11 items-center justify-center rounded-full p-[3px] transition-transform duration-300">
+              <span
+                class="flex h-full w-full items-center justify-center rounded-full bg-lime-500 text-xs font-bold text-white">LP</span>
+            </button>
+            <button type="button" data-testimonial-pick="2" aria-pressed="false" aria-label="Toon review van Jeroen"
+              class="relative -ml-3 z-10 flex h-11 w-11 items-center justify-center rounded-full p-[3px] transition-transform duration-300">
+              <span
+                class="flex h-full w-full items-center justify-center rounded-full bg-yellow-500 text-xs font-bold text-white">TD</span>
+            </button>
+          </div>
+
+          <blockquote class="block text-[12px] lg:text-sm text-white/90 font-sans leading-relaxed" data-testimonial-quote>
+            "Klimazon is een professioneel bedrijf. De prijs was zeer goed en concurrerend,
+            en het werk is uitgevoerd volgens hoge kwaliteits&shy;normen."
+          </blockquote>
+
+          <span class="text-xs lg:text-sm text-white/90 font-sans" data-testimonial-author>
+            <span class="font-extrabold">Toni</span> — Dubbele airco in Amsterdam
+          </span>
+        </div>
+
       </div>
     </div>
 
@@ -247,44 +255,26 @@
         </div>
         <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">
           We zijn trots op het werk dat wij leveren en hebben intussen heel veel woningen voorzien van warmtepompen in
-          en rondom onze
-          regio.
-        </p>
-        <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">
-          Dit is hoe wij te werk gaan. Met onze expertise zorgen wij dat u krijgt wat u nodig heeft.
+          en rondom onze regio.
         </p>
 
         <!-- USP items -->
         <div class="flex flex-col sm:flex-row gap-6">
-          <!-- USP item 1 -->
-          <div class="flex flex-row gap-4">
-            <div
-              class="w-12 h-12 w-max h-max p-2 flex items-center justify-center rounded-full bg-slate-200 text-slate-600">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-            </div>
-            <div class="w-full min-w-[250px] flex flex-col md:gap-2 pt-1 md:pt-2">
-              <p class="text-sm sm:text-base leading-[2em] text-slate-600 font-bold">Inspectie & Voorbereiding</p>
-              <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">Voor wij starten komen we graag
-                langs. We controleren uw ruimtes, isolatie en gewenste capaciteit.</p>
-            </div>
-          </div>
 
-          <!-- USP item 2 -->
+          <!-- USP item -->
           <div class="flex flex-row gap-4">
             <div
               class="w-12 h-12 w-max h-max p-2 flex items-center justify-center rounded-full bg-slate-200 text-slate-600">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  d="M2.25 12l8.954-8.955a1.5 1.5 0 012.122 0L22.25 12M4.5 9.75V21h15V9.75" />
               </svg>
             </div>
             <div class="w-full min-w-[250px] flex flex-col gap-2 pt-1 md:pt-2">
               <p class="text-sm sm:text-base leading-[2em] text-slate-600 font-bold">Montage & Inbedrijfstelling</p>
-              <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">Wij plaatsen binnen- en buitenunit,
+              <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">Wij plaatsen binnen- en
+                buitenunit,
                 werken leidingen netjes weg en stellen het systeem veilig in.</p>
             </div>
           </div>
@@ -370,27 +360,32 @@
 
     <div class="relative flex flex-col z-10 mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
       <!-- Header -->
-      <div class="flex flex-col gap-6">
-        <div>
-          <p class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-white/90">Innovatieve technologie
+      <div class="flex flex-col justify-center sm:flex-row gap-6 md:gap-12">
+        <div class="max-w-xl">
+          <p class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-white/90">
+            Slim verwarmen
           </p>
-          <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-white/95">Rendabel dankzij onze
-            <span class="inline text-sky-300 [text-shadow:0_0_3px_rgba(59,130,246,0.6)]">innovatie</span>
-            en
-            <span class="inline text-sky-300 [text-shadow:0_0_3px_rgba(59,130,246,0.6)]">kennis</span>.
+
+          <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-white/95">
+            Comfortabel wonen
+            <span class="inline text-sky-300 [text-shadow:0_0_3px_rgba(59,130,246,0.6)]">zonder</span>
+            hoge kosten.
           </h2>
+
           <p class="mt-4 text-sm text-white/90 font-medium max-w-2xl">
-            Wij gebruiken niet zomaar producten. Onze producten zijn technisch cutting-edge en zorgen voor
-            moderne prestaties die u standaard verwacht van uw apparatuur.
+            Een warmtepomp haalt warmte uit de buitenlucht en zet die efficiënt om naar
+            verwarming voor uw woning en water. Dat betekent minder gasverbruik,
+            lagere energiekosten en een duurzamer huis.
           </p>
+
           <p class="mt-2 text-sm text-white/90 font-medium max-w-2xl">
-            Naast installatie leggen wij altijd duidelijk uit hoe uw apparatuur werkt en hoe u gebruik maakt
-            van de systemen.
+            Wij zorgen voor een complete installatie, afgestemd op uw woning. Van advies
+            en plaatsing tot duidelijke uitleg over het gebruik van het systeem.
           </p>
         </div>
 
         <!-- USP kaarten -->
-        <div class="grid gap-4 md:grid-cols-3">
+        <div class="flex gap-4 max-w-sm">
 
           <div class="rounded-2xl border border-white/20 backdrop-blur overflow-hidden">
             <div class="flex flex-col items-center w-full h-full">
@@ -410,69 +405,9 @@
                     Strakke plaatsing van binnen- en buitenunit, met nette leidingroutes en betrouwbare werking.
                   </p>
                 </div>
-                <a href="./diensten.html" class="group inline-flex gap-1
-                rounded-[5px] text-sm font-semibold text-[color:var(--kz-darkerblue)] transition hover:opacity-90">
-                  Lees over warmtepompen
-                  <span class="inline transition-transform duration-300 group-hover:translate-x-1">
-                    →
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="rounded-2xl border border-white/20 backdrop-blur overflow-hidden">
-            <div class="flex flex-col items-center w-full h-full">
-              <div class="relative flex flex-col items-center w-full px-8 py-24
-                [background-image:url('../assets/images/portraits/michael.jpg')]
-                bg-cover bg-opacity-50 overflow-hidden">
-
-                <!-- Pseudo overlay -->
-                <div class="absolute inset-0 bg-black/20 z-0"></div>
-              </div>
-              <div class="flex flex-col gap-3 p-5 h-full w-full justify-between bg-white">
-                <div class="flex flex-col gap-1">
-                  <p class="text-s text-slate-600 font-bold">
-                    Kennis over warmtepompen en energiemanagement
-                  </p>
-                  <p class="text-sm text-slate-600 font-medium">
-                    We adviseren niet alleen over warmtepompen, maar ook over slimme energie<wbr>management<wbr>systemen en
-                    energiebeheer. Zo haalt u het maximale uit uw installatie.
-                  </p>
-                </div>
-                <a href="./offerte.html" class="group inline-flex gap-1
-                rounded-[5px] text-sm font-semibold text-[color:var(--kz-darkerblue)] transition hover:opacity-90">
-                  Vraag een offerte aan
-                  <span class="inline transition-transform duration-300 group-hover:translate-x-1">
-                    →
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="rounded-2xl border border-white/20 backdrop-blur overflow-hidden">
-            <div class="flex flex-col items-center w-full h-full">
-              <div class="relative flex flex-col items-center w-full px-8 py-24
-                [background-image:url('../assets/images/portraits/duurzame-installaties-noord-holland.webp')]
-                bg-cover bg-opacity-50 overflow-hidden">
-
-                <!-- Pseudo overlay -->
-                <div class="absolute inset-0 bg-black/20 z-0"></div>
-              </div>
-              <div class="flex flex-col gap-3 p-5 h-full w-full justify-between bg-white">
-                <div class="flex flex-col gap-1">
-                  <p class="text-s text-slate-600 font-bold">
-                    Hoog rendement, strak afgewerkt
-                  </p>
-                  <p class="text-sm text-slate-600 font-medium">
-                    We combineren kwaliteitsmerken met nette montage. Zo haalt u maximaal voordeel uit uw installatie, met
-                    betrouwbare bediening en monitoring.
-                  </p>
-                </div>
                 <a href="./projecten.html" class="group inline-flex gap-1
                 rounded-[5px] text-sm font-semibold text-[color:var(--kz-darkerblue)] transition hover:opacity-90">
-                  Bekijk onze recente projecten
+                  Bekijk onze projecten
                   <span class="inline transition-transform duration-300 group-hover:translate-x-1">
                     →
                   </span>
@@ -553,8 +488,7 @@
         <article
           class="group h-full rounded-[5px] bg-white shadow-[0_12px_30px_rgba(15,23,42,0.08)] overflow-hidden flex flex-col">
           <div class="relative aspect-[4/3] overflow-hidden" data-carousel>
-            <img src="./assets/images/projects/project-08.jpg"
-              alt="Warmtepomp in een woning in Assendelft"
+            <img src="./assets/images/projects/project-08.jpg" alt="Warmtepomp in een woning in Assendelft"
               class="carousel-image absolute inset-0 h-full w-full object-cover [overflow-clip-margin:unset]"
               decoding="async" />
             <img src="./assets/images/projects/project-08.jpg" alt="Detail van warmtepomp en leidingwerk"
@@ -594,8 +528,7 @@
             <img src="./assets/images/projects/project-08.jpg" alt="Warmtepomp buitenunit in Wormer"
               class="carousel-image absolute inset-0 h-full w-full object-cover [overflow-clip-margin:unset]"
               decoding="async" />
-            <img src="./assets/images/projects/project-08.jpg"
-              alt="Binnenopstelling met strak afgewerkt leidingwerk"
+            <img src="./assets/images/projects/project-08.jpg" alt="Binnenopstelling met strak afgewerkt leidingwerk"
               class="carousel-image absolute inset-0 h-full w-full object-cover [overflow-clip-margin:unset] hidden"
               loading="lazy" decoding="async" />
             <button type="button" data-carousel-prev class="absolute left-3 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full bg-white/90 text-slate-700 shadow
@@ -606,7 +539,8 @@
           <div class="flex flex-col gap-4 p-5 grow">
             <div>
               <p class="text-xs font-semibold uppercase tracking-widest text-[var(--kz-blue)]">Wormer</p>
-              <h3 class="mt-2 text-lg font-semibold text-slate-800 line-clamp-1">All-electric warmtepomp met stille buitenunit</h3>
+              <h3 class="mt-2 text-lg font-semibold text-slate-800 line-clamp-1">All-electric warmtepomp met stille
+                buitenunit</h3>
               <p class="mt-2 text-sm text-slate-600 line-clamp-2">
                 Volledige verwarming met lage energiekosten en focus op comfort en laag geluidsniveau.
               </p>
@@ -871,7 +805,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="relative w-full mb-4 sm:mb-12 overflow-hidden">
+  <section class="relative w-full mt-4 sm:mt-12 mb-4 sm:mb-12 overflow-hidden">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <h4
         class="w-min text-m sm:xl font-bold tracking-tight uppercase bg-[linear-gradient(to_right,var(--kz-darkerblue),var(--kz-blue))] bg-clip-text text-transparent">
@@ -997,6 +931,7 @@
   <script src="./js/marquee.js" defer></script>
   <script src="./js/hero-contract.js" defer></script>
   <script src="./js/includes.js" defer></script>
+  <script type="module" src="./js/testimonial-rotator.js" defer></script>
 
   <script src="https://forminit.com/sdk/v1/forminit.js"></script>
 
