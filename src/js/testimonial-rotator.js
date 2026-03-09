@@ -51,8 +51,7 @@ import { AIRCO_TESTIMONIALS } from "./airco-testimonials.js";
       var isActive = i === safeIndex;
       pickButtons[i].setAttribute("aria-pressed", isActive ? "true" : "false");
       pickButtons[i].style.zIndex = isActive ? "30" : String(10 - i);
-      pickButtons[i].style.transform = isActive ? "translateY(-1px) scale(1.06)" : "translateY(0) scale(1)";
-      pickButtons[i].style.boxShadow = isActive ? "0 0 0 2px rgba(255,255,255,0.5)" : "none";
+      pickButtons[i].style.transform = isActive ? "translateY(-1px) scale(1)" : "translateY(0) scale(0.8)";
       pickButtons[i].style.background = "conic-gradient(" + inactiveRingColor + " 360deg, " + inactiveRingColor + " 360deg)";
     }
   }

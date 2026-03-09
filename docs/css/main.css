@@ -1584,8 +1584,8 @@ a {
   margin-bottom: 1.5rem;
 }
 
-.-ml-3{
-  margin-left: -0.75rem;
+.-ml-5{
+  margin-left: -1.25rem;
 }
 
 .-mt-0\.5{
@@ -1754,12 +1754,12 @@ a {
   height: 2.5rem;
 }
 
-.h-11{
-  height: 2.75rem;
-}
-
 .h-12{
   height: 3rem;
+}
+
+.h-14{
+  height: 3.5rem;
 }
 
 .h-16{
@@ -1810,12 +1810,22 @@ a {
   height: 2px;
 }
 
+.h-\[300px\]{
+  height: 300px;
+}
+
 .h-\[350px\]{
   height: 350px;
 }
 
 .h-\[53px\]{
   height: 53px;
+}
+
+.h-\[stretch\]{
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
 }
 
 .h-auto{
@@ -1829,6 +1839,10 @@ a {
 .h-max{
   height: -moz-max-content;
   height: max-content;
+}
+
+.h-\[200px\]{
+  height: 200px;
 }
 
 .max-h-\[200px\]{
@@ -1851,12 +1865,12 @@ a {
   width: 2.5rem;
 }
 
-.w-11{
-  width: 2.75rem;
-}
-
 .w-12{
   width: 3rem;
+}
+
+.w-14{
+  width: 3.5rem;
 }
 
 .w-16{
@@ -2152,6 +2166,10 @@ a {
 
 .flex-row{
   flex-direction: row;
+}
+
+.flex-row-reverse{
+  flex-direction: row-reverse;
 }
 
 .flex-col{
@@ -2804,8 +2822,8 @@ a {
   padding: 1.5rem;
 }
 
-.p-\[3px\]{
-  padding: 3px;
+.p-\[4px\]{
+  padding: 4px;
 }
 
 .px-2{
@@ -3026,6 +3044,10 @@ a {
   text-align: right;
 }
 
+.text-start{
+  text-align: start;
+}
+
 .font-sans{
   font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
 }
@@ -3115,6 +3137,10 @@ a {
 
 .font-medium{
   font-weight: 500;
+}
+
+.font-normal{
+  font-weight: 400;
 }
 
 .font-semibold{
@@ -4046,8 +4072,16 @@ a {
     display: none;
   }
 
+  .sm\:h-12{
+    height: 3rem;
+  }
+
   .sm\:h-auto{
     height: auto;
+  }
+
+  .sm\:w-12{
+    width: 3rem;
   }
 
   .sm\:w-20{
@@ -4211,6 +4245,14 @@ a {
     line-height: 1;
   }
 
+  .sm\:text-\[0\.95rem\]{
+    font-size: 0.95rem;
+  }
+
+  .sm\:text-\[13px\]{
+    font-size: 13px;
+  }
+
   .sm\:text-\[3rem\]{
     font-size: 3rem;
   }
@@ -4275,6 +4317,10 @@ a {
     margin-top: 6rem;
   }
 
+  .md\:mt-6{
+    margin-top: 1.5rem;
+  }
+
   .md\:block{
     display: block;
   }
@@ -4293,6 +4339,10 @@ a {
 
   .md\:hidden{
     display: none;
+  }
+
+  .md\:h-\[350px\]{
+    height: 350px;
   }
 
   .md\:w-1\/2{
@@ -4342,6 +4392,10 @@ a {
 
   .md\:flex-col{
     flex-direction: column;
+  }
+
+  .md\:flex-col-reverse{
+    flex-direction: column-reverse;
   }
 
   .md\:items-center{

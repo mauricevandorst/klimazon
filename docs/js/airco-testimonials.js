@@ -1,7 +1,7 @@
 export const AIRCO_TESTIMONIALS = [
   {
     quote:
-      '"Een heel fijn bedrijf met uiterst secure, vakbekwame en vriendelijke vakmensen. Een genot om zaken mee te doen! De servicegerichtheid en ouderwetse vriendelijkheid (waar vind je dat nog?) doen de rest."',
+      '"Een heel fijn bedrijf met secure, vakbekwame en vriendelijke vakmensen. Een genot om zaken mee te doen! De servicegerichtheid en ouderwetse vriendelijkheid (waar vind je dat nog?) doen de rest."',
     author: '<span class="font-extrabold">JJ</span> &mdash; Airco-installatie'
   },
   {

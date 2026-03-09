@@ -28,8 +28,8 @@ export function renderLayout() {
             <a data-nav href="diensten.html" class="hover:text-emerald-700">Diensten</a>
             <a data-nav href="werkwijze.html" class="hover:text-emerald-700">Werkwijze</a>
             <a data-nav href="projecten.html" class="hover:text-emerald-700">Projecten</a>
-            <a data-nav href="contact.html" class="hover:text-emerald-700">Contact</a>
-            <a data-nav href="contact.html" class="btn-primary">Offerte</a>
+            <a data-nav href="tel:+31654216787" class="hover:text-emerald-700">Contact</a>
+            <a data-nav href="offerte.html" class="btn-primary">Offerte</a>
           </nav>
 
           <button
@@ -50,8 +50,8 @@ export function renderLayout() {
             <a data-nav href="diensten.html" class="py-1">Diensten</a>
             <a data-nav href="werkwijze.html" class="py-1">Werkwijze</a>
             <a data-nav href="projecten.html" class="py-1">Projecten</a>
-            <a data-nav href="contact.html" class="py-1">Contact</a>
-            <a data-nav href="contact.html" class="btn-primary w-fit">Offerte</a>
+            <a data-nav href="tel:+31654216787" class="py-1">Contact</a>
+            <a data-nav href="offerte.html" class="btn-primary w-fit">Offerte</a>
           </div>
         </nav>
       </header>
@@ -73,7 +73,6 @@ export function renderLayout() {
               <a class="hover:text-emerald-700" href="diensten.html">Diensten</a>
               <a class="hover:text-emerald-700" href="werkwijze.html">Werkwijze</a>
               <a class="hover:text-emerald-700" href="projecten.html">Projecten</a>
-              <a class="hover:text-emerald-700" href="contact.html">Contact</a>
             </div>
           </div>
 
