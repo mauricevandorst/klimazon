@@ -6,15 +6,17 @@ import { AIRCO_TESTIMONIALS } from "./airco-testimonials.js";
 
   var quoteEl = testimonials.querySelector("[data-testimonial-quote]");
   var authorEl = testimonials.querySelector("[data-testimonial-author]");
+  var sourceEl = testimonials.querySelector("[data-testimonial-source]");
   var pickButtons = testimonials.querySelectorAll("[data-testimonial-pick]");
-  if (!quoteEl || !authorEl || !pickButtons.length || pickButtons.length !== AIRCO_TESTIMONIALS.length) return;
+  if (!quoteEl || !authorEl || !sourceEl || !pickButtons.length || pickButtons.length !== AIRCO_TESTIMONIALS.length)
+    return;
 
   var entries = AIRCO_TESTIMONIALS;
   var activeIndex = 0;
   var animationFrameId = null;
   var intervalMs = 8000;
   var cycleStartTime = 0;
-  var activeRingColor = "rgba(251, 146, 60, 1)";
+  var activeRingColor = "rgb(255, 255, 255)";
   var inactiveRingColor = "rgba(255, 255, 255, 0.35)";
   var resizeTimer = null;
 
@@ -46,6 +48,10 @@ import { AIRCO_TESTIMONIALS } from "./airco-testimonials.js";
     activeIndex = safeIndex;
     quoteEl.textContent = entries[safeIndex].quote;
     authorEl.innerHTML = entries[safeIndex].author;
+    if (entries[safeIndex].source) {
+      sourceEl.src = entries[safeIndex].source.src;
+      sourceEl.alt = entries[safeIndex].source.alt;
+    }
 
     for (var i = 0; i < pickButtons.length; i += 1) {
       var isActive = i === safeIndex;

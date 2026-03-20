@@ -153,11 +153,11 @@
         <div class="w-full max-w-xl">
           <p class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-white">Over ons</p>
           <h1 class="mt-3 text-xl sm:text-3xl font-bold tracking-tight text-white">
-            Échte mensen die moeiteloos schakelen tussen hard werken en goed advies.
+            Vakmensen die moeiteloos schakelen tussen hard werken en goed advies.
           </h1>
           <p class="mt-4 text-sm sm:text-base font-medium text-white/90 leading-relaxed">
-            Wij zijn Klimazon, een gedreven team uit de Zaanstreek. We komen niet “even een apparaatje plaatsen”, maar
-            zorgen dat uw huis prettig aanvoelt, zuinig draait en er strak bij ligt.
+            Wij zijn Klimazon, een gemotiveerd team uit de Zaanstreek. We komen niet “even langs voor montage”, maar
+            zorgen dat uw huis prettig aanvoelt, de apparatuur zuinig draait en uw duurzaamheid slim werkt.
           </p>
 
           <div class="mt-6 flex flex-wrap gap-3">
@@ -171,23 +171,53 @@
           </div>
         </div>
 
-        <!-- Testimonial + proof -->
-        <div class="w-full max-w-sm md:mt-6 items-start h-[stretch]" data-reveal>
-          <div class="flex w-full items-center justify-start gap-3">
-            <img class="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover"
-              src="./assets/images/portraits/boy-den-brave.jpg" alt="Profielfoto van Boy den Brave" loading="lazy"
-              decoding="async" />
-            <p class="text-xs sm:text-[13px] text-white">
-              <span class="font-bold">Boy den Brave</span>
-              <span class="font-normal">— Eigenaar</span>
-            </p>
-          </div>
+        <!-- Testimonials -->
+        <div class="relative max-w-sm" data-testimonials>
+          <div class="pointer-events-none absolute"></div>
+          <div
+            class="relative flex flex-col gap-4">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="text-[11px] uppercase tracking-[0.10em] text-white/70 font-semibold">Klantverhalen</p>
+                <p class="mt-1 text-xs text-white/80">Zaanstreek &amp; Noord-Holland</p>
+              </div>
+            </div>
 
-          <div class="mt-4 flex flex-col items-center gap-4">
-            <p class="text-start text-[13px] sm:text-[0.95rem] text-white/90">
-              "Goed werk vraagt om kennis, ambitie en ervaring. Of het nu gaat om een klein of groots project, goed werk
-              realiseer je met een team dat naast je staat en dezelfde stappen zet."
-            </p>
+            <div class="flex items-center">
+              <button type="button" data-testimonial-pick="0" aria-pressed="true" aria-label="Toon review van Toni"
+                class="relative z-30 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full p-[4px] transition-transform duration-300">
+                <span
+                  class="flex h-full w-full items-center justify-center rounded-full bg-indigo-500 text-xl sm:text-2xl font-medium text-white">J</span>
+              </button>
+              <button type="button" data-testimonial-pick="1" aria-pressed="false" aria-label="Toon review van Marjolein"
+                class="relative -ml-5 z-20 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full p-[4px] transition-transform duration-300">
+                <span
+                  class="flex h-full w-full items-center justify-center rounded-full bg-lime-500 text-xl sm:text-2xl font-medium text-white">L</span>
+              </button>
+              <button type="button" data-testimonial-pick="2" aria-pressed="false" aria-label="Toon review van Jeroen"
+                class="relative -ml-5 z-10 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full p-[4px] transition-transform duration-300">
+                <span
+                  class="flex h-full w-full items-center justify-center rounded-full bg-yellow-500 text-xl sm:text-2xl font-medium text-white">T</span>
+              </button>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-3xl leading-none text-white/40">“</span>
+              <blockquote class="block text-[12px] lg:text-sm text-white/90 font-sans leading-relaxed"
+                data-testimonial-quote>
+                "Klimazon is een professioneel bedrijf. De prijs was zeer goed en concurrerend,
+                en het werk is uitgevoerd volgens hoge kwaliteits&shy;normen."
+              </blockquote>
+            </div>
+
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-xs lg:text-sm text-white/90 font-sans" data-testimonial-author>
+                <span class="font-extrabold">Toni</span> — Dubbele airco in Amsterdam
+              </span>
+              <img src="./assets/images/logo/google-reviews.png" alt="Google reviews" data-testimonial-source
+                class="h-10 sm:h-12 w-auto rounded-[5px] border border-slate-200 bg-white px-3"
+                loading="lazy" decoding="async" />
+            </div>
           </div>
         </div>
 
@@ -460,18 +490,38 @@
           </h2>
         </div>
 
-        <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">
-          We starten met uw woning, verbruik en comfortwensen. Soms is het antwoord simpel,
-          soms vraagt het om maatwerk. Hoe dan ook, we leggen het duidelijk uit en adviseren wat echt past.
-        </p>
-        <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">
-          Daarna regelen we de uitvoering: materiaal&shy;keuze, planning, installatie en een heldere uitleg
+        <div class="flex flex-col gap-1">
+          <span class="flex gap-2 text-lg font-semibold h-8 w-auto rounded-full items-center justify-start">
+            Uw woning
+            <span class="text-2xl">🏠☀️</span>
+          </span>
+          <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">
+            We starten met uw woning, verbruik en comfortwensen. Soms is het antwoord simpel,
+            soms vraagt het om maatwerk. Hoe dan ook, we leggen het duidelijk uit en adviseren wat echt past.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <span class="flex gap-2 text-lg font-semibold h-8 w-auto rounded-full items-center justify-start">
+            Wij regelen het
+            <span class="text-2xl">🫱🏼‍🫲🏻</span>
+          </span>
+          <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">
+          Daarna regelen we de uitvoering. Materiaal&shy;keuze, planning, installatie en een heldere uitleg
           over gebruik en instellingen. U hoeft niets te “googelen”. Wij lopen het met u door.
-        </p>
-        <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <span class="flex gap-2 text-lg font-semibold h-8 w-auto rounded-full items-center justify-start">
+            Wij onderhouden
+            <span class="text-2xl">🔧</span>
+          </span>
+          <p class="text-sm sm:text-base font-medium leading-[2em] text-slate-700">
           En ook na oplevering blijven we dichtbij. Voor onderhoud, controles en snelle service, zodat uw installatie
           betrouwbaar blijft presteren. Voor een lange tijd.
-        </p>
+          </p>
+        </div>
 
         <div class="flex flex-wrap gap-2 px-auto sm:px-0">
           <a href="./offerte.html" class="group inline-flex gap-2 w-full md:w-max items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold text-nowrap

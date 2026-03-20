@@ -179,33 +179,53 @@
         </div>
 
         <!-- Testimonials -->
-        <div class="flex flex-col gap-4 max-w-sm" data-testimonials>
-          <div class="flex items-center">
-            <button type="button" data-testimonial-pick="0" aria-pressed="true" aria-label="Toon review van Toni"
-              class="relative z-30 flex h-14 w-14 items-center justify-center rounded-full p-[4px] transition-transform duration-300">
-              <span
-                class="flex h-full w-full items-center justify-center rounded-full bg-indigo-500 text-2xl font-medium text-white">J</span>
-            </button>
-            <button type="button" data-testimonial-pick="1" aria-pressed="false" aria-label="Toon review van Marjolein"
-              class="relative -ml-5 z-20 flex h-14 w-14 items-center justify-center rounded-full p-[4px] transition-transform duration-300">
-              <span
-                class="flex h-full w-full items-center justify-center rounded-full bg-lime-500 text-2xl font-medium text-white">L</span>
-            </button>
-            <button type="button" data-testimonial-pick="2" aria-pressed="false" aria-label="Toon review van Jeroen"
-              class="relative -ml-5 z-10 flex h-14 w-14 items-center justify-center rounded-full p-[4px] transition-transform duration-300">
-              <span
-                class="flex h-full w-full items-center justify-center rounded-full bg-yellow-500 text-2xl font-medium text-white">T</span>
-            </button>
+        <div class="relative max-w-sm" data-testimonials>
+          <div class="pointer-events-none absolute"></div>
+          <div
+            class="relative flex flex-col gap-4">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="text-[11px] uppercase tracking-[0.10em] text-white/70 font-semibold">Klantverhalen</p>
+                <p class="mt-1 text-xs text-white/80">Zaanstreek &amp; Noord-Holland</p>
+              </div>
+            </div>
+
+            <div class="flex items-center">
+              <button type="button" data-testimonial-pick="0" aria-pressed="true" aria-label="Toon review van Toni"
+                class="relative z-30 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full p-[4px] transition-transform duration-300">
+                <span
+                  class="flex h-full w-full items-center justify-center rounded-full bg-indigo-500 text-xl sm:text-2xl font-medium text-white">J</span>
+              </button>
+              <button type="button" data-testimonial-pick="1" aria-pressed="false" aria-label="Toon review van Marjolein"
+                class="relative -ml-5 z-20 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full p-[4px] transition-transform duration-300">
+                <span
+                  class="flex h-full w-full items-center justify-center rounded-full bg-lime-500 text-xl sm:text-2xl font-medium text-white">L</span>
+              </button>
+              <button type="button" data-testimonial-pick="2" aria-pressed="false" aria-label="Toon review van Jeroen"
+                class="relative -ml-5 z-10 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full p-[4px] transition-transform duration-300">
+                <span
+                  class="flex h-full w-full items-center justify-center rounded-full bg-yellow-500 text-xl sm:text-2xl font-medium text-white">T</span>
+              </button>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-3xl leading-none text-white/40">“</span>
+              <blockquote class="block text-[12px] lg:text-sm text-white/90 font-sans leading-relaxed"
+                data-testimonial-quote>
+                "Klimazon is een professioneel bedrijf. De prijs was zeer goed en concurrerend,
+                en het werk is uitgevoerd volgens hoge kwaliteits&shy;normen."
+              </blockquote>
+            </div>
+
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-xs lg:text-sm text-white/90 font-sans" data-testimonial-author>
+                <span class="font-extrabold">Toni</span> — Dubbele airco in Amsterdam
+              </span>
+              <img src="./assets/images/logo/google-reviews.png" alt="Google reviews" data-testimonial-source
+                class="h-10 sm:h-12 w-auto rounded-[5px] border border-slate-200 bg-white px-3"
+                loading="lazy" decoding="async" />
+            </div>
           </div>
-
-          <blockquote class="block text-[12px] lg:text-sm text-white/90 font-sans leading-relaxed" data-testimonial-quote>
-            "Klimazon is een professioneel bedrijf. De prijs was zeer goed en concurrerend,
-            en het werk is uitgevoerd volgens hoge kwaliteits&shy;normen."
-          </blockquote>
-
-          <span class="text-xs lg:text-sm text-white/90 font-sans" data-testimonial-author>
-            <span class="font-extrabold">Toni</span> — Dubbele airco in Amsterdam
-          </span>
         </div>
 
       </div>
@@ -702,3 +722,4 @@
 </body>
 
 </html>
+
