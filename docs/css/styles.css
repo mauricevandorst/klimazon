@@ -70,6 +70,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
   }
 
   body {
@@ -237,17 +238,6 @@
   select,
   textarea {
     @apply focus:outline-none;
-  }
-
-  .btn-primary:focus-visible,
-  .btn-secondary:focus-visible,
-  .chip:focus-visible,
-  a:focus-visible,
-  button:focus-visible,
-  input:focus-visible,
-  select:focus-visible,
-  textarea:focus-visible {
-    box-shadow: 0 0 0 4px var(--kz-focus-ring);
   }
 
   /* 5) Marquee animation */
