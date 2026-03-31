@@ -1,4 +1,4 @@
-import { rmSync, mkdirSync, cpSync, existsSync, readdirSync } from "node:fs";
+import { rmSync, mkdirSync, cpSync, existsSync, readdirSync, copyFileSync } from "node:fs";
 import { execSync } from "node:child_process";
 
 const SRC = "src";
@@ -21,6 +21,13 @@ function copyStatic() {
 
   cpSync(`${SRC}/js`, `${DOCS}/js`, { recursive: true, force: true });
   cpSync(`${SRC}/assets`, `${DOCS}/assets`, { recursive: true, force: true });
+
+  // kopieer sitemap en robots
+  for (const file of ["sitemap.xml", "robots.txt"]) {
+    if (existsSync(`${SRC}/${file}`)) {
+      copyFileSync(`${SRC}/${file}`, `${DOCS}/${file}`);
+    }
+  }
 }
 
 function buildCss() {
