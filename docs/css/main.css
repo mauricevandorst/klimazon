@@ -1550,6 +1550,10 @@ a {
   z-index: 200;
 }
 
+.col-span-2{
+  grid-column: span 2 / span 2;
+}
+
 .-mx-6{
   margin-left: -1.5rem;
   margin-right: -1.5rem;
@@ -1776,6 +1780,10 @@ a {
   height: 3rem;
 }
 
+.h-14{
+  height: 3.5rem;
+}
+
 .h-16{
   height: 4rem;
 }
@@ -1879,6 +1887,10 @@ a {
 
 .w-12{
   width: 3rem;
+}
+
+.w-14{
+  width: 3.5rem;
 }
 
 .w-16{
@@ -1994,6 +2006,10 @@ a {
 
 .max-w-\[520px\]{
   max-width: 520px;
+}
+
+.max-w-lg{
+  max-width: 32rem;
 }
 
 .max-w-sm{
@@ -3972,6 +3988,12 @@ a {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.hover\:shadow-md:hover{
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .hover\:shadow-slate-700\/70:hover{
   --tw-shadow-color: rgb(51 65 85 / 0.7);
   --tw-shadow: var(--tw-shadow-colored);
@@ -4147,6 +4169,10 @@ a {
 }
 
 @media (min-width: 640px){
+  .sm\:col-span-1{
+    grid-column: span 1 / span 1;
+  }
+
   .sm\:mx-0{
     margin-left: 0px;
     margin-right: 0px;
@@ -4335,6 +4361,10 @@ a {
     padding-bottom: 2.5rem;
   }
 
+  .sm\:pb-16{
+    padding-bottom: 4rem;
+  }
+
   .sm\:pe-0{
     padding-inline-end: 0px;
   }
@@ -4349,6 +4379,10 @@ a {
 
   .sm\:pt-4{
     padding-top: 1rem;
+  }
+
+  .sm\:pt-8{
+    padding-top: 2rem;
   }
 
   .sm\:text-2xl{
@@ -4390,6 +4424,11 @@ a {
   .sm\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .sm\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .sm\:text-sm{
@@ -4677,6 +4716,10 @@ a {
 
   .lg\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-5{
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .lg\:flex-row{
