@@ -2327,10 +2327,6 @@ a {
   align-self: flex-end;
 }
 
-.self-stretch{
-  align-self: stretch;
-}
-
 .overflow-hidden{
   overflow: hidden;
 }
@@ -4214,8 +4210,12 @@ a {
     height: 3.5rem;
   }
 
-  .sm\:h-auto{
-    height: auto;
+  .sm\:h-40{
+    height: 10rem;
+  }
+
+  .sm\:h-full{
+    height: 100%;
   }
 
   .sm\:w-14{
