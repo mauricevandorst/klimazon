@@ -10,6 +10,20 @@ function resolveIncludesBaseUrl() {
   return new URL(window.location.href);
 }
 
+function resolveSiteBasePath(includesBase) {
+  const marker = "/js/includes.js";
+  const path = includesBase.pathname || "/";
+  const markerIndex = path.lastIndexOf(marker);
+  if (markerIndex >= 0) {
+    return path.slice(0, markerIndex + 1);
+  }
+  const jsIndex = path.lastIndexOf("/js/");
+  if (jsIndex >= 0) {
+    return path.slice(0, jsIndex + 1);
+  }
+  return "/";
+}
+
 function createHeaderSkeleton() {
   return `
     <div class="navbar-skeleton" aria-hidden="true">
@@ -52,7 +66,16 @@ async function fetchHtml(urls, mustInclude) {
   return null;
 }
 
-async function includeHTML(id, urls, mustInclude, minDelayMs = 0) {
+function normalizeInjectedRelativePaths(html, siteBasePath) {
+  // Injected partials resolve URLs against the current page URL.
+  // Convert "./..." references to site-base absolute paths so they work on deep routes and subpaths (e.g. /docs/).
+  const base = siteBasePath.endsWith("/") ? siteBasePath : `${siteBasePath}/`;
+  return html.replace(/\b(href|src)=["']\.\/([^"']+)["']/g, (_match, attr, relPath) => {
+    return `${attr}="${base}${relPath}"`;
+  });
+}
+
+async function includeHTML(id, urls, mustInclude, minDelayMs = 0, siteBasePath = "/") {
   const el = document.getElementById(id);
   if (!el) return false;
 
@@ -63,7 +86,7 @@ async function includeHTML(id, urls, mustInclude, minDelayMs = 0) {
     if (minDelayMs > elapsedMs) {
       await wait(minDelayMs - elapsedMs);
     }
-    el.innerHTML = html;
+    el.innerHTML = normalizeInjectedRelativePaths(html, siteBasePath);
     return true;
   }
   return false;
@@ -71,6 +94,7 @@ async function includeHTML(id, urls, mustInclude, minDelayMs = 0) {
 
 (async () => {
   const includesBase = resolveIncludesBaseUrl();
+  const siteBasePath = resolveSiteBasePath(includesBase);
   const headerBaseUrl = new URL("../partials/header.html", includesBase);
   const footerBaseUrl = new URL("../partials/footer.html", includesBase);
   const headerEl = document.getElementById("header");
@@ -85,16 +109,22 @@ async function includeHTML(id, urls, mustInclude, minDelayMs = 0) {
     `${headerBaseUrl.toString()}?v=${Date.now()}`,
   ];
 
-  const headerInjected = await includeHTML("header", headerUrls, undefined, 220);
+  const headerInjected = await includeHTML("header", headerUrls, undefined, 220, siteBasePath);
   if (!headerInjected) {
     console.warn("[includes] header inject failed", headerUrls);
   }
 
   if (!document.querySelector("[data-mobile-menu]")) {
-    await includeHTML("header", [
-      "/partials/header.html",
-      `/partials/header.html?v=${Date.now()}`,
-    ], undefined, 220);
+    await includeHTML(
+      "header",
+      [
+        `${siteBasePath}partials/header.html`,
+        `${siteBasePath}partials/header.html?v=${Date.now()}`,
+      ],
+      undefined,
+      220,
+      siteBasePath
+    );
   }
 
   if (headerEl) {
@@ -115,7 +145,7 @@ async function includeHTML(id, urls, mustInclude, minDelayMs = 0) {
     footerBaseUrl.toString(),
     `${footerBaseUrl.toString()}?v=${Date.now()}`,
   ];
-  await includeHTML("footer", footerUrls);
+  await includeHTML("footer", footerUrls, undefined, 0, siteBasePath);
 
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();

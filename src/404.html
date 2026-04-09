@@ -7,9 +7,18 @@
 
   <title>404 – Pagina niet gevonden | Klimazon</title>
   <meta name="robots" content="noindex">
+  <script>
+    (function () {
+      var path = window.location.pathname || "/";
+      var baseHref = path.indexOf("/docs/") === 0 ? "/docs/" : "/";
+      var base = document.createElement("base");
+      base.href = baseHref;
+      document.head.appendChild(base);
+    })();
+  </script>
 
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="icon" href="/assets/images/icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="icon" href="./assets/images/icons/favicon.ico" type="image/x-icon">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +39,7 @@
       <div class="hero-image-wrap w-full" data-hero-image-wrap>
         <div class="hero-image-skeleton shadow-[0_0_14px_rgba(0,0,0,0.08)]" data-hero-skeleton aria-hidden="true">
         </div>
-        <img src="/assets/images/bg/404.png" alt="Pagina niet gevonden"
+        <img src="./assets/images/bg/404.png" alt="Pagina niet gevonden"
           class="w-full h-full rounded-[5px] shadow-[0_0_14px_rgba(0,0,0,0.18)] object-cover object-center opacity-0 transition-opacity duration-300 [overflow-clip-margin:unset]"
           data-hero-image loading="eager" fetchpriority="high" decoding="async" />
       </div>
@@ -43,7 +52,7 @@
       <div class="hero-image-wrap w-full max-w-[520px] max-h-[200px] overflow-hidden border-b-[1px] border-[#ffffff47]"
         data-hero-image-wrap>
         <div class="hero-image-skeleton" data-hero-skeleton aria-hidden="true"></div>
-        <img src="/assets/images/bg/404.png" alt="Pagina niet gevonden"
+        <img src="./assets/images/bg/404.png" alt="Pagina niet gevonden"
           class="w-full h-full object-cover object-center [overflow-clip-margin:unset] opacity-0 transition-opacity duration-300"
           data-hero-image loading="eager" fetchpriority="high" decoding="async" />
         <div class="absolute inset-0 bg-gradient-to-b from-white/0 via-white/10 to-black/20 z-0"></div>
@@ -84,7 +93,7 @@
           </p>
 
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="/" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
+            <a href="./" class="group h-auto inline-flex gap-2 items-center justify-center rounded-[5px] px-4 py-2 text-sm font-semibold
                    bg-white/10 text-white focus:text-white/90 transition hover:opacity-90">
               <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
                 ←
@@ -138,46 +147,46 @@
       <!-- Service cards -->
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-10">
 
-        <a href="/zonnepanelen.html"
+        <a href="./zonnepanelen.html"
           class="group flex flex-col items-center gap-3 rounded-[8px] border border-slate-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
           <div class="w-14 h-14 flex items-center justify-center rounded-full bg-slate-50">
-            <img src="/assets/images/icons/solar-panels.svg" alt="Zonnepanelen" class="w-8 h-8 group-hover:opacity-70 transition" />
+            <img src="./assets/images/icons/solar-panels.svg" alt="Zonnepanelen" class="w-8 h-8 group-hover:opacity-70 transition" />
           </div>
           <span class="text-sm font-semibold text-slate-700 text-center">Zonnepanelen</span>
           <span class="text-xs text-[color:var(--kz-blue)] font-medium group-hover:opacity-70 transition">Meer info →</span>
         </a>
 
-        <a href="/airconditioning.html"
+        <a href="./airconditioning.html"
           class="group flex flex-col items-center gap-3 rounded-[8px] border border-slate-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
           <div class="w-14 h-14 flex items-center justify-center rounded-full bg-slate-50">
-            <img src="/assets/images/icons/airconditioning.svg" alt="Airconditioning" class="w-8 h-8 group-hover:opacity-70 transition" />
+            <img src="./assets/images/icons/airconditioning.svg" alt="Airconditioning" class="w-8 h-8 group-hover:opacity-70 transition" />
           </div>
           <span class="text-sm font-semibold text-slate-700 text-center">Airconditioning</span>
           <span class="text-xs text-[color:var(--kz-blue)] font-medium group-hover:opacity-70 transition">Meer info →</span>
         </a>
 
-        <a href="/warmtepomp.html"
+        <a href="./warmtepomp.html"
           class="group flex flex-col items-center gap-3 rounded-[8px] border border-slate-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
           <div class="w-14 h-14 flex items-center justify-center rounded-full bg-slate-50">
-            <img src="/assets/images/icons/heat-pump.svg" alt="Warmtepomp" class="w-8 h-8 group-hover:opacity-70 transition" />
+            <img src="./assets/images/icons/heat-pump.svg" alt="Warmtepomp" class="w-8 h-8 group-hover:opacity-70 transition" />
           </div>
           <span class="text-sm font-semibold text-slate-700 text-center">Warmtepomp</span>
           <span class="text-xs text-[color:var(--kz-blue)] font-medium group-hover:opacity-70 transition">Meer info →</span>
         </a>
 
-        <a href="/thuisbatterij.html"
+        <a href="./thuisbatterij.html"
           class="group flex flex-col items-center gap-3 rounded-[8px] border border-slate-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
           <div class="w-14 h-14 flex items-center justify-center rounded-full bg-slate-50">
-            <img src="/assets/images/icons/home-battery.svg" alt="Thuisbatterij" class="w-8 h-8 group-hover:opacity-70 transition" />
+            <img src="./assets/images/icons/home-battery.svg" alt="Thuisbatterij" class="w-8 h-8 group-hover:opacity-70 transition" />
           </div>
           <span class="text-sm font-semibold text-slate-700 text-center">Thuisbatterij</span>
           <span class="text-xs text-[color:var(--kz-blue)] font-medium group-hover:opacity-70 transition">Meer info →</span>
         </a>
 
-        <a href="/onderhoud-en-service.html"
+        <a href="./onderhoud-en-service.html"
           class="group col-span-2 sm:col-span-1 flex flex-col items-center gap-3 rounded-[8px] border border-slate-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
           <div class="w-14 h-14 flex items-center justify-center rounded-full bg-slate-50">
-            <img src="/assets/images/icons/maintenance.svg" alt="Onderhoud & Service" class="w-8 h-8 group-hover:opacity-70 transition" />
+            <img src="./assets/images/icons/maintenance.svg" alt="Onderhoud & Service" class="w-8 h-8 group-hover:opacity-70 transition" />
           </div>
           <span class="text-sm font-semibold text-slate-700 text-center">Onderhoud &amp; Service</span>
           <span class="text-xs text-[color:var(--kz-blue)] font-medium group-hover:opacity-70 transition">Meer info →</span>
@@ -193,12 +202,12 @@
   </div>
 
   <!-- Minimal scripts (only if you want the mobile topbar carousel behaviour) -->
-  <script src="/js/topbar-carousel.js" defer></script>
-  <script src="/js/menu.mobile.js" defer></script>
-  <script src="/js/dropdowns.desktop.js" defer></script>
-  <script src="/js/services-slider.js" defer></script>
-  <script src="/js/hero-contract.js" defer></script>
-  <script src="/js/includes.js" defer></script>
+  <script src="./js/topbar-carousel.js" defer></script>
+  <script src="./js/menu.mobile.js" defer></script>
+  <script src="./js/dropdowns.desktop.js" defer></script>
+  <script src="./js/services-slider.js" defer></script>
+  <script src="./js/hero-contract.js" defer></script>
+  <script src="./js/includes.js" defer></script>
 </body>
 
 </html>
