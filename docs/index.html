@@ -410,8 +410,7 @@
               <div class="flex justify-evenly sm:gap-4 overflow-hidden pb-2 sm:px-0">
 
                 <div class="flex flex-col gap-2 items-center">
-                  <a class="service-btn shrink-0" type="button" aria-label="Zonnepanelen"
-                    href="./zonnepanelen-zakelijk.html">
+                  <a class="service-btn shrink-0 pointer-events-none opacity-80" type="button" aria-label="Zonnepanelen" aria-disabled="true">
                     <img class="h-full w-full" src="./assets/images/icons/solar-panels-business.svg"
                       alt="Zonnepanelen" />
                   </a>
@@ -419,32 +418,28 @@
                 </div>
 
                 <div class="flex-col gap-2 items-center">
-                  <a class="service-btn shrink-0" type="button" aria-label="Airconditioning"
-                    href="./airconditioning-zakelijk.html">
+                  <a class="service-btn shrink-0 pointer-events-none opacity-80" type="button" aria-label="Airconditioning" aria-disabled="true">
                     <img class="p-3" src="./assets/images/icons/airconditioning-business.svg" alt="Airconditioning" />
                   </a>
                   <span class="text-xs">Airconditioning</span>
                 </div>
 
                 <div class="hidden sm:flex flex-col gap-2 items-center">
-                  <a class="service-btn shrink-0" type="button" aria-label="Thuisbatterij"
-                    href="./thuisbatterij-zakelijk.html">
+                  <a class="service-btn shrink-0 pointer-events-none opacity-80" type="button" aria-label="Thuisbatterij" aria-disabled="true">
                     <img class="p-3" src="./assets/images/icons/home-battery-business.svg" alt="Thuisbatterij" />
                   </a>
                   <span class="text-xs">Thuisbatterij</span>
                 </div>
 
                 <div class="flex flex-col gap-2 items-center">
-                  <a class="service-btn shrink-0" type="button" aria-label="Warmtepomp"
-                    href="./warmtepomp-zakelijk.html">
+                  <a class="service-btn shrink-0 pointer-events-none opacity-80" type="button" aria-label="Warmtepomp" aria-disabled="true">
                     <img class="p-3" src="./assets/images/icons/heat-pump-business.svg" alt="Warmtepomp" />
                   </a>
                   <span class="text-xs">Warmtepomp</span>
                 </div>
 
                 <div class="hidden md:flex flex-col gap-2 items-center">
-                  <a class="service-btn shrink-0" type="button" aria-label="Luchtgordijn"
-                    href="./luchtgordijn-zakelijk.html">
+                  <a class="service-btn shrink-0 pointer-events-none opacity-80" type="button" aria-label="Luchtgordijn" aria-disabled="true">
                     <img class="p-3" src="./assets/images/icons/air-curtain-business.svg" alt="Luchtgordijn" />
                   </a>
                   <span class="text-xs">Luchtgordijn</span>
@@ -477,9 +472,9 @@
 
         <!-- CTA to all services -->
         <div class="flex">
-          <a id="allServicesBtn" href="./diensten.html" class="group mx-auto my-2 inline-flex gap-1 items-center justify-center rounded-[5px] px-4 py-2
-            text-sm font-semibold text-white shadow-sm
-            bg-[color:var(--kz-darkerblue)] hover:opacity-90 transition
+          <a id="allServicesBtn" aria-disabled="true" tabindex="-1" class="group mx-auto my-2 inline-flex gap-1 items-center justify-center rounded-[5px] px-4 py-2
+            text-sm font-semibold text-white shadow-sm pointer-events-none opacity-80
+            bg-[color:var(--kz-darkerblue)] transition
             focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[color:var(--kz-darkerblue)]">
             <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
               →
