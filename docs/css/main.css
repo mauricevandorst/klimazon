@@ -2910,6 +2910,11 @@ a {
   padding-right: 5px;
 }
 
+.py-0\.5{
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
 .py-1{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -2968,11 +2973,6 @@ a {
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.py-0\.5{
-  padding-top: 0.125rem;
-  padding-bottom: 0.125rem;
 }
 
 .pb-10{
@@ -3250,6 +3250,10 @@ a {
   letter-spacing: 0.11em;
 }
 
+.tracking-\[0\.12em\]{
+  letter-spacing: 0.12em;
+}
+
 .tracking-\[0\.18em\]{
   letter-spacing: 0.18em;
 }
@@ -3268,10 +3272,6 @@ a {
 
 .tracking-widest{
   letter-spacing: 0.1em;
-}
-
-.tracking-\[0\.12em\]{
-  letter-spacing: 0.12em;
 }
 
 .text-\[color\:var\(--kz-blue\)\]{
@@ -3473,6 +3473,10 @@ a {
   opacity: 0.5;
 }
 
+.opacity-60{
+  opacity: 0.6;
+}
+
 .opacity-70{
   opacity: 0.7;
 }
@@ -3495,10 +3499,6 @@ a {
 
 .opacity-\[0\.03\]{
   opacity: 0.03;
-}
-
-.opacity-60{
-  opacity: 0.6;
 }
 
 .shadow{
