@@ -3399,6 +3399,10 @@ a {
   color: rgb(255 255 255 / 0.4);
 }
 
+.text-white\/45{
+  color: rgb(255 255 255 / 0.45);
+}
+
 .text-white\/5{
   color: rgb(255 255 255 / 0.05);
 }

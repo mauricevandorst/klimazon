@@ -22,8 +22,8 @@ function copyStatic() {
   cpSync(`${SRC}/js`, `${DOCS}/js`, { recursive: true, force: true });
   cpSync(`${SRC}/assets`, `${DOCS}/assets`, { recursive: true, force: true });
 
-  // kopieer sitemap en robots
-  for (const file of ["sitemap.xml", "robots.txt"]) {
+  // kopieer root-bestanden die direct in docs moeten staan
+  for (const file of ["sitemap.xml", "robots.txt", "site.webmanifest"]) {
     if (existsSync(`${SRC}/${file}`)) {
       copyFileSync(`${SRC}/${file}`, `${DOCS}/${file}`);
     }

@@ -38,6 +38,13 @@ function initialSync() {
     }
   }
 
+  for (const file of ["robots.txt", "sitemap.xml", "site.webmanifest"]) {
+    const from = path.join(SRC, file);
+    if (existsSync(from)) {
+      copyFile(from, path.join(DOCS, file));
+    }
+  }
+
   copyDir(path.join(SRC, "js"), path.join(DOCS, "js"));
   copyDir(path.join(SRC, "assets"), path.join(DOCS, "assets"));
   copyDir(path.join(SRC, "partials"), path.join(DOCS, "partials"));
