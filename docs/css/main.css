@@ -1654,12 +1654,12 @@ a {
   margin-left: auto;
 }
 
-.mr-2{
-  margin-right: 0.5rem;
-}
-
 .ms-\[15px\]{
   margin-inline-start: 15px;
+}
+
+.mt-0\.5{
+  margin-top: 0.125rem;
 }
 
 .mt-1{
@@ -2136,16 +2136,6 @@ a {
 
 .animate-\[kz-nav-in_420ms_cubic-bezier\(\.2\2c \.8\2c \.2\2c 1\)_forwards\]{
   animation: kz-nav-in 420ms cubic-bezier(.2,.8,.2,1) forwards;
-}
-
-@keyframes spin{
-  to{
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin{
-  animation: spin 1s linear infinite;
 }
 
 .cursor-not-allowed{
@@ -2975,6 +2965,10 @@ a {
   padding-bottom: 2rem;
 }
 
+.pb-1{
+  padding-bottom: 0.25rem;
+}
+
 .pb-10{
   padding-bottom: 2.5rem;
 }
@@ -3461,10 +3455,6 @@ a {
   opacity: 0.2;
 }
 
-.opacity-25{
-  opacity: 0.25;
-}
-
 .opacity-40{
   opacity: 0.4;
 }
@@ -3483,10 +3473,6 @@ a {
 
 .opacity-70{
   opacity: 0.7;
-}
-
-.opacity-75{
-  opacity: 0.75;
 }
 
 .opacity-80{

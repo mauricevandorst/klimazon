@@ -11,11 +11,18 @@
   var typeEl = section.querySelector("[data-ac-type]");
   var descriptionEl = section.querySelector("[data-ac-description]");
   var coolingEl = section.querySelector("[data-ac-cooling]");
+  var roomSizeEl = section.querySelector("[data-ac-room-size]");
+  var wifiEl = section.querySelector("[data-ac-wifi]");
   var soundDetailEl = section.querySelector("[data-ac-sound-detail]");
   var heatingEl = section.querySelector("[data-ac-heating]");
   var usp1El = section.querySelector("[data-ac-usp-1]");
   var usp2El = section.querySelector("[data-ac-usp-2]");
   var usp3El = section.querySelector("[data-ac-usp-3]");
+  var usp4El = section.querySelector("[data-ac-usp-4]");
+  var usp5El = section.querySelector("[data-ac-usp-5]");
+  var usp6El = section.querySelector("[data-ac-usp-6]");
+  var usp7El = section.querySelector("[data-ac-usp-7]");
+  var usp8El = section.querySelector("[data-ac-usp-8]");
   var mainCarousel = section.querySelector("[data-ac-carousel]");
   var mainPrevButton = section.querySelector("[data-ac-main-prev]");
   var mainNextButton = section.querySelector("[data-ac-main-next]");
@@ -99,12 +106,19 @@
     var type = active.getAttribute("data-type") || "";
     var description = active.getAttribute("data-description") || "";
     var cooling = active.getAttribute("data-cooling") || "Onbekend";
+    var roomSize = active.getAttribute("data-room-size") || "Onbekend";
+    var wifi = active.getAttribute("data-wifi") || "Onbekend";
     var soundIndoor = active.getAttribute("data-sound-indoor") || "Onbekend";
     var soundOutdoor = active.getAttribute("data-sound-outdoor") || "Onbekend";
     var heating = active.getAttribute("data-heating") || "Onbekend";
     var usp1 = active.getAttribute("data-usp-1") || "";
     var usp2 = active.getAttribute("data-usp-2") || "";
     var usp3 = active.getAttribute("data-usp-3") || "";
+    var usp4 = active.getAttribute("data-usp-4") || "";
+    var usp5 = active.getAttribute("data-usp-5") || "";
+    var usp6 = active.getAttribute("data-usp-6") || "";
+    var usp7 = active.getAttribute("data-usp-7") || "";
+    var usp8 = active.getAttribute("data-usp-8") || "";
     var soundDetail = soundIndoor + " / " + soundOutdoor;
 
     if (soundEl) soundEl.textContent = soundDetail;
@@ -121,11 +135,51 @@
     if (typeEl) typeEl.textContent = type;
     if (descriptionEl) descriptionEl.textContent = description;
     if (coolingEl) coolingEl.textContent = cooling;
+    if (roomSizeEl) roomSizeEl.textContent = roomSize;
+    if (wifiEl) wifiEl.textContent = wifi;
     if (soundDetailEl) soundDetailEl.textContent = soundDetail;
     if (heatingEl) heatingEl.textContent = heating;
-    if (usp1El) usp1El.textContent = usp1;
-    if (usp2El) usp2El.textContent = usp2;
-    if (usp3El) usp3El.textContent = usp3;
+    
+    if (usp1El) {
+      usp1El.textContent = usp1;
+      var li1 = usp1El.closest("li");
+      if (li1) li1.style.display = usp1 ? "" : "none";
+    }
+    if (usp2El) {
+      usp2El.textContent = usp2;
+      var li2 = usp2El.closest("li");
+      if (li2) li2.style.display = usp2 ? "" : "none";
+    }
+    if (usp3El) {
+      usp3El.textContent = usp3;
+      var li3 = usp3El.closest("li");
+      if (li3) li3.style.display = usp3 ? "" : "none";
+    }
+    if (usp4El) {
+      usp4El.textContent = usp4;
+      var li4 = usp4El.closest("li");
+      if (li4) li4.style.display = usp4 ? "" : "none";
+    }
+    if (usp5El) {
+      usp5El.textContent = usp5;
+      var li5 = usp5El.closest("li");
+      if (li5) li5.style.display = usp5 ? "" : "none";
+    }
+    if (usp6El) {
+      usp6El.textContent = usp6;
+      var li6 = usp6El.closest("li");
+      if (li6) li6.style.display = usp6 ? "" : "none";
+    }
+    if (usp7El) {
+      usp7El.textContent = usp7;
+      var li7 = usp7El.closest("li");
+      if (li7) li7.style.display = usp7 ? "" : "none";
+    }
+    if (usp8El) {
+      usp8El.textContent = usp8;
+      var li8 = usp8El.closest("li");
+      if (li8) li8.style.display = usp8 ? "" : "none";
+    }
 
     updatePickButtons(safeIndex);
     scrollActivePickIntoView(safeIndex);
