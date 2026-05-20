@@ -3335,6 +3335,11 @@ a {
   color: rgb(34 197 94 / var(--tw-text-opacity, 1));
 }
 
+.text-green-600{
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity, 1));
+}
+
 .text-neutral-600{
   --tw-text-opacity: 1;
   color: rgb(82 82 82 / var(--tw-text-opacity, 1));
@@ -3343,6 +3348,11 @@ a {
 .text-neutral-900{
   --tw-text-opacity: 1;
   color: rgb(23 23 23 / var(--tw-text-opacity, 1));
+}
+
+.text-red-600{
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity, 1));
 }
 
 .text-rose-500{
@@ -3438,16 +3448,6 @@ a {
 .text-yellow-400{
   --tw-text-opacity: 1;
   color: rgb(250 204 21 / var(--tw-text-opacity, 1));
-}
-
-.text-green-600{
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity, 1));
-}
-
-.text-red-600{
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity, 1));
 }
 
 .antialiased{
